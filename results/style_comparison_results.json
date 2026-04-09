@@ -1,0 +1,201 @@
+{
+  "created_at": "2026-04-09T16:44:42",
+  "labels": [
+    "official",
+    "publicistic"
+  ],
+  "balanced_samples_per_label": 500,
+  "train_size": 800,
+  "test_size": 200,
+  "max_chars": 3000,
+  "results": [
+    {
+      "model": "word_multinomial_nb",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_label": {
+        "official": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        },
+        "publicistic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        }
+      },
+      "confusion_matrix": {
+        "official": {
+          "official": 100,
+          "publicistic": 0
+        },
+        "publicistic": {
+          "official": 0,
+          "publicistic": 100
+        }
+      },
+      "top_features": [
+        {
+          "label": "official",
+          "features": [
+            "жазылсын",
+            "түсімдер",
+            "редакцияда",
+            "шешіміне",
+            "мекемесі",
+            "енгізілсін",
+            "тізілімінде",
+            "қаулының",
+            "бекітілсін",
+            "желтоқсандағы",
+            "етсін",
+            "жүктелсін"
+          ]
+        },
+        {
+          "label": "publicistic",
+          "features": [
+            "abai",
+            "алынды",
+            "сурет",
+            "пікір",
+            "жаңалықтар",
+            "kz",
+            "сайтынан",
+            "өтті",
+            "деді",
+            "сонымен",
+            "қатар",
+            "отыр"
+          ]
+        }
+      ]
+    },
+    {
+      "model": "char_tfidf_centroid",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_label": {
+        "official": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        },
+        "publicistic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 100
+        }
+      },
+      "confusion_matrix": {
+        "official": {
+          "official": 100,
+          "publicistic": 0
+        },
+        "publicistic": {
+          "official": 0,
+          "publicistic": 100
+        }
+      }
+    },
+    {
+      "model": "char_multinomial_nb",
+      "accuracy": 0.995,
+      "macro_f1": 0.995,
+      "per_label": {
+        "official": {
+          "precision": 1.0,
+          "recall": 0.99,
+          "f1": 0.995,
+          "support": 100
+        },
+        "publicistic": {
+          "precision": 0.9901,
+          "recall": 1.0,
+          "f1": 0.995,
+          "support": 100
+        }
+      },
+      "confusion_matrix": {
+        "official": {
+          "official": 99,
+          "publicistic": 1
+        },
+        "publicistic": {
+          "official": 0,
+          "publicistic": 100
+        }
+      },
+      "top_features": [
+        {
+          "label": "official",
+          "features": [
+            "___",
+            "____",
+            "_____",
+            "ылсын",
+            " 1. ",
+            "2. ",
+            "азылс",
+            "зылсы",
+            "ы\" қ",
+            "лы\" қ",
+            "ы\" қа",
+            "лсын:"
+          ]
+        },
+        {
+          "label": "publicistic",
+          "features": [
+            ".kz",
+            "kz ",
+            ".kz ",
+            "i.k",
+            "i.kz",
+            "i.kz ",
+            "aba",
+            "bai",
+            " aba",
+            " abai",
+            "abai",
+            "abai."
+          ]
+        }
+      ]
+    },
+    {
+      "model": "word_tfidf_centroid",
+      "accuracy": 0.995,
+      "macro_f1": 0.995,
+      "per_label": {
+        "official": {
+          "precision": 0.9901,
+          "recall": 1.0,
+          "f1": 0.995,
+          "support": 100
+        },
+        "publicistic": {
+          "precision": 1.0,
+          "recall": 0.99,
+          "f1": 0.995,
+          "support": 100
+        }
+      },
+      "confusion_matrix": {
+        "official": {
+          "official": 100,
+          "publicistic": 0
+        },
+        "publicistic": {
+          "official": 1,
+          "publicistic": 99
+        }
+      }
+    }
+  ]
+}
