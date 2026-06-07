@@ -6,6 +6,20 @@ SOURCES = {
         "base_url": "https://adilet.zan.kz",
         "text_selector": {"tag": "div", "attrs": {"class": "text"}},
         "min_text_length": 500,
-    }
-    # todo: добавить научный, художественный, публицистический стили
+    },
+    "publicistic": {
+        "label": "publicistic",
+        "output_file": "data/publicistic.csv",
+        "scraper": "scraper_publicistic.py",
+    },
+    "literary": {
+        "label": "literary",
+        "output_file": "data/literary.csv",
+        "scraper": "scraper_literary.py",
+    },
+    "scientific": {
+        "label": "scientific",
+        "output_file": "data/scientific.csv",
+        "scraper": "scraper_scientific.py",
+    },
 }
