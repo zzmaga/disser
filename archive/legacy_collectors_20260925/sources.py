@@ -1,0 +1,41 @@
+SOURCES = {
+    "official": {
+        "label": "official",
+        "style_name": "Formal",
+        "label_id": 0,
+        "output_file": "data/official.csv",
+        "rss_url": "https://adilet.zan.kz/kaz/docs/rss",
+        "base_url": "https://adilet.zan.kz",
+        "text_selector": {"tag": "div", "attrs": {"class": "text"}},
+        "min_text_length": 500,
+        "scraper": "scraper_adilet.py",
+    },
+    "scientific": {
+        "label": "scientific",
+        "style_name": "Scientific",
+        "label_id": 1,
+        "output_file": "data/scientific.csv",
+        "scraper": "scraper_scientific.py",
+    },
+    "publicistic": {
+        "label": "publicistic",
+        "style_name": "Publicist",
+        "label_id": 2,
+        "output_file": "data/publicistic.csv",
+        "scraper": "scraper_publicistic.py",
+    },
+    "literary": {
+        "label": "literary",
+        "style_name": "Artistic",
+        "label_id": 3,
+        "output_file": "data/literary.csv",
+        "scraper": "scraper_literary.py",
+    },
+    "colloquial": {
+        "label": "colloquial",
+        "style_name": "Colloquial",
+        "label_id": 4,
+        "output_file": "data/colloquial.csv",
+        "scraper": "scraper_colloquial.py",
+    },
+}

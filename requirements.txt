@@ -1,0 +1,16 @@
+pandas>=2.0
+scikit-learn>=1.4
+beautifulsoup4>=4.12
+lxml>=5.0
+requests>=2.31
+urllib3>=2.0
+tqdm>=4.66
+torch>=2.2
+transformers>=4.40
+accelerate>=0.30
+safetensors>=0.4
+sentencepiece>=0.2
+lingua-language-detector>=2.0
+# Optional (needs MSVC Build Tools on Windows / or a prebuilt wheel):
+# fasttext-wheel
+# fasttext

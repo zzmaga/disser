@@ -1,0 +1,291 @@
+{
+  "colloquial.csv": {
+    "rows": 494,
+    "columns": [
+      "text",
+      "label",
+      "source_url",
+      "year",
+      "site"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "source_url": 0,
+      "year": 0,
+      "site": 0
+    },
+    "labels": {
+      "colloquial": 494
+    },
+    "words": 39204,
+    "word_quantiles": {
+      "0.0": 6.0,
+      "0.1": 13.0,
+      "0.5": 75.0,
+      "0.9": 146.0,
+      "1.0": 319.0
+    },
+    "exact_text_duplicates": 0,
+    "url_duplicates": 0,
+    "sites": {
+      "telegram_otandastar": 456,
+      "telegram_status_kz": 35,
+      "telegram_qazaqtili": 3
+    }
+  },
+  "literary.csv": {
+    "rows": 500,
+    "columns": [
+      "text",
+      "label",
+      "source_url",
+      "year",
+      "site"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "source_url": 0,
+      "year": 0,
+      "site": 0
+    },
+    "labels": {
+      "literary": 500
+    },
+    "words": 1232513,
+    "word_quantiles": {
+      "0.0": 108.0,
+      "0.1": 226.30000000000004,
+      "0.5": 1198.0,
+      "0.9": 5294.40000000001,
+      "1.0": 34000.0
+    },
+    "exact_text_duplicates": 1,
+    "url_duplicates": 0,
+    "sites": {
+      "adebiportal_proza": 500
+    }
+  },
+  "official.csv": {
+    "rows": 1100,
+    "columns": [
+      "text",
+      "label",
+      "source_url",
+      "year"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "source_url": 0,
+      "year": 0
+    },
+    "labels": {
+      "official": 1100
+    },
+    "words": 5213510,
+    "word_quantiles": {
+      "0.0": 64.0,
+      "0.1": 137.8,
+      "0.5": 660.5,
+      "0.9": 6163.100000000002,
+      "1.0": 519113.0
+    },
+    "exact_text_duplicates": 1,
+    "url_duplicates": 0,
+    "sites": {}
+  },
+  "publicistic.csv": {
+    "rows": 500,
+    "columns": [
+      "text",
+      "label",
+      "source_url",
+      "year",
+      "site"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "source_url": 0,
+      "year": 0,
+      "site": 0
+    },
+    "labels": {
+      "publicistic": 500
+    },
+    "words": 141359,
+    "word_quantiles": {
+      "0.0": 67.0,
+      "0.1": 107.9,
+      "0.5": 209.0,
+      "0.9": 536.5000000000001,
+      "1.0": 2823.0
+    },
+    "exact_text_duplicates": 0,
+    "url_duplicates": 0,
+    "sites": {
+      "abai": 500
+    }
+  },
+  "scientific.csv": {
+    "rows": 500,
+    "columns": [
+      "text",
+      "label",
+      "source_url",
+      "year",
+      "site"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "source_url": 0,
+      "year": 0,
+      "site": 0
+    },
+    "labels": {
+      "scientific": 500
+    },
+    "words": 715207,
+    "word_quantiles": {
+      "0.0": 122.0,
+      "0.1": 413.9,
+      "0.5": 961.5,
+      "0.9": 2769.7000000000007,
+      "1.0": 24503.0
+    },
+    "exact_text_duplicates": 4,
+    "url_duplicates": 0,
+    "sites": {
+      "bilim_research": 299,
+      "bilim_referats": 201
+    }
+  },
+  "processed": {
+    "rows": 5780,
+    "columns": [
+      "text",
+      "label",
+      "style_name",
+      "source_url",
+      "year",
+      "site",
+      "raw_label",
+      "raw_source_file"
+    ],
+    "nulls": {
+      "text": 0,
+      "label": 0,
+      "style_name": 0,
+      "source_url": 0,
+      "year": 0,
+      "site": 2346,
+      "raw_label": 0,
+      "raw_source_file": 0
+    },
+    "documents": 2996,
+    "class_rows": {
+      "Formal": 2346,
+      "Artistic": 1229,
+      "Scientific": 1134,
+      "Publicist": 618,
+      "Colloquial": 453
+    },
+    "class_documents": {
+      "Artistic": 498,
+      "Colloquial": 453,
+      "Formal": 1099,
+      "Publicist": 492,
+      "Scientific": 454
+    },
+    "words": 1757578,
+    "site_label": {
+      "Artistic": {
+        "abai": 0,
+        "adebiportal_proza": 1229,
+        "bilim_referats": 0,
+        "bilim_research": 0,
+        "telegram_otandastar": 0,
+        "telegram_status_kz": 0
+      },
+      "Colloquial": {
+        "abai": 0,
+        "adebiportal_proza": 0,
+        "bilim_referats": 0,
+        "bilim_research": 0,
+        "telegram_otandastar": 429,
+        "telegram_status_kz": 24
+      },
+      "Publicist": {
+        "abai": 618,
+        "adebiportal_proza": 0,
+        "bilim_referats": 0,
+        "bilim_research": 0,
+        "telegram_otandastar": 0,
+        "telegram_status_kz": 0
+      },
+      "Scientific": {
+        "abai": 0,
+        "adebiportal_proza": 0,
+        "bilim_referats": 447,
+        "bilim_research": 687,
+        "telegram_otandastar": 0,
+        "telegram_status_kz": 0
+      }
+    },
+    "domain_label": {
+      "Artistic": {
+        "abai.kz": 0,
+        "adebiportal.kz": 1229,
+        "adilet.zan.kz": 0,
+        "bilim-all.kz": 0,
+        "t.me": 0
+      },
+      "Colloquial": {
+        "abai.kz": 0,
+        "adebiportal.kz": 0,
+        "adilet.zan.kz": 0,
+        "bilim-all.kz": 0,
+        "t.me": 453
+      },
+      "Formal": {
+        "abai.kz": 0,
+        "adebiportal.kz": 0,
+        "adilet.zan.kz": 2346,
+        "bilim-all.kz": 0,
+        "t.me": 0
+      },
+      "Publicist": {
+        "abai.kz": 618,
+        "adebiportal.kz": 0,
+        "adilet.zan.kz": 0,
+        "bilim-all.kz": 0,
+        "t.me": 0
+      },
+      "Scientific": {
+        "abai.kz": 0,
+        "adebiportal.kz": 0,
+        "adilet.zan.kz": 0,
+        "bilim-all.kz": 1134,
+        "t.me": 0
+      }
+    },
+    "word_quantiles": "style_name     \nArtistic    0.0    108.0\n            0.5    350.0\n            0.9    350.0\n            1.0    350.0\nColloquial  0.0      8.0\n            0.5     79.0\n            0.9    154.8\n            1.0    319.0\nFormal      0.0     64.0\n            0.5    350.0\n            0.9    350.0\n            1.0    350.0\nPublicist   0.0     42.0\n            0.5    246.5\n            0.9    350.0\n            1.0    350.0\nScientific  0.0     26.0\n            0.5    350.0\n            0.9    350.0\n            1.0    350.0",
+    "exact_text_duplicates": 0
+  },
+  "audit_date": "2026-09-25",
+  "scope": "Read-only audit of raw and processed datasets; existing training reports were read, models were not retrained.",
+  "fingerprints": {
+    "data\\colloquial.csv": "c9047556a7cff2d3df5f0d8a5e1c80b935dfb8690463af00877d1dc8f22c71fb",
+    "data\\literary.csv": "4defb339273bd67fd5158196081ae507e486c8c01342e9b8d1d2d10db8e14c2e",
+    "data\\official.csv": "eb82ba682405c4eab5e11882965aaf0e2addba6bd8544ce69f2e02d25a86739d",
+    "data\\publicistic.csv": "ef614003e82eccdcdd355e4f9450ddfb398fea804c64dba1307b69c53f16f159",
+    "data\\scientific.csv": "ee3a4657fd42cb0f33fbb661645c550431a4acd6cac83e16885cac95808b2651",
+    "data\\processed\\train_corpus.csv": "ea7872d3f2588d91a2e4f4da0c7c58fb3d9b5e4f0658a44c5ef86f478aee210e",
+    "data\\processed\\baseline_report.json": "731e3716753df047cfddd68fbfd810ebcebf603faf1f2d343c8c35b65720746d",
+    "artifacts\\kazbert_smoke\\train_history.json": "01848688552f7389a5c3ba07e404724db1ee34851cdc86cbfc7f2dae60ad464c",
+    "artifacts\\kazbert_smoke\\best_report.json": "5e32c874fff54fa31ae673b7331b0321fd00a92fc102ea8bee1e4ead8c3cedc3"
+  }
+}
