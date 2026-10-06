@@ -109,7 +109,7 @@ class InferenceService:
             raise ValueError('Выберите модель из списка.')
         if not any(c.isalpha() for c in text):
             raise ValueError('Нужен текст со словами, а не только числа или знаки.')
-        if self.config.get('cleaning_version')=='text_only_v3':
+        if self.config.get('cleaning_version') in {'text_only_v3','text_only_v4'}:
             from kazstyle.data.quality import clean_text, assert_text_only
             cleaned,_=clean_text(text)
             if cleaned:assert_text_only([cleaned])

@@ -46,5 +46,14 @@ class V6InferenceTests(unittest.TestCase):
         for tokenizer,limit in self.service.constraints:
             self.assertLessEqual(len(tokenizer(response['excerpt'])['input_ids']),limit)
 
+    def test_next_cleaning_version_keeps_photo_caption_removal(self):
+        previous=self.service.config['cleaning_version']
+        try:
+            self.service.config['cleaning_version']='text_only_v4'
+            response=self.service.classify('Қазақстан мен Ресей туралы хабар. Сурет\n:сайтынан\nалынды\nҚұжат көлік саласына қатысты.')
+            self.assertEqual(response['excerpt'],'Қазақстан мен Ресей туралы хабар. Құжат көлік саласына қатысты.')
+        finally:
+            self.service.config['cleaning_version']=previous
+
 
 if __name__=='__main__':unittest.main()
