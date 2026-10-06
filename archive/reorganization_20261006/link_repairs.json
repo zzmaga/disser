@@ -1,0 +1,14 @@
+[
+  {
+    "file": "reports\\dissertation_audit_20261006\\report.html",
+    "before_sha256": "c0529009329b23c81e1e4c12b922e592d223051dc5c4426530d7687b8b47a89a",
+    "reason": "Repair relative presentation links after relocation; no numerical results changed",
+    "after_sha256": "920c98ee7a75cbfc0eb8e8ca81078b44d852ed98e8b34af09b4b57aaedaa54c8"
+  },
+  {
+    "file": "archive\\reports\\dissertation_draft_20261006_results\\manuscript.html",
+    "before_sha256": "3cd0f8a19e3767657505ae9bbd31df8fda2477bb83e952783dabdae1bf309306",
+    "reason": "Repair relative presentation links after relocation; no numerical results changed",
+    "after_sha256": "9a4db308a2e6a20988b718f5de4c227356fc31b4d9b39204be6e15ba70b1658a"
+  }
+]

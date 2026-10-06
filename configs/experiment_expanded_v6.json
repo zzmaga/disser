@@ -1,0 +1,58 @@
+{
+  "name": "expanded_v6_shared_three_seeds",
+  "run_prefix": "expanded_v6",
+  "dataset": "data/processed/expanded_v6_shared",
+  "manifest_sha256": "9713b9ba9ca8c6d45f39ca8104e9e04d3dddc81b5f47cf3cfc4ffffc471eff0c",
+  "dataset_config_sha256": "eb6b67c96035c3e6742a0c357da84562c76ea7186fcdceff6e95a09b14d51634",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 2,
+  "learning_rate": 2e-05,
+  "threads": 4,
+  "device": "cuda",
+  "precision": "float16",
+  "gradient_checkpointing": true,
+  "fused_adamw": true,
+  "selection": "Best epoch by validation Macro-F1 within each run; family by mean validation Macro-F1 over ALL seeds. Representative deployment seed fixed at 42 before training. No selection by test or hand-picked examples.",
+  "test_status": "Provisional development labels; documents from earlier development pools may be reassigned. This is not a fresh independent final benchmark.",
+  "purpose": "Compare six classifier families on frozen text-only views with source expansion and conservative author/work/template/shared-passage grouping. Replaces the intentionally aborted v5 engineering series.",
+  "pretraining_checks": "reports/corpus_expansion_20261006/pretraining_v6_checks.json",
+  "limitations": [
+    "Source/category and assistant-screened labels have not been independently adjudicated by human experts.",
+    "Publisher and length distributions still correlate with style; removing URLs does not remove this confounding.",
+    "Known author and work IDs are grouped; unknown authors and unidentified aliases remain a limitation.",
+    "Collected business templates are training-only. Reserved AYU forms are excluded from this dataset.",
+    "This changes data composition, excerpt policy, group allocation and hardware/precision relative to v4. A difference from v4 is not a controlled causal estimate of data cleaning.",
+    "GPU mixed-precision results can differ from CPU results despite the same seed. Timing is not directly comparable across hardware.",
+    "Conservative shared-passage grouping reduces the balanced dataset to 1265 documents: 980 train, 140 validation and 145 test. Not every semantic dependency is detectable."
+  ],
+  "models": [
+    {
+      "id": "mbert_last",
+      "model_name": "google-bert/bert-base-multilingual-cased",
+      "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+      "head": "last",
+      "batch_size": 1,
+      "gradient_accumulation": 8
+    },
+    {
+      "id": "kaz_roberta_last",
+      "model_name": "kz-transformers/kaz-roberta-conversational",
+      "revision": "43077c2fd0a163487ed468b5ec3b8750686a5888",
+      "head": "last",
+      "batch_size": 1,
+      "gradient_accumulation": 8
+    },
+    {
+      "id": "kaz_roberta_concat4",
+      "model_name": "kz-transformers/kaz-roberta-conversational",
+      "revision": "43077c2fd0a163487ed468b5ec3b8750686a5888",
+      "head": "concat4",
+      "batch_size": 1,
+      "gradient_accumulation": 8
+    }
+  ]
+}

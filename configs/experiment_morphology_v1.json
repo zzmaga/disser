@@ -1,0 +1,15 @@
+{
+  "purpose": "Exploratory ablation for the IPM morphology requirement; development data, not a new external test",
+  "dataset": "data/processed/text_only_v4_shared",
+  "manifest_sha256": "a42109bbc024bea934e1c5821c7d00c1b9ab150f81f19e3c6a1e9bcba9681c83",
+  "stanza_version": "1.15.0",
+  "resources_version": "1.15.0",
+  "model_dir": "models/stanza_kk_1_15",
+  "processors": {"tokenize": "ktb_nocharlm", "mwt": "ktb", "pos": "ktb_nocharlm", "lemma": "ktb_nocharlm"},
+  "representations": ["raw", "stanza_surface", "stanza_lemma"],
+  "classifiers": ["word_tfidf_logreg", "word_tfidf_linear_svc"],
+  "seed": 42,
+  "baseline_run": "artifacts/text_only_v4_classical_s42",
+  "comparison": "Raw versus Stanza surface controls tokenization/MWT; Stanza lemma versus Stanza surface isolates the additional normalization step. Identical fixed TF-IDF/classifier settings. No hyperparameter search.",
+  "deployment": "Research artifacts only; do not change the six-model site based on this development-test ablation."
+}

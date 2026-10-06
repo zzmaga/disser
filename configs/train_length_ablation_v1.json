@@ -1,0 +1,12 @@
+{
+  "parent_manifest_sha256": "9713b9ba9ca8c6d45f39ca8104e9e04d3dddc81b5f47cf3cfc4ffffc471eff0c",
+  "train_word_budgets": [40, 80, 160],
+  "seed": 42,
+  "motivation": "Post-hoc development hypothesis: v6 has more natural long views but fails the known short school application. Test whether exposure to shorter views across classes changes this behavior without editing the example or its label into training.",
+  "fixed": "Same 980 train document identities, labels, groups, pretrained initialization, seed, two epochs, learning rate and optimizer update count. Validation/test CSVs must remain byte-identical to v6. No new examples or duplicated rows.",
+  "exception": "If shortening exposes a shared passage with an evaluation view, keep the original training text. This uses text overlap only, never predictions.",
+  "models": ["word_tfidf_logreg", "word_tfidf_linear_svc", "char_tfidf_linear_svc", "kaz_roberta_last"],
+  "neural": {"model_name": "kz-transformers/kaz-roberta-conversational", "revision": "43077c2fd0a163487ed468b5ec3b8750686a5888", "head": "last", "epochs": 2, "learning_rate": 0.00002, "batch_size": 1, "gradient_accumulation": 8, "precision": "float16", "gradient_checkpointing": true, "fused_adamw": true},
+  "selection": "Best epoch by validation; report the fixed single-seed comparison and all known probes, including failures. No iterative tuning to make the example pass. No automatic deployment promotion.",
+  "test_status": "Previously inspected development test; not a fresh independent benchmark."
+}

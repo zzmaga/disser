@@ -1,0 +1,52 @@
+{
+  "dataset": "data/processed/text_only_v4_shared",
+  "default_model": "roberta",
+  "models": {
+    "roberta": {
+      "name": "Kaz-RoBERTa",
+      "kind": "transformer",
+      "run": "text_only_v4_kaz_roberta_last_s42",
+      "weights_sha256": "d38f01781ab65edffba240249f029817a132854b878f1d241bfd95dbfbba6b52"
+    },
+    "roberta_concat4": {
+      "name": "Kaz-RoBERTa · 4 слоя",
+      "kind": "transformer",
+      "run": "text_only_v4_kaz_roberta_concat4_s42",
+      "weights_sha256": "5b9308f75b19480166ebbbc2afcf96006fb2b0f0578c144564d35f859df30b5e"
+    },
+    "mbert": {
+      "name": "mBERT",
+      "kind": "transformer",
+      "run": "text_only_v4_mbert_last_s42",
+      "weights_sha256": "8e719860d2a4c55bb4efd0e6c8b10f468304ba5a3186453544c1075cbbdd5a59"
+    },
+    "logreg": {
+      "name": "TF-IDF + Logistic Regression",
+      "kind": "classical",
+      "run": "text_only_v4_classical_s42",
+      "weights_sha256": "e33a29eddbb8d6c5ef4f39f3483dccfae44a7a321965c46891d6034e844720b1",
+      "file": "word_tfidf_logreg.joblib"
+    },
+    "word_svm": {
+      "name": "TF-IDF слов + SVM",
+      "kind": "classical",
+      "run": "text_only_v4_classical_s42",
+      "weights_sha256": "28b028a52a87baba72a0f7010468f880abd26f0ed3ebd1db86e8eaf81dead25c",
+      "file": "word_tfidf_linear_svc.joblib"
+    },
+    "char_svm": {
+      "name": "TF-IDF символов + SVM",
+      "kind": "classical",
+      "run": "text_only_v4_classical_s42",
+      "weights_sha256": "64095a44e6ebe7443373d9afbf9cb0d36a0df809b0e5b8356c71216f1eca973c",
+      "file": "char_tfidf_linear_svc.joblib"
+    }
+  },
+  "selection": {
+    "family": "kaz_roberta_last",
+    "representative_seed": 42,
+    "criterion": "Highest mean validation Macro-F1 across all three seeds; seed 42 fixed in advance for deployment, never best test seed."
+  },
+  "experiment_plan_sha256": "44abd006f0b42db74f63d6b52c4e3569fac90a972626cbcb3c2a6f194fa5d773",
+  "summary_sha256": "cb198d4222f11799a995de88737767bb781c27d5d389234fbb1b0826a6a0e0cc"
+}

@@ -1,10 +1,10 @@
-"""Train fixed classical baselines on ONE versioned two/three-class manifest."""
+"""Train fixed classical baselines on one shared versioned manifest."""
 from __future__ import annotations
 
 import argparse
 import time
 from pathlib import Path
-from kazstyle.settings import project_path
+from kazstyle.settings import project_path, require_new_run
 
 import joblib
 import numpy as np
@@ -15,7 +15,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
 
 from kazstyle.data.corpus import load_manifest, write_json
-from kazstyle.evaluation.reports import metrics, provenance, render_report, save_predictions
+from kazstyle.evaluation.reports import metrics, save_provenance, render_report, save_predictions
 
 
 def model_specs(seed=42):
@@ -33,8 +33,7 @@ def model_specs(seed=42):
 
 
 def train(dataset, out, seed=42):
-    if out.exists():
-        raise FileExistsError(f'Refusing to overwrite run: {out}')
+    require_new_run(out)
     frame,config = load_manifest(dataset)
     train_set = frame[frame.split=='train']
     validation = frame[frame.split=='validation']
@@ -45,7 +44,7 @@ def train(dataset, out, seed=42):
               for name,pipe in specs.items()}
     write_json(out/'protocol.json',{'models':params,'selection':'all configurations fixed before test',
                                    'seed':seed,'dataset_config':config})
-    write_json(out/'provenance.json',provenance(dataset,{'seed':seed}))
+    save_provenance(out,dataset,{'seed':seed})
     results = {}
     for name,pipe in specs.items():
         start = time.perf_counter()

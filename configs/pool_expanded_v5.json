@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "purpose": "provisional_development_pool",
+  "seed": 42,
+  "max_per_style": 1000,
+  "inputs": [
+    {
+      "path": "data/cleaned/reviewed_v3/candidates.jsonl",
+      "sha256": "fc1e95d7ee099ab06d2631282671f48c4c3a9c5c52c668652753d5b250c56af6"
+    },
+    {
+      "path": "data/external/journals_20261006/candidates.jsonl",
+      "sha256": "f64ccfa462c549b0a0710c3d27481f860748eea5fc3fcee0c6d1c950861a9336"
+    },
+    {
+      "path": "data/cleaned/prose_extended_attributed_20261006/candidates.jsonl",
+      "sha256": "99496c2c76b2bcf7a2fe7cec74b00b755b52f1b36ca9b25fc1b792d12ef0a566"
+    },
+    {
+      "path": "data/cleaned/forum_reviewed_20261006/candidates.jsonl",
+      "sha256": "86279934bfe5239ebcbe1188516dbac98396e40a70ec54114787da1d78727a01"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_reviewed_20261006/candidates.jsonl",
+      "sha256": "0d57bda8ad1774ddfb3973c9a909621e96eff7b22ab230ec20abb2c001252f53"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_extra_reviewed_20261006/candidates.jsonl",
+      "sha256": "b7ce484ec115f96e6ba4f17f1080063b9e9c4a33fac25938da47adb85bd18d86"
+    },
+    {
+      "path": "data/cleaned/business_reviewed_20261006/candidates.jsonl",
+      "sha256": "4a1ba97f602874cb90d41ea06b0484a70276ed3f2f6b28b26f156f0d13a5d047"
+    }
+  ],
+  "exclusions": [
+    {
+      "doc_id": "b8a920a9f8ed3ea79604c2ba",
+      "text_sha256": "40f340a1b30d78e348ff2858f2a2a542c9d883be734a1d15d3fef9e3005bc3e7",
+      "reason": "Литературная критика о рассказе, а не сам рассказ; видно из заголовка и начала/конца."
+    },
+    {
+      "doc_id": "0fd042e42e623623bd665de1",
+      "text_sha256": "ea18868a73ff915668f53efb10f785c24399c69ba95743ef7bd09dc44980be09",
+      "reason": "Очерк о писателе и оценка его творчества, а не художественная проза."
+    },
+    {
+      "doc_id": "3ffc0c10b6c3d498347e1485",
+      "text_sha256": "55d272bef1a21cc7e208963159b35dd9690d9da3688f8eb1d19a6aa6a1ab0564",
+      "reason": "Литературоведческое обсуждение эпопеи и отчёт о мероприятии; неоднородная публикация."
+    },
+    {
+      "doc_id": "2c3e2b9e6226977f8ee563df",
+      "text_sha256": "e92ecfd05ad101b403bfe27ca2968f0c9be648d1df62fc51e74fed62e8ee501d",
+      "reason": "Повтор публикации произведения Гүлсараның махаббаты; оставить doc_id 79e0fbd74db7d30f4f38a68a. Совпадение подтверждено просмотром и shingle-аудитом."
+    }
+  ],
+  "limitations": [
+    "Source/category and assistant-screened labels are provisional, not human gold.",
+    "Old development texts are reused; a new split is not an independent final test.",
+    "New author/work grouping remains incomplete when identities or serial publications are unknown.",
+    "University AYU forms are reserved separately and excluded.",
+    "Future training comparison requires a frozen manifest and a predeclared plan."
+  ]
+}

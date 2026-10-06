@@ -27,7 +27,7 @@ class HttpTests(unittest.TestCase):
             with urlopen(request, timeout=30) as response:
                 result = json.load(response)
             self.assertEqual(result['results'][0]['model'], 'logreg')
-            self.assertIn(result['results'][0]['style'], ['Formal', 'Publicist', 'Artistic'])
+            self.assertIn(result['results'][0]['style'], ['Formal', 'Publicist', 'Artistic', 'Scientific', 'Colloquial'])
         finally:
             server.shutdown()
             server.server_close()

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Независимая разметка казахских текстов</title>
+<style>
+*{box-sizing:border-box}body{font:17px/1.55 system-ui,sans-serif;background:#eef3f7;color:#1d3042;margin:0}main{max-width:1020px;margin:24px auto;padding:28px;background:white;border-radius:12px}h1{font-size:28px;line-height:1.3}button,input,select,textarea{font:inherit}button{padding:10px 16px;border:1px solid #9badbc;border-radius:7px;background:#f5f8fa;cursor:pointer}button.primary{background:#146f64;color:white;border-color:#146f64}button:disabled{opacity:.5;cursor:default}input[type=text],textarea{padding:10px;border:1px solid #9badbc;border-radius:6px;width:100%}label{display:block}small,.hint{color:#566878}.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.row>*{flex:1}#text{white-space:pre-wrap;background:#f4f8fb;padding:24px;border-left:4px solid #146f64;line-height:1.8;overflow-wrap:anywhere}#choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}#choices label{padding:10px;border:1px solid #c9d4dd;border-radius:7px;cursor:pointer}#choices label:has(input:checked){background:#e5f3ef;border-color:#146f64}#choices input{margin-right:8px}progress{width:100%;height:12px}details{margin:20px 0;padding:15px;border:1px solid #ccd7e0;border-radius:7px}li{margin:9px 0}#status{min-height:26px;color:#894318}#position{font-weight:600}footer{margin-top:28px;padding-top:18px;border-top:1px solid #d1dce4}.check{margin:16px 0}#jump{max-width:120px}textarea{resize:vertical}a{color:#16629b}@media(max-width:650px){main{margin:0;padding:16px}#choices{grid-template-columns:1fr}.row{align-items:stretch}}
+</style></head><body><main>
+<h1>Разметка функционального стиля</h1>
+<p>Оцените показанный казахский текст. Источник и предварительная метка скрыты. Не смотрите ответы моделей и другого разметчика. Оценка относится только к показанному фрагменту.</p>
+<details><summary><strong>Инструкция и границы стилей</strong></summary>
+<p>Сначала определите, что делает автор: устанавливает правило, объясняет исследование, сообщает общественно значимую новость, создаёт художественный образ или обращается к собеседнику. Тема текста сама по себе не определяет стиль.</p>
+<ul>
+<li><strong>Официально-деловой:</strong> нормативный акт, распоряжение, договор, заявление, деловое письмо. Цель — закрепить права, обязанности, решение или официальный запрос. Дата и фамилия не являются достаточным основанием. Новость о приказе может быть публицистической.</li>
+<li><strong>Научный:</strong> систематическое объяснение понятий, методов, доказательств или результатов. Сюда включается учебно-научное объяснение. Новость об открытии или интервью с учёным автоматически сюда не относится.</li>
+<li><strong>Публицистический:</strong> освещение общественных событий, новостное сообщение, общественно значимая аргументация, редакционная оценка. Может содержать цитаты и научные термины. Личная переписка не становится публицистикой только из-за обсуждения общественной темы.</li>
+<li><strong>Художественный:</strong> литературное повествование, поэзия, сказка, авторское создание образов и персонажей. Рецензия и пересказ содержания книги не обязательно художественные. Диалог персонажей оценивайте с учётом показанного повествовательного контекста.</li>
+<li><strong>Разговорный:</strong> непосредственное неофициальное общение, личный вопрос или ответ, бытовое обсуждение. Может быть длинным, грамотным и без сленга. Пост в Telegram или на форуме не гарантирует эту метку: там бывают новости и реклама.</li>
+</ul>
+<p>Если один стиль явно определяет цель текста, выбирайте его, даже при наличии небольшой цитаты другого стиля. Если сопоставимые части выполняют разные функции и преобладающий стиль установить нельзя, выбирайте «Смешанный». Если контекста мало или граница неразрешима по данному фрагменту — «Недостаточно контекста» и пояснение. Не угадывайте по отдельному слову.</p>
+<p>Русские заимствования и отдельные русские слова не исключают казахский текст. «Не казахский» означает, что казахский не является основным языком связного содержания; при сомнении оставьте пояснение. «Мусор» — меню, контактный список, обрывки таблиц, повреждённая кодировка, бессвязный набор. Не относите опечатки в обычном сообщении к мусору.</p>
+<p>Сохраняйте исходную орфографию. Причина обязательна для четырёх вариантов вне пяти стилей; для трудных стилевых решений комментарий также полезен. После независимой работы расхождения будут разбираться отдельно. Не пытайтесь заранее согласовать ответы.</p>
+</details>
+<div class="row"><label>Ваше имя или постоянный код разметчика<input id="reviewer" type="text" autocomplete="off" placeholder="Например, R01"></label><label>Опыт / владение казахским языком <small>(по желанию)</small><input id="expertise" type="text" autocomplete="off"></label></div>
+<p id="progressText"></p><progress id="progress" max="1" value="0"></progress>
+<div class="row"><p id="position"></p><label>Перейти к № <input id="jump" type="number" min="1" value="1"></label></div>
+<article id="text" lang="kk"></article><div id="choices"></div>
+<label>Почему выбрана эта метка / в чём сомнение<textarea id="reason" rows="3"></textarea></label>
+<p class="hint">Ответ сохраняется в этом браузере, если доступно локальное хранилище. Регулярно скачивайте JSON: это надёжная копия для передачи и продолжения работы.</p>
+<div class="row"><button id="prev">← Назад</button><button id="next">Далее →</button><button id="unanswered">Следующий без ответа</button></div>
+<footer>
+<label class="check"><input id="independent" type="checkbox"> Я самостоятельно прочитал(а) тексты и поставил(а) метки, не используя ответы модели или другого разметчика.</label>
+<div class="row"><button id="download" class="primary">Скачать ответы / черновик JSON</button><label>Продолжить из JSON<input id="restore" type="file" accept=".json,application/json"></label></div>
+<p id="status" role="status" aria-live="polite"></p>
+<small>Файл работает локально и не отправляет тексты или ответы в интернет. Частичный черновик можно сохранить; расчёт согласия требует полного набора ответов двух разных разметчиков.</small>
+</footer></main>
+<script type="application/json" id="packet">__PACKET_JSON__</script>
+<script>
+'use strict';
+const packet=JSON.parse(document.getElementById('packet').textContent);
+const $=id=>document.getElementById(id), key='kazstyle-annotation-'+packet.packet_sha256+'-'+packet.slot;
+const items=packet.slot==='B'?[...packet.items].reverse():packet.items;
+let index=0, answers={};
+function note(message){$('status').textContent=message;}
+function current(){return items[index];}
+function snapshot(){return {schema_version:1,packet_sha256:packet.packet_sha256,reviewer:$('reviewer').value.trim(),expertise:$('expertise').value.trim(),independent_review:$('independent').checked,complete:packet.items.every(r=>Boolean(answers[r.id]?.label)),decisions:packet.items.filter(r=>answers[r.id]?.label).map(r=>({id:r.id,text_sha256:r.text_sha256,label:answers[r.id].label,reason:answers[r.id].reason||''}))};}
+function store(){try{localStorage.setItem(key,JSON.stringify(snapshot()));}catch(_){note('Браузер не сохранил прогресс. Скачайте JSON перед закрытием.');}}
+function updateProgress(){const n=items.filter(r=>Boolean(answers[r.id]?.label)).length;$('progressText').textContent='Ответов: '+n+' из '+items.length+' · форма '+packet.slot;$('progress').max=items.length;$('progress').value=n;}
+function render(){const row=current(), decision=answers[row.id]||{};$('text').textContent=row.text;$('position').textContent='Текст '+(index+1)+' из '+items.length;$('jump').max=items.length;$('jump').value=index+1;$('prev').disabled=index===0;$('next').disabled=index===items.length-1;$('reason').value=decision.reason||'';$('choices').replaceChildren();
+for(const [value,label] of Object.entries(packet.labels)){const wrapper=document.createElement('label'),radio=document.createElement('input');radio.type='radio';radio.name='style';radio.value=value;radio.checked=decision.label===value;radio.addEventListener('change',()=>{answers[row.id]={...(answers[row.id]||{}),label:value};store();updateProgress();});wrapper.append(radio,document.createTextNode(label));$('choices').append(wrapper);}updateProgress();}
+function restore(data){if(data.schema_version!==1||data.packet_sha256!==packet.packet_sha256)throw Error('Это ответы для другого пакета.');const fresh={},seen=new Set(),lookup=new Map(items.map(r=>[r.id,r]));if(!Array.isArray(data.decisions))throw Error('Неверный формат ответов.');for(const r of data.decisions){if(seen.has(r.id)||!lookup.has(r.id)||lookup.get(r.id).text_sha256!==r.text_sha256||!Object.hasOwn(packet.labels,r.label))throw Error('Некорректный ID, текст или метка.');seen.add(r.id);fresh[r.id]={label:r.label,reason:String(r.reason||'')};}answers=fresh;$('reviewer').value=data.reviewer||'';$('expertise').value=data.expertise||'';$('independent').checked=data.independent_review===true;}
+$('reason').addEventListener('input',()=>{answers[current().id]={...(answers[current().id]||{}),reason:$('reason').value};store();});
+for(const id of ['reviewer','expertise','independent'])$(id).addEventListener('change',store);
+$('prev').onclick=()=>{index=Math.max(0,index-1);render();};$('next').onclick=()=>{index=Math.min(items.length-1,index+1);render();};
+$('jump').onchange=()=>{const n=Number($('jump').value);if(Number.isInteger(n)&&n>=1&&n<=items.length){index=n-1;render();}};
+$('unanswered').onclick=()=>{const n=items.findIndex((_,i)=>!answers[items[(index+1+i)%items.length].id]?.label);if(n<0){note('Все тексты размечены. Проверьте пояснения и скачайте ответы.');return;}index=(index+1+n)%items.length;render();};
+$('download').onclick=()=>{const data=snapshot();if(!data.reviewer){note('Укажите имя или постоянный код разметчика.');return;}const special=new Set(['mixed','insufficient','non_kazakh','noise']);const missing=data.decisions.find(r=>special.has(r.label)&&!r.reason.trim());if(missing){index=items.findIndex(r=>r.id===missing.id);render();note('Для этого решения нужно пояснение.');return;}if(data.complete&&!data.independent_review){note('Подтвердите самостоятельную разметку, если выполняли её самостоятельно.');return;}const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='review_'+packet.slot+'_'+data.reviewer.replace(/[^\p{L}\p{N}_-]/gu,'_')+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);note(data.complete?'Полный набор ответов сохранён в файл.':'Черновик сохранён. Остались тексты без ответа.');};
+$('restore').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;restore(JSON.parse(await file.text()));store();render();note('Ответы восстановлены.');}catch(error){note(error.message);}event.target.value='';};
+try{const saved=localStorage.getItem(key);if(saved)restore(JSON.parse(saved));}catch(_){note('Локальный прогресс недоступен. Можно восстановить ответы из JSON.');}render();
+</script></body></html>

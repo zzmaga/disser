@@ -1,0 +1,11 @@
+{
+  "dataset": "data/processed/text_only_v3",
+  "default_model": "roberta",
+  "models": {
+    "roberta": {"name": "Kaz-RoBERTa", "kind": "transformer", "run": "text_only_v3_roberta_last"},
+    "roberta_concat4": {"name": "Kaz-RoBERTa · 4 слоя", "kind": "transformer", "run": "text_only_v3_roberta_concat4"},
+    "logreg": {"name": "TF-IDF + Logistic Regression", "kind": "classical", "run": "text_only_v3_classical", "file": "word_tfidf_logreg.joblib"},
+    "word_svm": {"name": "TF-IDF слов + SVM", "kind": "classical", "run": "text_only_v3_classical", "file": "word_tfidf_linear_svc.joblib"},
+    "char_svm": {"name": "TF-IDF символов + SVM", "kind": "classical", "run": "text_only_v3_classical", "file": "char_tfidf_linear_svc.joblib"}
+  }
+}

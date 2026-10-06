@@ -22,7 +22,7 @@ def compare(dataset,runs,out):
     out.mkdir(parents=True)
     write_json(out/'results.json',results)
     write_json(out/'sources.json',{'runs':[str(p) for p in runs],'manifest_sha256':config['manifest_sha256']})
-    render_report(out,frame,config,results,title='Сравнение моделей на трёх стилях')
+    render_report(out,frame,config,results,title=f"Сравнение моделей: {len(config['styles'])} стилей")
 
 
 if __name__=='__main__':

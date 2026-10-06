@@ -1,0 +1,35 @@
+{
+  "dataset": "data/processed/train_length_ablation_v1",
+  "default_model": "roberta",
+  "models": {
+    "roberta": {
+      "name": "Kaz-RoBERTa",
+      "kind": "transformer",
+      "run": "train_length_ablation_v1_kaz_roberta_last_s42",
+      "weights_sha256": "d7a355d2123a737e92e53b2d2a5fda0c526550e66d4a99281bc7c0822c690a8e"
+    },
+    "logreg": {
+      "name": "TF-IDF + Logistic Regression",
+      "kind": "classical",
+      "run": "train_length_ablation_v1_classical_s42",
+      "weights_sha256": "3ffb9e8a6ac78e4edced4274ea5ed5af0e009a27babaf5602d525f3d6cff5856",
+      "file": "word_tfidf_logreg.joblib"
+    },
+    "word_svm": {
+      "name": "TF-IDF слов + SVM",
+      "kind": "classical",
+      "run": "train_length_ablation_v1_classical_s42",
+      "weights_sha256": "e2f0d1ff3ada1fcd92a2f17646305527056911aefbb43438e6576b4803e99dea",
+      "file": "word_tfidf_linear_svc.joblib"
+    },
+    "char_svm": {
+      "name": "TF-IDF символов + SVM",
+      "kind": "classical",
+      "run": "train_length_ablation_v1_classical_s42",
+      "weights_sha256": "7ccf59a2ad8aec9ddd72d628432edd4e5ce2198c0b363f4b62f2ee1b91b602aa",
+      "file": "char_tfidf_linear_svc.joblib"
+    }
+  },
+  "purpose": "Post-hoc controlled development ablation only; not approved for stable deployment",
+  "recipe_sha256": "fa963b8405908c171e328c65da62e07bef05a3d17c85fb0ebd62091cbe0a86e7"
+}

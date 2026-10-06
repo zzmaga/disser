@@ -1,0 +1,56 @@
+{
+  "dataset": "data/processed/expanded_v6_shared",
+  "default_model": "roberta",
+  "models": {
+    "roberta": {
+      "name": "Kaz-RoBERTa",
+      "kind": "transformer",
+      "run": "expanded_v6_kaz_roberta_last_s42",
+      "weights_sha256": "a283220c07476beef85d1ed21aee1edb51190fa00e30384702eeaf146629cab6"
+    },
+    "roberta_concat4": {
+      "name": "Kaz-RoBERTa · 4 слоя",
+      "kind": "transformer",
+      "run": "expanded_v6_kaz_roberta_concat4_s42",
+      "weights_sha256": "9a95e1a201c0600a0804aabac49fc643014e224ff188d4915b768df82ecbda2e"
+    },
+    "mbert": {
+      "name": "mBERT",
+      "kind": "transformer",
+      "run": "expanded_v6_mbert_last_s42",
+      "weights_sha256": "4aebcbdafd3c4c3c3b68f4ef93ecddef5d56028eed987d6c784a381947330bc5"
+    },
+    "logreg": {
+      "name": "TF-IDF + Logistic Regression",
+      "kind": "classical",
+      "run": "expanded_v6_classical_s42",
+      "weights_sha256": "9acbd95d8fd3cf98bbd4c023e9141838a03d9d10671bbed5be9557e0e2e01ee1",
+      "file": "word_tfidf_logreg.joblib"
+    },
+    "word_svm": {
+      "name": "TF-IDF слов + SVM",
+      "kind": "classical",
+      "run": "expanded_v6_classical_s42",
+      "weights_sha256": "e8214e2a6730d7244d166f53075250d39dac671720a0037078898a438cd8c42f",
+      "file": "word_tfidf_linear_svc.joblib"
+    },
+    "char_svm": {
+      "name": "TF-IDF символов + SVM",
+      "kind": "classical",
+      "run": "expanded_v6_classical_s42",
+      "weights_sha256": "ee6851fa76d5b0b94d6fbd0c19810987419f422ad4faa3889e4e5fb6073b7d23",
+      "file": "char_tfidf_linear_svc.joblib"
+    }
+  },
+  "selection": {
+    "family": "kaz_roberta_last",
+    "representative_seed": 42,
+    "criterion": "Highest mean validation Macro-F1 across all three seeds; seed 42 fixed in advance for deployment, never best test seed."
+  },
+  "experiment_plan_sha256": "e7bb3e572f67b4dc970057e7073256ff491d04afd3a3c194abf29465528b8a8e",
+  "summary_sha256": "3628a7b1eed63fd84391422f10720e9db250918c6316427d3b33b94b17f78723",
+  "evidence": {
+    "suite": "reports/expanded_v6/suite",
+    "summary": "reports/expanded_v6/repeated"
+  }
+}

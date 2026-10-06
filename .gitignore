@@ -1,5 +1,6 @@
 venv/
 .venv/
+.venv-gpu/
 /data/
 /artifacts/
 __pycache__/
@@ -8,6 +9,9 @@ tmp_*
 /models/
 /archive/*
 !/archive/legacy_collectors_20260925/
+!/archive/README.md
+!/archive/docs/
+!/archive/reorganization_20261006/
 /reports/
 .pytest_cache/
 *.ftz

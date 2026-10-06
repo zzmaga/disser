@@ -37,7 +37,8 @@ def handler_for(service):
             if path == '/api/health':
                 return self.reply(200, {'status': 'ready'})
             if path == '/api/models':
-                return self.reply(200, {'models': service.available_models(), 'default': 'roberta'})
+                return self.reply(200, {'models': service.available_models(), 'default': service.default_model,
+                                       'styles':service.available_styles(),'dataset':service.dataset.name})
             if path in STATIC:
                 filename, kind = STATIC[path]
                 return self.reply(200, (WEB / filename).read_bytes(), kind)
@@ -62,7 +63,7 @@ def handler_for(service):
                     raise ValueError('Некорректный запрос.')
                 if not isinstance(payload.get('compare', False), bool):
                     raise ValueError('Некорректный режим сравнения.')
-                result = service.classify(payload.get('text'), payload.get('model', 'roberta'), payload.get('compare', False))
+                result = service.classify(payload.get('text'), payload.get('model'), payload.get('compare', False))
                 return self.reply(200, result)
             except (ValueError, UnicodeDecodeError) as error:
                 return self.reply(400, {'error': str(error)})
@@ -75,8 +76,9 @@ def handler_for(service):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
+    parser.add_argument('--deployment', help='Optional model registry JSON')
     args = parser.parse_args()
-    service = InferenceService()
+    service = InferenceService(deployment=args.deployment)
     server = ThreadingHTTPServer(('127.0.0.1', args.port), handler_for(service))
     print(f'Website ready: http://127.0.0.1:{args.port}', flush=True)
     try:

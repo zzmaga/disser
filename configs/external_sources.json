@@ -1,0 +1,18 @@
+{
+  "news": {
+    "repo": "kurumikz/kaz-news-corpus",
+    "revision": "efcfa2e4cb0a01c9feaf455ee91db040c162b380",
+    "filename": "kaz_news_corpus_clean.jsonl",
+    "license": "odc-by",
+    "credit": "kurumikz",
+    "purpose": "News from multiple publishers; source-derived Publicist candidates"
+  },
+  "chat": {
+    "repo": "kurumikz/telegram-corpus-russian-kazakh",
+    "revision": "87fc5537b54c2133981bb33c7d3b6279145736bb",
+    "filename": "telegram_data.txt",
+    "license": "cc-by-nc-sa-4.0",
+    "credit": "Kurumikz",
+    "purpose": "Unannotated informal message candidates; no conversation IDs; research use only"
+  }
+}

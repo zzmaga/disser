@@ -1,0 +1,97 @@
+{
+  "verified_on": "2026-10-06",
+  "scope": "Primary publisher pages, abstracts and official resource descriptions checked. This is a verified reading map, not a claim of full-text review of every paper.",
+  "sources": [
+    {
+      "id": "kubesova2020",
+      "title": "FUNCTIONAL STYLES OF KAZAKH LANGUAGE",
+      "authors": ["М. E. Kubesova"],
+      "year": 2020,
+      "venue": "Global Trends and Values in Education, 1(1), 126–134",
+      "url": "https://journals.sdu.edu.kz/index.php/gtve/article/view/308",
+      "checked": "publisher metadata and abstract",
+      "supported_claim_ru": "Работа рассматривает определения и классификацию функциональных стилей в казахском языкознании, включая разговорную, официальную, научную и публицистическую речь.",
+      "use_ru": "Лингвистическая постановка задачи; не источник метрик классификаторов. Для подробных определений и цитат прочитать полный текст."
+    },
+    {
+      "id": "qazcorpus",
+      "title": "National Corpus of the Kazakh Language: Main Corpus description",
+      "authors": ["National Corpus of the Kazakh Language"],
+      "year": null,
+      "url": "https://qazcorpus.kz/header/belgileren.php",
+      "checked": "official corpus description",
+      "supported_claim_ru": "Описание основного корпуса выделяет художественный, научный, публицистический, официально-деловой и разговорный стили; тексты сопровождаются метаданными автора, источника, темы и стиля.",
+      "use_ru": "Обоснование пяти целевых классов и отдельного хранения метаданных. Наличие веб-поиска не означает разрешение на массовое скачивание; этот корпус в наши данные не импортирован."
+    },
+    {
+      "id": "fazylzhan2026",
+      "title": "Requirements for the representativeness of a corpus and their implementation in the National Corpus of the Kazakh Language",
+      "authors": ["А.М. Fazylzhan", "L.R. Koishygulova", "Zh.K. Omirbekova"],
+      "year": 2026,
+      "venue": "Bulletin of Karaganda University. Philology Series, 31(2(122)), 106–117",
+      "doi": "10.31489/2026phi2(122)/106-117",
+      "url": "https://philology-vestnik.buketov.edu.kz/philology-vestnik/article/view/1348",
+      "checked": "publisher metadata and abstract; publication date 2026-06-27",
+      "supported_claim_ru": "Репрезентативность связывается с разнообразием жанров и стилей, регистровым балансом, объёмом, точностью текстов и документированием; авторы отмечают потребность в современных коммуникационных материалах.",
+      "use_ru": "Объяснение, почему равное число строк по классам не заменяет жанровое разнообразие. Не переносить оценки национального корпуса на наш небольшой набор."
+    },
+    {
+      "id": "myntti2024",
+      "title": "Intersecting Register and Genre: Understanding the Contents of Web-Crawled Corpora",
+      "authors": ["Amanda Myntti", "Liina Repo", "Elian Freyermuth", "Antti Kanner", "Veronika Laippala", "Erik Henriksson"],
+      "year": 2024,
+      "venue": "NLP4DH, 386–397",
+      "doi": "10.18653/v1/2024.nlp4dh-1.38",
+      "url": "https://aclanthology.org/2024.nlp4dh-1.38/",
+      "checked": "ACL metadata and abstract",
+      "supported_claim_ru": "Исследование раздельно классифицирует регистры и жанры веб-текстов и показывает, что один регистр может пересекаться с несколькими тематическими жанрами.",
+      "use_ru": "Различать функциональный стиль, жанр и тему; метка раздела сайта — предварительный сигнал. Другая таксономия и другие данные: её F1 нельзя напрямую сравнивать с нашим."
+    },
+    {
+      "id": "sogaard2021",
+      "title": "We Need To Talk About Random Splits",
+      "authors": ["Anders Søgaard", "Sebastian Ebert", "Jasmijn Bastings", "Katja Filippova"],
+      "year": 2021,
+      "venue": "EACL, 1823–1832",
+      "doi": "10.18653/v1/2021.eacl-main.156",
+      "url": "https://aclanthology.org/2021.eacl-main.156/",
+      "checked": "ACL metadata and abstract",
+      "supported_claim_ru": "Авторы обсуждают оптимистичность случайных разбиений и рекомендуют несколько независимых тестовых наборов либо, при их отсутствии, диагностические разбиения со сдвигом распределения.",
+      "use_ru": "Обоснование source-holdout как дополнительной диагностики. Она не превращается в независимый финальный тест только благодаря другому разбиению."
+    },
+    {
+      "id": "ribeiro2020",
+      "title": "Beyond Accuracy: Behavioral Testing of NLP Models with CheckList",
+      "authors": ["Marco Tulio Ribeiro", "Tongshuang Wu", "Carlos Guestrin", "Sameer Singh"],
+      "year": 2020,
+      "venue": "ACL, 4902–4912",
+      "doi": "10.18653/v1/2020.acl-main.442",
+      "url": "https://aclanthology.org/2020.acl-main.442/",
+      "checked": "ACL metadata and abstract",
+      "supported_claim_ru": "CheckList предлагает поведенческие проверки NLP-систем, дополняющие общую метрику и выявляющие конкретные типы ошибок.",
+      "use_ru": "Методологическая связь с проверками замены имён и дат. В проекте реализованы собственные регрессионные проверки, а не воспроизведён полный CheckList."
+    },
+    {
+      "id": "lee2022",
+      "title": "Deduplicating Training Data Makes Language Models Better",
+      "authors": ["Katherine Lee", "Daphne Ippolito", "Andrew Nystrom", "Chiyuan Zhang", "Douglas Eck", "Chris Callison-Burch", "Nicholas Carlini"],
+      "year": 2022,
+      "venue": "ACL, 8424–8445",
+      "doi": "10.18653/v1/2022.acl-long.577",
+      "url": "https://aclanthology.org/2022.acl-long.577/",
+      "checked": "ACL metadata and abstract",
+      "supported_claim_ru": "Работа исследует близкие дубликаты и длинные повторяющиеся подстроки в корпусах языкового моделирования и методы их удаления.",
+      "use_ru": "Мотивация контроля частичных совпадений. Наше объединение общих фрагментов в одну часть — собственная консервативная процедура для классификации, не воспроизведение алгоритма статьи."
+    },
+    {
+      "id": "kazroberta_card",
+      "title": "kz-transformers/kaz-roberta-conversational: model card",
+      "authors": ["kz-transformers"],
+      "year": null,
+      "url": "https://huggingface.co/kz-transformers/kaz-roberta-conversational",
+      "checked": "official model card",
+      "supported_claim_ru": "Карточка описывает Kaz-RoBERTa как MLM-модель, предобученную на MDBKD и разговорных данных; это не готовый пятистилевой классификатор.",
+      "use_ru": "Точное название encoder и ограничение оценки: отсутствие пересечений с нашим train не доказывает отсутствие текста в предобучении. Ревизия весов фиксируется отдельно в экспериментальном плане."
+    }
+  ]
+}

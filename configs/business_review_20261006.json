@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "scope": "all_rows",
+  "reviewer_kind": "assistant",
+  "reviewer": "Codex assistant review; not expert annotation",
+  "input_sha256": "3886c7387eec4806f087fc1198ebdd4e2562b8f798a0e90909c2c60bf86c9a3e",
+  "classifier_predictions_used": false,
+  "decisions": [
+    {
+      "doc_id": "7c174d8e1e78cca45288df7d",
+      "text_sha256": "455ade7a502cc5126c6ca1ebafb73baa6295d57766586bc834e26a2f47f006d4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "7ad6a50008b36e05247f8915",
+      "text_sha256": "f7dfab22e8a1fa9c8524c8210fa5dd5196f70959b5521fa2fd5d99ce246f9e04",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "2874ea689ba059e561d1fb83",
+      "text_sha256": "87f80713349f3ea06d5a3afd2cb16ccc078ebe2c11c60c55d0ad9dbe0771f37c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "a6f3df62c2feb8f35d75d051",
+      "text_sha256": "2080075f971ba86c3d901e486406366432407face69421bcb91099f2c46d6559",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "50be3b38df76a56f7507d954",
+      "text_sha256": "8d1047c32c3c853e63bd0e737cef10c6517cd5d4576126b681d8139827e0b6f3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "3ec49906ed985b0ca422e9ff",
+      "text_sha256": "5bcd4f24fa0c811cb7828cc6c545bd2c39050648a4cfcbce6675544c5f8a72d7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "b36b6c16ca28d34f4f638ed0",
+      "text_sha256": "b000f60fc3c89b88c5c406ac8e33b211445332d07fb4525fafebe94484e44a21",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_applications"
+    },
+    {
+      "doc_id": "2b326c0236fc65571261c491",
+      "text_sha256": "df8694a535499ea6cca1814f97f9302ebc6b40d17f09ac70d94f29bfac1d1efe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "ebc6a10682ebebb199c571df",
+      "text_sha256": "dbdfd8ac08f922d5a68015b41a8f6934ea005d3ff706b0faaf0f0b0931d1771c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "2277547fdecb936c86db0e35",
+      "text_sha256": "bb4ef2f71378aabcf5b4206781b3863d5b3cefcd8317c61665d0e634a7f75ab4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "c9cac384d3be9b58b86577ca",
+      "text_sha256": "c7e607ec754a4d89f1f99cc4c7b32c3044cfeb164a294f7f63b34036c1da5376",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "42bbf999ca2bc2e78ad661dd",
+      "text_sha256": "934f67b45b0236f4c17e00f62ac00086f261d7d3b67190303ff5dc308e7ed187",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "46a9411e091cd57c70494441",
+      "text_sha256": "248a73beaec2b46f0d5fd12d586483a72ae0d1a18efa2e3191ebe93fb0b1aca6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "0832f3e826a106c3d3c0f66a",
+      "text_sha256": "dfb31deb1cb5f9983f88b2f157002db95cc9fccae9c85c46bd94f8e029baf24e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "1c34e8d70da05f12f257a692",
+      "text_sha256": "49e3b0442c21128f800e07850f92adb542e280456773f7b05a04987693afe50c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "0306cd470e3ec932ba73a397",
+      "text_sha256": "2af3b6d8fdf121841c2cf301c081c969fb00979c47f833f8c3066235a03be5fd",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "000438af071a81a31c23a0a6",
+      "text_sha256": "f2a87fd9cf538ea37cfb89508d90d1917e6a2d2dc3fd6ad67bbdfe5e52c8d036",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "ffaedbd9ac9bc942ce1ccdc5",
+      "text_sha256": "dfaf609a9559e37ffda1f731be0f66696489feb5bccb2e4c1ee26479fc0b3ec0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "d67c52398096f0c68fd68964",
+      "text_sha256": "83f568171a8a8e69f7ba5af8ae6e75e06220ed05e13d63c39927e6a5e2dfe30b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "ee2d748925115fc2b2825388",
+      "text_sha256": "7377b43239e6c72a20fa6c6cdcf3ca33343528d1c6be84191476d15b3ab52b7f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Типовой официальный документ с адресованием/распорядительной или просительной формулой; предварительно оставить. Заполнители сохранены без выдуманных имён и дат.",
+      "template_family_id": "resmihat_personnel_orders"
+    },
+    {
+      "doc_id": "1d9cd6c9d5a3a1c827b3583c",
+      "text_sha256": "91b78cd4cbe32930e083628173ff0865d114ce0587a836c583d649eeb8d2e5f1",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Двуязычный договор: русский перевод находится внутри выбранного казахского HTML-блока."
+    },
+    {
+      "doc_id": "37e37b6894b5c335ff8ac0d7",
+      "text_sha256": "caeb6fa49be516ffa2184aacae170ed3adb154d7feeb4563486fcc6b2b1970c9",
+      "keep": true,
+      "reviewed_extent": "head_middle_tail_preview",
+      "reason": "Начало, середина и окончание соответствуют форме договора. Полный текст не размечен; точный будущий фрагмент требует отдельной проверки."
+    },
+    {
+      "doc_id": "ff0d1f766dcd9db7fe79710a",
+      "text_sha256": "bcdd29ad59fe12b9310cbb6b7063bd5caf8bfa2130823e59b7de8ceb4b389f19",
+      "keep": true,
+      "reviewed_extent": "head_middle_tail_preview",
+      "reason": "Начало, середина и окончание соответствуют форме договора. Полный текст не размечен; точный будущий фрагмент требует отдельной проверки.",
+      "template_family_id": "resmihat_procurement_1301"
+    },
+    {
+      "doc_id": "04766a589a5685c4f4ca577d",
+      "text_sha256": "da681c01b6fc180379c04bf4bfb549098fb8ed4c90e94970715196a412fa5b57",
+      "keep": true,
+      "reviewed_extent": "head_middle_tail_preview",
+      "reason": "Начало, середина и окончание соответствуют форме договора. Полный текст не размечен; точный будущий фрагмент требует отдельной проверки.",
+      "template_family_id": "resmihat_procurement_1301"
+    },
+    {
+      "doc_id": "f4df1df71d259f147c9dad37",
+      "text_sha256": "01018aaf5278ac83fd6ea08ba22af8927b389dae7f8d20bf6cefe63083839af0",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        59,
+        294
+      ]
+    },
+    {
+      "doc_id": "b293f62401bea05bb3162387",
+      "text_sha256": "1032921346ffdc9e3e9ca6a5ee1d9d889bf8609b4a2acc37481c7dcb76a7e529",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        102,
+        304
+      ]
+    },
+    {
+      "doc_id": "cf2fcf76c9bb29e99f1ada23",
+      "text_sha256": "ffe693f5b372b6d935d6c1af074df0b6cdfcb44ad5dadbd51ea6bbad8fc36ea4",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        47,
+        223
+      ]
+    },
+    {
+      "doc_id": "e4996c088b3d7bb6a00ca6b6",
+      "text_sha256": "3c28ffdb65424e564b77e546128741731c6a1c31410b38df75df7e899e32db92",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        41,
+        440
+      ]
+    },
+    {
+      "doc_id": "fa8638cb2ff851a866b0d3ba",
+      "text_sha256": "631f73fc6177199d4ca050bf06e603330a337dd1236af83c5adf81614787eb03",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        121,
+        400
+      ]
+    },
+    {
+      "doc_id": "3c69205e0ae52a9af6168aa3",
+      "text_sha256": "cf6bbf14425c28b7cf02fb2f4150a07fd76a81f3aeea63db0fd205aed51101ff",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Структура пояснительной записки с инструкциями в скобках, а не самостоятельный текст документа."
+    },
+    {
+      "doc_id": "7bdcf29cf7ca32ccea37f57d",
+      "text_sha256": "326c8facdf13b849c6a167b827e0e6f3a8a1aa1afcb8c7a3dd18260f2e5d267d",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Двуязычное учебное объяснение жанра; это не сама объяснительная записка."
+    },
+    {
+      "doc_id": "0397eb2f437bb27106502e2f",
+      "text_sha256": "730bb2e9a4f692ff654833767017248cc3a029296187dd6f9ca9bcd99e96652d",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        20,
+        702
+      ]
+    },
+    {
+      "doc_id": "1485b3790bfb1a609cfc3162",
+      "text_sha256": "a1d479d551d72d73346c5a62dc5cb1cd5e194e93542c2e62b69c29bb6a76fc0c",
+      "keep": true,
+      "reviewed_extent": "selected_span",
+      "reason": "Оставлен первый самостоятельный казахский образец; перевод/другие образцы/учебная шапка вне выбранного непрерывного фрагмента.",
+      "text_span": [
+        0,
+        474
+      ]
+    },
+    {
+      "doc_id": "aff4e59765dbc4bc8baa007f",
+      "text_sha256": "8cc5b6342ecd14bece7f3642eb9440642aeca61631aef90ed4106252486feb1e",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Методическое описание телеграмм, а не текст конкретной телеграммы."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "text_only_v4_shared_three_seeds",
+  "dataset": "data/processed/text_only_v4_shared",
+  "manifest_sha256": "a42109bbc024bea934e1c5821c7d00c1b9ab150f81f19e3c6a1e9bcba9681c83",
+  "seeds": [42, 43, 44],
+  "epochs": 2,
+  "learning_rate": 0.00002,
+  "threads": 4,
+  "selection": "Best epoch by validation Macro-F1 within each run; report ALL seeds. No seed chosen by test.",
+  "test_status": "Existing development test, previously inspected; not a fresh independent final benchmark.",
+  "models": [
+    {"id": "mbert_last", "model_name": "google-bert/bert-base-multilingual-cased", "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8", "head": "last", "batch_size": 2, "gradient_accumulation": 4},
+    {"id": "kaz_roberta_last", "model_name": "kz-transformers/kaz-roberta-conversational", "head": "last", "batch_size": 8, "gradient_accumulation": 1},
+    {"id": "kaz_roberta_concat4", "model_name": "kz-transformers/kaz-roberta-conversational", "head": "concat4", "batch_size": 8, "gradient_accumulation": 1}
+  ]
+}

@@ -1,0 +1,1652 @@
+{
+  "schema_version": 1,
+  "input_sha256": "2c1b65e160ed0fff69617f9cef005ab9c0414d00cd5acff8727f259ed00b4757",
+  "reviewer": "assistant metadata review, not semantic annotation",
+  "decisions": [
+    {
+      "doc_id": "d305441e03b5ceed46d21dd6",
+      "text_sha256": "46540131992ea6f0f10b72660dcf46ffd2939aac3f989c250f094f2fb3057746",
+      "author_name": "Қанат Алтынбек",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Қанат АЛТЫНБЕК",
+      "remove_suffix": "Қанат АЛТЫНБЕК, Қазақстан Жазушылар одағының мүшесі, ҚР Ұлттық кітапханасының Ғалым хатшысы"
+    },
+    {
+      "doc_id": "7c3209d6a5b5df59ef6c9de6",
+      "text_sha256": "f297234a29557917a8ba0d56b0648e6e118d213378353681517d9b607c0cb56a",
+      "author_name": "Дінәш Нұрмұхамбетов",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Дінәш Нұрмұхамбетов",
+      "remove_suffix": "Дінәш Нұрмұхамбетов"
+    },
+    {
+      "doc_id": "29b51b8e635d408fd53f7b0e",
+      "text_sha256": "373d5e6a3442d4ff16da584004d35f455e226b1023b74963975ecd634dbfac87",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Ақкүрең Бақыт",
+      "remove_suffix": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "4dfe3858eabdf07e0894e936",
+      "text_sha256": "e2e7269c5c6419b2fb8a972e5cf532b76c412f7cc41435c410128e21d7173d45",
+      "author_name": "Бейбіт Бөжен",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Бейбіт Бөжен",
+      "remove_suffix": "Бейбіт Бөжен"
+    },
+    {
+      "doc_id": "97c8aa8333099e7f8696a8ac",
+      "text_sha256": "e16173c4f59bce3f7891f24d4c9bd5d8d75c1262f1ea8c6287a46500c03c006f",
+      "author_name": "Келіс Рахымжанов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Келіс Рахымжанов"
+    },
+    {
+      "doc_id": "c68008fdddaaa1a60f16cf00",
+      "text_sha256": "35971e5d8fd75d1af2e0c1366d88e5fa5d5bd97ec9b2e17165f360be1d0ee1fb",
+      "author_name": "Жәди Шәкен",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жәди Шәкен"
+    },
+    {
+      "doc_id": "820452a6c55465e88d9a0665",
+      "text_sha256": "39979c0760df40a7507b8524158df0a948fa3c34e409b47f7b0a1112c443a525",
+      "author_name": "Хусеин Рахми Гөрпынар",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Хусеин Рахми Гөрпынар",
+      "remove_suffix": "Түрік тілінен аударған: Маржан ЕРШУ"
+    },
+    {
+      "doc_id": "30e8172e911bef8295c3e587",
+      "text_sha256": "8417a00825e6cfdbec7dcf89d6f7a00771d6d8e1582a33750f9ee6aea89a96c8",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "dfccbfd4a589eab1195e0289",
+      "text_sha256": "72784c76fbf1401a15d95ec435227553ac6ce7872b017ce40f3d28b53ce55efb",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "13161fc96ebbacb32f9b2d54",
+      "text_sha256": "934afda2d3d8d5065289b7d62df4047189dc49c63da22da51106f2f0b4d9d1e9",
+      "author_name": "Жазира Қажықызы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жазира Қажықызы"
+    },
+    {
+      "doc_id": "72a2fbc89f76fc149e3aceb6",
+      "text_sha256": "cb5378da68bc7a079281307dd3ce8fa0b010962c891d4a92f57c4ed8dcf67fc3",
+      "author_name": "Бейбіт Нұрмұханов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт Нұрмұханов"
+    },
+    {
+      "doc_id": "5822c8cc8293af9c64811269",
+      "text_sha256": "885936675a3e88d3e7c5fdeb35a667d168207efa2ce7d509e178bdf60568899d",
+      "author_name": "Жақсыбек Шанышқылы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жақсыбек Шанышқылы"
+    },
+    {
+      "doc_id": "e9ff91c99b44e880ad002742",
+      "text_sha256": "49a485cebb0c3415818ebe9cc4badf6ec4ccc00d31eccd263fe8a73926054c29",
+      "author_name": "Қаусылхан Қасымханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қаусылхан Қасымханұлы"
+    },
+    {
+      "doc_id": "4113b1c384e7ae0cb3ec46cf",
+      "text_sha256": "d4e336e8271312e8e2fa15e9a7a92f13b86f4ffc4aab6f03b0be4138dc300e6d",
+      "author_name": "Махаббат Саидрахманова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Махаббат Саидрахманова"
+    },
+    {
+      "doc_id": "f624456f16f8417ca576ac9d",
+      "text_sha256": "3b931e39a14787abe5d465a73b08e8a7aef3b204e892a8e814e71ee2ed7b550c",
+      "author_name": "Айнаш Қасым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айнаш Қасым"
+    },
+    {
+      "doc_id": "0604e1cc48ca4bfdcd243a11",
+      "text_sha256": "67e49b6ccd168e1b4776f4b4509be703eff6cb8eec452e6c4915e79b2338a57d",
+      "author_name": "Ерлан Нұрланов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ерлан Нұрланов"
+    },
+    {
+      "doc_id": "fc29450f04fe92de39b2b221",
+      "text_sha256": "6f94d35cbe2d97dc6a94c358de18649ea7b0a400235db27b4f44670add3e9ac0",
+      "author_name": "Жақсыбек Шанышқылы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жақсыбек Шанышқылы"
+    },
+    {
+      "doc_id": "e1974be8b1a2d3e773a354ff",
+      "text_sha256": "cf7780888c1a045cd7e653c0716c45a39bb8f17ff64357ce22f4c8fffd0aa949",
+      "author_name": "Толымбек Әбдірайым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Толымбек Әбдірайым"
+    },
+    {
+      "doc_id": "e05154d563597f8c15676c36",
+      "text_sha256": "2c7eeb6d5828c14a4e800b1c0f450718bb542b523d840d85c3aa1ce8c7fca34a",
+      "author_name": "Бейбіт Нұрмұханов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт Нұрмұханов"
+    },
+    {
+      "doc_id": "dc85b6277459b8fa0868468b",
+      "text_sha256": "b241eb2b2af00ba308f1fbc76d1fbe36a8810db18b7ebfc53fea42470c4941c4",
+      "author_name": "Мия Алгожаева",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мия Алгожаева"
+    },
+    {
+      "doc_id": "f0accff0ee079b2d01378623",
+      "text_sha256": "848086d60bdd567213589510cbf833d969d4c970a8d757f9352888c49e79aab1",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "7a93a82fa1e35fcc4fe5dd94",
+      "text_sha256": "265895df658e65f6148255697646f57218574f4446c812f49c2578ec7a20bf2b",
+      "author_name": "Нұрасыл Зиядабек",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Зиядабек Нұрасыл",
+      "reason": "Одинаковые два компонента подписи в обратном порядке; консервативная группировка."
+    },
+    {
+      "doc_id": "bc13e82e4f2023f8f972cfee",
+      "text_sha256": "4f64878be50edcf711e423edef655a46dca8de29ffaef19685727c111efc9e20",
+      "author_name": "Қамар Қарасаева",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қамар Қарасаева"
+    },
+    {
+      "doc_id": "6d3781723a371aec2914d05b",
+      "text_sha256": "97fba0855c3c35043fe37cd828dcfca38959dcd1f8afb58ec30f70081b8b1615",
+      "author_name": "Назар Эшанқұл",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Назар Эшанқұл",
+      "remove_suffix": "өзбек тілінен аударған Нұрғиса Камалбек"
+    },
+    {
+      "doc_id": "0bd0379059e3981fb2e3bec5",
+      "text_sha256": "723838e11401ce86c909dcfb741ba77c62e7b19f28fb8c1e67cd376fe74d39bc",
+      "author_name": "Жанай Амантурлин",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Жанай АМАНТУРЛИН",
+      "remove_suffix": "Жанай АМАНТУРЛИН, ҚР Ақпарат саласының үздігі"
+    },
+    {
+      "doc_id": "c2449144dc71f64a2cdada90",
+      "text_sha256": "dd870b49839bab20350914bfaed4af0aaa43285a7d524360a183bc2b92b4ca38",
+      "author_name": "Жанасыл Серікболұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жанасыл Серікболұлы"
+    },
+    {
+      "doc_id": "548afcd85e8d9a16d62535a2",
+      "text_sha256": "dcd391c5448835a45449db8a86f0f1819df31cd2ae05be15ff399b264259bf93",
+      "author_name": "Ақлима Исмаил",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақлима Исмаил"
+    },
+    {
+      "doc_id": "3bfd3b423e56276cd18c22d9",
+      "text_sha256": "4aa332460536af2795380f038d92578149a3e90693d63f37f74353221ba98465",
+      "author_name": "Адал Шәріп",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Адал Шәріп"
+    },
+    {
+      "doc_id": "40450fb85f38561a9cb40894",
+      "text_sha256": "17e6c85c747c52e0c3ab51f0663291d7d6b5183620890e4268e038c966aad2e6",
+      "author_name": "Нұрлан Қалқа",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрлан Қалқа"
+    },
+    {
+      "doc_id": "33bdc2cb251556fa56e94561",
+      "text_sha256": "87ae2ac40d6a98243ac7b7a06fc7307daaf1e62b3bb350c59a764318a99394e1",
+      "author_name": "Әдебиет Белгібайұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Әдебиет Белгібайұлы"
+    },
+    {
+      "doc_id": "7406b543781d139341ea4e8a",
+      "text_sha256": "f90117a4d79362bb7cb8d4e2ca67547abf6a01e0591cd01b3625a31087c7d09b",
+      "author_name": "Құлтөлеу Мұқаш",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Құлтөлеу Мұқаш"
+    },
+    {
+      "doc_id": "f589aabc8f57b75b9d26adc8",
+      "text_sha256": "2a257dfc5a98778247ec56bdaaaf10bd512e896eca93ba10b7ef7b070815d727",
+      "author_name": "Ардақ Үсейінова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ардақ Үсейінова"
+    },
+    {
+      "doc_id": "ea630c979824196509de3924",
+      "text_sha256": "3d587fb21f95d54fdcf7a459d7a693dc4db6bc30bbf8b768d44b2feb01793497",
+      "author_name": "Ольга Токарчук",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Ольга Токарчук",
+      "remove_prefix": "(Әңгіме) Авторы: Ольга Токарчук (Нобель сыйлығының иегері) Ағылшын тілінен аударған Дүйсенәлі Әлімақын "
+    },
+    {
+      "doc_id": "be01b8fff6a4989ddaab75f2",
+      "text_sha256": "faa7370e6c10d8092835cf9c47b04c03d6a69f302768b14456574875b518cc04",
+      "author_name": "Алаш Кеңшілікұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Алаш Кеңшілікұлы"
+    },
+    {
+      "doc_id": "c53b7c646521244622195e2e",
+      "text_sha256": "31315fab7bc2a961eea79d1d9c130e759839a5063b57b7ce6ed22e4b07b49a02",
+      "author_name": "Төкен Әлжантегі",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Төкен Әлжантегі"
+    },
+    {
+      "doc_id": "7cf7c47ccbfc74403a17c43a",
+      "text_sha256": "27cd988139a2b63876c90c06b8d17012ca9b050a0d58e44d165637a561fbacd0",
+      "author_name": "Фариза Әбдікерімова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Фариза Әбдікерімова"
+    },
+    {
+      "doc_id": "549160e2990e90499856c2ab",
+      "text_sha256": "50b05ecccc14c11e2b69582ccc7ec1cd7daa4ca6ad42fc67f110ab71ad1c1c17",
+      "author_name": "Үміт Битенова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Үміт Битенова"
+    },
+    {
+      "doc_id": "29bc1cc5af115a427554c90b",
+      "text_sha256": "33cc8127cca50a5e45a0fdf160443f8ad30ca3d086b1797d037ac131aba4b273",
+      "author_name": "Нағашыбек Қапалбекұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нағашыбек Қапалбекұлы"
+    },
+    {
+      "doc_id": "cd1eafd6df28a2e7cce14671",
+      "text_sha256": "c4061537efb31a0b1432d36cc016eb0500a701ab9331bfb1dd03b2accb109258",
+      "author_name": "Ілияс Башарұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ілияс Башарұлы"
+    },
+    {
+      "doc_id": "708ca71973c818599b52a867",
+      "text_sha256": "c14e86adb1624a6fa0b8c697c7b2f0f81990b3e77e8ccd4a1373d5fbe967c005",
+      "author_name": "Айнаш Қасым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айнаш Қасым"
+    },
+    {
+      "doc_id": "515a3004f6c8b0ad49a602a4",
+      "text_sha256": "4d3aba595b447ed7aa404f87586c15386ed7f87b2b88754fe2c269394190bc39",
+      "author_name": "Ділдәр Мамырбаева",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ділдәр Мамырбаева"
+    },
+    {
+      "doc_id": "2b4b5ef294900fb664d8eb8f",
+      "text_sha256": "f9b2ea1169d1b429ba65b2c4bc47c3e682de22aa0e5e897d8db2a965519d3f9b",
+      "author_name": "Роза Мұқанова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Роза Мұқанова"
+    },
+    {
+      "doc_id": "b8a920a9f8ed3ea79604c2ba",
+      "text_sha256": "2b46c124cb00c0bb36552f0315835b96c20e40fe94330ee3a39fa3b60f1337ac",
+      "author_name": "Оразбек Сапарханұлы",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Оразбек Сапарханұлы",
+      "remove_suffix": "Оразбек Сапарханұлы"
+    },
+    {
+      "doc_id": "3b65bcf19b776ad9a4192504",
+      "text_sha256": "5ed9f68931318ec4fe6496091c3041d45bd6acded98126f4fd63c0b353fbbd47",
+      "author_name": "Айнаш Қасым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айнаш Қасым"
+    },
+    {
+      "doc_id": "91e7c72d6745afdd34c0b32e",
+      "text_sha256": "ebaf45f56d313248186a02cb57859b92fabe2c7150330ae7822ea844801c3028",
+      "author_name": "Айнаш Қасым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айнаш Қасым"
+    },
+    {
+      "doc_id": "59a8e6d05eb9914c097c3ac7",
+      "text_sha256": "07d922dbe369420cddb7f2055f1c78e33fce018968a8d42a08236c18eb2be09f",
+      "author_name": "Нұрлан Қабдай",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Нұрлан ҚАБДАЙ",
+      "remove_prefix": "Нұрлан ҚАБДАЙ (әңгіме) "
+    },
+    {
+      "doc_id": "f75eb859ec49894d7562500f",
+      "text_sha256": "de7a8b87d628bcfcfa91da15fe7645cf6d2ca2e05a0ef11f7b60850ed37e8a5d",
+      "author_name": "Нұрасыл Зиядабек",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Нұрасыл ЗИЯДАБЕК",
+      "remove_prefix": "Нұрасыл ЗИЯДАБЕК (әңгіме) "
+    },
+    {
+      "doc_id": "e9773507076290b66bc6581c",
+      "text_sha256": "5cc0259463ad9161346ac8a6b1c84ccf5f40ae9b2ba96ee434063ea828d148ca",
+      "author_name": "Мұхтар Мағауин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхтар Мағауин"
+    },
+    {
+      "doc_id": "ddab47e3968ec598f67dcbb5",
+      "text_sha256": "7e32e38e1dab8c418028ffad0e66113f875c5c9cd6cd85074bcacc36e4ecd658",
+      "author_name": "Салтанат Әбдіғали",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Салтанат Әбдіғали"
+    },
+    {
+      "doc_id": "df2eeb347d003dac7ec53ee8",
+      "text_sha256": "04e5c0932070c142a315db86f4f0f571acc62b32c73a75a13dc0f8d2fa346a2a",
+      "author_name": "Константин Паустовский",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Константин Паустовский"
+    },
+    {
+      "doc_id": "87b602435c2723f865e2f14a",
+      "text_sha256": "f0007bcd9bb0fdcdfff5a50de43e9918a9a3586bb6fd7e286123602850b1ecca",
+      "author_name": "Джек Лондон",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Джек Лондон"
+    },
+    {
+      "doc_id": "b15ea6b7f1711d4fa3f07217",
+      "text_sha256": "608535d888135675dea4a31ec896226fc8aa66efa89f5b7856797c9c1330e2f9",
+      "author_name": "Рахымжан Отарбаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Рахымжан Отарбаев"
+    },
+    {
+      "doc_id": "3e1bd092371c522bfdc43423",
+      "text_sha256": "c44d492dc9ff7dfbdd3d92c6bfb2b0f92da2c70c3759f46fcf47cd9b69c12216",
+      "author_name": "Дәурен Қуат",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Дәурен Қуат"
+    },
+    {
+      "doc_id": "b43e4c653d2657d22d67a285",
+      "text_sha256": "ecb5a22138fe3ae733ff3dffb29f7581db667bf43204d60d5e262374b23627a4",
+      "author_name": "Әлібек Асқаров",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Әлібек Асқаров"
+    },
+    {
+      "doc_id": "a5406df24baf9193bb232e2d",
+      "text_sha256": "27e5ba9a1d6486118ffc736fbf6dac2dbb186f95feafdf11ed04fcc12554c1c1",
+      "author_name": "Шыңғыс Айтматов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Шыңғыс Айтматов"
+    },
+    {
+      "doc_id": "16505a525f98b5d35e060e1d",
+      "text_sha256": "f9b124eab48818ef0528a808790237780fa720b2828fd4ea95ac3ac8ca38b88b",
+      "author_name": "Нұрлайым Батыр",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрлайым Батыр"
+    },
+    {
+      "doc_id": "916306075560e1c491081a69",
+      "text_sha256": "7b5797c1b5b5d8e77f8bc82e73ab11e3ff2349e712c7174df5e09411b58e6239",
+      "author_name": "Нұрбек Мырзабекұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрбек Мырзабекұлы"
+    },
+    {
+      "doc_id": "a53bb5df1db7998dc69ef106",
+      "text_sha256": "db2a922dee5d9171221e2fbf876837aa1c664323c34d9ae260a27422547bf4fd",
+      "author_name": "Еркінгүл Солтанаева",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Еркінгүл Солтанаева"
+    },
+    {
+      "doc_id": "6981cbf8ef2e4d0ee5a6a50f",
+      "text_sha256": "22a8beb72c0ee99d1a5801de8fc59df73d58aa94208d2fc0d1a01fcf300d1340",
+      "author_name": "Дидар Амантай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Дидар Амантай"
+    },
+    {
+      "doc_id": "c75bf9527363222b16e9b24a",
+      "text_sha256": "069fe954bb5f22116a05bb794f0c4d44f18cb71485e67a0ffc57b761e3423e7e",
+      "author_name": "Камал Әлпейісова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Камал Әлпейісова"
+    },
+    {
+      "doc_id": "78542d97a44e7593fb6918c6",
+      "text_sha256": "e09326d69ea09ce554876192441fe959cc9a1c5c572b43aa3121e86927bbf10e",
+      "author_name": "Ақлима Исмаил",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Ақлима Исмаил",
+      "remove_suffix": "Ақлима Исмаил"
+    },
+    {
+      "doc_id": "3f5b020fcbfcc88dde6053ea",
+      "text_sha256": "1c79fb1d4aa062a27af9a4c0959170b9053c8c26fa836f69a18c76f8b8c099a9",
+      "author_name": "Оралхан Бөкей",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Оралхан Бөкей"
+    },
+    {
+      "doc_id": "99c564cadabc8904cfcbebab",
+      "text_sha256": "ce8f44cf39d6e5b31c4ee7c80093400ccc5a31d0f3e04f068ff6b88849fe1385",
+      "author_name": null,
+      "author_kind": "unknown",
+      "reason": "Нет однозначной подписи автора в заголовке/проверенном начале и конце; не использовать имя редактора как автора произведения."
+    },
+    {
+      "doc_id": "4ad9487fd23d5004234b52a7",
+      "text_sha256": "75c14eeffdf1dedd4590ea74cc913868cfda0f92c4f2a5f11f19c91f3b35e961",
+      "author_name": "Үміт Жәлеке",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Үміт Жәлеке"
+    },
+    {
+      "doc_id": "f65105519b2c75bab43c149a",
+      "text_sha256": "50c82e508a958a535096f83feb7e0356739f3d3d01abf494c70f0f564c4e3ead",
+      "author_name": "Ақлима Исмаил",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Ақлима Исмаил",
+      "remove_suffix": "Ақлима Исмаил"
+    },
+    {
+      "doc_id": "22ce072aa9877ed96af12272",
+      "text_sha256": "8f6f9bd2607834fce34fdc39fb2fa59a4038870ff37ed5584226f285ad6da25b",
+      "author_name": "Думан Омар",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Думан Омар"
+    },
+    {
+      "doc_id": "ae118a1a131a3482be9a5c09",
+      "text_sha256": "8c0ddce9d74fa5cdad13d2c00bfafe4cd94553fc49bb3e935e230f6f401dbf06",
+      "author_name": "Нұрбек Мырзабекұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрбек Мырзабекұлы"
+    },
+    {
+      "doc_id": "9c2d03e7c0d9fb8764e5bd11",
+      "text_sha256": "3392a78423d466abf98eff5868198cd6d65c314898aa67b7d61056a4c552fdc9",
+      "author_name": "Ақлима Исмаил",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақлима Исмаил"
+    },
+    {
+      "doc_id": "5a76eb23e6519ba381d6d363",
+      "text_sha256": "b264954e87017c51a3c442d6531aa48ca244cf6eb23ab77508947788a8222eb6",
+      "author_name": "Лима",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лима",
+      "remove_suffix": "Лима Көрнекі сурет: Даниель Ф. Герхартц. «Қыстың күні»"
+    },
+    {
+      "doc_id": "108752315fa883b63ca08de5",
+      "text_sha256": "0a68123467a262e9bbfdc823da86bfb8e88155b8c4d81d25d215249e77a08509",
+      "author_name": "Мұхтар Мағауин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхтар Мағауин"
+    },
+    {
+      "doc_id": "0e0e6e159eff5a60b31b9686",
+      "text_sha256": "1dcea0e00ae07cdbcf8d4bd774bfbf6746d161c6fb7e21eb3278f568f7cf5625",
+      "author_name": "Жолтай Әлмашұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жолтай Әлмашұлы"
+    },
+    {
+      "doc_id": "18d935e38b31fbde94e488f1",
+      "text_sha256": "c38beadef897e45b9a0c9185341053ffa358d63bd20166436de81f594f2abc75",
+      "author_name": "Мағыш Аятханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мағыш Аятханұлы"
+    },
+    {
+      "doc_id": "79e0fbd74db7d30f4f38a68a",
+      "text_sha256": "ce52e24fe769f14cbf4efec17610b56e04ba420fa4b9081b76f5b5371498fbd7",
+      "author_name": "Төлен Тілеубай",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Төлен Тілеубай",
+      "remove_suffix": "Төлен Тілеубай"
+    },
+    {
+      "doc_id": "9ee50ea0648b5a814c93de6b",
+      "text_sha256": "164dbbad46bb09cf6ccd53eb6c72b4b099b8fad6f44d831b5db148388b7a029b",
+      "author_name": "Думан Омар",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Думан Омар"
+    },
+    {
+      "doc_id": "d7583164051d508ef6288da4",
+      "text_sha256": "96b1e5d6b135410bd83393d5d12dfcf20d24d0d145687bf58210a08913110164",
+      "author_name": "Ыбырай Алтынсарин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ыбырай Алтынсарин"
+    },
+    {
+      "doc_id": "7b64d15c15431eb98999df55",
+      "text_sha256": "a84f94a033e0fa05d805dfedac8243329ddc5e472a712375f7d6f6fa448102a1",
+      "author_name": "Әлібек Байбол",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Әлібек Байбол"
+    },
+    {
+      "doc_id": "a34f55681e8d3bddaa486ce6",
+      "text_sha256": "93504bf5fce132d1e64e337c8a1e84f398f356e5617787308e329d0cd0c8e3da",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "b112f556e1402164ce01d390",
+      "text_sha256": "72366690eec35bc523bd98c60e835795d011ccaa398a1fe0b577c59ebdf38a49",
+      "author_name": "Бейімбет Майлин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейімбет Майлин"
+    },
+    {
+      "doc_id": "c3e585184fddea8b55f363df",
+      "text_sha256": "a1c41c0715a9abe2022989bb52e598732134106dfea466a5ba9f1f4bc7da9497",
+      "author_name": "Айдана Қайсарбекқызы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айдана Қайсарбекқызы"
+    },
+    {
+      "doc_id": "0dfdf7f93436d264a774c9a6",
+      "text_sha256": "16ea5b6c034d3beafe3dc63cb69b14e6ab70bb1003b1d24b610f01a025019838",
+      "author_name": "Қуаныш Жиенбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуаныш Жиенбай"
+    },
+    {
+      "doc_id": "8c7d2211cb0eeac509d975f9",
+      "text_sha256": "f4d1e6cbf29cdb12c2056c815a17fc8145c4d86dd9a335e551a60e7fffebc5bf",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "bdc48dd30cdb668f3e3aab67",
+      "text_sha256": "a586e57d2051f1df35974ed7ad0404afe33b3d76bffcd59afe2e8476611149a2",
+      "author_name": "Қуат Айтқали",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Қуат Айтқали",
+      "remove_suffix": "Қуат Айтқали"
+    },
+    {
+      "doc_id": "b3f42af0741d0cdbfb11b356",
+      "text_sha256": "489357271ca80f55fecb1f206393fb243c9b9b6626c05e199d3fa79c34e91cf2",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "27ad289d099709b800a0dbc7",
+      "text_sha256": "5dca80d43c0593a5c9eb0c897feea9f46b75df6c990a79270295f67b1d205225",
+      "author_name": "Бану Дәулетбаева",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бану Дәулетбаева"
+    },
+    {
+      "doc_id": "1314c21df5a7beae78ebbcd9",
+      "text_sha256": "4c3f74604a566ba95912f05f4f16aa8e9d590deb9148489f96d6f32b5bd2b2a9",
+      "author_name": "Мұхтар Мағауин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхтар Мағауин"
+    },
+    {
+      "doc_id": "9f628a37eb5188fd0e92a4d1",
+      "text_sha256": "4052b44f13930854c39c23a6e718b918e91d6dbad1f919e6d8b733d5a22feb35",
+      "author_name": "Камал Әлпейісова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Камал Әлпейісова"
+    },
+    {
+      "doc_id": "e434b9f58ed351a63294e480",
+      "text_sha256": "47c67eff7ed8963d2f800861cc9bc7f4b531426dc6a3944d0169178b15b5c368",
+      "author_name": "Абай Аймағамбет",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Абай Аймағамбет"
+    },
+    {
+      "doc_id": "477a738934c7510f17ce8e85",
+      "text_sha256": "2e2edb0df6da0feef8c9a954e1efc73960a9562a3bc965c648239a9227ab7529",
+      "author_name": "Әлихан Жақсылық",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Әлихан Жақсылық"
+    },
+    {
+      "doc_id": "6fce526a3005fe9517fbfb21",
+      "text_sha256": "5496cdcf764ac8d4f0bff540637ae7400d51795118868b85f33d9a7aceba04f9",
+      "author_name": "Ретбек Мағаз",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ретбек Мағаз"
+    },
+    {
+      "doc_id": "07b4c1359c486ac2bc5b44f3",
+      "text_sha256": "5d882d24b9d2ee34fc5f41f708ed04c941710803a135d2e45f67557e99f2ef6f",
+      "author_name": "Камал Әлпейісова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Камал Әлпейісова"
+    },
+    {
+      "doc_id": "75e0e9ab8cc66b6b5719d3ca",
+      "text_sha256": "06bdfdd1b64a83d02c0a7245f2f7ea4e042c29a7efc057c18e9d18f4cc95bbae",
+      "author_name": "Нұрбек Нұржанұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрбек Нұржанұлы"
+    },
+    {
+      "doc_id": "48683ac26067e0c4bba55878",
+      "text_sha256": "c6b426561b3de6853495341df5414e588b3e82bb92dca3194c4ae3f466aa85b8",
+      "author_name": "Сая Итегулова",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Сая Итегулова",
+      "remove_suffix": "Сая Итегулова Астана, 2020 жыл. Көрнекі сурет ашық интернет көздерінен алынды"
+    },
+    {
+      "doc_id": "b1488df2bf09a73f2517014d",
+      "text_sha256": "3fa7f21d8aacd7b4ef7655307f23b7fdb2b2ccb7d14ca6d399f1bd9032d37f77",
+      "author_name": "Камал Әлпейісова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Камал Әлпейісова"
+    },
+    {
+      "doc_id": "adde3f994d8fcc1192bee61d",
+      "text_sha256": "57e165d56bd52524aece5bd5bf08488b576254d086c9ba6e6c00a35eb79d5e7f",
+      "author_name": "Толымбек Әбдірайым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Толымбек Әбдірайым"
+    },
+    {
+      "doc_id": "5f7364961ccf8542a1ea1119",
+      "text_sha256": "ca3345b36c5fc5ed503fd5d2644cd44ab5b25354a27cb8723fda0035c479ff84",
+      "author_name": "Камал Әлпейісова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Камал Әлпейісова"
+    },
+    {
+      "doc_id": "402ec240f5575ece008e1e18",
+      "text_sha256": "7c7f53af4d24fc8bc761cfa57b777b20a21c8a8148f46532fbaee211141333ce",
+      "author_name": "ҚУАНДЫҚ ТҮМЕНБАЙ",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "ҚУАНДЫҚ ТҮМЕНБАЙ"
+    },
+    {
+      "doc_id": "ba818b6df7e19590bcc94511",
+      "text_sha256": "bd136fd570452afe06aa4e12447d3e56d4b567c9c84107575e793f07079f5281",
+      "author_name": "Жолдыбай Базар",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жолдыбай Базар"
+    },
+    {
+      "doc_id": "f462a8c1ac767f47dbf319dc",
+      "text_sha256": "39215f549df237fb3191b2d9a5f87d65c5fbabfb6d0448efec793dd8cdf7685a",
+      "author_name": "Тілеуберді Сахаба",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Тілеуберді Сахаба",
+      "remove_suffix": "Тілеуберді Сахаба, Павлодар қаласы. Көрнекі сурет сайтынан алынды."
+    },
+    {
+      "doc_id": "09f2aa490a8d50f01d9abaaa",
+      "text_sha256": "2bc64a66acc6cb5b0717246a91584bc2a01e1cb56aea27584f9c198412aaa449",
+      "author_name": "Ретбек Мағаз",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ретбек Мағаз"
+    },
+    {
+      "doc_id": "f1c35a43bf2eb5197ee56c6c",
+      "text_sha256": "e92c8550bee27d4b7fd1733d48064a7d601ee1c875e2442d92f7384a2b31c043",
+      "author_name": "Жеңіс Оспанов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жеңіс Оспанов"
+    },
+    {
+      "doc_id": "e5374fbe7f914c3401a77ff1",
+      "text_sha256": "83b7b2588e8be7a357cf2f5ad5693b1c0d71f15a7d45486a815a1f226df7a6e2",
+      "author_name": "Бейбіт Нұрмұханов",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Бейбіт Нұрмұханов",
+      "remove_suffix": "Бейбіт Нұрмұханов , журналист, жазушы"
+    },
+    {
+      "doc_id": "50f3b1e1cdc30d2f22334a30",
+      "text_sha256": "9112aead12b71ed9067c9d72e2ddbfb21349bbb76c4ee7fdf43ac5bbf1c58957",
+      "author_name": "Әкім Тарази",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Әкім Тарази"
+    },
+    {
+      "doc_id": "041dcae4bc7247c868b9d077",
+      "text_sha256": "509e80720747e71d6598665a1763562846cfca178ac307d635f9e465367e10fc",
+      "author_name": "Үміт",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Үміт",
+      "remove_suffix": "Лақап аты: Үміт"
+    },
+    {
+      "doc_id": "d590cf3c077f18e24905fa62",
+      "text_sha256": "0a6b11cabf49ce41588e6ab5a5deef950b37067f6c4c03a289fb1bfafc3a39c5",
+      "author_name": "Мұғалім",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Мұғалім",
+      "remove_suffix": "Лақап аты: Мұғалім"
+    },
+    {
+      "doc_id": "12da8c3f3956bc0f55f945de",
+      "text_sha256": "81892bbd6f996743baabb70c2d653425dfae6c85a4419f09e9bbd5546f519692",
+      "author_name": "Әбдірәйім",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Әбдірәйім",
+      "remove_suffix": "Лақап аты: Әбдірәйім"
+    },
+    {
+      "doc_id": "8df1025cfbf7203d59aafcf6",
+      "text_sha256": "3e516ce594b32561f52b1df305a41562dda8a6c88f261b4bd113f9681bd2b1cd",
+      "author_name": "Ұлпа",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ұлпа",
+      "remove_suffix": "Лақап аты: Ұлпа"
+    },
+    {
+      "doc_id": "d5c83bc4be9c9e52afc1f1cb",
+      "text_sha256": "412c3e775bd34d78eaf13e029f1b8b5d38c757ec01114b0dfdc0d614b36b21a8",
+      "author_name": "Балықбай",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Балықбай",
+      "remove_suffix": "Лақап аты: Балықбай"
+    },
+    {
+      "doc_id": "0b7d06b7d39ea0c86f57643c",
+      "text_sha256": "22eac6cfa457fbaf113027f642e84d3df0684cf512ca08e24a328b8a9929084b",
+      "author_name": "Төлен Әбдік",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Төлен Әбдік"
+    },
+    {
+      "doc_id": "a2b896aca271479d1be3daf9",
+      "text_sha256": "6a8cac24e269be6fa3528636c4b7abb7b9e05e6e25804bdfac8214518f22f843",
+      "author_name": "Ақ-Кеңгір",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ақ-Кеңгір",
+      "remove_suffix": "Лақап аты: Ақ-Кеңгір"
+    },
+    {
+      "doc_id": "a0099ce98a0b3a103c2a104c",
+      "text_sha256": "3cd6c494d9251490cf49ab50c6b2fc3d9d4c085ca3fe30f9bdaab497a2e9b300",
+      "author_name": "Күнтай",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "«Күнтай»",
+      "remove_suffix": "«Күнтай»"
+    },
+    {
+      "doc_id": "ade44df2a4385a02ecd06e4a",
+      "text_sha256": "8a4885df522deb540d844a0a846355db5cd8c48cfb3f30138277352fdf71e830",
+      "author_name": "ПЕГАС",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: ПЕГАС",
+      "remove_suffix": "Лақап аты: ПЕГАС"
+    },
+    {
+      "doc_id": "af87109dbfaf3e71fe5818dc",
+      "text_sha256": "2189c9504fb14b3db94372bfc72b303b38e3566bd88b568dfa9a9ad7758a5347",
+      "author_name": "Қала баласы",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Қала баласы",
+      "remove_suffix": "Лақап аты: Қала баласы"
+    },
+    {
+      "doc_id": "5aeea92dc7eb2b6c1f800dfd",
+      "text_sha256": "2d5a99ca42882d593da22b24706dfeea12693a5d07e9e6275036c0959af4adc2",
+      "author_name": "Сайын",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Сайын",
+      "remove_suffix": "Лақап аты: Сайын"
+    },
+    {
+      "doc_id": "5f162a9ca436bcfcc7140671",
+      "text_sha256": "e6552662fe9aa81f9647446cb1a5ff8fa1e1c4160657781995a88de6a09e050b",
+      "author_name": "Ақжігіт",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ақжігіт",
+      "remove_suffix": "Лақап аты: Ақжігіт"
+    },
+    {
+      "doc_id": "ba832ad71011724027c77d8c",
+      "text_sha256": "d3a21f236d3e1f7d65cfe17fd462bbacdae07e2db37df53aa73612696acc1fa8",
+      "author_name": "Есентай",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Есентай",
+      "remove_suffix": "Лақап аты: Есентай"
+    },
+    {
+      "doc_id": "78e986972da621644a70c064",
+      "text_sha256": "9650c94f134b4d419fe234db388fcfe8898b361d46c6d5f3ce800ca767a14849",
+      "author_name": "Кітапхан",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Кітапхан",
+      "remove_suffix": "Лақап аты: Кітапхан"
+    },
+    {
+      "doc_id": "c5d5aaa51563ef0208120c75",
+      "text_sha256": "6ed26da2d72e85f3b087347f8990bd924e3ea66ef74d805aea783c0b9f3289e1",
+      "author_name": "Агата Кристи",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Агата Кристи",
+      "remove_suffix": "Лақап аты: Агата Кристи"
+    },
+    {
+      "doc_id": "1280854813596f300f1ffbd3",
+      "text_sha256": "0533c4f1998851740b0a6a88e91db8d32630c70a5dc0f8ad36d06c6e82d6440e",
+      "author_name": "Перизат Сары",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Перизат САРЫ",
+      "remove_suffix": "Перизат САРЫ, Орал қаласы Түсіндірме Пиндөш 1 – пиндуодуо (Қытай маркетплейсі. Сөздікжасам талабына сәйкес келмейді. Аутор қысқартып жазды. Ресми қабылданбаған) Айқауын 2 – банан (кірме сөзге балама енгізген – М. Өтемісұлы атындағы БҚУ-дің қазақ тілі мен әдебиеті БББ-нің 2-курс студенті Ернар Жақыптегі. Ресми қабылданбаған)"
+    },
+    {
+      "doc_id": "8f1f441f3dbf8d9be4e4d0ac",
+      "text_sha256": "e1483ed87296aa43b053fc552afa8efc13b02e1774a04c3fc30299d3d65cbe29",
+      "author_name": "Ерман",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ерман",
+      "remove_suffix": "Лақап аты: Ерман"
+    },
+    {
+      "doc_id": "6c31c961114035d57b02eff5",
+      "text_sha256": "1d509838675372ce27aa4947868ac19188731ab9281997a78b750fbde28bd902",
+      "author_name": "Бейбіт Бөжен",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Бейбіт Бөжен",
+      "remove_suffix": "Бейбіт Бөжен"
+    },
+    {
+      "doc_id": "2d95de751af580dc99a245d9",
+      "text_sha256": "1ed8474035434ed7d8961296ead2c70fcbce54613ad9f38f59ba22dfb8354b9e",
+      "author_name": "Толымбек Әбдірайым",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Толымбек Әбдірайым",
+      "remove_suffix": "Толымбек Әбдірайым, жазушы"
+    },
+    {
+      "doc_id": "b22cd5e6cd708f7805c35941",
+      "text_sha256": "e3e893f8b8387830ed00cf3e0a2bf45c7d3e447d0793502008a30682c6bd5b82",
+      "author_name": "Шұғыла",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Шұғыла",
+      "remove_suffix": "Лақап аты: Шұғыла"
+    },
+    {
+      "doc_id": "4051183d1d8f5596c629eebe",
+      "text_sha256": "891149273bc4a159b733cd36257eb0bdee3d101375fe4989e8c5310beb8dc414",
+      "author_name": "Түркебай Байшақ",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Түркебай Байшақ",
+      "remove_suffix": "Лақап аты: Түркебай Байшақ"
+    },
+    {
+      "doc_id": "ea9834ba9075784bc215b954",
+      "text_sha256": "147c297eb7b186f8683f570e34dfeb0889f035f1e3b22a77f33df9e151c52c9d",
+      "author_name": "Жезқоңыр",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Жезқоңыр",
+      "remove_suffix": "Лақап аты: Жезқоңыр"
+    },
+    {
+      "doc_id": "6af6ab10a938c485ead0f150",
+      "text_sha256": "50d2298714be54f4725a6681bdfc1c57444b4fca6f6c5c5bda5f911364933a76",
+      "author_name": "Ханаш",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ханаш",
+      "remove_suffix": "Лақап аты: Ханаш"
+    },
+    {
+      "doc_id": "3fc189959e0ed7997d8ef44e",
+      "text_sha256": "43d0b1782bdded1b4c98e3099c8821adfbd0d021409348334574c17086c43239",
+      "author_name": "Шәмші",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Шәмші",
+      "remove_suffix": "Лақап аты: Шәмші"
+    },
+    {
+      "doc_id": "b856558482dda5afaaad68b9",
+      "text_sha256": "d9cb4291139045a5b3810ed4e77ed67c71e83ab295a664eecbd116a4fe602adc",
+      "author_name": "Жігіт ағасы",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Жігіт ағасы",
+      "remove_suffix": "Лақап аты: Жігіт ағасы"
+    },
+    {
+      "doc_id": "a81e5d4b2dff8c6ca6dd7823",
+      "text_sha256": "70c481446a5baee95beb9fad0b68a3daf0d82982fa7f3388574eb6c5249b3172",
+      "author_name": "Ұлар қыз",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Лақап аты: Ұлар қыз",
+      "remove_suffix": "Лақап аты: Ұлар қыз"
+    },
+    {
+      "doc_id": "95c42ae975884d2a238bba8d",
+      "text_sha256": "8bacec38392487970335ecf6252ebb3ddb9669a3e30a6cd0f2150e39a158b6ae",
+      "author_name": "Жанайдар",
+      "author_kind": "pen_name",
+      "evidence_field": "text",
+      "evidence": "Бүркенші есім: Жанайдар",
+      "remove_suffix": "Бүркенші есім: Жанайдар"
+    },
+    {
+      "doc_id": "da13ad61d8013ee974858e12",
+      "text_sha256": "ac99403fa7bfcc56e3778be67d2cb37ee09a7fc0d63ae47fbe5cee46aea0631f",
+      "author_name": "Қанат Тілеухан",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қанат Тілеухан"
+    },
+    {
+      "doc_id": "82329440316f0c423badb206",
+      "text_sha256": "bc56a4880e4bf1cded0ae157f7af6059412dc1f93679728253bf965c719ae0eb",
+      "author_name": "Мереке Құлкенов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мереке Құлкенов"
+    },
+    {
+      "doc_id": "2ede142eb76e87cf6994b78c",
+      "text_sha256": "d1ff8710e6491a65b366571b68299b39ce64afd9a8f1fb0c108c10ad1ddaf7f3",
+      "author_name": "Бейбіт Бөжен",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт Бөжен"
+    },
+    {
+      "doc_id": "0d921e8e597d47ea976f63e3",
+      "text_sha256": "8006762e677ca92c309f7b6e36d4a1d97fce59227d754a9386de3047bcd85fab",
+      "author_name": "Жолтай Жұмат-Әлмашұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жолтай Жұмат-Әлмашұлы"
+    },
+    {
+      "doc_id": "52620fa750f8ced9f7997982",
+      "text_sha256": "7ca132268d370a0c798060c72bd2de6275fa32da4d1e66f6b6411c4f1353e3e9",
+      "author_name": "Назар Эшонқул",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Назар Эшонқул"
+    },
+    {
+      "doc_id": "e0231203298d9e7b2459697e",
+      "text_sha256": "3553ac98824949a33ba4575c7ebd475a516582f81d8c44e81d1342f69a1af4bb",
+      "author_name": "Нағашыбек Қапалбекұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нағашыбек Қапалбекұлы"
+    },
+    {
+      "doc_id": "0fd042e42e623623bd665de1",
+      "text_sha256": "ea18868a73ff915668f53efb10f785c24399c69ba95743ef7bd09dc44980be09",
+      "author_name": null,
+      "author_kind": "unknown",
+      "reason": "Нет однозначной подписи автора в заголовке/проверенном начале и конце; не использовать имя редактора как автора произведения."
+    },
+    {
+      "doc_id": "4dbac999f0276cabea553cba",
+      "text_sha256": "4a770f3f57a20eafbff8ad1040b1f90702d6c5fa75d9389717dbfe6cbd91932e",
+      "author_name": "Арайлым Бекбосынова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Арайлым Бекбосынова"
+    },
+    {
+      "doc_id": "87fffd2b0f296c4b7549e700",
+      "text_sha256": "10a9a14e40bb8ac59a386648a22869a9078c8ab6963b666a6db9ea39f92c92d4",
+      "author_name": "Толымбек Әбдірайым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Толымбек Әбдірайым"
+    },
+    {
+      "doc_id": "2c3e2b9e6226977f8ee563df",
+      "text_sha256": "e64c59cbd0d2924af26e9dd1f8531b8983250d4c8d927867b2800f0b311d58b2",
+      "author_name": "Төлен Тілеубай",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Төлен Тілеубай",
+      "remove_suffix": "Төлен Тілеубай, жазушы, журналист."
+    },
+    {
+      "doc_id": "67ed826d1906cd8db40feec5",
+      "text_sha256": "851abf0266df77d2d5ca7bd89ed665cbe28f367d59c77668e4b9ae4feaf0de05",
+      "author_name": "Мұқан Абдуллаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұқан Абдуллаев"
+    },
+    {
+      "doc_id": "f42ca45b7da27ac1346638d7",
+      "text_sha256": "487041d8c60c25f2b7f3b8fd9ee30f0ceecf44dd89a88733e6590fbabf57c94d",
+      "author_name": "Қуаныш Жиенбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуаныш Жиенбай"
+    },
+    {
+      "doc_id": "c89a8588439106bc209571b9",
+      "text_sha256": "3ec730e19281bb38418dfbec014824711245bd6996fd989e3af6e49d8aafbaa3",
+      "author_name": "Қаусылхан Қасымханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қаусылхан Қасымханұлы"
+    },
+    {
+      "doc_id": "7050eef178299bf4fcf565e3",
+      "text_sha256": "13a029acba75c2c0d83f5bac031aafdc8c4515149d5384f638992f91d477a077",
+      "author_name": "Редьярд Джозеф Киплинг",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Редьярд Джозеф Киплинг"
+    },
+    {
+      "doc_id": "6347623ad603688f9caf88b9",
+      "text_sha256": "9ec9872e7159ecbb0ffb3b474c99c478509b0a9d3eb78b24971e7320f2aa48ea",
+      "author_name": "Ерғали Бақаш",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ерғали Бақаш"
+    },
+    {
+      "doc_id": "3cf1ff442e00541dec2b7a0a",
+      "text_sha256": "d07bd7dc6b9f4514ded42b79084560acc5fb818b1f36af5520e775a3bac1467e",
+      "author_name": "Сағындық Рахымжан",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Сағындық Рахымжан"
+    },
+    {
+      "doc_id": "2f8272d407d6cf093b770ee8",
+      "text_sha256": "08670ea5d333fb56311c14b65091b27f93c6382ab82c2765f3dff25f970a3748",
+      "author_name": "Жақсыбек Шанышқылы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жақсыбек Шанышқылы"
+    },
+    {
+      "doc_id": "a8a9f7f6227b63e29b3977ea",
+      "text_sha256": "548f8b810abc8f07c567b44c8a649b0ea5732b1297b3012664566b456ca9f893",
+      "author_name": "Қанат Алтынбек",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қанат Алтынбек"
+    },
+    {
+      "doc_id": "0fba225cc9b09d027f41a5f4",
+      "text_sha256": "a1ac898dcd6c287d6ef25a5b387fd486629332a3c8454368836a617f2618e940",
+      "author_name": "Бейбіт Бөжен",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт Бөжен"
+    },
+    {
+      "doc_id": "ac789705662fd2f7df4d4f61",
+      "text_sha256": "88bf1c9d627677a1f6fb6dea91e5b9ceba38ee2cd920b5a3af97dd5b4c2c7cdf",
+      "author_name": "Сұлтан Раев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Сұлтан Раев"
+    },
+    {
+      "doc_id": "75d8d21f7b545a738eea387a",
+      "text_sha256": "3953cf46f2f7ae1878c49bba88afc333c70677456f7456f39b32dcda6a23c497",
+      "author_name": "Мұхамет ТІЛЕУБАЙ",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхамет ТІЛЕУБАЙ"
+    },
+    {
+      "doc_id": "4553c9100efced09462c8a30",
+      "text_sha256": "273ae2b86c1e3a3db9222db807456559378fb10c354221727b3d8e25074fe25c",
+      "author_name": "Бейбіт Бөжен",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт Бөжен"
+    },
+    {
+      "doc_id": "96f52a0ba8dc39fa60853f97",
+      "text_sha256": "91e4e5d30fb4229eb1f88ba019be34414b1bc7e2318cb01b4af05fc10d9b84e7",
+      "author_name": "Мұхаммед-Қанапия Шарханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхаммед-Қанапия Шарханұлы"
+    },
+    {
+      "doc_id": "ccd657a3621e0c10d4a1b680",
+      "text_sha256": "dbd82d9c5490b8c6395c9f75ab510ebf2121e598c293d58474f2543e6be88a71",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "552db2799734928c5f60fe6f",
+      "text_sha256": "30d57c6cf2ccd801a8399d7f61520d0c27fae4be76cb4f49d78258e1278e86b0",
+      "author_name": "Нәсіреддин Сералиев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нәсіреддин Сералиев"
+    },
+    {
+      "doc_id": "4323df7b3eb02049d4361021",
+      "text_sha256": "4189ca25a5cdc95975b6a998b237ea16abf189eb82a1f30c0d7ad531f0819384",
+      "author_name": "Асылбек Ихсанов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Асылбек Ихсанов"
+    },
+    {
+      "doc_id": "644a1fe6afb8b053ba837157",
+      "text_sha256": "889053aebfd9fd47896aee2fb2e6e89e09a444bcc58d3ea17a7512b2cee98f5b",
+      "author_name": "Қуаныш Жиенбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуаныш Жиенбай"
+    },
+    {
+      "doc_id": "8b44cd3f64be10a9902cb8c9",
+      "text_sha256": "14bdc46bb6e0fa7fbd4e90314a7cf5f854e9414d8905761c2294d38195c1a9e4",
+      "author_name": "Тілек Қайырдін",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Тілек Қайырдін"
+    },
+    {
+      "doc_id": "976c5008585d015ed474a425",
+      "text_sha256": "b7c952b9c71d3fb89d50a82d4d1e2e7be97e647c99f7c7e43d5f7e20a68cfb9d",
+      "author_name": "Бейбіт БӨЖЕН",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Бейбіт БӨЖЕН"
+    },
+    {
+      "doc_id": "fc8495535a835244f3c1de57",
+      "text_sha256": "f65f058cac72e22f2285a57f42d43e53d648afcb70e12918ffd5913ef9a21ff7",
+      "author_name": "Сұлтан Раев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Сұлтан Раев"
+    },
+    {
+      "doc_id": "89bfdd4f2420e81aebdc5088",
+      "text_sha256": "8b2fe549b6ca158e2ef512e3419ba5b59c56c7d1329073b2baf62ea4430f07e6",
+      "author_name": "Асылбек Ихсан",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Асылбек Ихсан"
+    },
+    {
+      "doc_id": "ac7c826e115308abf53c129e",
+      "text_sha256": "770dfecbabee5ec2f56e3f05dabdf98cbe1899b724301ca76b83aa23364e1b73",
+      "author_name": "Мұхамет Тілеубай",
+      "author_kind": "byline",
+      "evidence_field": "text",
+      "evidence": "Мұхамет ТІЛЕУБАЙ",
+      "remove_suffix": "Мұхамет ТІЛЕУБАЙ, Әдебиет және өнер музейінің ғылыми қызметкері Көкшетау қаласы"
+    },
+    {
+      "doc_id": "7a1b9fe130fc36e97b77fbc7",
+      "text_sha256": "f1525c6f7356cf143d8a45dac0f03ca7e93cffe8aebb2ee0cf0fbd7acf450929",
+      "author_name": "Мұқан Абдуллаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұқан Абдуллаев"
+    },
+    {
+      "doc_id": "177e2d5fc235c2de602caf89",
+      "text_sha256": "9ad4463cbe5971ce69c061107fe2c26602faaddd82e9ad11b4e94a864b2d8a50",
+      "author_name": "Нұрасыл Зиядабек",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрасыл Зиядабек"
+    },
+    {
+      "doc_id": "adab5fed5e5b1e77521676b8",
+      "text_sha256": "5415ca7aacd521efde5491e4f8f1caec9c0586f3e2b3625b3366bf5de3bff03a",
+      "author_name": "Таяма Катай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Таяма Катай"
+    },
+    {
+      "doc_id": "174101fa8892895ea842e875",
+      "text_sha256": "5482d5f13d88dc9dbc9c06973701fc22d88ecdcb56cf2c464c2f3b0f310e400d",
+      "author_name": "Құлтөлеу Мұқаш",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Құлтөлеу Мұқаш"
+    },
+    {
+      "doc_id": "19abc6fbfe1b0dc110ffb012",
+      "text_sha256": "46e97e5424af8a6dec1b585ce015c7d2d8146e32675b9894cea3f6d6ca3e319c",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "74badca5c20012e50d0a01e8",
+      "text_sha256": "f5e74082a6ddfd2312cbb3e8302e3f70821518a62d464a295fea7711120427bf",
+      "author_name": "Би Шумин",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Би Шумин"
+    },
+    {
+      "doc_id": "a97f2140df70be75c5c269c9",
+      "text_sha256": "9b98649f8d4fa442e961f8ef3640028c3c516d6bd9d16a5f1e08fde0c121fb48",
+      "author_name": "Мирас Мұқаш",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мирас Мұқаш"
+    },
+    {
+      "doc_id": "67d46659bd48072bacd26439",
+      "text_sha256": "d894c887e8f8e3e3b672d3bd9034606ca0d711580936b972db139870f8c1556b",
+      "author_name": "Жабал Ерғалиұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жабал Ерғалиұлы"
+    },
+    {
+      "doc_id": "2dadd3edbfc39edfe9730c18",
+      "text_sha256": "d33a59029973c00c9d01f6024832f69f6a1848da4b73cf93aaf8ca99c7ca2a1e",
+      "author_name": "Қуаныш Жиенбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуаныш Жиенбай"
+    },
+    {
+      "doc_id": "52ab57b1baa21f1b8e418a66",
+      "text_sha256": "11dcbb59cafdf6e9702ede11112265717677adcee373a1f9b36ad8809ccc46d8",
+      "author_name": "Қабыл Әбдірахманұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қабыл Әбдірахманұлы"
+    },
+    {
+      "doc_id": "177859d608bf386055a16c1b",
+      "text_sha256": "fceed84f478f56e7c7542690a746486ae01385d8884d56b8cad4805263fe4116",
+      "author_name": "Ұларбек Дәлейұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ұларбек Дәлейұлы"
+    },
+    {
+      "doc_id": "b01f333146968bdee3ca128b",
+      "text_sha256": "721cf1c94217ead02827efb913d37ea8413458fe25f2c9a2e2a5e6d869b2c3f9",
+      "author_name": "Нағашыбек Қапалбекұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нағашыбек Қапалбекұлы"
+    },
+    {
+      "doc_id": "da19e577fd9c50cb0ed57222",
+      "text_sha256": "09b4a927ef231bf4d683995c95dc28b68265926a41058daa4f9becea01fbfb51",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "4d42160dd572098f7460fa8f",
+      "text_sha256": "ab16ba5137c10730b28498dd262b99a32bd6d41360574502f25d7179c2872b0b",
+      "author_name": "Алаш Кеңшілікұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Алаш Кеңшілікұлы"
+    },
+    {
+      "doc_id": "377a204df75689c06d13c993",
+      "text_sha256": "cbb1f834f973942ac8f5c96a7e6691dae08b3b1a81fcc162d08aa977bd6af939",
+      "author_name": "Қуандық Түменбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қуандық Түменбай"
+    },
+    {
+      "doc_id": "a374bc2f8dd67f620e0c063b",
+      "text_sha256": "ce3237fa8de7819f374d57cf9a62d009dc0bf11d05020dc61112bdff9f93a18d",
+      "author_name": "Думан Терлікбаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Думан Терлікбаев"
+    },
+    {
+      "doc_id": "cb194c214796eadbcf276bb0",
+      "text_sha256": "c627064652ff4ff04b9f3da7d759322e9e672521175ff083770831e0846292b7",
+      "author_name": "Жеңісбек Көкенов",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Жеңісбек Көкенов"
+    },
+    {
+      "doc_id": "556b4eb66ed4187af185f286",
+      "text_sha256": "6541c09e0cdce68f1f36b86f1b5efb66763f0fb749a701539f38ec97edbe96ad",
+      "author_name": "Есболат Айдабосын",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Есболат Айдабосын"
+    },
+    {
+      "doc_id": "762f1fb861164bf8e43a921d",
+      "text_sha256": "5030fb7543c52084de23021d362d4c796c6b4c42dab83abb5cfa48232af9a23d",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "8e082d17ba94d1f052fd8244",
+      "text_sha256": "b8a6a56b0fa560e5334d114746e86c479adf5e06993d883abb1c861eeac23ac6",
+      "author_name": "Салтанат Әбдіғали",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Салтанат Әбдіғали"
+    },
+    {
+      "doc_id": "46da90e348ca73e4d1088d52",
+      "text_sha256": "195fc415fe0ad581301587acf82dc8f792ef29d838c834d2680022ef4dd279d3",
+      "author_name": "Мұхтар Шерім",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхтар Шерім"
+    },
+    {
+      "doc_id": "c59ca6894a2d1ae53be1d82c",
+      "text_sha256": "f9a5d152339386e8cfae333a84d8e6aab5b8a08419ceaf47005fee7331cdd0b4",
+      "author_name": "Асхат Өмірбаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Асхат Өмірбаев"
+    },
+    {
+      "doc_id": "58bd1a11cc424e42e3f5aba3",
+      "text_sha256": "6c1c35926082620d6f9e8215fcd53fbd6c29866003e09bee28df1e1300a4be4f",
+      "author_name": "Мұқан Абдуллаев",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұқан Абдуллаев"
+    },
+    {
+      "doc_id": "84c59db9dad9a332edb2f6a6",
+      "text_sha256": "9b7811043bfaacfdfed3b224d1793a10fa226fc50d088276fde3332e28e7900f",
+      "author_name": "Қанат Әбілқайыр",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Қанат Әбілқайыр"
+    },
+    {
+      "doc_id": "466d46ba9e2ca675b3ad207c",
+      "text_sha256": "46df613ae4355a91cb167f7705f60edd2ee53e6cbe60c6219f633f66adacff01",
+      "author_name": "Гүлзейнеп СӘДІРҚЫЗЫ",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Гүлзейнеп СӘДІРҚЫЗЫ"
+    },
+    {
+      "doc_id": "6cc0049c6ac9917010fe8319",
+      "text_sha256": "3b7ed6e64c0152e08cde30065f694bf2cd392866ab91a874efbebfc830c5aceb",
+      "author_name": "Нұрасыл Зиядибеков",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрасыл Зиядибеков"
+    },
+    {
+      "doc_id": "72058d9b054bb845f24796ae",
+      "text_sha256": "71fafafc4f9ff5436c7c9a2dce79656d59212b58c34d2065fb0e4ea39e62866e",
+      "author_name": "Ласло Краснохоркаи",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ласло Краснохоркаи"
+    },
+    {
+      "doc_id": "683524276ffc4486650590e4",
+      "text_sha256": "fa55dcce51934fd73ea8b6f19d9d4ad0186558c242f450937f5b7b75612dcdf6",
+      "author_name": "Алғабек Хамитұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Алғабек Хамитұлы"
+    },
+    {
+      "doc_id": "fb731f18a1ae7af8d89a586a",
+      "text_sha256": "e9f869997e163e679bfc306a14f9b291b24e423ed5d8867f483820fa7ecdadce",
+      "author_name": "Дүкен Мәсімханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Дүкен Мәсімханұлы"
+    },
+    {
+      "doc_id": "a8e9c3f3191c94a61d62f67b",
+      "text_sha256": "5633133cde12983f43a00d2c13adae7ddc571320b3acca50a453513a2db1a1aa",
+      "author_name": "Дүкен Мәсімханұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Дүкен Мәсімханұлы"
+    },
+    {
+      "doc_id": "dcb98cf07dfb6edc6fa27017",
+      "text_sha256": "d88540c27a98fdae6eb1ae8f2f3bf0911bd75b54d2905386add73e4286f654c8",
+      "author_name": "Мұхарбек Жәкейұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Мұхарбек Жәкейұлы"
+    },
+    {
+      "doc_id": "325307805b0ac9dc9c1232d5",
+      "text_sha256": "5448c8b9092484f5194a3f4654f721b58cc81d91692bdd15ca7816f8fc78c825",
+      "author_name": "Ақкүрең Бақыт",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Ақкүрең Бақыт"
+    },
+    {
+      "doc_id": "3ffc0c10b6c3d498347e1485",
+      "text_sha256": "55d272bef1a21cc7e208963159b35dd9690d9da3688f8eb1d19a6aa6a1ab0564",
+      "author_name": null,
+      "author_kind": "unknown",
+      "reason": "Нет однозначной подписи автора в заголовке/проверенном начале и конце; не использовать имя редактора как автора произведения."
+    },
+    {
+      "doc_id": "5e47d85370bb600101768861",
+      "text_sha256": "9420f170939878c19dfe09b6c342f2fbb60f6aec3b46d6b0a4a8e04f1576bab0",
+      "author_name": "Гүлтас Құрманбай",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Гүлтас Құрманбай"
+    },
+    {
+      "doc_id": "b12df7f6065936443465e43e",
+      "text_sha256": "23a1273364614af31a63b8ac0bdf33cb9f22dc614e4ac335fee0d881b4eacc00",
+      "author_name": "Зияш Телеуова",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Зияш Телеуова"
+    },
+    {
+      "doc_id": "c77d37a2f323ebdbc1669dd8",
+      "text_sha256": "24eb9c79553ff557f5f9e366d248be31ed1a551d18976dc967e284f600da521b",
+      "author_name": "Дзюнъитиро Танидзаки",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Дзюнъитиро Танидзаки"
+    },
+    {
+      "doc_id": "e509716408e603c966485e2e",
+      "text_sha256": "75360e51da3bf289aa0e8fdc86329fedb7d1381f5a7eedeba1b4fd39861ae7e7",
+      "author_name": "Айнаш Қасым",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Айнаш Қасым"
+    },
+    {
+      "doc_id": "6cb18d24eb9165703d08e00a",
+      "text_sha256": "786a877ef1a4f418b05a8c8188ab9bd553dd8f0a1874cd7cf453300442f1e75a",
+      "author_name": "Сағындық Рахымжан",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Сағындық Рахымжан"
+    },
+    {
+      "doc_id": "6358acecc1b1635447ce0c14",
+      "text_sha256": "6efad6648463dd5ec17450f94bd1b30fb8afc0edd1fb3919616a02d834753dc1",
+      "author_name": "Нұрбек Нұржанұлы",
+      "author_kind": "byline",
+      "evidence_field": "title",
+      "evidence": "Нұрбек Нұржанұлы"
+    }
+  ]
+}

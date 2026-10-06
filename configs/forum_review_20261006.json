@@ -1,0 +1,691 @@
+{
+  "schema_version": 2,
+  "scope": "all_rows",
+  "reviewer_kind": "assistant",
+  "reviewer": "Codex assistant semantic review; not an expert annotator",
+  "input_sha256": "fb8df25a55550d69bc9cb6af50e7eef8a326c0efd4837a7b0e2c3dcccd2d434e",
+  "reviewed_at": "2026-10-06",
+  "classifier_predictions_used": false,
+  "policy": "Read full candidate text. Keep natural questions provisionally; reject task/lyrics-dominated, promotional/mixed, identifier-bearing and duplicate records. Preserve spelling. No human gold labels claimed.",
+  "decisions": [
+    {
+      "doc_id": "9fd9049c94bfdb6b3b6a688b",
+      "text_sha256": "da9ae8ae3022f4be2410b527cedf64aed8c903ccc394be80098143e01267a74c",
+      "keep": true,
+      "reason": "Личный опыт и просьба о совете по освоению программ.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "9ba796039132c4aca420b7c7",
+      "text_sha256": "b83550148a8d1ad5fe849f9fe6546a17ca1eedd7559820765fc16ff7206411f6",
+      "keep": false,
+      "reason": "Обрывочное перечисление без связного коммуникативного контекста.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "3da037b084a4aa495e485904",
+      "text_sha256": "d87c783e50d00372068421139d3250acf053fbb49d5a0c8a086f1e07eafbb139",
+      "keep": true,
+      "reason": "Неформальное описание собственной проблемы с ноутбуком и просьба о помощи.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "954d329a3bcfc0059e4b967c",
+      "text_sha256": "5776e0f13ad6ee224aa939e4c6f760185602a398e4d85b50ced24c3e6e6268a2",
+      "keep": true,
+      "reason": "Бытовой вопрос о повреждённом телефоне, разговорная орфография.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4c7aee28dfc6a998647a6fef",
+      "text_sha256": "5580d831ba3fcdf377a49719b81754ae9f43dae80628d9e18a3c8e37fcf82f3b",
+      "keep": false,
+      "reason": "Большой фрагмент программного кода и формализованного технического задания; неоднозначная стилевая метка.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "814f9a83efa32d3196e6b451",
+      "text_sha256": "c71cbb6ae43a8cddccc7f21ea5b1b95ff19c557e282d84ad436f8fc7446f3493",
+      "keep": true,
+      "reason": "Неформальный вопрос о выборе способа работы с компьютерной графикой.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "1147eb45034608455936d62e",
+      "text_sha256": "b48a304b5deaa9ae15a4c2b9d18c7e76e25477e6d6a40028c182f71c483dfdfc",
+      "keep": true,
+      "reason": "Личное обращение к сообществу и воспоминание о сайте; упоминание бренда не URL.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "aef2f95947caa38add8c1475",
+      "text_sha256": "db57c5e3fd9dcaddb1060a4feae0ac4c7d75ad1b08f6073e41ced13890bb313f",
+      "keep": false,
+      "reason": "Преобладает перечень тем учебного конспекта; просьба в конце не делает весь текст разговорным.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "7a7598b954021f84f3233cea",
+      "text_sha256": "d35cb430cd0632ce53e907cc51a3787fe7147c3cc4661db60c5807242a1a0c0f",
+      "keep": false,
+      "reason": "Преобладает формулировка учебных тем, а не бытовое общение.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "cc36a7daed2ecbeb75bf2abe",
+      "text_sha256": "ed7ad651389249b5a492402bce2c53061d8375c3ce9ef2c9c1e996e61899f034",
+      "keep": false,
+      "reason": "Преобладает формулировка учебного задания/тем конспекта.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "0931c9ed50f513cc17b109fa",
+      "text_sha256": "7bbb765c10fd9e6df9b148329c2c1dcf3e3c3b8d820150f59899d6be654cc25e",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "f3e1e4fde9d6fc6f42e894c4",
+      "text_sha256": "a4ab53afa1dfac8e3bc4ddf1bc404d1d9d9d90570396a62afe2408365b28b9ad",
+      "keep": false,
+      "reason": "Развёрнутая рекламная презентация проекта и описание игры; смешанный текст.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "e837432a3eef9652368ed459",
+      "text_sha256": "152534975e28c74fce80bfa5299e18660fd29ec0576050d18970fffd8d1538f2",
+      "keep": true,
+      "reason": "Личное намерение и просьба высказать мнение, неформальная орфография.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4cbfc5608749e6cc958dc9ab",
+      "text_sha256": "1431f49dcfca6e0491a0fbb7e1ebf00d2ca1bc21ecb6b3ba5823b9b610f98144",
+      "keep": false,
+      "reason": "Преобладает процитированный стихотворный/песенный текст.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "b54d3c2adf64e182f8d6d0fd",
+      "text_sha256": "e6e19c9f5637575f3b2519df7b2d40164457abf0578050fb6c9462c74dc03da4",
+      "keep": false,
+      "reason": "Преобладает учебное задание по системам счисления.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "adb82945a185ea5d52719658",
+      "text_sha256": "bb48fc8181c647d13c93c20e3b6d91df5956129dcefdd07bb6de2c37d2ea2a7a",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "a943b1185bc083a754ba620c",
+      "text_sha256": "3e2be6b3f1cc9baf0a66fed1382ad1f2ddcc9f51d8ad559e8d4010d2a7f29fb2",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "2f6b0a917367efcbfe62841b",
+      "text_sha256": "2dcfa8d9db7a23afcba1b511a8eaaf2cfb7499493621bade586c8512ac685d81",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "b146e55780021e059ccab635",
+      "text_sha256": "0b4bab44ca10c796982e68a6ce8d04d22b6e440fcf790bb2358284ba5fcd235c",
+      "keep": true,
+      "reason": "Неформальное сообщение о поломке принтера; естественное переключение языков.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "62d60bdf6b9ef628e323c9c6",
+      "text_sha256": "af469383a50e6f28d7ae3a2de105480168e936a286f20184d6106e18edec6322",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "db8c8425e92b4de2e2e14499",
+      "text_sha256": "4f9af0ba5377e06cf7d3f7447f61f11244dfd0920162b14735fc64cd80d5670b",
+      "keep": false,
+      "reason": "Практически весь текст — условие задачи по программированию.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "30e0f19819dcbe9e3751d031",
+      "text_sha256": "60da1843b7cf0b7a27e25d7ef3e4efc36b9ed2d50e450b1b3da9352b7ef93732",
+      "keep": false,
+      "reason": "Преобладает учебное задание по программированию.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "47c750f9cd22e31867d8ad54",
+      "text_sha256": "6a06b1134ad434ee05cfddce75d798f49c4b727d73e055ba9a706457301ccc74",
+      "keep": false,
+      "reason": "Формализованное условие задачи, входные и выходные данные.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "1cc13d8345cf92fad40ad4cd",
+      "text_sha256": "249a355e329b002e26aacc460d5730f0da65d40ac635e6c39ba81d494754141b",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "cd95f30774abe453638a32c1",
+      "text_sha256": "bb81712b3324ed31b49ceb68f905d4d25a09e38dbbf278c7668cac5d643b1908",
+      "keep": true,
+      "reason": "Вопрос пользователя о технике; нормативная речь не исключает разговорную коммуникативную функцию.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "162825abfc4838ae75b282c0",
+      "text_sha256": "f7dc6cbc1b38619746663f918d24ec2a1de4fafe2435d2e84fff1996fd090930",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ca573f7b52a62327e929459c",
+      "text_sha256": "076e51481cc1692f556d39255bb2e698a054f207e53019fc55f411518eb0ee1f",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "911e22b11ba66aadcf726ca2",
+      "text_sha256": "54713f83b02559695953379932fbc914226b26a85450180da71ffbbd470849f3",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "57ae94bd556b708303c2a4f0",
+      "text_sha256": "021f9ce26c5a585c15049955643c4e679f7b2de73ca1a7adc96dca8651596100",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ff60cab0eaecc52cb91eca57",
+      "text_sha256": "82edc2d7dc6e2b94860a239feb77dd94091290f96d6845e529fb63b63375a864",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "b15f9c48062603de0e5c26b8",
+      "text_sha256": "a6cae4fc915741800158227108a758ca603e36e759f44eed30c0500cd5deb90f",
+      "keep": false,
+      "reason": "Присутствует номер телефона и запрос личных данных; исключить из обучающего пула.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "0b1d9592c8ad777709143d8a",
+      "text_sha256": "e6b091d4c8cc1514934ab2a86dd3aa26ccf65d31ffc8decfbaa0440ccea0e8a8",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "d1b97d378d3a2c31ebc5bd31",
+      "text_sha256": "51f773dfba2d9a6d9520c3a89ff73870cb0e78962b77a8224b20d3b8b9571277",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "888cf02a818f3a1f930455a3",
+      "text_sha256": "68f59120259e98294fd392b117a3148ca49ab386938b991bd949f62500222e6f",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ea48fe07350c0e924eceecc7",
+      "text_sha256": "f64964f45ac145b5a770450d88ada91f2b181a592b100f82caff64911f3a95a5",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "464347a8a3813f33c0579f36",
+      "text_sha256": "bbc24f61b81b78730a271b9be6926ce3f16202941fa4c2f32a1f8da494bca112",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "14934de8e4f2ed82a5dc37b2",
+      "text_sha256": "cfed432db8aa6ddeedfd442e856fab74e11926acbf18a309367874c5c15bbf76",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "d40e7ac351ea57c457f97bd2",
+      "text_sha256": "253f3fde27c6542356db996d9e39d15d27ebc768d2f08551d2343537cc0abebc",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "98b03a1425f60cff66f34ab0",
+      "text_sha256": "ff6254ba2e4f95d91eaaec0cf9a7094d5fa1369585fc63a599843ead46410f3d",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "effd4e3ebf4043c879e1d5e3",
+      "text_sha256": "5ea19b1546d39117f97b5f9b8bfede193e8429024b3568f1e5077bd8cad3bca2",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "fc79f0299b87c9f2f45ce21f",
+      "text_sha256": "db99e040fe8a70a0ff2affddb94fe10b6ceb96835ba020d9a429998754563abf",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "7093dd26e6a742d253f80f30",
+      "text_sha256": "8c04ec695f1525dfaa403e59704b9a115a7f26f70d59cb8e46aa7a85ee1f6e93",
+      "keep": false,
+      "reason": "Присутствует номер телефона; исключить из обучающего пула.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "64973129f6ce9aa11209f720",
+      "text_sha256": "89cc6e93e32f5ec566057a98cf7da590b5e66983f3078af1c3886e84a6157725",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "e49186c0db7dab15acf2f5eb",
+      "text_sha256": "379c9a8e37894179c16ae155b58f9b287d6ae27186209368cc719b321742f9f2",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "b6ce92ddf58267b33a9999f7",
+      "text_sha256": "196a3f28e02e3115f0f7fda04654e067a22121c26dcda7bd98ff79dcc9f15ac6",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "cd2b826a8f026dad363d34bb",
+      "text_sha256": "14cb9013d55d37654d8d0bfe7c717fd245897519d1f895f01b521fe45abccf1c",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "0dbeb76441662628fca9469a",
+      "text_sha256": "930781ffcd817b1d6c8a81d1682b03946573ebe2c27d72379f8ef31c5f4a5d0a",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "cdc28e084f9927c4bdc75a7d",
+      "text_sha256": "9d41d28ed2b55790391b747911b3230313ecd82947d2528c6861f7c7d0fdc663",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ba66d544c072291037d40c06",
+      "text_sha256": "a3afcbbdacc0825844957f7237a19737fc19427cd040d5925921aa222b58c42d",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "8fedd55da33435b918e63c5a",
+      "text_sha256": "e88a0b3b01e41150b92d88a23b84769a19bd41b5dd6ffe928957763d7f95c659",
+      "keep": true,
+      "reason": "Краткий запрос названий заведений; пограничный по недостатку контекста, оставить для человеческой проверки.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "e582424fe3b9b068aa479ebe",
+      "text_sha256": "e566a763455c47a7545f4cdb96d810fed65e3a78846e9af848a7c1dc3303cad1",
+      "keep": true,
+      "reason": "Личный вопрос об исполнителях жанра; пограничная краткая формулировка.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "e2b707cbaabdea2115e3f4cb",
+      "text_sha256": "b344b94cf74af95c72ea5baceb3e3ad62494ee5df04f3a700eb0a1fa93ca1a4b",
+      "keep": false,
+      "reason": "Большая часть текста — цитата песни; смешение разговорной просьбы и художественного материала.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "09d06008613911b5fd1d3e0a",
+      "text_sha256": "16f0b201f7985a4676246c735283c5a25befbe9f8eefa94a6d8f433c5c6cc2c7",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "54ebdc2b900f67b9df5c81d1",
+      "text_sha256": "fff549755273fc5c96f1bff5d09cf20c1475b29a20c232cd040b3997a3bc3ba1",
+      "keep": true,
+      "reason": "Личная ситуация и обращение за советом.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "2a8154103eeb17185f2f3241",
+      "text_sha256": "494c204f1aa777c98eb4b3f47ee485c73654c716dba78aee699155a424006836",
+      "keep": false,
+      "reason": "Значимую часть текста занимают строки песни; неоднозначная единая метка.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "2cf7a85c9383803eb13ce07c",
+      "text_sha256": "14bef4d566f325e2b42a5386d8723b4bd4caad5970b786e5cad1f4d4079911d4",
+      "keep": true,
+      "reason": "Просьба к собеседникам написать стихотворение, само стихотворение отсутствует.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "f1597fed3c6df0929b43f12d",
+      "text_sha256": "1e294c05e9993f47ac564c769b9ad84ff587ca494cab6ef99c52fdd149dd3dab",
+      "keep": false,
+      "reason": "Цитируемые поэтические строки составляют существенную часть короткого текста.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "32ada462aef3c3003ba10fac",
+      "text_sha256": "fd0c0a4f0549c7ae4e3f41cf0a4fa4cc74bb51917c4d931012350217ae1a47a0",
+      "keep": true,
+      "reason": "Личное воспоминание и просьба найти запись, без длинной песенной цитаты.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "e089b61c0c6254d5a8f6c806",
+      "text_sha256": "dddfdba1f334c2d04b7969ac5dcb20619cecd8f0230ad769e3ca2a36d2185abd",
+      "keep": true,
+      "reason": "Короткая просьба о нотах, без художественной цитаты.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "38c805d479b8d069715c26bc",
+      "text_sha256": "723f08afb530b149a80f26366e752b3a1ff5ce452fdfc92aa50c2e9f3fcb405e",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "726e7f2ec8f407b06ac7c3aa",
+      "text_sha256": "096b15c8aa85461e197b508549dba6930327f7775b52e2d5643d50864965cd51",
+      "keep": false,
+      "reason": "Цитата рэпа занимает существенную часть короткого запроса.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "51485651dd87300cc53346d0",
+      "text_sha256": "4873cad82cae62d068e56cce88634a280362f2cbdd5911957cf4f65b308adae3",
+      "keep": false,
+      "reason": "Доминирует полный стихотворный/песенный фрагмент.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4c4de173d9a5caaa363a60b3",
+      "text_sha256": "b3df00c7756eaead6bfb4ac766d5002529531e91c67112ae307dcca7f1a6da21",
+      "keep": false,
+      "reason": "Песенная цитата занимает существенную часть короткого текста.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "9a284e3424380667a8ebf009",
+      "text_sha256": "c9db9414866b8e441e65bbd731306cf326bad93b848b2b4a4bf4b0073bf6022e",
+      "keep": false,
+      "reason": "Значительная часть короткого запроса — повторённая песенная цитата.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "7d0292af85c4d2b95b7576c8",
+      "text_sha256": "0d028cf45090e13ea5bf457fe5b75c94df6026f7e5020315beb59cd9572f0fae",
+      "keep": false,
+      "reason": "Почти весь короткий текст — повторённая песенная строка.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "f2b0bb412e2408594ac3bb4f",
+      "text_sha256": "56b82596adfa84ad372399b256c5815613a0eb9aa6ef280c8fec524b31063467",
+      "keep": false,
+      "reason": "Повторённая песенная строка преобладает над собственно просьбой.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "e0ff2e15e047fa435311c43b",
+      "text_sha256": "7247661c0d935c927c46eaa8d876eb5b34b6a54546d6d6eda20f11aa1474019a",
+      "keep": false,
+      "reason": "Доминирует песенная цитата.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ff48cdd8143c88f65df93a63",
+      "text_sha256": "af1264b39914c321246aa58ac04965a758ded704e1e02ef3063690df305904b6",
+      "keep": false,
+      "reason": "Смешение песенного текста с короткой просьбой; исключено консервативно.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "7f4154f6784bfe4ec66ac971",
+      "text_sha256": "935826918966644247a58a8e04f9e5c6fe6646dcd440915c97139c3827529f1f",
+      "keep": true,
+      "reason": "Личное воспоминание о клипе; краткая цитата не доминирует.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "a525e90bdb831c2d41f66218",
+      "text_sha256": "88d59abd96b6ac08093e5a5fedf9dbb2d24001e19b2e1049ca77b73bc46b7cde",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4bcdd79efb5d3eea64fbf757",
+      "text_sha256": "4fac9b91fc3b434fac1f5ae2800a4e99dbd302cb16fc34238e5d9ae17f45b718",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "b7e28bc7bf825d0fafd19f42",
+      "text_sha256": "930ffc473f21aa65d5af8cf7e507b270a8dffb87fb776f5ccc1a2a1ac7552e2b",
+      "keep": true,
+      "reason": "Личное рассуждение о двух версиях песни; цитата краткая, доминирует вопрос.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "cdb7ce97f62d4bd9550f16bd",
+      "text_sha256": "19ac05fb05e11264bb72f0e2221d9c59e6c526fb5a71e45422a5d79dd817e70c",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "df5946afd0b4a2f0d7067ee9",
+      "text_sha256": "22e3d715b83c2241fe9d7bc8e9beafb0e1fa9c0e6dc7cc952ba1aa79fc46107a",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4163fb4e6f1c8ce2ff3ae59b",
+      "text_sha256": "68433c79d4a7d9a92cca55028bd275e33f2363f653b72e02b9acc27e6503cb4f",
+      "keep": true,
+      "reason": "Вежливая личная просьба и объяснение цели; человеческая проверка естественности языка нужна.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "458b7ff7665f3a8263cbea0b",
+      "text_sha256": "f54d1d5cfff9b5a8f15cc6d2cdb61359067244325b478ba913f0dc3660f1d9ea",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "a5910aa9058c1920296256ed",
+      "text_sha256": "2ca6d6416ed4f7af7352d4ff247bd72c5978531f6c55f0567076dce0c5054901",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "864eddd3734898e64d32129e",
+      "text_sha256": "ffa4eb6e61eb84ccc45288cc53ce24df64b6ac5d1740c6fca6003bd8a24375c2",
+      "keep": true,
+      "reason": "Личный рассказ о своей работе и обращение за предложениями названия.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "a5a091bd2a67b850886ba046",
+      "text_sha256": "40f935eaaec871a5444e2b1bbfa079f51b773fa778983a39d1f446eeb82198ce",
+      "keep": true,
+      "reason": "Неформальная просьба найти сериал; более короткий повтор 79 исключён.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "d7eb09ee4c3f4625af7510e6",
+      "text_sha256": "dbab83fa7aee56529c98cd500de468d049ceb64dd9b973ae0abacba0e30b20af",
+      "keep": false,
+      "reason": "Повтор того же вопроса: совпадающий основной текст с a5a091bd2a67b850886ba046, другая шапка.",
+      "reviewed_extent": "entire_candidate_text",
+      "duplicate_of": "a5a091bd2a67b850886ba046"
+    },
+    {
+      "doc_id": "a6069dfd1fe25e134dc6a7d0",
+      "text_sha256": "e844c3d1148ff6138ef2981e937ab00bd722e5d8bdadb20e67914f98fb752219",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "d74b301b558c3e757d04f0dc",
+      "text_sha256": "205e8570d58319290059dc33b444f2f763ba211a8c57f2aad5eef7389f3d7c1d",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "4924240cb75160169e82e2df",
+      "text_sha256": "a537f59b401cfba9abd64058228cea65bb256801324d9e4da33d22195a53479b",
+      "keep": true,
+      "reason": "Личное воспоминание и просьба опознать фильм.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ecd927cadbbe3093417bd3eb",
+      "text_sha256": "a22bc900791ab9c75db5c4f4109038e7b05995e178058ac01a86e1554a4de6bc",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "f8608981b8c95ac749d8ecb6",
+      "text_sha256": "6414e2d6b660e07ec32901b66003730f5e823ae7c86f2345009ec2d979bd82b8",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "f84bde227e265b406c145385",
+      "text_sha256": "f1f80e8acd013f85380c3a0385d9c86fd2d029d8b2d9d1f6de897f13e24459e4",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "c7758048ae111f0bfad063c6",
+      "text_sha256": "bcd58e9f7b03f9f7f9912a7cf2014dcbea3dbb42876c937b97c8decd1fb16035",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "31cd279f0cc9dfddf0ae56d1",
+      "text_sha256": "547928a166ca143e59f0c0115afb5ee41540498acce8147146924c068104b3dd",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "6ca09e08407adee3d6dd23bb",
+      "text_sha256": "15e66dcb8eb197c9d5af32dfea69af638808ddfd47c63efe687e83a39bd7cd42",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "ec3bcbc27f468754022b0c54",
+      "text_sha256": "34509774a20718ac00c9f1d1e2ab19894c284b229803037d265ac6b46a014e68",
+      "keep": true,
+      "reason": "Разговорный пересказ фильма по памяти; пограничное повествование, оставить для человеческой проверки.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "545762b7f57de91824e508a8",
+      "text_sha256": "b9a8b04a314e0749182a8401a40350ece5be5c3d1a9a253ce75698abbc9461e7",
+      "keep": true,
+      "reason": "Пересказ сюжета ради идентификации фильма; пограничное повествование.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "3b91496121f2f14cfbceb520",
+      "text_sha256": "b3ed786f50a12ec3fb9502eeeb4ed98d5cc377d2c8ee5263a2870d654170cc01",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "8f9e828f1b66359541594edf",
+      "text_sha256": "a008087dba35e30a499dcc4cc58650ceb40055ab8be65dfe60702e71086dc9b1",
+      "keep": true,
+      "reason": "Неформальный пересказ фильма с просьбой назвать его; пограничное повествование.",
+      "reviewed_extent": "entire_candidate_text",
+      "human_review_priority": "borderline"
+    },
+    {
+      "doc_id": "2891696584520f6b51d320a8",
+      "text_sha256": "10c864916bab417c85f62dca36481af370b6ffceb9036ea6b0fada5d503d028d",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "55e877699a1b9e309fdef9bd",
+      "text_sha256": "82999557d53381145dc44be55d6efded150fc922c0620b1c6c69ada191016c81",
+      "keep": true,
+      "reason": "Непосредственный вопрос/просьба к собеседникам по бытовой ситуации; нет доминирующего задания, рекламного или художественного фрагмента.",
+      "reviewed_extent": "entire_candidate_text"
+    },
+    {
+      "doc_id": "caa56b8ad43882ac2f599b59",
+      "text_sha256": "31df03b89da8d9074b580cef6740bd7910ed8ae415de93b77fd7aa51a6ba15b4",
+      "keep": false,
+      "reason": "Рекомендация собственного списка фильмов и публицистические утверждения смешаны с просьбой.",
+      "reviewed_extent": "entire_candidate_text"
+    }
+  ]
+}

@@ -29,7 +29,7 @@ function showResult(data) {
   const styles = new Set(data.results.map(r => r.style));
   $('result-caption').textContent = comparing ? 'Ответы моделей' : 'Предполагаемый стиль';
   $('style').textContent = comparing && styles.size > 1 ? 'Ответы различаются' : data.results[0].style_ru;
-  $('chosen-model').textContent = comparing ? (styles.size === 1 ? 'Все 5 моделей выбрали один стиль' : 'Сравните ответы ниже') : data.results[0].model_name;
+  $('chosen-model').textContent = comparing ? (styles.size === 1 ? `Все ${data.results.length} моделей выбрали один стиль` : 'Сравните ответы ниже') : data.results[0].model_name;
   $('comparison').replaceChildren();
   $('comparison').hidden = !comparing;
   if (comparing) for (const row of data.results) {
@@ -57,7 +57,7 @@ async function classify(compare = false) {
   if (busy || !ready || !$('text').value.trim()) return;
   busy = true; latest = null; refreshButtons();
   $('output').setAttribute('aria-busy', 'true'); $('elapsed').textContent = '';
-  $('loading-label').textContent = compare ? 'Проверяем текст пятью моделями…' : 'Модель читает текст…';
+  $('loading-label').textContent = compare ? 'Сравниваем ответы моделей…' : 'Модель читает текст…';
   setView('loading');
   try {
     const response = await fetch('/api/classify', {method: 'POST', headers: {'Content-Type': 'application/json'},
@@ -67,7 +67,7 @@ async function classify(compare = false) {
     showResult(data);
   } catch (error) {
     $('error').textContent = error.message === 'Failed to fetch'
-      ? 'Нет связи с сервером. Проверьте, что server.py запущен, и повторите попытку.' : error.message;
+      ? 'Нет связи с сервером. Запустите start_site.cmd и повторите попытку.' : error.message;
     setView('error');
   } finally {
     busy = false; $('output').setAttribute('aria-busy', 'false'); refreshButtons();
@@ -98,10 +98,11 @@ async function initialize() {
       $('model').append(option);
     }
     $('model').value = data.default; ready = true;
+    $('style-scope').textContent = `Доступные стили: ${data.styles.join(', ')}. Версия корпуса: ${data.dataset}. Вход модели — только очищенный текст.`;
     $('connection').textContent = '● Сервер подключён'; refreshButtons();
   } catch {
     $('connection').textContent = 'Сервер недоступен';
-    $('error').textContent = 'Не удалось подключиться. Запустите server.py и обновите страницу.'; setView('error');
+    $('error').textContent = 'Не удалось подключиться. Запустите start_site.cmd и обновите страницу.'; setView('error');
   }
 }
 updateCount(); initialize();

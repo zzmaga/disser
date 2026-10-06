@@ -5,6 +5,7 @@ import html
 import importlib.metadata
 import json
 import platform
+import shutil
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -53,6 +54,7 @@ def save_predictions(path, part, predictions, config):
     result = []
     for row, pred in zip(part.to_dict('records'), predictions):
         result.append({'sample_id':row['sample_id'], 'doc_id':row['doc_id'],
+                       **({'split_group_id':row['split_group_id']} if 'split_group_id' in row else {}),
                        'duplicate_group_id':row['duplicate_group_id'], 'source_url':row['source_url'],
                        'y_true':int(row['label']), 'y_pred':int(pred),
                        'true_name':config['id_to_label'][str(row['label'])],
@@ -61,10 +63,26 @@ def save_predictions(path, part, predictions, config):
     write_jsonl(path,result)
 
 
+def save_provenance(out, dataset, params):
+    record = provenance(dataset, params)
+    for relative, expected in record['source_sha256'].items():
+        target = out / 'source_snapshot' / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(PROJECT_ROOT / relative, target)
+        if file_hash(target) != expected:
+            raise RuntimeError('Source changed while taking the experiment snapshot')
+    write_json(out / 'provenance.json', record)
+
+
 def render_report(out, frame, config, results, title='Pilot comparison'):
     """Self-contained HTML, no plotting dependency; actual counts and metrics only."""
     names = [config['id_to_label'][str(i)] for i in range(len(config['styles']))]
     counts = frame.groupby(['split','style_name']).size().unstack(fill_value=0)
+    limitations = config.get('limitations', [
+        'Source labels have not been expert-reviewed; source and class are confounded.',
+        'This internal test does not establish generalization to new publishers.'
+    ])
+    limitations_html = ''.join('<li>'+html.escape(item)+'</li>' for item in limitations)
     rows, matrices = [], []
     for name, result in results.items():
         te = result['test']
@@ -80,21 +98,21 @@ def render_report(out, frame, config, results, title='Pilot comparison'):
 <style>body{{max-width:1080px;margin:40px auto;padding:0 24px;font:17px/1.5 system-ui;color:#172b42}}
 table{{border-collapse:collapse;margin:20px 0;width:100%}}th,td{{border:1px solid #cbd5e1;padding:10px;text-align:right}}
 th:first-child,td:first-child{{text-align:left}}th{{background:#eaf0f7}}.note{{background:#fff2cf;padding:18px;border-radius:8px}}</style>
-<h1>{html.escape(title)}</h1><p>Три/два стиля, одинаковые тексты и разбиения у всех моделей.
+<h1>{html.escape(title)}</h1><p>Стилей: {len(names)}. Одинаковые тексты и разбиения у всех моделей.
 Единица оценки: один фиксированный фрагмент исходного документа.</p>
-<p class="note">Предварительный эксперимент. Метки получены из источников и ещё не проверены человеком.
-Каждый класс связан с отдельным сайтом. Эти результаты не доказывают перенос на новые источники
-и не являются воспроизведением чисел статьи. Test не использовался для настройки.</p>
+<div class="note">Предварительный эксперимент на фиксированном внутреннем разбиении.
+Выбор эпохи выполняется по validation; ограничения test указаны ниже.
+<ul>{limitations_html}</ul></div>
 <h2>Состав выборок</h2>{counts.to_html()}<h2>Результаты</h2>
 <table><tr><th>Модель</th><th>Validation Macro-F1</th><th>Test Macro-F1</th><th>Test accuracy</th><th>Обучение, с</th></tr>{''.join(rows)}</table>
 <h2>Матрицы ошибок test</h2>{''.join(matrices)}<p>Manifest SHA-256: {config['manifest_sha256']}</p></html>'''
     (out/'report.html').write_text(content,encoding='utf-8')
     lines = ['# Предварительное сравнение моделей','',
-             'Метки источников ещё не проверены; источник связан с классом. Один фрагмент на документ.', '',
+             'Один фрагмент на документ. Ограничения: ' + ' '.join(limitations), '',
              '| Model | Validation Macro-F1 | Test Macro-F1 | Test accuracy | Fit seconds |',
              '|---|---:|---:|---:|---:|']
     for name,r in results.items():
         lines.append(f"| {name} | {r['validation']['macro_f1']:.4f} | {r['test']['macro_f1']:.4f} | {r['test']['accuracy']:.4f} | {r['fit_seconds']:.2f} |")
     lines.extend(['','Dataset SHA-256: '+config['manifest_sha256'], '',
-                  'Test используется только после фиксации конфигураций. Отдельная проверка новых источников ещё не выполнена.'])
+                  'Показаны результаты внутреннего разбиения. Проверки новых источников и известных ошибок сохраняются в отдельных отчётах.'])
     (out/'report.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')

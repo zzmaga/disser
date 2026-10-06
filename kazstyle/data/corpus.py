@@ -199,14 +199,14 @@ def duplicate_groups(frame: pd.DataFrame, threshold=.92):
     return [names[uf.find(i)] for i in range(len(frame))], edges
 
 
-def balanced_splits(frame, seed=42, per_class=300):
+def balanced_splits(frame, seed=42, per_class=300, group_key='duplicate_group_id'):
     """Stratify independent groups, then balance document counts within each split.
 
     Surplus records stay in reserve; no oversampling and no cross-split group reuse.
     """
-    groups = frame.groupby("duplicate_group_id").agg(label=("label", "first"), n_labels=("label", "nunique"))
+    groups = frame.groupby(group_key).agg(label=("label", "first"), n_labels=("label", "nunique"))
     if (groups.n_labels != 1).any():
-        raise ValueError("Conflicting duplicate-group labels must be quarantined first")
+        raise ValueError(f"Mixed-label {group_key} cannot be split with single-label stratification; review grouping or use a separately specified multilabel allocation")
     train_groups, rest = train_test_split(groups.index.to_numpy(), test_size=.30,
                                          random_state=seed, stratify=groups.label)
     val_groups, test_groups = train_test_split(rest, test_size=.5, random_state=seed,
@@ -217,7 +217,7 @@ def balanced_splits(frame, seed=42, per_class=300):
     targets["test"] = per_class - sum(targets.values())
     labels = sorted(frame.label.unique())
     for split, ids in split_sets.items():
-        part = frame[frame.duplicate_group_id.isin(ids)]
+        part = frame[frame[group_key].isin(ids)]
         present = part.label.value_counts()
         if set(present.index) != set(labels):
             raise ValueError(f"Missing class in {split}")
@@ -228,7 +228,7 @@ def balanced_splits(frame, seed=42, per_class=300):
                               for label in labels]).copy()
         selected["split"] = split
         parts.append(selected)
-        counts[split] = {"documents_per_class": count, "groups": selected.duplicate_group_id.nunique()}
+        counts[split] = {"documents_per_class": count, "groups": selected[group_key].nunique()}
     result = pd.concat(parts).sort_values(["split", "label", "doc_id"]).reset_index(drop=True)
     validate_manifest(result)
     return result, counts
@@ -243,6 +243,9 @@ def validate_manifest(frame):
     for key in ["doc_id", "duplicate_group_id", "excerpt_hash"]:
         if (frame.groupby(key).split.nunique() > 1).any():
             raise ValueError(f"Cross-split leakage: {key}")
+    if 'split_group_id' in frame:
+        from kazstyle.data.grouping import validate_group_separation
+        validate_group_separation(frame)
     if set(frame.split) != {"train", "validation", "test"}:
         raise ValueError("Expected train/validation/test")
     labels = set(frame.label)
@@ -369,4 +372,19 @@ def load_manifest(dataset: Path):
         raise ValueError("Manifest changed after dataset construction")
     frame = pd.read_json(dataset / "manifest.jsonl", lines=True, dtype={"sample_id":str,"doc_id":str,"excerpt_hash":str,"duplicate_group_id":str})
     validate_manifest(frame)
+    if config.get('schema_version') == 3:
+        from kazstyle.data.quality import assert_text_only
+        if file_hash(dataset/'metadata.jsonl') != config['metadata_sha256']:
+            raise ValueError('Provenance metadata changed after dataset construction')
+        for split in ['train','validation','test']:
+            path=dataset/f'{split}.csv'
+            if file_hash(path)!=config['input_file_hashes'][path.name]:
+                raise ValueError('Text-only input file changed after dataset construction')
+            inputs=pd.read_csv(path,encoding='utf-8',keep_default_na=False)
+            if list(inputs.columns)!=['text','label']:
+                raise ValueError('Only text and label may appear in training input files')
+            expected=frame[frame.split==split]
+            if inputs.text.tolist()!=expected.text.tolist() or inputs.label.tolist()!=expected.label.tolist():
+                raise ValueError('Model inputs and report manifest differ')
+            assert_text_only(inputs.text)
     return frame, config

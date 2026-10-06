@@ -1,0 +1,1319 @@
+{
+  "input_sha256": "cfc9eb4de39cb549ce257c05e061a3a877ba11aa4d587981c0ca02490bd402ed",
+  "input_file": "data\\external\\screened_v2_20261002\\candidates.jsonl",
+  "reviewer": "assistant_semantic_review_20261002",
+  "expert_verified": false,
+  "reviewed_messages": 262,
+  "decisions": [
+    {
+      "doc_id": "004ec620481586d82bd7b059",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "02ea06f4b4c37770be6a2cb0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "06ebb8f2d23b570ca9c9b1a6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "07fd10d634180e911b12cf0b",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "093ae41c3710832b314b6b2f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "0a69f2374dd3001f1fcd1945",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "0e9b290c54bbd2eca31e0633",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "0f7806d0813a602c847180bf",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "10928936951f1a1cba2cd1c5",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "10cf2d7dd14ed8c8a34883e8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "137cffeee7ce187071b2d170",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "14b59e5d95c464b2b1da51d2",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "15b41a8fa31c52c5cc547fb6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "195073d7dba39de284e5f338",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "19a86f0589f10605f33c9077",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "1a7774875bd11476817e2255",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "1b4b0513c9d53ae16c54938a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "1b6e8984d98ff88f74309b7f",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "1c6f3e3f04b5d53fbbc6fe06",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "1eb8dd5b1f00d6d0ec23232d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "20dd714d3f40d6df9f8bc0b8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "21f7d9e120a54414af13c42d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "23e95d24c2e2c768f710f124",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "241a9c57aa5888140f972c68",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "24654d973959cc833b1a8acb",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "252959c23f68beeab44cddca",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "2569fa5a0e05d90a87aa2434",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "268b9cc8224fa738bd218035",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "279288929c95032625d1cd01",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "27cfb4fdec676e59944e3f1d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "27dfaa6b1b94cf08e793850c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "281343cbaa9cfa1f20fb1e3e",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "289178a219b86675cf9c330b",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "299034f44467f52338df37f4",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "29a1e30a8abc827cb3b422f1",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "2d8ed9f51c592a3fc7bc38d7",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "2dd3c974999d0602ebaed9e3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "2f135f893d74da7072c7d14d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "31851436bb193007b43b61b5",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "329b3c070bcd8d72a4fab1ca",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "32d9edbb932167a5673690e8",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "335575ee84c70edbba483d7c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "33f184d875323b27db8819a1",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "34c2e5fbc007bf85278616c3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "37a26df6ec99c40fae812270",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "38e2b5d7359dad513322347e",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "39b19687f5d2d1ee627728d3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "3b8dfeab939bcb2d198623a9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "407ae39ca521ae36fe477250",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "442266f8ade875ce0fb3261a",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "46e249ee7ad9463e1a1f145d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "470aedc7479a575afc9c713f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "475960e4691ed82578cf22dc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "486534e56be3ce8316b01335",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "49f2d7cf2b399141e2c9add9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "4b0dcf979a0392b5b4e7c105",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "4b133c87471f278faace47f8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "4c454b6f8a8f31937f5aa96f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "4cf35228771929f8980162e3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "4f37030ea2efb2ad041a87d5",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "4f5fdc4388574870589a1da4",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "5174d498dc8f763f15552334",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "51f37b848b43b9c7f3e31a47",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "52b882e7236fadbfc38fb0c6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "552d80c7489fc372ac5afdce",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "558e04dd2a207b754a19227a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "572e9181c97684a52b4757cc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "589fc673029b1a31a05b4042",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "5921f5c2e00217c7173f6eb8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "5a2f4b2fb7731e170ecae9b5",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "5acf8df40dfc5f560c3429d3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "5e8e11af81e6378aacfc260f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "5ec4b7c3f7197b005f986374",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6026b28ee7b6fa66da3eff1e",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "6131f88bc73ea1758f3163e4",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "61cd564714c7375a63a51acb",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6232dcc4aaa49308a68fa830",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "64545f6deb0a53ed91a8c4fc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "648f51db3ce0e6bd40cc4613",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6499586bb137bb8315c78a02",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "65ffc715bae81d0356a286b5",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "66b91cbac9a2fb4c5e385e27",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "6718510c9f0fb8750a5923cf",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "679b1d37a7d8c3b28ad3d655",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "68c60395a6b428d7c4fcab20",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "6a06cc0717e8b5ad3bb58af0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6c1837ef4ffc79d209ced64b",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6cbd47713bbf6256b39ceafe",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6d906426ada450f7a14517e9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6eb67cc9482cb3c3ee1bc753",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "6eebcdfe50c98f1227c07f44",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "6ef403a1a0e4e7fc930e8537",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6f0124fa734fa20151037ae1",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6f45f49c1436b0c6786bdde8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "6fb1dd11b9fe8b825f739e11",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "71bd143403d3f565c3dfa8bf",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "74e353d67975f927ed0e32fb",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "755ccaa7ac68092c59e615d6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "75c98fc6d8dcb811c4c309a6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "78ac865063ce2b4a1c491076",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "78b78f3b296df98783d5eac2",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "794f2ccb4ae2201ff6277920",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "7a2fa8ed6bff9751aedcdb43",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "7bac9112d7aba3592ad19443",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "7be4cdd4ae913c6be144219c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "7cd474067338e09672b9a463",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "7f5f9f0632f2183dc8aa7d61",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "81a8856ad0d21f88ee94bca3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "8246ed1e8b7dba66afbeb5ed",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "828df5a593817e6c95153ae2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "82c2653fd697a018a68449e8",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "841665f73c897604a5f36dbd",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "843da439f9a5b4e4b5604861",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "84ea63afe1640fc9a6d8ada0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "875a96fcc6f08f2a4e2f0154",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "87ec196295ac60a236939cc4",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "880a1860405b706ee3d37ef0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "89b8a0297a68f32c33ce3256",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "89e733c09c68a967599866c7",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "8bb0aaeab121ed4e9e9cee0d",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "8c576c43bc20d087e1dcf21c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "8c9b39f4357b6fec35c00f51",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "8cb8b354acee4d5bfe9f1122",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "8fff6c39bb1a26ee19f9e484",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "90091bb51502695a4d934f61",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "906e93b5678fd40f30781264",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9082d319878fb2b88899dd04",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "90bfc175728f2ef5ecce23d2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "90ef2b74387d89bd48f35416",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "93c4f52ab41bf357f2163764",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "93f3ffb978d4297afc4764d7",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "947d1d5c5af9b75a3be6b192",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "94c3a213495c5ce1503061b9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "95bb85acfae471cb46de29af",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "960d8548964e46bcdd802aa9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9700222924bb9a3182790e99",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "970467d848e3180ab7e57178",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "9777c5efb35fabaa04c48d17",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9790b22a7afddef97e657e3f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9876ebf39a9c2b27cf3d3b09",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "990f51300556f9babf71f3cd",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "991bbbe0d2f60a4de1d530fe",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "995cbacb6e2738260a0439bb",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "999014403da6671476ab06df",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "99a9289cfa9ddcc32928735d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "99bd26fbeaadc9a116ded848",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "99f112d11b9d223e5a60c246",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9a850dcf8010d5cc2ec01802",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9abc7694eda899d234b8b303",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9b27072f8c56dda5b0b61a93",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9b6a2857f4fac84d019289a8",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9d6b8ba2fed631ef777d0d8c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "9fcc4489fb9e28df5c4cbd01",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "a095c52d34c95104e07b744d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a2c7d1ca930c28f3d2e823d2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a2de231547f7b3727e4cd04e",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a3cacac8bc4adf1f8e14f4c0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a61974f1f491c82d111e5572",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "a6b65f781d4bd2969fd987bf",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "a70741eb6c3781b9d2cffdef",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a72bf94b563daa9f3e565c00",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "a838cf3beee49ea91488c297",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "a90809c7a8b4feaf8397c896",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "aa8d23c0d929e1866b8e8b7a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "aabb9b0214d579a4513e6c14",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ad1287b95937acf69e639f00",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "aeb2f79d0a4e77ba5c4ce90c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "aef3543b0b067b6252a7f2c3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "afbd70d943349033755ebbbc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "afceddb45d629630ce4e534a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b077b5bc44c221abfa10dbe2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b1ee0de258767fc2d57ef29a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b27832a354c579e2fed24ef2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b2d05664c812d069cf60f3a3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b35339f1f70dab913ad2daa3",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b3bd92e4478cbf2fc98f1ed0",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "b52af7d3583b89b58cc97777",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "b5b648bd310b470c2691cf63",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "b9843e773570af52a2ce7298",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ba8edae00d71b2c719336003",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ba9687857200fdc1d7765f47",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "bca45449df8b12ac19c9ff08",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "bcfcf6f9b0946694dddf3104",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c154c4333ff6b39d082bf480",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c20b7d90f61025e6389a8087",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c2c86c88ef438dc9bdb8430e",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c378cc1e0b439a93d292b8cb",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "c402394f497de2887cf7e523",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c40612a744c52cb60c3b4b97",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c40c6bd25609c2b4c01032ce",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "c46f90c52b3d908f87fef09b",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c534f6396af9f2c979d4414e",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "c547949fa3a883282a46881f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "c9cc26e43c93cec0bacda00d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ca960b77fddb3993a2d45fca",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "cce0cc7f7355b01412da4097",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "cd0a780d11bf1bd8edc407eb",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "cd8ed7d95f92e171b69e9829",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "cdcbbdbe6f905e3ecff278e1",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ce512bfbd06381c25a0fbb4a",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "cf262f27748cee6d949322e8",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "cf2e549df9a136f02863612d",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d0aad41585842d9eac34eef4",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d0b227570c25ec2dd8469fe9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d0eef4ae76a4a4215dff80f2",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d1b85fa024690013879d606f",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d21c268900ea910bb551f677",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d2bec57146d935b328e00813",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "d2df6effd474e39eb15e2d13",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d2f26f60d81e4a543b941ea9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d3fa79c17336c12f7a4fe95c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d52957bafdaf80a51c161088",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d568aca89f54a01b41fcc90d",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "d670b6f86b2b2858f364a370",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "d6e7729eb8f568eef5057061",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d74e70005b2f794973d4dc56",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "d75c3af25422fa7b39dcf606",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d7801c5c51411383fbc9bdbe",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "d99544a17419e537852e82c7",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "dad10a840a46ae5415a59ccc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "dad9acc9f177137ab6ff121a",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "db1abf0e7b32949f8954629c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "dbb93c5470d46ecdc4ff4101",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "ddfe6a2bdcce9247e13e7dc7",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "de9cbce2de5678df37acd6ee",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "df2ddb47c1741fd709c31d92",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e16d2f36c38d7201cc3cfa37",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e197acc69ecbb06c3d00fa08",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e1cb22ded4669c4622348615",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e4fcccc23a4956454c6549fc",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e54ef7517444afd1807768f6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e5f4d9e24eeba18b937e22de",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e60d0a1e3c8aa0c93e869894",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e668b420abdf14bf321b216c",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e6c571256dbc413b7f169e76",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e6e432e02485cd72f664743d",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e724283ab2508e6a1bd40edf",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e883264b0a5c8acd6a04d042",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e97ed389f5dc629e60327b7e",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "e98849ced9cf722a635e0c8b",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "e9a10fabd95f50b742abe859",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ea1c0b891b2acbe489f4e9b9",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "eaad6164cdaf8f778e3c1cc7",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "eb647e93a6c1bad2a7957940",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ebc35f0c89af7789ab77c301",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "ee76356428c20d1e5d8279e6",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ee8899db8e65753c3f0da35c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ef282a906211d7a3e68d9e46",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "efa96bdd2a38ea1f48dd1140",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "f2799324ce9ebf5b90b36283",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "f352f67ac2d2e48c38f62457",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "f4d7eef15519a518748005c9",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "f5ed31a5a5dbdd35a4fb6042",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "f7e1ade922a2416f90eed282",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "f7feeacbfc8134d280fba291",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "f92e94836b7550c83174d546",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "fd23f7791165a6041734de93",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "fd58538aa2dbc96efdd2406c",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "fd702718a1943c58705f7869",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ffb636a3d5bdf84301bf8b36",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    },
+    {
+      "doc_id": "ffdf89cecf6c91efe39b23b3",
+      "keep": false,
+      "reason": "other_language_or_quoted_expository_or_likely_bot_or_ambiguous_style"
+    },
+    {
+      "doc_id": "fffd093a4212810e41da09ae",
+      "keep": true,
+      "reason": "informal_personal_utterance"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "model_name": "google-bert/bert-base-multilingual-cased",
+  "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+  "license": "apache-2.0",
+  "max_tokens": 512,
+  "observed_max_tokens_text_only_v3": 531
+}
