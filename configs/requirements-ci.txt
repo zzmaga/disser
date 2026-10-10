@@ -1,0 +1,5 @@
+# Small, pinned environment for the portable demo and CI tests (Python 3.12+).
+beautifulsoup4==4.15.0
+soupsieve==2.9.2
+typing_extensions==4.16.0
+lingua-language-detector==2.2.0

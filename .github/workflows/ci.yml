@@ -1,0 +1,55 @@
+name: KazStyle CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-demo:
+    name: Tests and demo (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - name: Check out code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: configs/requirements-ci.txt
+      - name: Install demo dependencies
+        run: python -m pip install -r configs/requirements-ci.txt
+      - name: Run portable tests
+        run: python scripts/ci.py
+      - name: Run text cleaning demo
+        run: python -m kazstyle.demo --out-dir build/demo
+      - name: Upload demo and test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: kazstyle-demo-${{ matrix.os }}
+          path: |
+            build/ci-tests.txt
+            build/ci-tests.json
+            build/demo/
+          if-no-files-found: error
+          retention-days: 14

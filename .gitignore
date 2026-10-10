@@ -20,3 +20,4 @@ tmp_*
 .env
 .env.*
 !.env.example
+/build/
