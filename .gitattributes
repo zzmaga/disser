@@ -1,4 +1,4 @@
 # Research recipes contain byte-level checksums of JSON plans and reviews.
 # Preserve their bytes on Windows and Linux; do not rewrite completed evidence.
-configs/*.json -text
-configs/**/*.json -text
+configs/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+configs/**/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
