@@ -13,20 +13,7 @@ from kazstyle.data.quality import CLEANING_VERSION, assert_text_only, inspect_te
 from kazstyle.settings import project_path
 from kazstyle.data.grouping import assign_split_groups, assign_passage_groups, validate_group_separation, GROUP_KEYS
 from kazstyle.models.tokenization import load_dataset_tokenizer, tokenizer_specs, fit_shared_text
-
-
-def diverse_sample(part, n, seed):
-    """Round-robin source/genre strata; no duplicating rare examples."""
-    buckets=[p.sample(frac=1,random_state=seed).to_dict('records')
-             for _,p in part.groupby(['source_domain','genre'],sort=True)]
-    chosen=[]
-    while buckets and len(chosen)<n:
-        next_buckets=[]
-        for bucket in buckets:
-            if len(chosen)<n:chosen.append(bucket.pop())
-            if bucket:next_buckets.append(bucket)
-        buckets=next_buckets
-    return pd.DataFrame(chosen)
+from kazstyle.data.sampling import diverse_sample
 
 
 def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=None, shared_reference=None):

@@ -4,6 +4,21 @@ from pathlib import Path
 
 from kazstyle.data.corpus import digest,file_hash,write_json,write_jsonl
 from kazstyle.data.pool import merge
+from kazstyle.data.sampling import diverse_sample
+import pandas as pd
+
+
+class SamplingTests(unittest.TestCase):
+    def test_missing_metadata_does_not_drop_documents_and_empty_keeps_schema(self):
+        frame = pd.DataFrame([{'doc_id':str(i), 'source_domain':domain, 'genre':genre}
+                              for i, (domain, genre) in enumerate([
+                                  ('a', 'news'), ('a', 'news'), ('b', 'news'), (None, None)])])
+        result = diverse_sample(frame, 20, 42)
+        self.assertEqual(set(result.doc_id), set(frame.doc_id))
+        self.assertEqual(len(result), len(frame))
+        self.assertEqual(list(diverse_sample(frame, 0, 42).columns), list(frame.columns))
+        self.assertEqual(diverse_sample(frame, 2, 42).source_domain.nunique(), 2)
+        self.assertEqual(diverse_sample(frame, 3, 42).doc_id.tolist(), diverse_sample(frame, 3, 42).doc_id.tolist())
 
 
 class DevelopmentPoolTests(unittest.TestCase):

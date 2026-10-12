@@ -6,7 +6,7 @@ from collections import Counter
 from pathlib import Path
 
 import pandas as pd
-from kazstyle.data.build_v3 import diverse_sample
+from kazstyle.data.sampling import diverse_sample
 from kazstyle.data.corpus import digest, file_hash, write_json, write_jsonl
 
 
@@ -54,6 +54,7 @@ def merge(recipe_path, out):
     chosen = selected.astype(object).where(pd.notna(selected), None).to_dict('records')
     out.mkdir(parents=True)
     shutil.copy2(recipe_path,out/'recipe.json');shutil.copy2(__file__,out/'code_snapshot.py')
+    shutil.copy2(Path(__file__).with_name('sampling.py'), out/'sampling_snapshot.py')
     write_jsonl(out/'candidates.jsonl', chosen);write_jsonl(out/'excluded.jsonl', rejected)
     write_json(out/'duplicate_inputs.json', repeated)
     summary = {'documents_before_cap': len(rows), 'by_style_before_cap': dict(before),
