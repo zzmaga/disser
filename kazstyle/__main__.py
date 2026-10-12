@@ -4,6 +4,9 @@ import runpy
 import sys
 
 COMMANDS = {
+    'export-corpus': ('kazstyle.data.export_corpus', 'Export or verify a versioned document corpus and its provenance'),
+    'collect-poetry': ('kazstyle.data.poetry', 'Collect attributed whole poems with author/work groups'),
+    'screen-legal': ('kazstyle.data.legal_import', 'Screen a pinned downloaded legal source without altering it'),
     'build-training-views': ('kazstyle.data.training_views', 'Controlled train-length ablation with byte-identical parent evaluation CSVs'),
     'build-source-holdout': ('kazstyle.data.source_holdout', 'Freeze a group-disjoint publisher-holdout development diagnostic'),
     'merge-candidates': ('kazstyle.data.pool', 'Compose a provisional development pool from checksummed sources and exclusions'),
