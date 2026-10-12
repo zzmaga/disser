@@ -35,11 +35,13 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-          cache-dependency-path: configs/requirements-ci.txt
-      - name: Install demo dependencies
-        run: python -m pip install -r configs/requirements-ci.txt
-      - name: Run portable tests
-        run: python scripts/ci.py
+          cache-dependency-path: |
+            configs/requirements-ci.txt
+            configs/requirements-data-ci.txt
+      - name: Install offline data and API test dependencies
+        run: python -m pip install -r configs/requirements-data-ci.txt
+      - name: Run offline data and API tests
+        run: python scripts/ci.py --data
       - name: Run text cleaning demo
         run: python -m kazstyle.demo --out-dir build/demo
       - name: Upload demo and test reports
