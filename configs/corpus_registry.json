@@ -1,0 +1,22 @@
+{
+  "active_document_corpus": "data/cleaned/unified_corpus_20261010",
+  "collection_targets": {
+    "official": 2000,
+    "scientific": 2000,
+    "publicistic": 2000,
+    "literary": 2000,
+    "colloquial": 2000
+  },
+  "note": "Targets refer to screened documents, not fragments or expert-verified labels. Candidate batches below have not been merged into the active corpus. Deployment is controlled separately by configs/deployment.json.",
+  "candidate_batches": [
+    {"path": "data/cleaned/legal_screened_20261010", "state": "screened_not_merged"},
+    {"path": "data/external/journals_scale_20261010/bulletin-history", "state": "collected_not_merged"},
+    {"path": "data/external/journals_scale_20261010/bulletin-geography", "state": "interrupted_checkpoint"},
+    {"path": "data/external/journals_scale_20261010/bulletin-journalism", "state": "interrupted_checkpoint"},
+    {"path": "data/external/journals_scale_20261010/philart", "state": "interrupted_checkpoint"},
+    {"path": "data/external/poetry_scale_20261010", "state": "interrupted_checkpoint"},
+    {"path": "data/external/forum_scale_20261010", "state": "interrupted_checkpoint"},
+    {"path": "data/external/stories_scale_20261010", "state": "partial_assistant_review"},
+    {"path": "data/external/business_scale_20261010", "state": "collected_not_merged"}
+  ]
+}

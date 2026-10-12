@@ -1,0 +1,645 @@
+{
+  "reviewer_kind": "assistant",
+  "expert_verified": false,
+  "source": "data/external/stories_scale_20261010/candidates.jsonl",
+  "source_sha256": "db67b245b858fa18d7b02fab957b5175657686fc324fd1e1b108f6b9ceb342fb",
+  "decisions": [
+    {
+      "doc_id": "3a20494b91c92a05974d848f",
+      "text_sha256": "167c7d1ba9cdebee6988f42620ced88be34bd0148c4a2e76d433373beb7ab831",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(қазіргі заман прозасы) ",
+      "remove_suffix": " Көрнекі сурет: Юрий Сизоненко \"Батар күннің сәулесі\""
+    },
+    {
+      "doc_id": "d71e06b662bb0a8d52457a80",
+      "text_sha256": "7919c104402b40d798c23df9dd1dd826fdf925391d92a6cb7fbcfd3a7d229dc4",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "Әңгіме "
+    },
+    {
+      "doc_id": "db0917e975bb71268279c049",
+      "text_sha256": "0b05833edee92f5ec0606e49a9ec147aa3b6c3d508e31e58787a83486d1b3042",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "bc1c2d2afaf732a48f9a6175",
+      "text_sha256": "aa500dc4b8a1be0abc626e61d193947236886e41e3084e001d2b59c0f502137a",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "3ed4bbe86892b78410a10f3d",
+      "text_sha256": "a018739bf409d220640cd465b6364a9efb85cdd635e6c8aabe3276dbcee02191",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "7e88e5c7581e9bd8f8226c8e",
+      "text_sha256": "01e6b00c3196bb012b59a054e8fba3e6343638962976c6772753d4b9fab456af",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "1f1320fe79a7cdb9b7b42fc6",
+      "text_sha256": "e5e25fd45a413eaa49c98e99120f2b6e0546e1b2d23af15bb09ef146b64b75b7",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "c3c814854eb22fee19e1cffb",
+      "text_sha256": "11a0d43f56ef6406a68ddebc36039e78d77fd8a4bf578d7319bf27803fb77367",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(қазіргі әңгіме) ",
+      "remove_suffix": " Сурет ғаламтордан алынды"
+    },
+    {
+      "doc_id": "a4640e84ae7739b0ddc31353",
+      "text_sha256": "8217b0a7930395c03e41543192340e9bcf747e4b8ec6b3222f2e299eda6a6fed",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "Әңгіме "
+    },
+    {
+      "doc_id": "41a13cfc55569794710d6599",
+      "text_sha256": "bb98052ec8a18bb31bf5731d1e48e266094d3d5fe412e11f16220903f7a56b9e",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "78a3764a25ee6a14d92295b3",
+      "text_sha256": "cddc059b462a95ae2f090c3e9440518a399b7faa002024707ec9f37fb1c494d5",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "ba1bb0adfb299dc4d7cda678",
+      "text_sha256": "02ab6e30883647e29d38874f10c714debb9846e7cd146efa81f63fc870b31c6a",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_suffix": " Көрнекі фото:"
+    },
+    {
+      "doc_id": "308fe6b7876958893eab924b",
+      "text_sha256": "a38a6459c58ccb2383989daa50c149f68cf1825723465d115025b3b56f55118e",
+      "keep": false,
+      "reason": "Эссе на границе художественного и публицистического стиля; требуется уточнить правило разметки.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "49785d73ce9e4d625862ad24",
+      "text_sha256": "1b6c0b121967a6b0f2f0e2e9b2fa60bd4221c3e9fa187eecf33a4684cbb03a57",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "c2e678730e040cd52bc9e902",
+      "text_sha256": "294c257796a9824b43c9c6991c0df5263f9a65c0fd4dbf305a769ac578c6c309",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "d46341c4ddcd37717ce1429f",
+      "text_sha256": "8e0328ed14e43ae756d23056328c92a4af5774f0563c7b97e820d0b189c20db9",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "fb96691aaeaab894fd7f64ac",
+      "text_sha256": "f57bd7f712a333aa4cd5e858fade8f1a6923468f9aadf59d9d6e2e52185c9f88",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "9ff1cf649071311681aeffab",
+      "text_sha256": "563f480474280be0b550f8b6b8e350bb784b2dfb56bd2f6f1f3d9a34345f489b",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "24c7b2a386b1b0fdf394dcb3",
+      "text_sha256": "9b4752f3aec82eaa4fd2846be33096cda10b5071b7fddfef5007c6b35dc0cea3",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) ",
+      "remove_suffix": " Көрнекі сурет: Л.И. Соломаткин \"Ревизор келгенде\""
+    },
+    {
+      "doc_id": "5cb205c8bef1771fbc3116a3",
+      "text_sha256": "fc611189fb2b1e7a0f542e432538951684de74e883bb99a2ffc86c2e291edac5",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "c78f3c7f363ae9c9b2a80c7b",
+      "text_sha256": "37537f520c842e3f840b9ade3fd43a615e9c8af4f7cedd2f83d47bfce04ccc3c",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "76ac6efdf81aa8ade2bf5654",
+      "text_sha256": "dee8265cd175c6a1c916d283e0d265d48d515e60363bf2a976a392f7c498ea6b",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(қиял-шыны аралас) ",
+      "remove_suffix": " Көрнекті сурет: Критика. Травьестің карикатурасы. 1930ж"
+    },
+    {
+      "doc_id": "cd2210d7be3fcfba8150af80",
+      "text_sha256": "79ad752ecbfa68e92d05b433c830c83bdee5d59957ce820823724ee680ae7541",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "eb88bd50c0c21bab510ac1bc",
+      "text_sha256": "6e51f7d3e7ec07c10d89dc7d1603d17e42b0837bef48914141d88b86b61a1f43",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "752172da785c790b910e2742",
+      "text_sha256": "ce0087b86dacb9f4af6f5f480b371951577c7ea579c99aa0aed46caed6436e0f",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "69acf28995c14da41be96187",
+      "text_sha256": "52303abb5e85f0d4df2d9489da6d1ff3fe295d6b125ec60b8e8e1cf34aeeef03",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) ",
+      "remove_suffix": " фото:"
+    },
+    {
+      "doc_id": "21fea4c734bc90640eaf69b9",
+      "text_sha256": "ee556a37ef0fa6f33ce83b81e58cfabdc039f0a6a3ca54209699425ce9518fe8",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_suffix": " Сурет:"
+    },
+    {
+      "doc_id": "e28e8c0be8a5cd77f77088f3",
+      "text_sha256": "f3b5b49609ab7b59d429f71b00953402f3ecd11958f06eb96c6e49328351628c",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "3c9b74147a3fba3f5d2b6eaf",
+      "text_sha256": "a942f6c67c4689156330885a76e122c92d8c33d39ee6a0fa9af6963617fc644b",
+      "keep": false,
+      "reason": "В конце словарные пояснения, заметны смешанные латинские и кириллические буквы; отложить до отдельного извлечения.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "05e587c1706a4d1c521c222e",
+      "text_sha256": "7c105492034922ec36c1df247926132d7eae98b8e462b91d7ca65714a0532d37",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "9dba8e142ee3c17ab6a9d549",
+      "text_sha256": "57764c9d337a1c2d2985c6faad4f6f74ced618e746620e98786c7897e9e16671",
+      "keep": false,
+      "reason": "Биографическое предисловие перед рассказом; требуется отделить основной текст.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "d74339e5ced57b91c166f5fd",
+      "text_sha256": "3f02afb5a29acbbf1c9e70a981981e59ffa1a20c86ee6e4810c2b8378eab8734",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "52fbd884249038361f99c85b",
+      "text_sha256": "b7234b513007801861803313a3e5a220d6131cc91cbad09c27db9bd98d60147e",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "711c125250d54cb660546fab",
+      "text_sha256": "d206111cf07e50f9f375d0021ef6db592bf628d43e75c5a97606449040eccf25",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "267c1d40c11d0506c3d6aac8",
+      "text_sha256": "5c65042fbc32a7306b7f2934629da3664f5a055df9e6c20dc03276355cb5b233",
+      "keep": false,
+      "reason": "Массовые смешанные латинские/кириллические буквы внутри слов; требуется отдельная проверка нормализации.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "59fb4b409b4e8f6371a4586a",
+      "text_sha256": "af7e573e9d643857bbbc19223785acfff2602c4b74b80dfad3c98fbcae51954a",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(Ертегі-әңгіме) "
+    },
+    {
+      "doc_id": "457115c5e1c582a9c5ddde65",
+      "text_sha256": "cc00768d0a05c2bd17007af5ee12f9dccf913c971020c8afc94eac9052d32fde",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "( әңгіме ) ",
+      "remove_suffix": " Сурет ғаламтордан алынды"
+    },
+    {
+      "doc_id": "7aedc16c5b4ae261c277d3e6",
+      "text_sha256": "e59bf1f8edf8f7b4260a453e197f8da8d79eb06e6480c6c68c538fe355edf803",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "( әңгіме ) ",
+      "remove_suffix": " Фото: fotogenius.es"
+    },
+    {
+      "doc_id": "430c0ff3f2c9ce85c4ebfe26",
+      "text_sha256": "904fd64ad540d5ccd04c4c94883225a936edf35044b5e920e10a839c07c939b2",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "( әңгіме ) "
+    },
+    {
+      "doc_id": "60479c935e6d09d331af56a1",
+      "text_sha256": "c31a0a380ae4a50a84e0aa67c2f31d7ba971e040aebc1a62c6fa9657c5c1caa4",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "4ffffe08e88a2a1adf547df4",
+      "text_sha256": "30af9605cb73936690bdd4f5cb3423c6b97e1b6e5e34f37202ad3bdc0ba7bbcd",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "e89f740dc0347640c1f42099",
+      "text_sha256": "98e5000760b0f938fc13c923ee46220ca37578b66ab06b9f1f7e746ccefef92a",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "Әңгіме ",
+      "remove_suffix": " Сурет сайтынан алынды"
+    },
+    {
+      "doc_id": "51a88c93602ee873a9343783",
+      "text_sha256": "ee7d6636cdeb5175f1d21f3ead8301e2c3ade5febd753239d14485ef55ea7986",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "d66665e7e467db13925038b4",
+      "text_sha256": "f6a9c189b51a342835f9f4127e480f38750667b2d0e2d659d753a763ec02dd6c",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) ",
+      "remove_suffix": "Сурет ғаламтордан алынды ОҚИ ОТЫРЫҢЫЗ: Қуандық Шамахайұлы. Мұқанның көршісі"
+    },
+    {
+      "doc_id": "e4c2a95c7fac8cbed2c5bf13",
+      "text_sha256": "25b10dc8e569dd11632ed773e2de2e1495b3210d63638bc10ac7f078f017df63",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "( әңгіме ) "
+    },
+    {
+      "doc_id": "ab1fa742306cd1a9d09d11d2",
+      "text_sha256": "1e432174e43f51a13c65001f2289225a7e8bef00762f08d891c133e68ddf8cf5",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "c096176a2cdc28174813f244",
+      "text_sha256": "e765f4618a03b1b2416fb18727da7326884ab6f948e83268aec8a06098fe3be5",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "f42985eef3a87584cd543879",
+      "text_sha256": "2746190e278c14a66a87a02414a1986f3e7b4ede11f2071985dde409cef0bb07",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "a87027835f960f48be91925c",
+      "text_sha256": "e8d9972e9186be1956e41f25e0d188edcf3b2297c330a606e37b3907c6c49e44",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "әңгіме "
+    },
+    {
+      "doc_id": "4f2c28340df28f9c230a4108",
+      "text_sha256": "ff3314464540f3979f089a88c0bed01845e196115c60b19057aeae3b73081e8c",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "547e53ffb8805614d28190ab",
+      "text_sha256": "dd3a7a86a56be21f1d1cb7f49dc3a344e72a6e0960d89df1c69f9f928fda1754",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "50001194d8d427f78d48ec69",
+      "text_sha256": "ea3fabefbb9556561510b8a2bfb0c2d37eba691ec171e166f6fef3113381acdc",
+      "keep": false,
+      "reason": "Вступление о литературном конкурсе смешано с рассказом; отложить до отделения вступления.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "35999e74500a81078e79ddbd",
+      "text_sha256": "26d8d257e279944799997b86be21f6f025051ef4a7af21fcdbe34aecd65ea9a8",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_suffix": " Сурет anews.az сайтынан алынды"
+    },
+    {
+      "doc_id": "064ebd233357c5345d544eb8",
+      "text_sha256": "daaec682c27b8894e91e51a4f35e34e4a9f04a2382e9522d052decde4d2b245d",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "Әңгіме "
+    },
+    {
+      "doc_id": "fd6355c1761d9a2a61ebd8fb",
+      "text_sha256": "e6daaf161c50a26da881b9be23857c12b1382c6d65b5ec562f217304a09d42ca",
+      "keep": true,
+      "reason": "В просмотренных начале и конце присутствуют персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "867d7180968295bea2f40e1a",
+      "text_sha256": "10d069daaf7a9a8bd9939b3aac50cf3b8ef6c31c47a87fef36ff0899fa6c4d36",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "bd0855e526e46b00603fa24c",
+      "text_sha256": "008a8d609e604f8820b62929bf54338f12873efe56f37e977e983cd967f5341d",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "89020a56ccf52c4134e29f68",
+      "text_sha256": "ee1a371c87c377ee4ec99a73be321b52f75aa81722d854d55df4a595976705b5",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "619c70186e152e56260003bd",
+      "text_sha256": "9dba7a3839797b3b4948675f544d0211c118074c3d1113ccec6619fda44cb7ab",
+      "keep": false,
+      "reason": "Конец содержит пояснение слова «хамелеон»; отделить комментарий переводчика от рассказа.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "fca6d4561bb6d9e37cded73e",
+      "text_sha256": "ca31cb067ba6c56c0dba224eec285d3ffdeac304e4d104390cca74c4d8faf702",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "52167d30677ca8653cd27034",
+      "text_sha256": "aac9d5a982201160cac638c824bc75f8854d3687a90e357ec967d30c5ce0d00b",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "65652844fceeaea36100b2fd",
+      "text_sha256": "510e777a6b0fdc0e8107e90b23255bceda73b39368606460f40e421ccf5b771b",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "Әңгіме "
+    },
+    {
+      "doc_id": "674122967acf92e21a9c5e93",
+      "text_sha256": "b06ad102571593e31a38dbf4734d10ce05ca5f8571212d591c5bc0412a8d8f38",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "aa04d69ea6ad34921a700d4f",
+      "text_sha256": "aedc3de3d6850c303aacc9dcaac988cdb3c572131f49b41ec169b15ad7b32b46",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "a412481e2e3fdcbb3df70472",
+      "text_sha256": "ef626202c4ebbc86bdc3d65035a5cc5f6c6f712a899570d2a9b2327f4a157dc1",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "836046bb58372d3f458d007e",
+      "text_sha256": "929774b8200ae4e17bd9dc1855c8cbfd5bfe153edeab8ff8c1563dd2617818c7",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "63191089cdbe3372fd834d4d",
+      "text_sha256": "db1c89b932cc70097f64aeb4ebcffe31bc70f7047764aa186ce9e0166b37cd6c",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "263fa676902d41d5c2d3d400",
+      "text_sha256": "e5f9724456057742a2b31e391660403613607ee9cbbff341381df73dc3966e03",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "5e18c9f62d0d72c716a33a7f",
+      "text_sha256": "87e971df05adef97029ac5f06fe790edd59765e3335e78675d53bff03004abf1",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "24f1a30b7ee1f357fc0140ac",
+      "text_sha256": "68a20082feda53dadae84474bc10d32203d4ac0c58fb8dd66d2126dd051e335b",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "d1668d7c2e2925e141a2b5c4",
+      "text_sha256": "f61e57af670bba108fec9e120a42c7c4804d954ea592bfd7b8f4efe46ad3e260",
+      "keep": false,
+      "reason": "Перед повествованием развёрнутый русскоязычный фрагмент дневника; требуется проверить границы эпиграфа.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "64362e45019605d4579d81f8",
+      "text_sha256": "5cc170c92f230a6c51bb6fd537d55cf68ad8be7c8febba8485602ad538f624c0",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "1619e164565e010867c0e4a7",
+      "text_sha256": "ca68f2a03e73956728ddb4297d7865761a4e124edcb5ce6724eba85c1cfda5d5",
+      "keep": false,
+      "reason": "Многократные разрывы слов внутри текста и в конце: таң ғы, көр дім, тая ғына, си пады; требуется исправление по источнику.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "e86359175df1b78b3d866498",
+      "text_sha256": "ce67952282c9c66a57e02bd2ae8024352915f179e2aafd7ae55dc654c2000af9",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "5e2e6203748a25f7d9e0c13b",
+      "text_sha256": "0b0ff79de34a993717fd5e2f77e23d08b41c61c3b9ea115409dbd87eb561a304",
+      "keep": false,
+      "reason": "Редакционное предисловие о переводчике и авторе; требуется выделить сам рассказ.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "836655323c817628e6c06f8a",
+      "text_sha256": "04d78ba3af1f947699f0b6d9d0bbed0175a402469114f153971048580e05ac33",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "3e17089b1b128d8a9e6bb104",
+      "text_sha256": "a7b4a135d9e2b80c2c0116f6d662c0bdb98e2e212b082ee2d50dcc728be93733",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "f2cc2951cdb86f01597b8b12",
+      "text_sha256": "f15f86a052487c3d7ad0b6ed3dd5f6ce07beb7759eca05a78bc8299e3c65b9e4",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "e068e37184694b145df6da49",
+      "text_sha256": "fe7712204afe53f40540cb8a2906082a116629ddd861e46e4321d7ef724f41d2",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "8a2db6880d8135619f896192",
+      "text_sha256": "e1487237ab4d31d2326bcebfb8298d1aae41bd016bdf8296948564730d72efb4",
+      "keep": false,
+      "reason": "Начало как личное письмо/обращение, конец повествовательный; требуется полный просмотр жанровой смеси.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "07b3d5557adc54e018d23d40",
+      "text_sha256": "62a2f6f768ab5b3fc0d11b1783c213b8d04918fa672249687e88d7e555798e4f",
+      "keep": false,
+      "reason": "Биография и библиографические сведения в конце; требуется отделить рассказ.",
+      "reviewed_extent": "title_beginning_end"
+    },
+    {
+      "doc_id": "f32e63eb7db3f01397644799",
+      "text_sha256": "f248f582d7582bde5f95a45da07b5d0297d271887f10607c788650f79b6013f1",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "6fe67878a1c7b7ccc376a2f6",
+      "text_sha256": "8dd9ff33690012c64d4f44d9aa5a741e62c22afed039deb0b31b41ac80d2ec63",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "fd75c91851dd29d976c24380",
+      "text_sha256": "94e7d1f0516e9eb92ff1acd93574b9d3c3a66e7b843f0a92a90ed7c2b553a419",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    },
+    {
+      "doc_id": "2b558b6a54d23df92b68cbe6",
+      "text_sha256": "cf507c139d95debfbc1c7f54f4e5f3b0f418eae94cf427417150519f23e1e07f",
+      "keep": true,
+      "reason": "В просмотренных начале и конце — персонажи, действие, диалог или образное повествование; середина не проверена.",
+      "reviewed_extent": "title_beginning_end",
+      "remove_prefix": "(әңгіме) "
+    }
+  ],
+  "note": "Partial screen of titles and beginning/end only. Source boilerplate removal is literal, hash-bound and limited to inspected boundary text."
+}
