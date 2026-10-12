@@ -79,9 +79,9 @@ def rescreen(source,out):
     write_json(out/'collection.json',summary);print(json.dumps(summary))
 
 
-def collect(out,per_category=25,max_pages=8,categories=None):
+def collect(out,per_category=25,max_pages=8,categories=None,exclude_samples=None):
     if out.exists():raise FileExistsError(out)
-    if not 1<=per_category<=100 or not 1<=max_pages<=20:raise ValueError('Limits outside allowed range')
+    if not 1<=per_category<=1500 or not 1<=max_pages<=400:raise ValueError('Limits outside allowed range')
     categories = categories or CATEGORIES
     if not 1 <= len(categories) <= 8 or len(set(categories)) != len(categories):
         raise ValueError('Choose 1..8 distinct categories')
@@ -108,6 +108,13 @@ def collect(out,per_category=25,max_pages=8,categories=None):
                 parts.append(chunk)
             raw=b''.join(parts);p=cache/(digest(url)+'.html');p.write_bytes(raw)
             return BeautifulSoup(raw,'html.parser'),r.url,p
+    excluded=set()
+    if exclude_samples:
+        for row in json.loads(Path(exclude_samples).read_text(encoding='utf-8')):
+            source=row.get('source_url','')
+            if urlsplit(source).netloc=='surak.baribar.kz':
+                match=re.search(r'/(\d+)/?',urlsplit(source).path)
+                if match:excluded.add(match[1])
     accepted,rejected,errors=[],[],[];seen=set();hashes=set()
     listing,_,_=fetch(BASE+'categories')
     category_links={unquote(urlsplit(urljoin(BASE,a['href'])).path).rsplit('/',1)[-1]:urljoin(BASE,a['href'])
@@ -123,7 +130,7 @@ def collect(out,per_category=25,max_pages=8,categories=None):
                 for link in links:
                     if n>=per_category or blocked:break
                     match=re.search(r'/(\d+)/?',urlsplit(link).path)
-                    if not match or match[1] in seen:continue
+                    if not match or match[1] in seen or match[1] in excluded:continue
                     seen.add(match[1])
                     try:
                         page,actual,path=fetch(link);raw,author_group=parse_question(str(page))
@@ -149,6 +156,7 @@ def collect(out,per_category=25,max_pages=8,categories=None):
             except (requests.RequestException,ValueError) as exc:errors.append({'url':url,'error':str(exc)});break
     write_jsonl(out/'candidates.jsonl',accepted);write_jsonl(out/'quarantine.jsonl',rejected)
     summary={'candidates':len(accepted),'categories':categories,'by_category':dict(Counter(r['category'] for r in accepted)),
+             'excluded_existing_thread_ids':sorted(excluded),'per_category':per_category,'max_pages':max_pages,
              'quarantined':len(rejected),'quarantine_reasons':dict(Counter(reason for r in rejected for reason in r['eligibility_reasons'])),
              'errors':errors,'expert_verified':False,'used_for_training':False,
              'limitations':['Questions may contain quoted homework, news or lyrics; genre is not a gold style label.',
@@ -161,6 +169,7 @@ if __name__=='__main__':
     p.add_argument('--per-category',type=int,default=25);p.add_argument('--max-pages',type=int,default=8)
     p.add_argument('--rescreen',type=Path,help='Reprocess a previously collected snapshot without networking')
     p.add_argument('--categories', nargs='+', help='Explicit category slugs verified against the public categories page')
+    p.add_argument('--exclude-samples',type=Path,help='Existing/reserved source URLs; skipped before fetching')
     a=p.parse_args()
     if a.rescreen:rescreen(a.rescreen,a.out_dir)
-    else:collect(a.out_dir,a.per_category,a.max_pages,a.categories)
+    else:collect(a.out_dir,a.per_category,a.max_pages,a.categories,a.exclude_samples)

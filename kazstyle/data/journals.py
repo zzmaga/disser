@@ -45,8 +45,8 @@ def parse_abstract(content):
                   'license_urls': licenses, 'page_language': soup.html.get('lang', '') if soup.html else ''}
 
 
-def collect(out, per_journal=40, max_issues=8, excluded_samples=None):
-    if not 1 <= per_journal <= 200 or not 1 <= max_issues <= 20:
+def collect(out, per_journal=40, max_issues=8, excluded_samples=None, archives=None):
+    if not 1 <= per_journal <= 1000 or not 1 <= max_issues <= 150:
         raise ValueError('Collection limits out of range')
     if out.exists():
         raise FileExistsError(out)
@@ -78,11 +78,25 @@ def collect(out, per_journal=40, max_issues=8, excluded_samples=None):
             content = b''.join(chunks)
             path = cache / (digest(url)+'.html'); path.write_bytes(content)
             return BeautifulSoup(content, 'html.parser'), response.url, path
-    for journal, archive in ARCHIVES.items():
+    archives = ARCHIVES if archives is None else archives
+    if not archives or len(archives)>12 or any(not u.startswith('https://') for u in archives.values()):
+        raise ValueError('Invalid explicit journal archives')
+    for journal, archive in archives.items():
         host, count = urlsplit(archive).netloc, 0
         try:
             listing, base, _ = fetch(archive)
-            issues = list(dict.fromkeys(urljoin(base,a['href']) for a in listing.select('a[href]') if '/issue/view/' in a['href']))[:max_issues]
+            issues = list(dict.fromkeys(urljoin(base,a['href']) for a in listing.select('a[href]') if '/issue/view/' in a['href']))
+            visited_archives={base}
+            for _ in range(15):
+                if len(issues)>=max_issues:break
+                next_link=listing.select_one('a.next[href], a[rel="next"][href]')
+                if next_link is None:break
+                next_url=urljoin(base,next_link['href'])
+                if next_url in visited_archives or urlsplit(next_url).netloc!=host or '/issue/archive/' not in next_url:break
+                visited_archives.add(next_url)
+                listing,base,_=fetch(next_url)
+                issues=list(dict.fromkeys([*issues,*(urljoin(base,a['href']) for a in listing.select('a[href]') if '/issue/view/' in a['href'])]))
+            issues=issues[:max_issues]
             for issue in issues:
                 if count >= per_journal or host in blocked: break
                 listing, base, _ = fetch(issue)
@@ -128,7 +142,8 @@ def collect(out, per_journal=40, max_issues=8, excluded_samples=None):
     report = {'candidate_documents':len(accepted), 'by_journal':dict(Counter(r['journal'] for r in accepted)),
               'quarantined':len(rejected), 'quarantine_reasons':dict(Counter(v for r in rejected for v in r['eligibility_reasons'])),
               'excluded_probe_articles':sorted(excluded), 'blocked_hosts':sorted(blocked), 'errors':errors,
-              'expert_verified':False, 'used_for_training':False}
+              'expert_verified':False, 'used_for_training':False,
+              'archives':archives,'per_journal':per_journal,'max_issues':max_issues}
     write_json(out/'collection.json',report)
     print(json.dumps(report,ensure_ascii=True),flush=True)
 

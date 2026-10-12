@@ -61,9 +61,12 @@ def rescreen(source,out):
     write_json(out/'collection.json',result);print(json.dumps(result,ensure_ascii=True))
 
 
-def collect(out,per_category=30,max_pages=8,exclude_probe=None):
+def collect(out,per_category=30,max_pages=8,exclude_probe=None,categories=None):
     if out.exists():raise FileExistsError(out)
-    if not 1<=per_category<=100 or not 1<=max_pages<=20:raise ValueError('Collection limit outside bounded range')
+    if not 1<=per_category<=2500 or not 1<=max_pages<=400:raise ValueError('Collection limit outside bounded range')
+    categories=list(CATEGORIES) if categories is None else categories
+    if not categories or len(set(categories))!=len(categories) or any(c not in CATEGORIES for c in categories):
+        raise ValueError('Choose verified prose/story category IDs')
     out.mkdir(parents=True);cache=out/'pages';cache.mkdir()
     agent='KazStyleResearch/1.0';session=requests.Session();session.headers['User-Agent']=agent
     r=session.get(BASE+'/robots.txt',timeout=25);r.raise_for_status()
@@ -95,7 +98,7 @@ def collect(out,per_category=30,max_pages=8,exclude_probe=None):
                 match=re.search(r'(?:__|/)(\d+)$',urlsplit(sample['source_url']).path)
                 if match:excluded.add(match[1])
     candidates=[];quarantine=[];errors=[];seen=set();hashes=set()
-    for category in CATEGORIES:
+    for category in categories:
         url=BASE+'/kz/news/literary?category='+category;count=0
         for _ in range(max_pages):
             if not url or count>=per_category or blocked:break
@@ -136,7 +139,7 @@ def collect(out,per_category=30,max_pages=8,exclude_probe=None):
                 print(json.dumps({'category':category,'page':current,'accepted_in_category':count,'total_candidates':len(candidates)}),flush=True)
             except (requests.RequestException,ValueError) as exc:errors.append({'url':url,'error':str(exc)});break
     result={'candidates':len(candidates),'quarantined':len(quarantine),'errors':errors,
-        'per_category':per_category,'max_pages':max_pages,'source_sections':CATEGORIES,
+        'per_category':per_category,'max_pages':max_pages,'source_sections':{c:CATEGORIES[c] for c in categories},
         'reasons':dict(Counter(reason for r in quarantine for reason in r['eligibility_reasons'])),
         'excluded_probe_article_ids':sorted(excluded),'expert_verified':False,'used_for_training':False,
         'limitation':'May include essays, mixed texts and installments of the same work. Review genre, author/work grouping and reuse rights before dataset inclusion.'}
@@ -147,7 +150,8 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--out-dir',type=Path,required=True)
     p.add_argument('--per-category',type=int,default=30);p.add_argument('--max-pages',type=int,default=8)
     p.add_argument('--exclude-probe',type=Path)
+    p.add_argument('--categories',nargs='+',choices=list(CATEGORIES),help='Selected verified category IDs')
     p.add_argument('--rescreen',type=Path,help='Re-screen a frozen collection without new requests')
     a=p.parse_args()
     if a.rescreen:rescreen(a.rescreen,a.out_dir)
-    else:collect(a.out_dir,a.per_category,a.max_pages,a.exclude_probe)
+    else:collect(a.out_dir,a.per_category,a.max_pages,a.exclude_probe,a.categories)
