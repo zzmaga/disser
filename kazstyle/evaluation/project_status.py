@@ -35,6 +35,66 @@ def build():
            ('reports/ipm_progress_20261006.html','Восемь задач ИПМ: сделано и осталось'),
            ('reports/text_only_v4_repeated/report.html','Стабильная версия v4: предыдущая серия'),
            ('reports/morphology_ablation_v1/report.html','Отдельное сравнение лемматизации на v4')]
+    audit_note = ''
+    audit_path = reports/'corpus_audit_20261010/summary.json'
+    if audit_path.exists():
+        audit = json.loads(audit_path.read_text(encoding='utf-8'))
+        links[:0] = [('reports/corpus_audit_20261010/corpus.html','Просмотреть корпус v6: тексты, стили и поиск'),
+                     ('reports/corpus_audit_20261010/report.html','Аудит 10 октября: мусор, размер корпуса и высокий F1')]
+        audit_note = ('<h2>Предыдущий аудит пилотного корпуса</h2><p>До этой ревизии и отбора: '
+            + str(audit['merged_candidates']) + ' кандидата; в рабочем пуле: '
+            + str(audit['working_pool']) + '. Эти числа не складываются с размером v6. '
+            + 'Диагностика только по источнику, без текста: Macro-F1 '
+            + f"{audit['domain_baseline']['test_macro_f1']:.4f}"
+            + '. Это сильная связь источника с классом, а не доказательство качества на новых текстах.</p>'
+            + '<p>Отдельная ревизия очистки изменила '
+            + str(audit['candidate_revision']['changed']) + ' кандидатов; '
+            + str(audit['candidate_revision']['review_required']) + ' записей отмечены для просмотра. '
+            + 'Старые выборки и веса сохранены; нового обучения не было.</p>')
+    corpus_note = ''
+    corpus = None
+    registry_path = root/'configs/corpus_registry.json'
+    registry = json.loads(registry_path.read_text(encoding='utf-8')) if registry_path.exists() else {}
+    corpus_relative = registry.get('active_document_corpus', 'data/cleaned/unified_corpus_20261010')
+    corpus_path = root/corpus_relative
+    if (corpus_path/'COMPLETE.json').exists():
+        checksums = json.loads((corpus_path/'COMPLETE.json').read_text(encoding='utf-8'))
+        if file_hash(corpus_path/'summary.json') != checksums['summary.json']:
+            raise ValueError('Unified corpus summary checksum mismatch')
+        corpus = json.loads((corpus_path/'summary.json').read_text(encoding='utf-8'))
+        links[:0] = [(corpus_relative+'/corpus.html','Единый корпус: состав и CSV'),
+                     (corpus_relative+'/corpus.csv','Скачать весь корпус — text,label')]
+        corpus_note = ('<h2>Новый единый корпус — обучение ещё не выполнено</h2><p>'
+            + str(corpus['accepted_provisional']) + ' документов в основном CSV; '
+            + str(corpus['review']) + ' на разбор; '+str(corpus['excluded'])+' исключено. '
+            + 'Метки предварительные. Длинные тексты не нарезаны ради увеличения числа документов.</p>'
+            + '<p>Лимит 1000/стиль снят. Ссылки и сведения об источниках хранятся отдельно от модельного текста. '
+            + 'Эта версия не заменяет корпус и метрики завершённого v6: сайт пока использует прежние веса.</p>')
+    project_audit_note = ''
+    project_audit = reports/'technical/project_audit_20261012/audit.json'
+    if project_audit.exists():
+        check = json.loads(project_audit.read_text(encoding='utf-8'))
+        names = {'official':'Официально-деловой', 'scientific':'Научный', 'publicistic':'Публицистический',
+                 'literary':'Художественный', 'colloquial':'Разговорный'}
+        audit_rows = ''.join(
+            f'<tr><td>{names[style]}</td><td>{item["documents"]:,}</td><td>{item["target"]:,}</td>'
+            f'<td>{item["shortfall"]:,}</td><td>{item["words_p10_median_p90"][1]:,}</td></tr>'
+            for style, item in check['bank_by_style'].items())
+        project_audit_note = ('<h2>Проверка проекта — 12 октября 2026</h2>'
+            '<p>Корпус и сохранённые источники прошли проверку контрольных сумм. '
+            'Основной корпус и новые партии учитываются отдельно:</p>'
+            '<table><tr><th>Стиль</th><th>В корпусе</th><th>Цель</th><th>До цели</th><th>Медиана слов</th></tr>'
+            + audit_rows + '</table><p>Отдельно сохранено <strong>'
+            + f'{check["candidate_rows_not_added_to_bank"]:,}' + ' кандидатов</strong>. Часть сбора прервалась; '
+            'эти строки ещё не прошли объединённый отбор и не прибавлены к корпусу.</p>'
+            '<p class="note">Основные пробелы: преобладание законов среди деловых текстов и аннотаций среди научных, '
+            'различие длин, зависимость стиля от источника, незавершённая независимая разметка. '
+            'Равное число строк само по себе эти проблемы не устраняет.</p>'
+            '<p>Исправлены дедупликация форумных реплик, сохранение связей копий при группировке, '
+            'обработка HTTP-запросов и лишняя зависимость отбора данных от Transformers. '
+            'Старые данные и веса не переписаны. '
+            '<a href="technical/project_audit_20261012/audit.json">Числа и доказательства аудита</a>; '
+            '<a href="../docs/PROJECT.md">подробности и оставшиеся задачи</a>.</p>')
     # Write the IPM page first, so every hub link is checked against a real file.
     req=json.loads((reports/'dissertation_audit_20261006/requirements.json').read_text(encoding='utf-8'))['requirements']
     updates=[
@@ -46,6 +106,10 @@ def build():
         ('Работает','Локальный сайт и сервер, пять стилей, шесть моделей; внешний ИИ API не используется.','Зафиксировать демонстрационный сценарий и окончательные требования к интерфейсу.'),
         ('Внутренняя и дополнительная оценки выполнены','Метрики, матрицы ошибок, три seed, групповые интервалы, source-holdout, длина/источник и известные примеры.','Независимый финальный тест на новых источниках с человеческими метками.'),
         ('Частично','Исходная статья сохранена; рабочая рукопись дополнена фактическими результатами v6.','Завершить текст, оформление, заключение и доклад; старые неподтверждённые числа не выдавать за этот эксперимент.')]
+    if corpus:
+        updates[1] = ('Новая версия корпуса подготовлена',
+                      str(corpus['accepted_provisional'])+' документов в едином CSV, источники и группы отдельно; метки предварительные.',
+                      'Расширять прежде всего недостающие стили; провести независимую разметку и подготовить фиксированные входы для обучения.')
     for row,update in zip(req,updates):row[1:]=list(update)
     css='body{font:16px/1.6 system-ui;background:#f3f6fa;color:#183048;margin:0}main{max-width:1160px;margin:30px auto;background:white;padding:34px;border-radius:16px}h1,h2{line-height:1.2}a{color:#175ca8}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;border:1px solid #d7e0e8;text-align:left;vertical-align:top}.note{padding:16px;background:#fff2d7}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.cards a{padding:16px;background:#edf4fb;border-radius:10px;text-decoration:none}.muted{color:#5e7081}code{overflow-wrap:anywhere}@media(max-width:650px){main{margin:0;padding:18px}table{display:block;overflow:auto}}'
     ipm_rows=''.join('<tr>'+''.join('<td>'+html.escape(str(x))+'</td>' for x in row)+'</tr>' for row in req)
@@ -56,12 +120,15 @@ def build():
     counts=frame.groupby('split').size().to_dict()
     default=profile['models'][profile['default_model']]['name']
     content=f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KazStyle — результаты и диссертация</title><style>{css}</style></head><body><main>
-<h1>KazStyle: результаты и дальнейшая работа</h1><p class="muted">Обновлено 6 октября 2026 · одна точка входа в проект.</p>
+<h1>KazStyle: результаты и дальнейшая работа</h1><p class="muted">Эксперименты 6 октября 2026 · {'аудит корпуса 10 октября 2026 · ' if audit_note else ''}одна точка входа в проект.</p>
 <p><strong>Работает локальный классификатор пяти стилей.</strong> Вставить текст: <a href="http://127.0.0.1:8765">стабильный сайт v4</a>. Если сервер выключен, запустить <code>start_site.cmd</code>. Основная модель — {html.escape(default)}, корпус {len(active_frame)} текстов. Внешний ИИ API не используется.</p>
 <p>Новое исследование v6: <strong>{len(frame):,} текстов</strong>, по {len(frame)//5} на стиль. Train {counts['train']}, validation {counts['validation']}, test {counts['test']}. URL и сведения об источнике хранятся отдельно от признаков.</p>
 <p class="note">V6 пока не заменяет стабильный сайт: выбранная по validation модель ошибается на знакомом школьном заявлении, которое v4 распознаёт правильно. <a href="http://127.0.0.1:8766">Отдельный экспериментальный сайт v6</a> позволяет проверить новые веса. Высокая общая метрика не отменяет эту регрессию.</p>
 <div class="note">Это рабочие исследовательские результаты на предварительных метках. Диссертация ещё требует человеческой разметки, независимого финального теста и окончательного оформления.</div>
 <h2>Открыть нужное</h2><div class="cards">{cards}</div>
+{corpus_note}
+{project_audit_note}
+{audit_note}
 <h2>Завершённое сравнение v6</h2><p>Среднее ± стандартное отклонение при seed 42, 43 и 44. Один фиксированный корпус; это не три независимых тестовых набора. По validation выбрана Kaz-RoBERTa last; решение о готовности к замене стабильного сайта принимается отдельно.</p><table><tr><th>Вариант</th><th>Validation Macro-F1</th><th>Внутренний test Macro-F1</th></tr>{rows}</table>
 <p>Отдельно обученная Kaz-RoBERTa на диагностике переноса между источниками: <strong>{heldout:.4f} Macro-F1</strong>. Там другой train и другой состав test; напрямую вычитать это число из основной таблицы нельзя.</p>
 <h2>Следующий обязательный этап</h2><p>Два человека независимо проверяют <a href="../data/annotation/expanded_v6_audit_20261006/reviewer_A.html">форму A</a> и <a href="../data/annotation/expanded_v6_audit_20261006/reviewer_B.html">форму B</a> — по 250 фрагментов. Реальных ответов пока нет. Затем согласовываются спорные метки и готовится отдельная финальная проверка новых источников.</p>
