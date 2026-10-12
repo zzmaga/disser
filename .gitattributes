@@ -1,2 +1,0 @@
-# Preserve document bytes; PDF syntax must not undergo text EOL conversion.
-*.pdf binary
