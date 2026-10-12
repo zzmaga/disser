@@ -5,6 +5,23 @@ from kazstyle.data.corpus import balanced_splits
 
 
 class ProvenanceGroupingTests(unittest.TestCase):
+    def test_collapsed_duplicates_retain_all_author_and_parent_links(self):
+        frame = pd.DataFrame([
+            {'doc_id':'canonical', 'author_group':'author_a',
+             'duplicate_occurrences':[{'doc_id':'copy', 'author_group':'author_b', 'parent_id':'thread'}]},
+            {'doc_id':'another_work', 'author_group':'author_b'},
+            {'doc_id':'reply', 'parent_group':'thread'},
+            {'doc_id':'unrelated', 'author_group':None}])
+        groups = assign_split_groups(frame)
+        self.assertEqual(len(set(groups[:3])), 1)
+        self.assertNotEqual(groups[0], groups[3])
+        frame['split'] = ['train', 'test', 'train', 'test']
+        with self.assertRaisesRegex(ValueError, 'author_group'):
+            validate_group_separation(frame)
+        frame['split'] = ['train', 'train', 'test', 'test']
+        with self.assertRaisesRegex(ValueError, 'parent_group'):
+            validate_group_separation(frame)
+
     def test_author_and_parent_links_are_transitive_without_unknown_author_merging(self):
         frame = pd.DataFrame([
             {'doc_id':'a','parent_group':'p1','author_group':'writer'},

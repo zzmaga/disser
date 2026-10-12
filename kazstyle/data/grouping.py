@@ -52,20 +52,34 @@ def known_group(value):
     return value.strip() or None
 
 
+def group_values(row, key):
+    """Include provenance aliases retained when exact copies were collapsed."""
+    values = {known_group(row.get(key))}
+    occurrences = row.get('duplicate_occurrences')
+    if isinstance(occurrences, list):
+        for occurrence in occurrences:
+            if not isinstance(occurrence, dict):
+                raise ValueError('Duplicate provenance must contain objects')
+            value = occurrence.get(key)
+            if key == 'parent_group' and value is None:
+                value = occurrence.get('parent_id')
+            values.add(known_group(value))
+    elif occurrences is not None and not pd.isna(occurrences):
+        raise ValueError('Duplicate provenance must be a list or null')
+    return values - {None}
+
+
 def assign_split_groups(frame):
     uf = UnionFind(len(frame))
+    records = frame.to_dict('records')
     for key in GROUP_KEYS:
-        if key not in frame:
-            continue
         first = {}
-        for i, value in enumerate(frame[key]):
-            value = known_group(value)
-            if value is None:
-                continue
-            if value in first:
-                uf.union(i, first[value])
-            else:
-                first[value] = i
+        for i, row in enumerate(records):
+            for value in group_values(row, key):
+                if value in first:
+                    uf.union(i, first[value])
+                else:
+                    first[value] = i
     members = {}
     for i, doc_id in enumerate(frame['doc_id']):
         members.setdefault(uf.find(i), []).append(str(doc_id))
@@ -74,10 +88,11 @@ def assign_split_groups(frame):
 
 
 def validate_group_separation(frame):
+    records = frame.to_dict('records')
     for key in (*GROUP_KEYS, 'split_group_id'):
-        if key not in frame:
-            continue
-        values = frame[key].map(known_group)
-        present = frame.loc[values.notna(), ['split']].assign(group=values[values.notna()])
-        if (present.groupby('group')['split'].nunique() > 1).any():
-            raise ValueError(f'Cross-split overlap: {key}')
+        assigned = {}
+        for row in records:
+            for value in group_values(row, key):
+                previous = assigned.setdefault(value, row['split'])
+                if previous != row['split']:
+                    raise ValueError(f'Cross-split overlap: {key}')
