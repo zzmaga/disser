@@ -14,6 +14,14 @@ BODY='Мен жаңа телефон сатып алдым, бірақ оның 
 LEGAL='Қазақстан Республикасының Үкіметі ҚАУЛЫ ЕТЕДІ. Осы қаулыға сәйкес мемлекеттік мекеменің жұмысын ұйымдастыру тәртібі бекітілсін. Қаулының орындалуын бақылау облыс әкімінің орынбасарына жүктелсін. Құжат алғашқы ресми жарияланған күнінен кейін күшіне енеді. Мекеме басшысы қызметкерлерді бекітілген тәртіппен таныстыруды қамтамасыз етсін.'
 
 class ExpansionTests(unittest.TestCase):
+    def test_reserved_thread_rejected_by_legacy_post_extractor(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); source = root/'input.jsonl'
+            source.write_text(json.dumps({'usage_status':'reserved_final_test'})+'\n')
+            with self.assertRaisesRegex(ValueError, 'Reserved'):
+                build_posts([source], root/'out')
+            self.assertFalse((root/'out').exists())
+
     def test_poem_only_body_and_explicit_author(self):
         page='<h1 class="heading">Күз</h1><p>Пікірлер 100</p><div class="poem-content">Бірінші жол<br>Екінші жол<br>Үшінші жол<br>Төртінші жол</div><div class="olen-author-box"><figure><h5><a href="/figure/12">Ақын Аты</a></h5></figure></div>'
         text,meta=parse_poem(page,'https://bilim-all.kz/olen/12-kuz')
@@ -26,6 +34,21 @@ class ExpansionTests(unittest.TestCase):
         text,_,reasons,_=screen_text(raw)
         self.assertEqual(text,LEGAL);self.assertEqual(reasons,[])
         self.assertIn('residual_bilingual_pdf_furniture',screen_text('Маслихат г. Петропавловска '+LEGAL)[2])
+
+    def test_municipal_header_scope_preserves_quotes_body_and_unknown_names(self):
+        header='Акимат Костанайской области'
+        prefix='Қостанай облысының әкімдігі '
+        cleaned,_,reasons,log=screen_text(prefix+header+' '+LEGAL)
+        self.assertNotIn(header,cleaned)
+        self.assertIn(LEGAL,cleaned)
+        self.assertIn(header,log['removed_publisher_furniture'])
+        self.assertEqual(reasons,[])
+        for raw in [prefix+'«'+header+'» '+LEGAL,
+                    prefix+LEGAL*3+' '+header,
+                    'Акимат Неизвестной области '+prefix+LEGAL]:
+            text,_,reasons,_=screen_text(raw)
+            self.assertIn('Акимат',text)
+            self.assertIn('residual_bilingual_pdf_furniture',reasons)
 
     def test_invalid_upstream_record_logged_not_invented_or_silently_repaired(self):
         with tempfile.TemporaryDirectory() as tmp:

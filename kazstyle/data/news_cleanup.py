@@ -13,7 +13,7 @@ import shutil
 
 from kazstyle.data.quality import clean_text, inspect_text
 
-VERSION = 'source_furniture_review_v2'
+VERSION = 'source_furniture_review_v3'
 MONTHS = 'Қаңтар|Ақпан|Наурыз|Сәуір|Мамыр|Маусым|Шілде|Тамыз|Қыркүйек|Қазан|Қараша|Желтоқсан'
 PUBLICATION_DATE = re.compile(
     rf'^\s*(?:\d+\s+\d+\s+пікір\s+)?\d{{1,2}}\s+(?:{MONTHS}),?\s+20\d{{2}}\s+сағат\s+\d{{1,2}}:\d{{2}}\s+', re.I)
@@ -25,7 +25,7 @@ def digest(text):
     return hashlib.sha256(text.encode('utf-8')).hexdigest()
 
 
-def revise_text(text, source_domain):
+def revise_text(text, source_domain, *, genre=None):
     """Return text and an explicit removal log, without using a style label."""
     original = text
     removed = []
@@ -37,6 +37,11 @@ def revise_text(text, source_domain):
         return pattern.sub(replacement, value)
 
     domain = (source_domain or '').lower().removeprefix('www.')
+    if genre == 'research_abstract':
+        # A short, final keyword list is publication metadata. Do not cut at an
+        # early marker followed by sentences or another language's abstract.
+        text = remove(re.compile(r'\b(?:Түйін(?:ді)?\s*сөздер|Кілт(?:тік)?\s*сөздер|Ключевые\s+слова|Keywords)\s*[:：]\s*[^.!?\n]{3,500}[.]?\s*$', re.I),
+                      text, 'abstract_trailing_keyword_list')
     if domain == 'abai.kz':
         text = remove(PUBLICATION_DATE, text, 'abai_publication_timestamp')
         text = remove(PLURAL_CREDIT, text, 'abai_plural_photo_credit')
@@ -76,9 +81,27 @@ def revise_text(text, source_domain):
                   'source_rules': removed, 'base_changes': base_changes}
 
 
-def review_flags(text):
+def review_flags(text, *, original_text=None):
     """Screening only: a match is not proof of noise or an incorrect label."""
     flags = []
+    if re.search(r'\[\s*email\s+protected\s*\]', text, re.I):
+        flags.append('masked_email_placeholder')
+    # A Cyrillic lookalike can disguise a domain (observed: vk.сom).
+    # Flag the record; never rewrite ordinary Kazakh letters or guess a URL.
+    lookalikes = str.maketrans('аеорсухі', 'aeopcyxi')
+    for token in re.findall(r'(?<![\w.-])[\w-]+(?:\.[\w-]+)+', text.casefold()):
+        folded = token.translate(lookalikes)
+        if (folded != token and re.fullmatch(
+                r'(?:[a-z0-9-]+\.)+(?:com|kz|ru|org|net|edu|gov|io|info|biz|app|news)', folded)):
+            flags.append('confusable_domain_requires_review')
+            break
+    # A metadata cleanup must not hide a multilingual source block.
+    language_source = text if original_text is None else original_text
+    if (re.search(r'\b(?:Ключевые\s+слова|Keywords)\s*:',language_source,re.I)
+            and re.search(r'\b(?:В\s+данной\s+(?:научной\s+)?статье|This\s+(?:scientific\s+)?(?:article|paper|study))\b',language_source,re.I)):
+        flags.append('multilingual_abstract_blocks')
+    if re.search(r'''(?<!\w)(?:[A-Za-z][A-Za-z'-]*[ \t,;:.!?"()–—-]+){24}[A-Za-z][A-Za-z'-]*(?!\w)''',text):
+        flags.append('substantial_latin_prose_requires_language_review')
     if re.search(r'\b(?:Фото|Сурет(?:тер)?)(?:нің|тің)?\s*:|\bScreenshot\b', text, re.I):
         flags.append('possible_photo_credit')
     if re.search(r'Ең көп оқылған|Үздік материалдар|Ең оқылған:', text, re.I):
@@ -106,9 +129,9 @@ def build(source, out):
         ids.add(row['doc_id'])
     revised, changes, flagged = [], [], []
     for row in rows:
-        text, log = revise_text(row['text'], row.get('source_domain'))
+        text, log = revise_text(row['text'], row.get('source_domain'), genre=row.get('genre'))
         stats, reasons = inspect_text(text, min_words=8)
-        flags = review_flags(text) + ['quality:'+r for r in reasons]
+        flags = review_flags(text, original_text=row['text']) + ['quality:'+r for r in reasons]
         updated = {**row, 'text': text, 'content_hash': digest(text), 'quality': stats,
                    'eligibility_reasons': reasons, 'cleanup_review_flags': flags,
                    'cleanup_revision': VERSION, 'upstream_text_sha256': digest(row['text']),

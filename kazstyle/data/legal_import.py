@@ -11,12 +11,27 @@ from kazstyle.data.corpus import digest, file_hash, write_json, write_jsonl
 from kazstyle.data.quality import clean_text, inspect_text
 from kazstyle.data.forum import has_contact_identifier
 
-VERSION='zan_legal_screen_v1'
+VERSION='zan_legal_screen_v2'
 QR=re.compile(r'ҚР\s+НҚА\s+ЭББ-гі\s+нақты\s+құжатқа\s+сілтеу\s+QR-коды')
 # Exact recurring bilingual PDF furniture observed in the raw source. Do not
 # remove arbitrary names or Russian sentences by guessing where they end.
 HEADERS=['Правительство Республики Казахстан','(Премьер-Министр РК)',
          'Президент Республики Казахстан']
+# Exact municipal publisher headers observed in the pinned source (not a
+# catch-all regex for Russian text). Remove only unquoted occurrences in the
+# initial 450 characters and only alongside a Kazakh publisher designation.
+MUNICIPAL_HEADERS = (
+    'Акимат Восточно-Казахстанской области', 'Акимат Западно-Казахстанской области',
+    'Акимат Костанайской области', 'Акимат Акмолинской области',
+    'Маслихат Акмолинской области', 'Маслихат Западно-Казахстанской области',
+    'Аким Костанайской области', 'Маслихат Костанайской области',
+    'Акимат Актюбинской области', 'Аким Алматинской области',
+    'Акимат Карагандинской области', 'Акимат Мангистауской области',
+    'Акимат Атырауской области', 'Маслихат Павлодарской области',
+    'Акимат Северо-Казахстанской области', 'Аким Актюбинской области',
+    'Аким Атырауской области', 'Аким Северо-Казахстанской области',
+    'Акимат Павлодарской области', 'Аким Мангистауской области',
+)
 RUSSIAN_FURNITURE=re.compile(r'\b(?:Маслихат|Акимат|Аким|Министерство|Министерства|Агентство|Республики Казахстан|регулированию|области|района|регистрационной)\b',re.I)
 
 def screen_text(raw):
@@ -24,6 +39,18 @@ def screen_text(raw):
     def strip(match):
         removed.append(match.group());return ' '
     text=QR.sub(strip,raw)
+    short_prefix=text[:450]
+    if re.search(r'\b(?:әкім|мәслихат)',short_prefix,re.I):
+        for header in MUNICIPAL_HEADERS:
+            pattern=re.compile(re.escape(header).replace(r'\ ',r'\s+'))
+            def remove_header(match):
+                before=short_prefix[:match.start()].rstrip()
+                after=short_prefix[match.end():].lstrip()
+                if (before and before[-1] in '«"“\'') or (after and after[0] in '»"”\''):
+                    return match.group()
+                return strip(match)
+            short_prefix=pattern.sub(remove_header,short_prefix)
+        text=short_prefix+text[450:]
     # The repeated publisher header is confined to the first 1,200 characters.
     prefix=text[:1200]
     for header in HEADERS:

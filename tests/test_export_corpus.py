@@ -12,6 +12,25 @@ TEXT = 'Қазақстанда жаңа кітапхана ашылды, онд�
 
 
 class ExportCorpusTests(unittest.TestCase):
+    def test_keyword_cleanup_does_not_hide_multilingual_abstract_flag(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            text=TEXT+' В данной научной статье рассматривается исследование. Ключевые слова: ғылым, табиғат.'
+            _,recipe=self.fixture(root,[self.row('mixed',text=text,genre='research_abstract',style='scientific')])
+            build(recipe,root/'out')
+            audit=json.loads((root/'out/audit.jsonl').read_text(encoding='utf8'))
+            self.assertIn('multilingual_abstract_blocks',audit['review_flags'])
+            self.assertEqual(load_documents(root/'out'),[])
+
+    def test_colon_and_period_bylines_share_author_and_work_group(self):
+        row = {'source_domain':'adebiportal.kz', 'title':'Думан Рамазан. Күйік (әңгіме)'}
+        period = publisher_groups(row)
+        colon = publisher_groups({**row, 'title':'Думан РАМАЗАН: Күйік (әңгіме)'})
+        self.assertEqual(period['author_group'], colon['author_group'])
+        self.assertEqual(period['work_group'], colon['work_group'])
+        self.assertEqual(publisher_groups({**row, 'title':'Күйік: бір әңгіме'}), {})
+        self.assertEqual(publisher_groups({**row, 'title':'Қ. Шамахайұлы: Әңгіме'}), {})
+
     def test_collection_target_is_independent_of_historical_article(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -67,6 +86,41 @@ class ExportCorpusTests(unittest.TestCase):
         self.assertEqual(publisher_groups({**row, 'title':'Әдебиетіміздегі әкелер образы'}), {})
         self.assertEqual(publisher_groups({**row, 'source_domain':'example.org'}), {})
         self.assertNotIn('text', first)
+
+    def test_source_required_style_review_cannot_be_disabled_by_recipe(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            row = {**self.row('review-source'), 'requires_explicit_style_review': True}
+            _, recipe = self.fixture(root, [row])
+            build(recipe, root/'out')
+            self.assertEqual(load_documents(root/'out'), [])
+            with (root/'out/review.csv').open(encoding='utf-8-sig', newline='') as stream:
+                held = list(csv.DictReader(stream))
+            self.assertEqual(len(held), 1)
+
+    def test_source_repair_requires_original_and_repaired_hashes(self):
+        from kazstyle.data.prose import parse_story
+        from kazstyle.data.quality import clean_text
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            snapshot = root/'story.html'
+            snapshot.write_text('<h1>Әңгіме</h1><a href="/kz/news/literary?category=51">ӘҢГІМЕ</a>'
+                                '<div class="content-text"><p>'+TEXT.replace('кітапхана','кітап\u00adхана')+'</p></div>', encoding='utf8')
+            historical = clean_text(parse_story(snapshot.read_bytes(), repair_soft_hyphens=False)[0])[0]
+            decision = {'doc_id':'story', 'kind':'verified_prose_soft_hyphens',
+                        'text_sha256':digest(historical), 'source_sha256':file_hash(snapshot),
+                        'repaired_text_sha256':digest(TEXT), 'soft_breaks':1}
+            row = {**self.row('story', text=historical), 'source_domain':'adebiportal.kz',
+                   'source_snapshot':str(snapshot), 'source_sha256':file_hash(snapshot)}
+            _, recipe = self.fixture(root, [row], source_repairs=[decision])
+            build(recipe, root/'out')
+            self.assertEqual(load_documents(root/'out')[0]['text'], TEXT)
+            change = json.loads((root/'out/changes.jsonl').read_text(encoding='utf8'))
+            self.assertEqual(change['source_rules'][0]['repaired_word_breaks'], 1)
+            snapshot.write_text(snapshot.read_text(encoding='utf8')+' changed', encoding='utf8')
+            with self.assertRaisesRegex(ValueError, 'snapshot changed'):
+                build(recipe, root/'invalid')
+            self.assertFalse((root/'invalid').exists())
 
     def test_unrecognized_domains_flagged_without_treating_sentences_as_urls(self):
         self.assertIsNotNone(DOMAIN_LIKE.search('polese.by'))

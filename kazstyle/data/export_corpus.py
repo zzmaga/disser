@@ -41,9 +41,10 @@ def publisher_groups(row):
     """Conservative publisher-attributed families; never verified identities."""
     if row.get('source_domain') != 'adebiportal.kz' or not isinstance(row.get('title'), str):
         return {}
-    author, separator, title = row['title'].partition('.')
+    parts = re.split(r'[.:]', row['title'], maxsplit=1)
+    author, title = (parts if len(parts) == 2 else ('', ''))
     tokens = author.split()
-    if (not separator or not title.strip() or not 2 <= len(tokens) <= 4
+    if (not title.strip() or not 2 <= len(tokens) <= 4
             or not all(t[0].isupper() and all(c.isalpha() or c == '-' for c in t) for t in tokens)):
         return {}
     author_key = ' '.join(author.casefold().split())
@@ -79,7 +80,7 @@ def read_recipe(path):
                 if str(row.get('usage_status', '')).startswith('reserved'):
                     raise ValueError('Reserved material cannot enter a development corpus')
                 origin = {'path': str(source), 'line': line_number, 'text_sha256': digest(row['text'])}
-                needs_review = bool(item.get('require_review')) or any(
+                needs_review = bool(item.get('require_review') or row.get('requires_explicit_style_review')) or any(
                     all(row.get(k) == value for k, value in f.items()) for f in filters)
                 if row['doc_id'] in by_id:
                     first = by_id[row['doc_id']]
@@ -139,6 +140,18 @@ def read_recipe(path):
                 row['label_origin'] = 'source_plus_assistant_semantic_review'
             else:
                 row['explicit_exclusion'] = decision['reason']
+    repaired_ids = set()
+    for decision in recipe.get('source_repairs', []):
+        row = by_id.get(decision.get('doc_id'))
+        if (row is None or decision.get('doc_id') in repaired_ids
+                or decision.get('kind') != 'verified_prose_soft_hyphens'
+                or digest(row['text']) != decision.get('text_sha256')
+                or row.get('source_sha256') != decision.get('source_sha256')
+                or type(decision.get('soft_breaks')) is not int or decision['soft_breaks'] <= 0
+                or not re.fullmatch('[a-f0-9]{64}', decision.get('repaired_text_sha256', ''))):
+            raise ValueError('Invalid, repeated or stale source repair')
+        repaired_ids.add(decision['doc_id'])
+        row['source_repair'] = decision
     return recipe, rows, repeats
 
 
@@ -247,9 +260,15 @@ def build(recipe_path, out):
     for i, row in enumerate(rows):
         raw_text = row['text']
         manual_removed=[]
+        if row.get('source_repair'):
+            from kazstyle.data.prose import repair_verified_source
+            raw_text, repair_log = repair_verified_source(row, row['source_repair'])
+            manual_removed.append(repair_log)
         for field in ['remove_prefix','remove_suffix']:
             value=(row.get('assistant_review') or {}).get(field)
             if value:
+                if not (raw_text.startswith(value) if field=='remove_prefix' else raw_text.endswith(value)):
+                    raise ValueError('Review boundary changed after source repair')
                 raw_text=(raw_text[len(value):].lstrip() if field=='remove_prefix'
                           else raw_text[:-len(value)].rstrip())
                 manual_removed.append({'rule':'hash_bound_assistant_'+field,'removed_text':value})
@@ -273,13 +292,13 @@ def build(recipe_path, out):
                 # A changed layout or a page containing only recommendations is
                 # review material, never a fallback to a silently accepted old body.
                 row = {**row, 'html_extraction_error': str(exc), 'html_extraction_version': HTML_VERSION}
-        text, cleaning = revise_text(raw_text, row.get('source_domain'))
+        text, cleaning = revise_text(raw_text, row.get('source_domain'), genre=row.get('genre'))
         cleaning['source_rules'].extend(manual_removed)
         cleaning['changed'] = text != row['text']
         if html_removed:
             cleaning['html_removed'] = html_removed
         stats, quality_reasons = inspect_text(text, min_words=8)
-        flags = review_flags(text)
+        flags = review_flags(text, original_text=raw_text)
         if DOMAIN_LIKE.search(text):
             flags.append('residual_domain_like_token')
         if has_contact_identifier(text):
@@ -370,7 +389,7 @@ def build(recipe_path, out):
     shutil.copy2(recipe_path, out/'recipe.json')
     for i, item in enumerate(recipe.get('reviews', [])):
         shutil.copy2(item['path'], out/f'assistant_review_{i+1}.json')
-    for name in ['export_corpus.py', 'news_cleanup.py', 'news_html.py', 'quality.py', 'forum.py', 'corpus.py', 'grouping.py', 'overlap.py']:
+    for name in ['export_corpus.py', 'news_cleanup.py', 'news_html.py', 'quality.py', 'forum.py', 'corpus.py', 'grouping.py', 'overlap.py', 'prose.py']:
         shutil.copy2(Path(__file__).with_name(name), out/'code'/name)
     counts = Counter(r['style'] for r in accepted)
     summary = {'version': VERSION, 'documents_before_screening': len(rows),

@@ -21,7 +21,10 @@ CATEGORIES={'51':'ӘҢГІМЕ','29':'ПРОЗА'}
 # public commentary. It is deliberately excluded after source-section inspection.
 
 
-def parse_story(raw):
+SOFT_WORD_BREAK = re.compile(r'(?<=[^\W\d_])\u00ad+(?=[^\W\d_])')
+
+
+def parse_story(raw, *, repair_soft_hyphens=True):
     soup=BeautifulSoup(raw,'html.parser');body=soup.select_one('.content-text');title=soup.find('h1')
     if body is None or title is None:raise ValueError('Story body/title absent')
     category_ids={parse_qs(urlsplit(a['href']).query).get('category',[''])[0]
@@ -33,8 +36,44 @@ def parse_story(raw):
     while lines and re.match(r'^(?:Тәржімалаған|Аударған|Қазақ тіліне аударған|Сурет:|Фото:)',lines[-1],re.I):
         credits.insert(0,lines.pop())
     published=soup.find('meta',attrs={'property':'article:published_time'})
-    return '\n'.join(lines),{'title':title.get_text(' ',strip=True),'category_ids':sorted(category_ids),
-        'credits':credits,'published_at':published.get('content') if published else None}
+    text = '\n'.join(lines)
+    repairs = 0
+    if repair_soft_hyphens:
+        text, repairs = SOFT_WORD_BREAK.subn('', text)
+    return text,{'title':title.get_text(' ',strip=True),'category_ids':sorted(category_ids),
+        'credits':credits,'published_at':published.get('content') if published else None,
+        'source_soft_hyphen_repairs':repairs}
+
+
+def repair_verified_source(row, decision):
+    """Recover only known soft breaks from an unchanged HTML source.
+
+    Never join ordinary spaces or guess an OCR word. Both the historical
+    extraction and the repaired text must match explicit recipe checksums.
+    """
+    if row.get('source_domain') != 'adebiportal.kz':
+        raise ValueError('Unsupported source for soft-hyphen repair')
+    path = Path(row['source_snapshot'])
+    if file_hash(path) != decision['source_sha256'] or row.get('source_sha256') != decision['source_sha256']:
+        raise ValueError('Prose snapshot changed')
+    raw, _ = parse_story(path.read_bytes(), repair_soft_hyphens=False)
+    historical = clean_text(raw)[0]
+    fixed, count = SOFT_WORD_BREAK.subn('', raw)
+    fixed = clean_text(fixed)[0]
+    suffix = decision.get('historical_remove_suffix')
+    if suffix is not None:
+        if (not isinstance(suffix, str) or not suffix or len(suffix) > 300
+                or not historical.endswith(suffix) or not fixed.endswith(suffix)):
+            raise ValueError('Historical attribution boundary changed')
+        historical = historical[:-len(suffix)].rstrip()
+        fixed = fixed[:-len(suffix)].rstrip()
+    if historical != row['text'] or digest(historical) != decision['text_sha256']:
+        raise ValueError('Historical prose extraction does not match the candidate')
+    if count != decision['soft_breaks'] or digest(fixed) != decision['repaired_text_sha256']:
+        raise ValueError('Repaired prose differs from the reviewed recipe')
+    return fixed, {'rule':'source_verified_soft_hyphens', 'repaired_word_breaks':count,
+                   'source_sha256':decision['source_sha256'],
+                   'repaired_text_sha256':decision['repaired_text_sha256']}
 
 
 def rescreen(source,out):

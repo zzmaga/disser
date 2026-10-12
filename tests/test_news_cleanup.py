@@ -7,6 +7,36 @@ from kazstyle.data.news_cleanup import build, revise_text, review_flags
 
 
 class NewsCleanupTests(unittest.TestCase):
+    def test_final_keyword_list_removed_only_for_abstract_and_without_losing_sentences(self):
+        body = 'Зерттеу нәтижелері табиғи экожүйелердің ерекшеліктерін көрсетеді.'
+        source = body+' Түйінді сөздер: табиғат, экожүйе, биоалуантүрлілік.'
+        fixed, log = revise_text(source, 'journal.example.org', genre='research_abstract')
+        self.assertEqual(fixed, body)
+        self.assertEqual(log['source_rules'][0]['rule'], 'abstract_trailing_keyword_list')
+        self.assertEqual(revise_text(source, 'example.org')[0], source)
+        mixed = source+' This article describes another language version of the abstract.'
+        self.assertEqual(revise_text(mixed, 'example.org', genre='research_abstract')[0], mixed)
+    def test_foreign_abstract_blocks_flagged_without_erasing_scientific_names(self):
+        text='Қазақша аннотация. В данной научной статье рассматривается исследование. Ключевые слова: генетика.'
+        self.assertIn('multilingual_abstract_blocks',review_flags(text))
+        english=' '.join(['This article examines scientific research and its methods']*4)
+        self.assertIn('substantial_latin_prose_requires_language_review',review_flags(english))
+        normal='Escherichia coli бактериясы мен DNA, RNA молекулалары зерттелді. Keywords атауы кілт сөздерді білдіреді.'
+        self.assertNotIn('multilingual_abstract_blocks',review_flags(normal))
+        self.assertNotIn('substantial_latin_prose_requires_language_review',review_flags(normal))
+
+    def test_masked_email_is_reviewed_not_silently_erased(self):
+        text = 'Осы мекенжайға жазыңыз: [email protected] Рақмет.'
+        self.assertIn('masked_email_placeholder', review_flags(text))
+        self.assertEqual(revise_text(text, 'surak.baribar.kz')[0], text)
+        self.assertNotIn('masked_email_placeholder', review_flags('The email protected by encryption.'))
+
+    def test_cyrillic_domain_lookalike_is_held_without_changing_letters(self):
+        text = 'Кейбір жерде vk.сom сайты ашылмай тұр.'
+        self.assertIn('confusable_domain_requires_review', review_flags(text))
+        self.assertEqual(revise_text(text, 'surak.baribar.kz')[0], text)
+        self.assertNotIn('confusable_domain_requires_review', review_flags('А. Құнанбайұлы және т.б. авторлар.'))
+
     def test_source_timestamp_removed_but_body_time_and_other_sources_survive(self):
         raw = '7 Сәуір, 2026 сағат 23:09 Жаңалық. Кездесу сағат 12:30-да басталды.'
         cleaned, _ = revise_text(raw, 'abai.kz')
