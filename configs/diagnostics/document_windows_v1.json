@@ -1,0 +1,20 @@
+{
+  "purpose": "development_window_probe_NOT_final_test",
+  "corpus": "data/cleaned/unified_corpus_20261012",
+  "window_plan": "reports/technical/corpus_followup_20261012/window_plan",
+  "window_plan_complete_sha256": "30d6e0abfe87e4eb4b1cc995c2cbd790243ceaa05d31ea093a0e69543d9edac7",
+  "deployment": "configs/deployment.json",
+  "deployment_sha256": "1a54c15b6e4af1830d72c8edbe790c3bde029292cb09628fe6adf3feceead3f3",
+  "models": [
+    "roberta",
+    "mbert",
+    "char_svm"
+  ],
+  "aggregation": "word_weighted_hard_vote",
+  "ties": "central label if tied for largest word vote; otherwise stable class order",
+  "selection": "Previously frozen 142 length/genre development examples; not an independent test.",
+  "selection_after_predictions": false,
+  "training": false,
+  "deployment_switch_authorized_by_this_plan": false,
+  "output_use": "Inspect changed decisions and within-document style heterogeneity; no claim of accuracy improvement."
+}

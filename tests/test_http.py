@@ -5,10 +5,20 @@ import unittest
 from http.server import ThreadingHTTPServer
 from urllib.request import Request, urlopen
 
-from kazstyle.settings import PROJECT_ROOT
+from kazstyle.settings import PROJECT_ROOT, artifact_path
 
 
-@unittest.skipUnless((PROJECT_ROOT/'data/processed/pilot_v2/config.json').exists(), 'Requires local pilot')
+def active_local_classifier_available():
+    profile = PROJECT_ROOT/'configs/deployment.json'
+    if not profile.exists():
+        return False
+    config = json.loads(profile.read_text(encoding='utf8'))
+    model = config['models']['logreg']
+    return ((PROJECT_ROOT/config['dataset']/'config.json').exists()
+            and (artifact_path(model['run'])/model['file']).exists())
+
+
+@unittest.skipUnless(active_local_classifier_available(), 'Requires the active local deployment and classifier')
 class HttpTests(unittest.TestCase):
     def test_frontend_and_local_prediction(self):
         from kazstyle.api.server import handler_for

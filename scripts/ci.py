@@ -17,11 +17,14 @@ def main():
     args = parser.parse_args()
     os.chdir(ROOT)
     suite = unittest.TestSuite()
-    patterns = ['test_quality.py', 'test_storage.py', 'test_demo.py', 'test_news_cleanup.py', 'test_api_contract.py']
+    patterns = ['test_quality.py', 'test_storage.py', 'test_demo.py', 'test_news_cleanup.py',
+                'test_api_contract.py', 'test_document_lengths.py', 'test_checkpoint.py']
     if args.data:
         patterns += ['test_export_corpus.py', 'test_style_expansion.py', 'test_news_html.py',
-                     'test_refresh_news.py', 'test_forum.py', 'test_prose.py', 'test_business.py',
-                     'test_pool.py', 'test_grouping.py', 'test_passage_grouping.py', 'test_overlap.py']
+                     'test_refresh_news.py', 'test_forum.py', 'test_forum_replies.py', 'test_prose.py', 'test_business.py',
+                     'test_pool.py', 'test_grouping.py', 'test_passage_grouping.py', 'test_overlap.py',
+                     'test_document_windows.py', 'test_forum_checkpoint.py', 'test_window_probe.py',
+                     'test_customer_reviews.py']
     for pattern in patterns:
         discovered = unittest.defaultTestLoader.discover(str(ROOT/'tests'), pattern=pattern)
         if discovered.countTestCases() == 0:
