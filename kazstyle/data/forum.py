@@ -18,13 +18,34 @@ BASE='https://surak.baribar.kz/'
 CATEGORIES=['компьютер-туралы','ұялы телефон','музыка-ән','кино-теледидар-телешоу']
 
 
+def own_post_element(post, selector):
+    """Find a post's own element without borrowing from nested replies."""
+    post_classes = {'qa-q-view', 'qa-a-list-item', 'qa-c-list-item'}
+    for element in post.select(selector):
+        owner = next((parent for parent in element.parents
+                      if post_classes.intersection(parent.get('class', []))), None)
+        if owner is post:
+            return element
+    return None
+
+
+def post_timestamps(post):
+    created = own_post_element(post, 'time[itemprop="dateCreated"][datetime]')
+    modified = own_post_element(post, 'time[itemprop="dateModified"][datetime]')
+    return (created.get('datetime') if created else None,
+            modified.get('datetime') if modified else None)
+
+
 def has_contact_identifier(text):
-    """Screen Kazakhstan phone numbers (7/8 prefixes) and possible 12-digit IDs.
+    """Screen local/international phone-like numbers and possible 12-digit IDs.
 
     Digit boundaries deliberately also match numbers attached to words. This is
     a conservative review filter, not a claim that every match is personal data.
     """
-    return bool(re.search(r'(?<!\d)(?:\+?7|8)(?:[\s()-]*\d){10}(?!\d)|(?<!\d)\d{12}(?!\d)', text))
+    return bool(re.search(
+        r'(?<!\d)(?:\+?7|8)(?:[\s()-]*\d){10}(?!\d)|'
+        r'(?<!\w)\+[1-9](?:[\s().-]*\d){6,14}(?![\s().-]*\d)|'
+        r'(?<!\d)\d{12}(?!\d)', text))
 
 
 def parse_question(content):
@@ -79,89 +100,174 @@ def rescreen(source,out):
     write_json(out/'collection.json',summary);print(json.dumps(summary))
 
 
-def collect(out,per_category=25,max_pages=8,categories=None,exclude_samples=None):
-    if out.exists():raise FileExistsError(out)
-    if not 1<=per_category<=1500 or not 1<=max_pages<=400:raise ValueError('Limits outside allowed range')
-    categories = categories or CATEGORIES
+def collect(out, per_category=25, max_pages=8, categories=None, exclude_samples=None,
+            *, resume=False, max_seconds=None, max_requests=None):
+    """Resume one frozen protocol from an atomic cursor, with verified cached pages."""
+    from kazstyle.data.checkpoint import CollectionCheckpoint, CollectionPaused
+    out = Path(out)
+    categories = list(categories or CATEGORIES)
+    if not 1 <= per_category <= 1500 or not 1 <= max_pages <= 400:
+        raise ValueError('Limits outside allowed range')
     if not 1 <= len(categories) <= 8 or len(set(categories)) != len(categories):
         raise ValueError('Choose 1..8 distinct categories')
-    out.mkdir(parents=True);cache=out/'pages';cache.mkdir()
-    s=requests.Session();agent='KazStyleResearch/1.0';s.headers['User-Agent']=agent
-    robot=RobotFileParser();response=s.get(BASE+'robots.txt',timeout=25)
-    if response.status_code in {401,403,429}:raise ValueError('Access/rate limit on robots.txt; collection stopped')
-    if response.status_code==200:robot.parse(response.text.splitlines())
-    else:robot.parse([])
-    (out/'robots.txt').write_text(response.text,encoding='utf-8')
-    last=0.;blocked=False
-    def fetch(url):
-        nonlocal last,blocked
-        if blocked:raise ValueError('Collection stopped after access/rate-limit response')
-        if urlsplit(url).netloc!='surak.baribar.kz':raise ValueError('Unexpected host')
-        if not robot.can_fetch(agent,url):raise ValueError('Disallowed by robots.txt')
-        time.sleep(max(0.,1.-(time.monotonic()-last)));last=time.monotonic()
-        with s.get(url,timeout=(8,20),stream=True) as r:
-            if r.status_code in {401,403,429}:blocked=True
-            r.raise_for_status();parts=[];size=0
-            for chunk in r.iter_content(65536):
-                size+=len(chunk)
-                if size>3*1024*1024:raise ValueError('Page byte limit')
-                parts.append(chunk)
-            raw=b''.join(parts);p=cache/(digest(url)+'.html');p.write_bytes(raw)
-            return BeautifulSoup(raw,'html.parser'),r.url,p
-    excluded=set()
+    if max_seconds is not None and max_seconds <= 0:
+        raise ValueError('Time budget must be positive')
+    if max_requests is not None and (type(max_requests) is not int or max_requests < 1):
+        raise ValueError('Request budget must be a positive integer')
+    excluded = set()
     if exclude_samples:
         for row in json.loads(Path(exclude_samples).read_text(encoding='utf-8')):
-            source=row.get('source_url','')
-            if urlsplit(source).netloc=='surak.baribar.kz':
-                match=re.search(r'/(\d+)/?',urlsplit(source).path)
-                if match:excluded.add(match[1])
-    accepted,rejected,errors=[],[],[];seen=set();hashes=set()
-    listing,_,_=fetch(BASE+'categories')
-    category_links={unquote(urlsplit(urljoin(BASE,a['href'])).path).rsplit('/',1)[-1]:urljoin(BASE,a['href'])
-                    for a in listing.select('a[href]') if '/questions/' in a['href'] or a['href'].startswith('./questions/')}
-    for category in categories:
-        url=category_links.get(category);n=0
-        if not url:errors.append({'category':category,'error':'Category link not found'});continue
-        for _ in range(max_pages):
-            if n>=per_category or not url or blocked:break
-            try:
-                listing,base,_=fetch(url)
-                links=list(dict.fromkeys(urljoin(base,a['href']) for a in listing.select('.qa-q-item-title a[href]')))
-                for link in links:
-                    if n>=per_category or blocked:break
-                    match=re.search(r'/(\d+)/?',urlsplit(link).path)
-                    if not match or match[1] in seen or match[1] in excluded:continue
-                    seen.add(match[1])
+            source = row.get('source_url', '')
+            if urlsplit(source).netloc == 'surak.baribar.kz':
+                match = re.search(r'/(\d+)/?', urlsplit(source).path)
+                if match:
+                    excluded.add(match[1])
+    protocol = {'version':'forum_checkpoint_v1', 'per_category':per_category,
+        'max_pages':max_pages, 'categories':categories, 'excluded_thread_ids':sorted(excluded),
+        'code_hashes':{name:file_hash(Path(__file__).with_name(name))
+                       for name in ['forum.py','quality.py','corpus.py','checkpoint.py']},
+        'unit':'whole question; source-derived style requires semantic review'}
+    initial = {'accepted':[], 'rejected':[], 'errors':[], 'seen':[], 'cache':{},
+        'category_index':0, 'page_index':0, 'url':None, 'pending':[], 'next_url':None,
+        'category_started':False, 'category_links':{}, 'blocked':False}
+    job = CollectionCheckpoint(out, protocol, initial, resume)
+    state = job.state
+    if state['blocked']:
+        raise ValueError('Source access/rate limit was recorded; do not automatically retry this collection')
+    cache = out/'pages';cache.mkdir(exist_ok=True)
+    accepted, rejected, errors = state['accepted'], state['rejected'], state['errors']
+    seen = set(state['seen']);hashes = {r['content_hash'] for r in accepted}
+    counts = Counter(r['category'] for r in accepted)
+    session = requests.Session();agent = 'KazStyleResearch/1.0'
+    session.headers['User-Agent'] = agent
+    robot = RobotFileParser();started = time.monotonic();last = 0.;requests_made = 0
+
+    def save(status='running'):
+        state['seen'] = sorted(seen)
+        job.save(status)
+
+    def budget_check():
+        if (out/'STOP').exists():
+            raise CollectionPaused('stop_file')
+        if max_seconds is not None and time.monotonic()-started >= max_seconds:
+            raise CollectionPaused('time_budget')
+        if max_requests is not None and requests_made >= max_requests:
+            raise CollectionPaused('request_budget')
+
+    def fetch(url):
+        nonlocal last, requests_made
+        budget_check()
+        if urlsplit(url).netloc != 'surak.baribar.kz' or not robot.can_fetch(agent,url):
+            raise ValueError('Unexpected host or disallowed URL')
+        previous = state['cache'].get(url)
+        if previous:
+            path = cache/previous['filename']
+            if file_hash(path) != previous['sha256']:
+                raise RuntimeError('Cached source checksum mismatch')
+            return BeautifulSoup(path.read_bytes(),'html.parser'), previous['actual_url'], path
+        time.sleep(max(0.,1.-(time.monotonic()-last)));last = time.monotonic()
+        requests_made += 1
+        with session.get(url,timeout=(8,20),stream=True) as response:
+            if response.status_code in {401,403,429}:
+                state['blocked'] = True
+                raise CollectionPaused('source_access_or_rate_limit')
+            response.raise_for_status();parts=[];size=0
+            for chunk in response.iter_content(65536):
+                size += len(chunk)
+                if size > 3*1024*1024:
+                    raise ValueError('Page byte limit')
+                parts.append(chunk)
+            raw = b''.join(parts);path = cache/(digest(url)+'.html')
+            path.write_bytes(raw)
+            state['cache'][url] = {'filename':path.name,'sha256':file_hash(path),'actual_url':response.url}
+            # Cursor still points to this URL; interruption here safely re-parses the saved page.
+            save()
+            return BeautifulSoup(raw,'html.parser'), response.url, path
+
+    stop_reason = None
+    try:
+        budget_check()
+        response = session.get(BASE+'robots.txt',timeout=(8,20))
+        if response.status_code in {401,403,429}:
+            state['blocked'] = True
+            raise CollectionPaused('robots_access_or_rate_limit')
+        response.raise_for_status();robot.parse(response.text.splitlines())
+        (out/'robots.txt').write_text(response.text,encoding='utf-8')
+        if not state['category_links']:
+            listing,_,_ = fetch(BASE+'categories')
+            state['category_links'] = {
+                unquote(urlsplit(urljoin(BASE,a['href'])).path).rsplit('/',1)[-1]:urljoin(BASE,a['href'])
+                for a in listing.select('a[href]') if '/questions/' in a['href'] or a['href'].startswith('./questions/')}
+            save()
+        while state['category_index'] < len(categories):
+            budget_check()
+            category = categories[state['category_index']]
+            if not state['category_started']:
+                state['url'] = state['category_links'].get(category)
+                state['category_started'] = True
+                if not state['url']:
+                    errors.append({'category':category,'error':'Category link not found'})
+            if counts[category] >= per_category or state['page_index'] >= max_pages or not state['url']:
+                state.update(category_index=state['category_index']+1, page_index=0,
+                             url=None, pending=[], next_url=None, category_started=False)
+                save();continue
+            if not state['pending']:
+                listing,base,_ = fetch(state['url'])
+                state['pending'] = list(dict.fromkeys(urljoin(base,a['href']) for a in listing.select('.qa-q-item-title a[href]')))
+                next_link = next((a['href'] for a in listing.select('.qa-page-links a[href]')
+                                  if a.get_text(strip=True) in {'»','›','Next'}),None)
+                state['next_url'] = urljoin(base,next_link) if next_link else None
+                save()
+            while state['pending'] and counts[category] < per_category:
+                budget_check()
+                link = state['pending'][0];match = re.search(r'/(\d+)/?',urlsplit(link).path)
+                if match and match[1] not in seen and match[1] not in excluded:
                     try:
-                        page,actual,path=fetch(link);raw,author_group=parse_question(str(page))
-                        text,cleaning=clean_text(raw);stats,reasons=inspect_text(text,min_words=20,max_words=500)
-                        content_hash=digest(text.casefold())
+                        page,actual,path = fetch(link);raw,author = parse_question(str(page))
+                        text,cleaning = clean_text(raw);stats,reasons = inspect_text(text,min_words=20,max_words=500)
+                        content_hash = digest(text.casefold())
                         if content_hash in hashes:reasons.append('exact_duplicate')
                         if has_contact_identifier(text):reasons.append('possible_contact_or_identifier')
-                        row={'doc_id':digest('surak_question:'+match[1])[:24],'text':text,'style':'colloquial',
-                             'source_url':actual,'source_domain':'surak.baribar.kz','parent_id':'surak_thread:'+match[1],
-                             'author_group':author_group,'genre':'forum_question','category':category,
-                             'label_origin':'question_genre_candidate_NOT_verified_style','review_status':'unreviewed',
-                             'usage_status':'review_pool_only','content_hash':content_hash,'quality':stats,'cleaning':cleaning,
-                             'eligibility_reasons':reasons,'source_snapshot':str(path),'source_sha256':file_hash(path),
-                             'collected_at':datetime.now(timezone.utc).isoformat(),
-                             'license':'Website attribution notice; no blanket redistribution permission asserted'}
+                        row = {'doc_id':digest('surak_question:'+match[1])[:24],'text':text,'style':'colloquial',
+                            'source_url':actual,'source_domain':'surak.baribar.kz','parent_id':'surak_thread:'+match[1],
+                            'author_group':author,'genre':'forum_question','category':category,
+                            'label_origin':'question_genre_candidate_NOT_verified_style','review_status':'unreviewed',
+                            'usage_status':'review_pool_only','content_hash':content_hash,'quality':stats,'cleaning':cleaning,
+                            'eligibility_reasons':reasons,'source_snapshot':str(path),'source_sha256':file_hash(path),
+                            'collected_at':datetime.now(timezone.utc).isoformat(),
+                            'license':'Website attribution notice; no blanket redistribution permission asserted'}
                         (rejected if reasons else accepted).append(row)
-                        if not reasons:hashes.add(content_hash);n+=1
-                    except (requests.RequestException,ValueError) as exc:errors.append({'url':link,'error':str(exc)})
-                next_link=next((a['href'] for a in listing.select('.qa-page-links a[href]') if a.get_text(strip=True) in {'»','›','Next'}),None)
-                url=urljoin(base,next_link) if next_link else None
-                write_jsonl(out/'candidates.jsonl',accepted);write_jsonl(out/'quarantine.jsonl',rejected)
-                print(json.dumps({'forum_category':category,'candidates_in_category':n,'total':len(accepted)},ensure_ascii=True),flush=True)
-            except (requests.RequestException,ValueError) as exc:errors.append({'url':url,'error':str(exc)});break
+                        if not reasons:hashes.add(content_hash);counts[category] += 1
+                    except (requests.RequestException,ValueError) as exc:
+                        errors.append({'url':link,'error':str(exc)})
+                    seen.add(match[1])
+                state['pending'].pop(0);save()
+            state.update(url=state['next_url'],next_url=None,page_index=state['page_index']+1,pending=[])
+            save()
+            print(json.dumps({'category':category,'accepted':counts[category],'total':len(accepted),'pages':state['page_index']}),flush=True)
+    except CollectionPaused as exc:
+        stop_reason = str(exc)
+    except (requests.RequestException,ValueError) as exc:
+        errors.append({'url':state['url'],'error':str(exc)});stop_reason = 'source_error'
+    except KeyboardInterrupt:
+        stop_reason = 'interrupted'
+    finally:
+        session.close()
+        save('paused' if stop_reason or state['category_index'] < len(categories) else 'finished')
+    # These are derived exports. The atomic checkpoint is authoritative while unfinished.
     write_jsonl(out/'candidates.jsonl',accepted);write_jsonl(out/'quarantine.jsonl',rejected)
-    summary={'candidates':len(accepted),'categories':categories,'by_category':dict(Counter(r['category'] for r in accepted)),
-             'excluded_existing_thread_ids':sorted(excluded),'per_category':per_category,'max_pages':max_pages,
-             'quarantined':len(rejected),'quarantine_reasons':dict(Counter(reason for r in rejected for reason in r['eligibility_reasons'])),
-             'errors':errors,'expert_verified':False,'used_for_training':False,
-             'limitations':['Questions may contain quoted homework, news or lyrics; genre is not a gold style label.',
-                            'One publisher; not a multi-source final test. Thread IDs are available; some author groups are unknown.']}
-    write_json(out/'collection.json',summary);print(json.dumps(summary,ensure_ascii=True))
+    finished = state['category_index'] == len(categories) and not stop_reason
+    summary = {'candidates':len(accepted),'quarantined':len(rejected),'by_category':dict(counts),
+        'errors':errors,'collection_finished':finished,'stop_reason':stop_reason,
+        'network_requests_this_run':requests_made,'excluded_existing_thread_ids':sorted(excluded),
+        'protocol':protocol,'expert_verified':False,'used_for_training':False,
+        'limitations':['Questions require semantic screening; source genre is not a verified style label.',
+                      'Completion means the configured crawl budget was exhausted, not the entire source.']}
+    write_json(out/'collection.json',summary)
+    if finished:
+        write_json(out/'COMPLETE.json',{'candidates_sha256':file_hash(out/'candidates.jsonl'),
+                                     'checkpoint_sha256':file_hash(out/'CHECKPOINT.json')})
+    return summary
 
 
 if __name__=='__main__':
@@ -170,6 +276,10 @@ if __name__=='__main__':
     p.add_argument('--rescreen',type=Path,help='Reprocess a previously collected snapshot without networking')
     p.add_argument('--categories', nargs='+', help='Explicit category slugs verified against the public categories page')
     p.add_argument('--exclude-samples',type=Path,help='Existing/reserved source URLs; skipped before fetching')
+    p.add_argument('--resume',action='store_true')
+    p.add_argument('--max-seconds',type=float)
+    p.add_argument('--max-requests',type=int)
     a=p.parse_args()
     if a.rescreen:rescreen(a.rescreen,a.out_dir)
-    else:collect(a.out_dir,a.per_category,a.max_pages,a.categories,a.exclude_samples)
+    else:print(json.dumps(collect(a.out_dir,a.per_category,a.max_pages,a.categories,a.exclude_samples,
+                                resume=a.resume,max_seconds=a.max_seconds,max_requests=a.max_requests)))

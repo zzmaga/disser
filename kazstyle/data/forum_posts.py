@@ -14,7 +14,7 @@ from urllib.parse import urljoin,urlsplit
 
 from bs4 import BeautifulSoup
 from kazstyle.data.corpus import digest,file_hash,write_json,write_jsonl
-from kazstyle.data.forum import parse_question,has_contact_identifier
+from kazstyle.data.forum import parse_question,has_contact_identifier,post_timestamps
 from kazstyle.data.quality import clean_text,inspect_text
 
 VERSION='forum_utterance_screen_v3'
@@ -25,9 +25,7 @@ ADDRESS=re.compile(r'\b(?:сізге|сізді|өзің|өзіңнің|өзің
 STRONG_PERSONAL=re.compile(r'\b(?:мен|менің|менде|маған|мені|өзім|ғой|гой|достар|сәлем|салем|рахмет|рақмет|ойлаймын|түсінбедім|білмеймін)\b',re.I)
 
 def timestamp(node):
-    created=node.select_one('time[itemprop="dateCreated"][datetime]')
-    modified=node.select_one('time[itemprop="dateModified"][datetime]')
-    return (created.get('datetime') if created else None,modified.get('datetime') if modified else None)
+    return post_timestamps(node)
 
 def parse_posts(raw,url):
     soup=BeautifulSoup(raw,'html.parser');match=re.search(r'/(\d+)/?',urlsplit(url).path)
@@ -75,6 +73,8 @@ def build(input_paths,out,existing_ids=()):
         with path.open(encoding='utf-8') as stream:
             for line in stream:
                 r=json.loads(line)
+                if str(r.get('usage_status', '')).startswith('reserved'):
+                    raise ValueError('Reserved question threads cannot enter a development post pool')
                 if r.get('source_domain')=='surak.baribar.kz' and r.get('source_snapshot') and r.get('source_sha256'):
                     previous = pages.setdefault(r['source_snapshot'], r)
                     if previous['source_sha256'] != r['source_sha256']:
