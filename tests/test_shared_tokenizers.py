@@ -15,6 +15,18 @@ class ToyTokenizer:
 
 
 class SharedTokenizerTests(unittest.TestCase):
+    def test_batch_prefix_search_preserves_nonmonotone_scalar_order(self):
+        class FastTokenizer:
+            is_fast=True
+            def __call__(self,text,**kwargs):
+                def encode(value):
+                    counts={1:3,2:9,3:6,4:8,5:12}
+                    return [1]*counts[len(value.split())]
+                return {'input_ids':[encode(value) for value in text] if isinstance(text,list) else encode(text)}
+        tokenizer=FastTokenizer()
+        self.assertEqual(fit_shared_text('one two three four five',[(tokenizer,6)]),'one two three')
+        with self.assertRaises(ValueError):fit_shared_text('one',[(tokenizer,2)])
+
     def test_same_whole_word_excerpt_fits_both_encoders(self):
         self.assertEqual(fit_shared_text('Бір екі үш төрт',[(ToyTokenizer(1),6),(ToyTokenizer(3),8)]),'Бір екі')
         with self.assertRaises(ValueError):fit_shared_text('Бір',[(ToyTokenizer(3),4)])
