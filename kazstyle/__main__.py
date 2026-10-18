@@ -4,6 +4,10 @@ import runpy
 import sys
 
 COMMANDS = {
+    'freeze-tokenizers': ('kazstyle.models.tokenizer_reference', 'Snapshot pinned tokenizers without constructing a dataset or loading weights'),
+    'reserve-evaluation': ('kazstyle.data.reservation', 'Freeze evaluation identities and full groups before new training'),
+    'curate-pending': ('kazstyle.data.curation', 'Prepare full-text pending-queue batches without approving labels'),
+    'thesis-english': ('kazstyle.evaluation.thesis_english', 'Build the English working manuscript from saved evidence'),
     'export-corpus': ('kazstyle.data.export_corpus', 'Export or verify a versioned document corpus and its provenance'),
     'collect-poetry': ('kazstyle.data.poetry', 'Collect attributed whole poems with author/work groups'),
     'screen-legal': ('kazstyle.data.legal_import', 'Screen a pinned downloaded legal source without altering it'),

@@ -24,7 +24,7 @@ def main():
                      'test_refresh_news.py', 'test_forum.py', 'test_forum_replies.py', 'test_prose.py', 'test_business.py',
                      'test_pool.py', 'test_grouping.py', 'test_passage_grouping.py', 'test_overlap.py',
                      'test_document_windows.py', 'test_forum_checkpoint.py', 'test_window_probe.py',
-                     'test_customer_reviews.py']
+                     'test_customer_reviews.py','test_folktales.py','test_curation.py','test_reservation.py']
     for pattern in patterns:
         discovered = unittest.defaultTestLoader.discover(str(ROOT/'tests'), pattern=pattern)
         if discovered.countTestCases() == 0:
