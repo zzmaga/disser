@@ -1,0 +1,121 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-12",
+  "source": "data/external/stories_scale_20261010/candidates.jsonl",
+  "expert_verified": false,
+  "note": "Partial content screening: observed title and beginning/end; not a full-document or expert annotation. Biography-prefaced works remain pending rather than counted as cleaned.",
+  "decisions": [
+    {
+      "doc_id": "312b209994ffb707b22b9cae",
+      "text_sha256": "ca10547532c75a9ba0c9a26d04e1a5d51ce239bb68241f095c7145fdb56c11cf",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "9822b7c8a968da5da9f81e8f",
+      "text_sha256": "ccbc9416be9feea063c81f457081eacc99f98166484fb60886b9d93a0cd36fe1",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "3b9566a0f966f44a01eb13a9",
+      "text_sha256": "3e8bcdf9b6e9a369e0e69691ad5fa1b606a474cd90d89b234559a6d163a3be8b",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "8eb94be4569ecc2e28c86723",
+      "text_sha256": "9f79f0fa2b1c9229f10abeb1e5c578e083b001174418973918b477b9685c25b8",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "676eab2c363a063cddc9b660",
+      "text_sha256": "b44227b05e1f48131799781673a07babc06185767ad4a5432dee5f45b80e3f1a",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "93d895051610df9bb4e72954",
+      "text_sha256": "fd3d57000244e2e6a1dfa938a3dae8bcfe59788c8cd1622d0774a8af15b0e97f",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "6c21c0771850e499d5f99146",
+      "text_sha256": "c3663cc2c41e2f98fece9a914801954ff2c171d8415ba9b1bff22b6cb2d1cfeb",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "a13b4f001aa6c883e454c218",
+      "text_sha256": "1fb6d64289a45cbdee8d317ffc645b404b82797c4f1e0e17a7012af3bd191c21",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "0ec838a73e6533dd1a45225f",
+      "text_sha256": "cedf7e9f625b789b05843a0ce0886d018bdfedbb48c6b7a4b4b4f15c7bed8984",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "145028ad5c99ac24ab3700b9",
+      "text_sha256": "3fec2c464ee3112649ed23ea7be16d19bb72da74ef3e41a445f0c484a6495871",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "7cc9592e211fc29bf695eb08",
+      "text_sha256": "573de9c3c965f7cddeb7dc6980283d346709d00bd6038adf70b28a17ab709019",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "d5881a1821abd60db7c03a93",
+      "text_sha256": "2b725cc8efd97cba68a5e96d41e7ceae310d029b5656a83a947c321d491b8228",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "319c3cda922bef7ed9c0e4ba",
+      "text_sha256": "e2776ccb49aa010f48e0dd9712a3d84a78f974dc247c0627234b128e064acabe",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "04cb6b6078a046328b230496",
+      "text_sha256": "6b83f092d743aba72123aae5c3429448878601ebba88cb906e29c11aba360648",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "aa4ca2c6639a3746eb9146b7",
+      "text_sha256": "d8ad7182b778bbeb878dbddf84a6c12d96888608faa2cccde77dc1b9262cde5e",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    },
+    {
+      "doc_id": "ba8e54d6582bc1cde6f5ba76",
+      "text_sha256": "9aea5ea4b69fecfb36e8b287dde67b12a2601c84fb63bc40eebed2f9e989e05f",
+      "keep": true,
+      "reviewed_extent": "title_beginning_end",
+      "reason": "Заголовок и прочитанные начало/конец содержат художественное повествование, персонажей или диалог. Предварительный отбор; средняя часть не проверена полностью."
+    }
+  ]
+}

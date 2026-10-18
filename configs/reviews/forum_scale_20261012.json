@@ -1,0 +1,989 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-12",
+  "source": "data/external/forum_scale_20261012/candidates.jsonl",
+  "expert_verified": false,
+  "selection": "First 100 computer-category candidates <=90 words and first 40 mobile-category candidates <=65 words. Deliberate screening, not a random quality estimate.",
+  "decisions": [
+    {
+      "doc_id": "9ba796039132c4aca420b7c7",
+      "text_sha256": "b83550148a8d1ad5fe849f9fe6546a17ca1eedd7559820765fc16ff7206411f6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "aef2f95947caa38add8c1475",
+      "text_sha256": "db57c5e3fd9dcaddb1060a4feae0ac4c7d75ad1b08f6073e41ced13890bb313f",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "7a7598b954021f84f3233cea",
+      "text_sha256": "d35cb430cd0632ce53e907cc51a3787fe7147c3cc4661db60c5807242a1a0c0f",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "cc36a7daed2ecbeb75bf2abe",
+      "text_sha256": "ed7ad651389249b5a492402bce2c53061d8375c3ce9ef2c9c1e996e61899f034",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "4cbfc5608749e6cc958dc9ab",
+      "text_sha256": "1431f49dcfca6e0491a0fbb7e1ebf00d2ca1bc21ecb6b3ba5823b9b610f98144",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Вопрос об авторе, но основную часть занимает цитата песни; смешанный текст."
+    },
+    {
+      "doc_id": "b54d3c2adf64e182f8d6d0fd",
+      "text_sha256": "e6e19c9f5637575f3b2519df7b2d40164457abf0578050fb6c9462c74dc03da4",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "db8c8425e92b4de2e2e14499",
+      "text_sha256": "4f9af0ba5377e06cf7d3f7447f61f11244dfd0920162b14735fc64cd80d5670b",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "30e0f19819dcbe9e3751d031",
+      "text_sha256": "60da1843b7cf0b7a27e25d7ef3e4efc36b9ed2d50e450b1b3da9352b7ef93732",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "47c750f9cd22e31867d8ad54",
+      "text_sha256": "6a06b1134ad434ee05cfddce75d798f49c4b727d73e055ba9a706457301ccc74",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "4bbf01cd543f5a5881fdde8f",
+      "text_sha256": "385d8e463e90d428585c31f87c40523d8f675d01a9302569cf21b15de1336ca7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6f613cb5b7947844b2134055",
+      "text_sha256": "f6a942c4fa585d76d66fc6a4ac18e9ee96ecba89ff5adc601c4c3e3b4c169a8a",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "e453af3f215cf44e746f36d5",
+      "text_sha256": "46893ede2b8845748e191efa69b8eb027dcbc2e62f7b339d3460827c992b2043",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "a5362282b42df3a72a829205",
+      "text_sha256": "c3ade025a614c6ee52d6aff5295cefc96c44e7385763d7ec9354f98874724361",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "a4f52a32ad7d1bfc01125537",
+      "text_sha256": "da09846205e779878d8688a6b3fe438f1dc5c06067086e7bfb3c42d167b3dd00",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "6c6c2d587e12d91e7a0fc04c",
+      "text_sha256": "362d513edb13fee56e28be7936e26a8907841955a8d7b88024c71cf8a0af3b7b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "b1a48c999443b659ede9304f",
+      "text_sha256": "3232fd822624e89f53587342fe3bdcba6d30f727e50e73cb7f50ec5e35278ddd",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "afbf197512cddb7085e0a202",
+      "text_sha256": "48fa81c11fca23abe3455b85f522127a555f7feb48f2a63f8460574de1445b0d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "d13d90eec8d829d2e0ad7215",
+      "text_sha256": "86c6fdc66c02e1c4d541cf28e40293269dd4c0dfd5cd7f8a09de88b246df8315",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "3cb047185e41033f4764e7c8",
+      "text_sha256": "1fc96382befb24c9c9bd47eb116271a205cf373128e90de19e138ffb1f512f10",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "b9a417bb107f072d465895ac",
+      "text_sha256": "0a7e5bf878edd7b418a0a9e4b3bcd2283a1f883826b7bfa4c7087d790945c292",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает программный код и строковые литералы."
+    },
+    {
+      "doc_id": "1a267f7293e0eb5367e84390",
+      "text_sha256": "391b48ddd01e92081facd2ad7873f2f4446bda40124df7cafa46baa56daae654",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "042b8e89910353771776cb8f",
+      "text_sha256": "c526eb7c56b386d4e74e42f3c9eb1a216f913542edad8c5ce0ad94bd2b3ace34",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "a15fa11aef9005b99ae69d7c",
+      "text_sha256": "41aa2748ab7654e8bb6917bc3f82b9a8e6b21230ca31316438eb3e6077895802",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "fa3fcbd960f67ac1269c13a8",
+      "text_sha256": "4f29a5ab53a69e8f5beb26a7ddb62cf41e910d016baa7a32f5ebafc11e0a2a71",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "d989942b588cc34337564242",
+      "text_sha256": "a268d7d5bdabc22757e99013df41b821b8d67bea37a942202763985c4dd9c059",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "b68be283a8575da3ba2d9616",
+      "text_sha256": "efc2816038d46fdd8e12a63d8558e477c33078b7488d91a13e6f13b1cebc9414",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "f94bb2c6f1e0e27bd1f01dce",
+      "text_sha256": "35bf9fba6012d990465cc6eba518b58eca4a44582cde7a05ba76d232b6b16de7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "1c301483b9a694bdeb057592",
+      "text_sha256": "3490acc59de45455c3a5d34bef58b70de6c56531700b2abe922586648963a03b",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "fbb97e527a700a73fc4ed805",
+      "text_sha256": "f0493db44400d736133425f8b177c3545621737d238f6ca58e97c72535c8ac74",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "10b8f90548ad081ab38c5a92",
+      "text_sha256": "7670771f0ebe4c26ca6c00dfae82306fcaba683764a52de9be7b465fb76812cd",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "8c98df4623b26a69468b1906",
+      "text_sha256": "c78fd19cc61c2ec8f870b22f8479df4742ac136d39e993ae2484c21e6fc5bdc5",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "df63235a6a689a114149f9e6",
+      "text_sha256": "f306844152a3c8d56bda9395e0c334edbabfb2534a34ea978e96926c04f9ac2b",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "46035e635dd29983122354ce",
+      "text_sha256": "45000301d210e8b25ced5083ccdcf8a4f96dcdcd327a26cb4f2e59cab5a47e95",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "9ad9d2091f58b141902994fc",
+      "text_sha256": "7d7bb70ada83a8d06fd424ca8bd26b1855e1eaa8a33f9c8add58455ae713ab94",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "22aafd67e55bfc9b8a3d527d",
+      "text_sha256": "5f9655a815c3c7893ac06c288a1ce3d3bdf94e5a82d4bd6f1db55262f441432f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "d2dbfbbfb4711aeedf7e8c9f",
+      "text_sha256": "2fdac7772951d9ff3ba413fa41326cc83c80978d2ec2cb497b62d51854698b73",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "5f34376c1927071f43bf868d",
+      "text_sha256": "1c85d5a289f3c464192ffefb278cc588e5b68c07252defa6d5f12494f1fb31e8",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "99aeb5286d311ea5bbdd93e7",
+      "text_sha256": "284c045f6b7f5e1c2c25252be6d39a64b2f7ac15d7d9adb756cf826eabf0d5d7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "8993464d5274a1bbb53eb38b",
+      "text_sha256": "f93d8195e0020beedec2bd12ebf3566bddbdab2b1093756b303a337608d30b31",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "f95904f4439fbbb62c989917",
+      "text_sha256": "516d9eabbf69158d578807cd7a6d5c74faab00b16ceefb70fbcdd2c13dbffeb3",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "b29f24027781305f50e56dc8",
+      "text_sha256": "1c14ddfbedb679831dc5bac6e537a7233e61af2acc366698f6c20e6e0b43115e",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "71efdbf9c4b63e001cb91f44",
+      "text_sha256": "9aaf16f7cdaf69714acc5ef01b89c35e4d93ab832293bd0098fdab0faaf4cb01",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "3e8bded0f82f61d9c1f5c6f2",
+      "text_sha256": "81ffb6670c1b92c83a055b8f338548fd721c84d8ca0d653f6f3749c3ce0fba18",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "8115f4cce8f96df3a8f0f766",
+      "text_sha256": "2a2740ae88304ff9fe08b952abc93074f0413ede6b7c3ac0dcaafc969c27a61a",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "9e088ad6d45cdc85c0cdebb2",
+      "text_sha256": "f44cd19efc61ac3235b2fc8db01af9d7f39eac535ef0dbedfa937a3dc0972eb7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "1707423ae1061aa1dc329902",
+      "text_sha256": "8ee775d0b8778ec641e01fe4a7b5c9ea92b515606858b0043eb5d620a8b3b005",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "5db07f56284450f9201f2310",
+      "text_sha256": "1170bddfa3f6765c3fb6d3957b8be78b8e306fa07a4c9c41bccb0f22807dbb5e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "a16b202ca2186da3af83c4d5",
+      "text_sha256": "f1502671f2dc18353d0dfb6a9858b710fd69a5d1993a056fcf255bb722723447",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "deb0990e362c4607c0450d86",
+      "text_sha256": "cd390ef9acfc7fb74a74062db0ea47ff60915554241574e489231c819ce7478f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "c2697ca758daed1f468a5a65",
+      "text_sha256": "138746223690fd2a2188ba5d3813f0f681536342b1a76e3310ea620a55c3cdf4",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания или перечень научных тем; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "01b33876f691efebe4720f51",
+      "text_sha256": "87ec6947bd6249f74901c18dc5bfb51ce8d5229e49f6b472997b75c16d4515ce",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "f2f506979c73db61a916a85b",
+      "text_sha256": "b504f9596536e216915ad05d7a5e676dcd3b11133ff4aefbba6d5f6134d51d60",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "79a01755f55a1ec3900a79c6",
+      "text_sha256": "d7882dd679a3c83292519ddbab49d989fb25cd8319d0ae49f82e023b98601ec7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "54e3062f0921ab9db7dcb83b",
+      "text_sha256": "2b7afc9bcd6f3cbe918ce7fc81cbbb19dd473f153c64cb45f9673f2b54ebcbe1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "3d8e48b05520d0485a5795f3",
+      "text_sha256": "18b0b760cff38d9425dfd8ba1736029d2a17c85b3a780cd20c4a15efd7f08365",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "b754a6111930cdba0d629049",
+      "text_sha256": "86274f87a6964d174f8408ec96a502865c1cbdfa836672d92655d343ac07cfba",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "596e0b9ba11c097931e12c55",
+      "text_sha256": "c5037cdf72e22e1adf8ea9d5be5d2cb1322f44372de9d3071b5f52994ecff0aa",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6c6115dd7855056dfd6661f9",
+      "text_sha256": "acb89698f6591c9c1a11828680979415c8a18b560434d9a13cefa1f0f47c15f1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "b2436c8cf606d253dcfc57e1",
+      "text_sha256": "901aee1f7f28a0b2885370d74b27bf710461bd31efd2670d6b5e36df9ad3773d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "e9b1e3b00ac7ab87fb21c09c",
+      "text_sha256": "3d9419893d15f24d2979c5716db9d4d962dd238c823ef99503695fe5ec32c2a7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6852c4a23b27bd15a593caf8",
+      "text_sha256": "9fa7c838716a85280033055bc5ab4bf97e4cafde857f6ebaacb3288d77ecaf7f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "e5a8d505c20876e7bf0ab702",
+      "text_sha256": "6b980126b84c6485f81a2c7a83f4b86e0f8237fdb986bb776ff6428149384f64",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6f247d77bdb474a56ce7bfcb",
+      "text_sha256": "832ab6ffb0b98c973d31f4e36c65237fd46dad2b5107b77acace1bd07524c865",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "d69f560ba64a64feb49a8e89",
+      "text_sha256": "4b4360edc8c48e3d8ca52109397ae840cbdf69afc8ddc7afbbc280c70d6a637c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7b7dd80b0c9a3d2e6d19c522",
+      "text_sha256": "16189032ab0a845ebbbc1b5e23652d6fdefe4a384cc78c03af8b15be3c176a0c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "08aebe334f5034e81c2fb3c6",
+      "text_sha256": "6eae12f7b7747ca7fcff808e4095667db40a8072743778f573c9850553e19a71",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6bb53dd86b273e8688e78f55",
+      "text_sha256": "11c589c924e9ce6ce017ef7a41a003a9cf28d2621e6f1436eab9d6f0eb1a0dd2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "174158d3ec3068a92f5301b8",
+      "text_sha256": "cace6582642216bac924ea2b95e5004b5e3cdd93da0d80d14f144c7ce23d7b32",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "79d719b5be1ef57393a23c48",
+      "text_sha256": "6ac179a34fffbf692604f53b8ccf5a6e44aba7d48f6d7eab97cc6c0e6785fa41",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "417f7d768f071f20a43b7dc1",
+      "text_sha256": "1ee1308bc94ffa61a55001a97caedb334e084728e8415f8cc7c2c3cd420ff709",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7be18ac564ad829363d77a88",
+      "text_sha256": "766f4f442ad24ab802e83b8247f6e2d4f209a7566c62294ed76f57e0d7a2a883",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "bbf10d04374f6d8bb56b9a53",
+      "text_sha256": "1fba187478dc1277278ac21bbede4413b4331a17ebdfc9c2b875e3f6ec0f05e9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "34e2a0e618bc325e4537acd4",
+      "text_sha256": "ff511f6d328dbe85830b937d884bf24eeb03ff2b56af4ab6e0770dc2515775a4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7f13ebd073da454c28980ea8",
+      "text_sha256": "e0dff5128cae6ccd2f22a8b26ee7c8a240c2755262d7252933ca5d1cf08a7dd0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "6ef27dffed48fe6c616e9e28",
+      "text_sha256": "a05bbda683f2930fbbfb589d3aabf3f32f91cc3483ef762dffd8ff7da53e213f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "9f92928c362fc8e337287750",
+      "text_sha256": "fbb00508839190e127d4635087ef25c1a2e2e71ce0cf7b87b62c7b721f6aad53",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "ec1184271fc32269ae17fd6a",
+      "text_sha256": "99288684a0ff2ecb90b12575e437f9d70789e16111b926f0392bfa9e1b97b673",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "5ba401b4d9303ef4b2729af0",
+      "text_sha256": "addb9cb2c79b32720b5ca7aa245a82035cbc87512812afab3bbc2fd5473def45",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "5af958e318f6ea9094e4efee",
+      "text_sha256": "1f6bd964349d707c7fcf95a5e3f8723ce9fab11359171efb75a9e4334685e4e0",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Коллективное обращение от имени жителей с просьбой решить проблему; граница разговорного и делового жанра, исключено из чистого разговорного набора."
+    },
+    {
+      "doc_id": "f691f07b3a69f16f8a1f9222",
+      "text_sha256": "9ccb9033662d8879c158252e0c8b1f729e67f4e270f7d1c8f335d4ff86f8f1f1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "5842cc0881366d8c24cf86b5",
+      "text_sha256": "1648a8ea05977a2f457c8b07bff12fd3b971179f05a27a12654d8a2c5abdec0a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "688083749b4682ea7aa138b0",
+      "text_sha256": "95e68a8375d353e4516822fc2ee2e9cc1ceb204b732d803980a4dae817286307",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "8e974b279facd5e0785d4bcd",
+      "text_sha256": "b0777d6442ba7ead8cf114371398a18561dc25f69d061f0610c9684cd899d539",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "b988c17bcbe4b76d99ae2004",
+      "text_sha256": "55ce2bf0578f4bfe44f85f5418a2d6206a84638e00e6208c0c8e25f7d914460a",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "e4b31648ec893d3980156388",
+      "text_sha256": "3b5ec4021288c2fd56731c1b5fe8b6ae16f8586bb5a4b740cb8f241f08a4290c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7a510607330287fca22b3236",
+      "text_sha256": "5383e7d1cdb9ae9769bf7121b4d842e2fc4fed19794dd16e3e619820bb7cc7f7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "bf38e162aff9a69096debd41",
+      "text_sha256": "4af3bfdab3e9b04fd84b0aef5bdb60fd24ba7e45f9d5e6cad36e60d5121c2fca",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "157d9d036e8fad7e317c242e",
+      "text_sha256": "11f726cba801678e05a225a0bec71da4d8255e8b11c9b0e321682fccad74081f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "308aa58001c31f0bfaf5b485",
+      "text_sha256": "31facd1d005e05147192a318d7ef4c188cf3adc436356f1abd8cb514dc1f83e7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7dc347d788324f18ebb1f17e",
+      "text_sha256": "7f07eb8d45b3467d536c129a76796b8601b701f34c4812557414832676dc4b93",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "75cc882db33663f18392409c",
+      "text_sha256": "37468d52f1cf5f18746d4a0d9032afc10f20dcaeb06703954ad9eb722db9aaa0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "3a135c521469fbddbf1dc156",
+      "text_sha256": "e466bfcc045417a0c9d29dddf5ad921d7d4e562e421d3a57ccc8d1af5af6dc9e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "278f3a4663e11a2a1cddca4a",
+      "text_sha256": "81d6b92f9c7193b3eafb8e39eca9fd96dfccf85af3809f62b985f5bff291daf1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "d2dd29d1dcbe2070c409b1f4",
+      "text_sha256": "9cd7abd33fafbeb5c6fef67f9dbe34a57048d86f123684395ea39da9bb564e57",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "36c460f4a627c77ca95ad9be",
+      "text_sha256": "379f684f56856fe325aab19e4cb5f6c69712d0d4b3275fc526c88b81eca8af03",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "de9a1faf035f8d4daf3e8309",
+      "text_sha256": "2ca9fef2adbe33bf2647ce69b52ed4bb0ff756c94a1296c85bc923b7240d1ddd",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "292f5f28b48bb90c617c607a",
+      "text_sha256": "ea4c7e0a3cb3179afaa6db820ba95bc6b185afa697ac99a168e6708198c53c1e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "07c7309d2741432e6da9a9fd",
+      "text_sha256": "69240a272f8a8e401d2fb372c94926b51a046645989412a4db2625ee14333740",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "3cff0850fb5f5447328578ef",
+      "text_sha256": "32305b1d97afd2bf6e4a8260f18dd217f623ae03a5a49466cd6eebe53fdd80f5",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Основную часть занимает формулировка учебного задания; не чистый разговорный образец."
+    },
+    {
+      "doc_id": "054cffc53e0b2c8d7fb52da9",
+      "text_sha256": "cff2d216bd5ba18650ea1334de861b9b6ee9c917dbd18ebcaa726c9606406695",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращение пользователя с вопросом/просьбой или личным комментарием; разговорные конструкции. Предварительная метка, не экспертная разметка."
+    },
+    {
+      "doc_id": "7c5abee5bdf237d4ec613f0d",
+      "text_sha256": "bdc170a150e12c54ac6552bf1e86fac54ff255827709d006c57ffdbb490335e8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "0002601c1a2d37fd8c9d0e4a",
+      "text_sha256": "7a43f3882d14ab3ec743726feb9b1f5c047ae61a1fb3ae4094e398c47bb4c179",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "a76f8d1f10deb350bd08f5bf",
+      "text_sha256": "1d1ffee6563ef52d60887299831558262be81251f0192287d3c3206d3fabdc2d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "7437903a88495ebdefd4a30e",
+      "text_sha256": "e43144b1471da4f4b9c29fc056901fe7eac4e7649d202f195a7342a5d7a4fbca",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "a84d20964f6473709c62231c",
+      "text_sha256": "0ccda16ac0dafc9353b000fb95df1047c723fb435f6d9d84c6e8a33236b1ee82",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "41a3cc9a4afbaac2ba0a05b4",
+      "text_sha256": "8ec41ff50ef49775ad047527c40e5d5338d635552ba35e95d0cb0c3d4be157f5",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "e76e2671c4dc40ab7dd2effc",
+      "text_sha256": "20f54c863740fa6d620805c3c5d93e9f38d54ddb1e0933074e3165d3d52c949c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "95310dedde769f5826f091a7",
+      "text_sha256": "a9a14d7e456045427f5365ddc250a5e339b7e3a81dc6d0f7bc5e2698c6c897f2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "bcbb5d76d8a36debdf281c22",
+      "text_sha256": "82d37771aeffa97a1e6ecd717f9e86e6a35f0f4901c52db52055424445c11f02",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "d020319d6f29cbbef974347e",
+      "text_sha256": "992baba5d5b6c82905a66ca6d02ce769f1796a4cada4d582461eecc86193aa26",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "226c4d984a3ff42c6c687ec7",
+      "text_sha256": "5479020137041b52097539f0644e27b6380c23e7a94ec130f812eb5edc24f404",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "da9068da28cbd9862dfcb470",
+      "text_sha256": "1c6f119e4e0706ce36f74993e4d0c9211b524cc0fb764796c2760deda21e54e6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5daf34ffe47c339455421f7f",
+      "text_sha256": "fd478681f62c7f4c3361927ae9268fdeb3787a807423d4d20cb50ee18fe04ce7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "afac57d116df40ff3067599f",
+      "text_sha256": "d588f813636357bd3b7ac911762e3d73631e04efa4879e36436cd94e9361ba20",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "a847f84c1ae3643d9133e506",
+      "text_sha256": "dd69579a3cccda7d7f0c630ba3f2d2541519ed5f6b89c7fb53ad5e5a1da70dac",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "147037fdf10b7c5a492de1b0",
+      "text_sha256": "12dd8bf9166bb71fb66bb374776bc88c8d56a9b5c208bc273371ab05eb5c349f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "1dfe75f833fe9cf8090ab0b2",
+      "text_sha256": "f6f5eb562ce0934e1598bf3d8b4bc0fe89004491fbb9954d86e96b174f6d0b32",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "0c91ba1f3479ffcc81ed1516",
+      "text_sha256": "4add6310484895089a8b7c5205bb851613a4aff19b8e644a747e0f54ba656602",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f5aac47db90bc3e10bae3b0f",
+      "text_sha256": "e802504e71781ead24dd4d5bf71ec6f33ad92984d282d470f4d8a5f32c8721a5",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Содержит полный международный телефонный номер, пропущенный прежним фильтром; исключено из модельного корпуса."
+    },
+    {
+      "doc_id": "0a1c8057408b553ed6900022",
+      "text_sha256": "2a3231ff72f5266d9c1c33312a8f7036a237cf013ca84e4705fb881c54bc95e3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "02e2fbba4d3b82d8e74c4ccd",
+      "text_sha256": "665fce5dfcc469d355b3cc84087d914363113b5eeee690e98c3cbaf0a13c81b6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "01802764ade26038e217ad1b",
+      "text_sha256": "ae13cb16d0bc2e990aeaf05a94c85ccbee3d97e8eb0c8278f2e413497fe82dfe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "04007428e8b67de1d2e6647d",
+      "text_sha256": "2272084a64a21d3639b77b3f9cc869c9accd4a3ab5ac630f37cccabab02c6c8b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "bc63179d29afbeccc02ddad5",
+      "text_sha256": "c8790fa4dc15db08f9e3a16628704b7cc3019653d3d81635d50f934238fd8b86",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "3c987f24d68b4b98cffa483c",
+      "text_sha256": "1faa1b957a22f3094339375862724458226d1db88cfa1f6502c6b77772295f6e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "b573894dc842b34495bedb4b",
+      "text_sha256": "4d624630157c6f3eeebf7501a2f3b5fe51c3a98df0d4086aa0024f83fcf5e099",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "9db9d22aa02a54123e40815f",
+      "text_sha256": "a36ad8b10c2a618af06bede2215318855b57c9300bd23f311dfd5c302c726104",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5fb73cc3dc53825dc6b1670c",
+      "text_sha256": "464729056a82c43b641b7eb6c9edef15283c9c14a03da6a1acb3d5b633dca821",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "77894f1c6ebe5ffd53f82280",
+      "text_sha256": "c8d964521886c54aed0b3bf7c1fc3e4fe417c0380236835cd4c8375314bd8a4d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "2c10a44eef2cceac05c40a21",
+      "text_sha256": "f2440340063adc98716d7901d135f050abc27095e1882da9fbfb66c9cb1284e2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "edce00b02d7a02192bbe328d",
+      "text_sha256": "910eceff8ba57cbd10f8c5c8372f4f296c1f4dd73588d452269809685a394607",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "abd2c0b4256c41b97583a078",
+      "text_sha256": "0a4c61183187bec48a584cfa2f4ec143b46a06a02eea94f97ae8e3c13317e69d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5ad2170cb580dd241764a889",
+      "text_sha256": "65c1272f5bd5e8c4f9422164e39a965a74034864dddb4e42f379237d8216b490",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "161c308687028bae612fa723",
+      "text_sha256": "6e9ca8cee6c9be5f7482f1fa3e5ad8d10490ce51378aeeed6f8dd9d888ea5cc1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "29c72987f234f4d8771d2228",
+      "text_sha256": "89d2f80a8b6b54460ed721bab6eb31353f2c03092627d97e613c52fd5ed5ee25",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "46c18a3f1b6ebc7a890492c8",
+      "text_sha256": "287eed85fa8c3e92846841d6958f8c29f63098bfe302c3dbded74c9d2a89aa2e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5913147a0efc2261ac7d087b",
+      "text_sha256": "e7511dacec22410cd8115a758168f634c069fd1e127f0c634de064832c3e6d90",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "375a1d88c8b28f11bf9e5bd7",
+      "text_sha256": "8bf08a5020ac84f6a63688f59b68024d717fb5df790ab9705a659a6e5726652c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "b48f6759a2eaa9adaf365f94",
+      "text_sha256": "0084e699a0b22f6c88c64a666c47216d2e4c839b6e0a669809f83655988fbf24",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "e4fe2008fa703ac1403c66a1",
+      "text_sha256": "43359ecb67dd4c20ccf87b317f8351d2e378dfb66e3cffda4251355048e85f30",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обычный вопрос или личное описание проблемы с телефоном/сервисом; предварительный разговорный стиль."
+    }
+  ]
+}

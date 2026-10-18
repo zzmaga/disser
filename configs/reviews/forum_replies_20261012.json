@@ -1,0 +1,429 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-12",
+  "source": "data/external/forum_replies_20261012/candidates.jsonl",
+  "expert_verified": false,
+  "selection": "60 posts <=40 words ordered by SHA256(review42|doc_id); short-post screening only, not a representative quality estimate.",
+  "decisions": [
+    {
+      "doc_id": "810dd0a5dcc3151eb711b9f1",
+      "text_sha256": "57df91da350b160cd3faad84cc8ce43e898af44614aef34aba8d45fc1499726d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "a9adcf146c9cfe39765cfe99",
+      "text_sha256": "b5b5931e576575eed9b65837d0d9664836acaa3cc66a497b08f1c68174d0ace7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "f84c3dcae064e15e05d3603d",
+      "text_sha256": "cad7790b263b601a495d555e220bff994be7b53dcf19eda3db5d7f6e72c8c06e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f343b72cd3737b50f5c03ada",
+      "text_sha256": "44c755f3784576a99746eac12250f479055afe5ebc2582808eb37d2794a361e2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "3426d8d4d87048367196c74c",
+      "text_sha256": "dc768955833654c82f2150dedddb5d708f91a693a3e9b8eebf58defc11c28371",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "401e7426d0832190a7123343",
+      "text_sha256": "d2e36889e903ad88d59d47631922f6be8f72a2fdf2165ed5fe239d4f07289745",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "10413e9431ad80ee12203bf8",
+      "text_sha256": "35a1d47522fe02601e08e25ce5d6401db1743652e06973b2fc1d04ab51e7e863",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "045504e33598b7999b7acfea",
+      "text_sha256": "a8acfdcb9d9b2fefdbd00dd93b4ca3577aa8f907fcb8a262fa82f24b91bd1872",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "d057346e6baaf8c6ad8215c7",
+      "text_sha256": "eb278e5922bce7791d0964439c138bb42103e65f5cd1ab84d3278c8a6ceb4c17",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "80a25fb48d85b45bc8b948c6",
+      "text_sha256": "1a96518a9a4c3223e3aad807837fa3083f7910c458898103eeb8b74a09722ff4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f8ccf7b5ada68b519569d590",
+      "text_sha256": "cb2beb9ea60adae568cf661e3162961b785e1c6c528445d336780134ff5825d6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "6a00eee5d5650fa478f7496e",
+      "text_sha256": "7a340f341c813f9623ab98adf31289f77c1701897d997ca802be2efca8ef8f86",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "4c42326b4f798d8ed4381699",
+      "text_sha256": "29310ac263b267892425780a1e4d10c4f841e412df62981e55083050128dd851",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f38531995b7205774f2f4cbe",
+      "text_sha256": "529beac230bb0d15d9ca7d2e17c5c2145d034163545e728f9224e02dd30535aa",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "918347232ef816bfc139bc1a",
+      "text_sha256": "9bcd984ce2560abaa7017660e8d5c53ca8317fc6476402b0eaeb72d5fc0e7ce4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "babe9d028bdf78767b9ca819",
+      "text_sha256": "1cdbc033afa8f4c4ee1720cdf10b0104ea4cb44c3777d3c334a192c0d3dbed3d",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "f9dfd16dac2f30e13b813f65",
+      "text_sha256": "b5c823a2b5f4bb3a20dde2e2573aa085c2cce568ea7a202ce8b50a0a7d83961b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "e588b4d9747f0136775d23d5",
+      "text_sha256": "2d83983890f75bd22643df08ef97363881189cb0c03b763741600ef74d03b6f8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "895be425b99befb8e3157286",
+      "text_sha256": "2bb4df3f62552075dfa68ba9130da032c86363b99f9232429968bcec67ba88fc",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "b2ad29923600d0ec827c40ee",
+      "text_sha256": "a222f12baec9a3394a450f6c3a2bb25fd8cbcb7db9aa99d8c30f9b3b53f2022e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f28e2203b84f175501ebc574",
+      "text_sha256": "9622275d6250381366f01f6fdcf619dd086baab0c77380b9b05c2b937e821032",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "93a4394906edc4613888dd8c",
+      "text_sha256": "6fed04ea8b7a874bb686dc7fc12affb52503c98162f6bad122463ff2bbbedf88",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "d3fff2dd45610655b4bede61",
+      "text_sha256": "d1822cdecc16c658f87d5995c5359c09157eace72c13339859fb1244af79f90d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "9de0a8b18d02b048ee70f859",
+      "text_sha256": "dfca719371e84e1c050cf87483a3c885f74d0c2036c2bfc2cfb083d4e7a11e0e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "9574950824b4af17a701c18a",
+      "text_sha256": "58416e78163450f0332fa79fa79adbb54d92fe1efbc069ccbbce0b3e6fcfbcfb",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5c101e2efc450a758c61d673",
+      "text_sha256": "7267ace123c7fd44ede4adf1b8bf44354df02cdc9b9a45bf5933c33f238cde72",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "e8627616dc4bf970ea6b322f",
+      "text_sha256": "626922451fbdcc6f10ecd5ee33ff6e49fe2b2e67b6f3a35a42d23dbb49587c76",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "fc1a0691d960d505ef8738dd",
+      "text_sha256": "c79fae8cdf335f9b536ce3f1becae4240fa1880a184f57e7e503ec9d178ee967",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "a1eb16c656b05aba8b399ef8",
+      "text_sha256": "9f348eeea67369ca7738ca8cdcf408e417bf878fc4b80963093eb9d19e77790e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "fc8f62cb699c2e4c5af8a3fe",
+      "text_sha256": "61e084ee603659888840c4ba438faad2bd10a8fae608a1f9ba2f2a3ca649252f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "8bffe3d4af4f6fe61c8a6807",
+      "text_sha256": "061c0b1c8f29d144159c4b98548e0eb6164002ba35a206a27995f72ca6bc084e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "c56177145ba7a84f417f4aeb",
+      "text_sha256": "bc527b1bd32c7aaa6d42313e3a9411f9cc6e1e217c76c1995443b449fcfcd6d5",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "ca2bdc7dde443737f72e1236",
+      "text_sha256": "0205a6f985e38013b71b6729a741bca3ebb53f3838838403f05279fa07e055a8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "46bc2a0913863c1c0b0d7388",
+      "text_sha256": "2da2272dffae188aed6ee20698abcf4ad1390cacf64da017c99f8e43be6dd568",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "c6dd2d985283fd888591e3e9",
+      "text_sha256": "d7aedb57444507f4ba90ae18de6316fd01778dfdb4bc02aec37b5b8f588733a1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "575d9629403203c7e0e552c0",
+      "text_sha256": "e36b54c2737417867be955b91d4931ea997a13e8176ad1b612f31fe8691dccfa",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "8588ebd7679bd0700196fa74",
+      "text_sha256": "638f46685d1b54c21e51e2f8baeeeb3a97f636dd3e59005b15554ebf040ae1ff",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "b8454cb7f2d90aee522f83bd",
+      "text_sha256": "55af271de8e208652ee0a6035c2966318ebf0f87d2f3c68ad31e3987de082ba1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "bf94806c6ef393ee4e4d1864",
+      "text_sha256": "e7bbea032cb5c8df52da9c75d48ed519334697d99d66a6b22ab5ce9277d997af",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "58373c405139ff2e1d48bdae",
+      "text_sha256": "3363f879bf7b78212b6cccbebf92fe9318699f02a67e6454403a2ced91c9dc75",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "5759317d7e500a98be489caf",
+      "text_sha256": "3709120d10cfef02f484b44b5ba749be6ef6f4f44147f80a3737344b38eb005d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "eaf8f73275208edbb5d1c020",
+      "text_sha256": "a5f78b28b415f4e43e1cccb4262e77f034cdd31fbfbdad5c0511d4001b8630e4",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обрезанная или недостаточная по контексту реплика."
+    },
+    {
+      "doc_id": "0b135ab134dc907b2bf99eed",
+      "text_sha256": "7b38b2de6c367ac4e2e5a916a438be2674d4d0eed8a892481466f5cf5633f237",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "3efda55c5226fc91a449fd81",
+      "text_sha256": "e9c2e7e3164aabc5e16587197eb4bd0c1ff4d38a65b41c82a69821787bf9a142",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обрезанная или недостаточная по контексту реплика."
+    },
+    {
+      "doc_id": "7c60d7aea15914ef9a5c7be0",
+      "text_sha256": "6564e6c9f59db76c079c1be052990801436ee434d8084f5a95bb27ee6a5e99e8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "429841e19699a542cdba0651",
+      "text_sha256": "8384a9011ba73b7d6f9703f126e480ea60b4300d2bc270b97c80c9c4e28ea18e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "ad22af1ed907790d1a59c1b9",
+      "text_sha256": "93d9e998ae5ca4c9f152d6ede6a3454a944aa4d6b5bbc490b146f79168f4a039",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "1db6b5abf2810c4311e32cf3",
+      "text_sha256": "693564792a4ddf5d9342699857c9ad600455af52c55e0b3108107dfa4fd79ff7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "042b2b0efe883fd67ef9705c",
+      "text_sha256": "a31a5a6a207e0d3939f7ac67333f2939bc789c6587c0fd38c700d478b3b13d46",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "8237770af504a04938299752",
+      "text_sha256": "35dce8c5f7a57867254aa431adb1b49857f464ed3127d462034adf9e2adcf841",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "3e57c105b2eca9ca2e69b389",
+      "text_sha256": "7ddf782947211004d4475fc40b3730bf241ddb2b41b03c96b727cbb1a24ad820",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "7974daaed599cc6d97ceab28",
+      "text_sha256": "97805fe266fe5c5f6795b1f438c8a6c8f4e238fdb1ba966836bf7ea035d61650",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "95ad82c6f0da4cc4a40b9b45",
+      "text_sha256": "876614e206d37f20288f64c8a80d9707d42992e3c3ca90d0cff4945844595da9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "686ce509db27a6550ad042c9",
+      "text_sha256": "a494398ded3349db8b55b35f8428b3f570bbf99499259b6f6896345445574ac4",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "eda965284164f9fcf4c1ce1a",
+      "text_sha256": "974fbd1f4fa8fa7b5c85ea43ce395ec6f506472dbf8f637f38ced1d7e10d4222",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "f5bd4e9532fa255cac6cb4e9",
+      "text_sha256": "415b30678fb4a8ca9ae15072be21d54d8eca2d0578fe227cfcd82de40d2a2689",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "40a22af184efc38cc7ab1db3",
+      "text_sha256": "624058dd991fdf1c9a398b36dc40e270a3a2905a6ac0562f492470b39eca0c06",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "cae39f119b131cebbf539eb4",
+      "text_sha256": "e51f41aad71a51e73ea87376981a60098663f42f7377b1d40bca55d178fadf9c",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    },
+    {
+      "doc_id": "75200f7682bd4834ade64b8a",
+      "text_sha256": "b8d577467c0073a2ef36119d76ec2a8d1e3e98686ea7a82417637efadcbb8807",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная реплика, ответ/возражение или обращение к собеседнику; предварительный разговорный стиль."
+    },
+    {
+      "doc_id": "0904fa2afae59147df9144ee",
+      "text_sha256": "ad7192d2d499664a5693412488e4715c0ab8694fe90648b2064c306b1cc24358",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Короткая цитата, афоризм, справочное изложение или стилистически неоднозначный фрагмент; не включать в чистый разговорный набор без дополнительной разметки."
+    }
+  ]
+}

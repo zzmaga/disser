@@ -1,0 +1,13 @@
+{
+  "purpose": "bounded_provisional_abstract_collection",
+  "archives": {
+    "biology": "https://bb.kaznu.kz/index.php/biology/kk/issue/archive",
+    "psychology_sociology": "https://bulletin-psysoc.kaznu.kz/index.php/1-psy/kk/issue/archive",
+    "ecology": "https://bulletin-ecology.kaznu.kz/index.php/1-eco/kk/issue/archive"
+  },
+  "per_journal": 100,
+  "max_issues": 4,
+  "output": "data/external/journals_followup_20261012",
+  "expert_verified": false,
+  "note": "New subject domains; abstracts still do not replace full scientific explanations. Preserve source snapshots, screen language and sample content before export."
+}
