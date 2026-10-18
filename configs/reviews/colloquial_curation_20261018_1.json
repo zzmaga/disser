@@ -1,0 +1,1774 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-18",
+  "expert_verified": false,
+  "selection": "Previously unreviewed colloquial queue, 8-55 words, only semantic-review flag; fixed SHA order within genres/upstream domains. Targeted curation, not an accuracy estimate.",
+  "packet": "reports\\technical\\dissertation_completion_20261018\\curation_followup\\packet_1.jsonl",
+  "packet_sha256": "e1500a643d6a98b32f4357c366b699d010551ad2edec6f5b734f72ab7b1e810c",
+  "reviewed_in_full": 220,
+  "human_reviews_received": 0,
+  "limitations": "All selected texts were displayed and read in full. Targeted short-text curation; not a population accuracy estimate. Claims in comments were not fact-checked. Rejected means excluded from this provisional style pool, not deletion from the source.",
+  "decisions": [
+    {
+      "doc_id": "819bacb196d95ad0be1c3ac2",
+      "text_sha256": "2a94cf5f3e98d47cbd91594ff284903d0affb7d94a7a9130430eae00a133a72d",
+      "shown_text_sha256": "2a94cf5f3e98d47cbd91594ff284903d0affb7d94a7a9130430eae00a133a72d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e86ab8a09cb660ac6c706263",
+      "text_sha256": "46f1f78a472c9dbebbb0a97564e14ab74a48307c08248bfa00158aa90d64d8c7",
+      "shown_text_sha256": "46f1f78a472c9dbebbb0a97564e14ab74a48307c08248bfa00158aa90d64d8c7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "563d995ce9f347f78b966cfd",
+      "text_sha256": "b8049adebf3a86b7ce64654a2fc26a9a0578ae8baba8df729950d17d4f5401d3",
+      "shown_text_sha256": "b8049adebf3a86b7ce64654a2fc26a9a0578ae8baba8df729950d17d4f5401d3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "4d9b88adfd86f3e5adc0fa78",
+      "text_sha256": "92cbb8deb4dae62a6443ca8706169ecdfc26622820512908571c2ca98cbac53c",
+      "shown_text_sha256": "92cbb8deb4dae62a6443ca8706169ecdfc26622820512908571c2ca98cbac53c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f1257576909feef48e98b5a8",
+      "text_sha256": "193084d3ab480ed408966e3806f96a9a05b62020c0ddff2ba80485fa26da4f04",
+      "shown_text_sha256": "193084d3ab480ed408966e3806f96a9a05b62020c0ddff2ba80485fa26da4f04",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "954897f8641bd2f37acfbc23",
+      "text_sha256": "2d03dfa785f257356c21976424c9558e44fb330ea576f11bf0b2548a7e763620",
+      "shown_text_sha256": "2d03dfa785f257356c21976424c9558e44fb330ea576f11bf0b2548a7e763620",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "96e31b93219e8e507e7cd24d",
+      "text_sha256": "1dbab04f55b9ef567fa10debdf17b2b0ecbadba276ad20f01fc4d0d527d4bd57",
+      "shown_text_sha256": "1dbab04f55b9ef567fa10debdf17b2b0ecbadba276ad20f01fc4d0d527d4bd57",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "09977d958d6951601c48eccb",
+      "text_sha256": "3d39fde17980f9e720e045dad810b62070f8fdfa8f280ed6286170dc5f057c57",
+      "shown_text_sha256": "3d39fde17980f9e720e045dad810b62070f8fdfa8f280ed6286170dc5f057c57",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "3edef969b3070bd17b775013",
+      "text_sha256": "99f4b765fee053d20d15dde4baeb9605d56f59350ca54c55f6a370d190555ff4",
+      "shown_text_sha256": "99f4b765fee053d20d15dde4baeb9605d56f59350ca54c55f6a370d190555ff4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f5ed5f979ed74e38b122376e",
+      "text_sha256": "f1cde373a8650556ece7fac0551af46336e8ff975b3adb8041731aa4b2c32726",
+      "shown_text_sha256": "f1cde373a8650556ece7fac0551af46336e8ff975b3adb8041731aa4b2c32726",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "5677d25b1190be1888b40319",
+      "text_sha256": "a56d1b05e1c277011fed0819e58db23b16d7f9db07f9608b1b5bdeac00766173",
+      "shown_text_sha256": "a56d1b05e1c277011fed0819e58db23b16d7f9db07f9608b1b5bdeac00766173",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "186b2e27f95f2dd4bc9aea47",
+      "text_sha256": "acd9b5eaa8f6bc9d252cdfab603ff1dd454f928cda6356200ac9b26af8bacfae",
+      "shown_text_sha256": "acd9b5eaa8f6bc9d252cdfab603ff1dd454f928cda6356200ac9b26af8bacfae",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "e733d1211ac1a3c061949f25",
+      "text_sha256": "79b74e2a8f738cdde76985aa5f5a97c880437e1acebcbd9f503e9dfa09887eee",
+      "shown_text_sha256": "79b74e2a8f738cdde76985aa5f5a97c880437e1acebcbd9f503e9dfa09887eee",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная просьба найти песню; краткая цитата служит объектом вопроса, а основная функция записи — обращение к собеседникам."
+    },
+    {
+      "doc_id": "2d3712e4b2b6e41451af9ae7",
+      "text_sha256": "9f3c50567f7f6c421c164cebe5de967aff8ab3bf0b2a34a80f18a191e4d2be9e",
+      "shown_text_sha256": "9f3c50567f7f6c421c164cebe5de967aff8ab3bf0b2a34a80f18a191e4d2be9e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "60ddc9f36cafd96131c67c62",
+      "text_sha256": "3c9627c3422c634217c45110893edc0343d1f5e43252121e2ca20b49aacdb30a",
+      "shown_text_sha256": "3c9627c3422c634217c45110893edc0343d1f5e43252121e2ca20b49aacdb30a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "96185ec7f423f1d0f362e7b2",
+      "text_sha256": "3753e3dfee5ea48b7ca9864264af80ded90e5294f9ab068010d46a4cf07a6532",
+      "shown_text_sha256": "3753e3dfee5ea48b7ca9864264af80ded90e5294f9ab068010d46a4cf07a6532",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ffbc402451cd9aad32874f60",
+      "text_sha256": "e6a47f55d4b89d82ce320a3d3ef947817271865885c7571728a54ba73d100157",
+      "shown_text_sha256": "e6a47f55d4b89d82ce320a3d3ef947817271865885c7571728a54ba73d100157",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "f4e38e410b78911773a6cc60",
+      "text_sha256": "53aca276a64cc0b1813767e9718c173755fd458691d085811b61628b273c2c22",
+      "shown_text_sha256": "53aca276a64cc0b1813767e9718c173755fd458691d085811b61628b273c2c22",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "44b37a7173b46ecf13168ce9",
+      "text_sha256": "3d738fa922eaba25bf8dcdf928766aebb7efb7324bc1c6a2ea62f99fb4710673",
+      "shown_text_sha256": "3d738fa922eaba25bf8dcdf928766aebb7efb7324bc1c6a2ea62f99fb4710673",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Вопрос содержит преимущественно пересланное предупреждение; смешаны обращение и информационное объявление. Не принимать как однозначный разговорный текст."
+    },
+    {
+      "doc_id": "15e9b979230a2c7349994b13",
+      "text_sha256": "fa0b22490b4b6c4dfce9af1f58d95ef9a438a8dc8f302aaecfa93821ff8e146c",
+      "shown_text_sha256": "fa0b22490b4b6c4dfce9af1f58d95ef9a438a8dc8f302aaecfa93821ff8e146c",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Значительная часть записи — цитата песни; разговорный запрос смешан с художественным фрагментом."
+    },
+    {
+      "doc_id": "56591e4d92496894ad20a33b",
+      "text_sha256": "6b4e78a6b465b2b9b4e2f5504f7cd3e1db0db23db6505fe1213762fb947ebb78",
+      "shown_text_sha256": "6b4e78a6b465b2b9b4e2f5504f7cd3e1db0db23db6505fe1213762fb947ebb78",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6dfc16f43230ed037ed0d218",
+      "text_sha256": "d6e4ad155a1921c647d1b2901858e9339f15bf78e7e38d866f9564c072dca0f5",
+      "shown_text_sha256": "d6e4ad155a1921c647d1b2901858e9339f15bf78e7e38d866f9564c072dca0f5",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f9a28f40af6e618aa5991255",
+      "text_sha256": "5ff4f65089c3bce0fda4ff765e19eb540ee47ddbbfceb9bce9d9ced40bcc03ab",
+      "shown_text_sha256": "5ff4f65089c3bce0fda4ff765e19eb540ee47ddbbfceb9bce9d9ced40bcc03ab",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "cb2cadc32f19228cf0ac50be",
+      "text_sha256": "c9d1a20602ece414ec3462a9dd5da0841222a4d19d10f10a4be4f4c43af1df3a",
+      "shown_text_sha256": "c9d1a20602ece414ec3462a9dd5da0841222a4d19d10f10a4be4f4c43af1df3a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "160b8ca129cb78fd9f8601c4",
+      "text_sha256": "c8fe4ab12fe5d787c099d74329bf23923e533cc698bd599f6bbec9035b822786",
+      "shown_text_sha256": "c8fe4ab12fe5d787c099d74329bf23923e533cc698bd599f6bbec9035b822786",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "874e93398f9f50964b2355da",
+      "text_sha256": "8fb20980157ee2e81fe8db8252129ccfae9316e216b57402145b0be0602bd1de",
+      "shown_text_sha256": "8fb20980157ee2e81fe8db8252129ccfae9316e216b57402145b0be0602bd1de",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "1fe7e9456cce44e632e64df2",
+      "text_sha256": "775ef9f056021d0612538a347642893b33445201d99ff61d2e2b62adb55cccd7",
+      "shown_text_sha256": "775ef9f056021d0612538a347642893b33445201d99ff61d2e2b62adb55cccd7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "d5dcca041f9cd3998298a29b",
+      "text_sha256": "faecf2332cc4feaa581cacc13f3704f9b5a6e7857385a5b0865c92a7b6be2efe",
+      "shown_text_sha256": "faecf2332cc4feaa581cacc13f3704f9b5a6e7857385a5b0865c92a7b6be2efe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "0c09dab7b5bddaea80d1a873",
+      "text_sha256": "3f3a3b7a68e2bb63f25b9f578362362890f95bfe006063097bfac706e70ea7bc",
+      "shown_text_sha256": "3f3a3b7a68e2bb63f25b9f578362362890f95bfe006063097bfac706e70ea7bc",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e36e4e0db70b183133cb09bf",
+      "text_sha256": "a816f7a12d51896ed3924e69db7954ea93aa00cc898387b349e15064132cc958",
+      "shown_text_sha256": "a816f7a12d51896ed3924e69db7954ea93aa00cc898387b349e15064132cc958",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "48a4aa7e58e38b40226c4a1d",
+      "text_sha256": "f7adfcaafd0483872cea67964fc3c046e8c9e397bec7b5585dadf7adb56efbe3",
+      "shown_text_sha256": "f7adfcaafd0483872cea67964fc3c046e8c9e397bec7b5585dadf7adb56efbe3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "089ba8096b2f22ffc9d30160",
+      "text_sha256": "e99bd103931d04748a07b96b4448229505c04e5ccc37c40431870b3bdade45a6",
+      "shown_text_sha256": "e99bd103931d04748a07b96b4448229505c04e5ccc37c40431870b3bdade45a6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "ddc2d8f53ba683889e6c1a88",
+      "text_sha256": "efb57d1012a1069e04563d9e9f563e3795528fb73c13ae4c3090d7bd88ae68c9",
+      "shown_text_sha256": "efb57d1012a1069e04563d9e9f563e3795528fb73c13ae4c3090d7bd88ae68c9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "1da41efaf7f475d855a8637c",
+      "text_sha256": "3d6160765029843f46f4e763eb3ee75536c9da586e35dd9983f24f3debb3b7a8",
+      "shown_text_sha256": "3d6160765029843f46f4e763eb3ee75536c9da586e35dd9983f24f3debb3b7a8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "a7c7db181aeb1041ae95fb1e",
+      "text_sha256": "ace5ff7f81d5a8fa476ed2bf77995de3c72539ef50d3312bc84e63bed5ea9571",
+      "shown_text_sha256": "ace5ff7f81d5a8fa476ed2bf77995de3c72539ef50d3312bc84e63bed5ea9571",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "5759902672490470349f76f3",
+      "text_sha256": "33c3ad9f079cac10dafb7ad88604ae51d985f1bb0316ce9ba79ff18dce4a2ec2",
+      "shown_text_sha256": "33c3ad9f079cac10dafb7ad88604ae51d985f1bb0316ce9ba79ff18dce4a2ec2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "695a29e5dcbcbf06fdf23b0b",
+      "text_sha256": "20156a13507eeb43d2b082a75d21c962d9f7a62b8949aff246204dca2a11e7ea",
+      "shown_text_sha256": "20156a13507eeb43d2b082a75d21c962d9f7a62b8949aff246204dca2a11e7ea",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6f975d426a55ed2d3b1080e4",
+      "text_sha256": "9b7bf49a1101deacad3d5e6dfeaa0be328ed8b0ec31d9a39b83afef6bb32c5c0",
+      "shown_text_sha256": "9b7bf49a1101deacad3d5e6dfeaa0be328ed8b0ec31d9a39b83afef6bb32c5c0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Ответ собеседнику с личной аргументацией. Религиозно-политическая тема сама по себе не меняет разговорную функцию."
+    },
+    {
+      "doc_id": "01b3f77415c8c114adfcd76e",
+      "text_sha256": "91bd4ea50dfa07f0c7e7402dc47db7ddcd0f4d51dbc5486f3b3ce383d554a241",
+      "shown_text_sha256": "91bd4ea50dfa07f0c7e7402dc47db7ddcd0f4d51dbc5486f3b3ce383d554a241",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "6fd463e12bd3f9b09a067240",
+      "text_sha256": "c13cb0ebaee2d4378acdf60ceb9299f07f14a7b3334cda1d34bae940e46902f2",
+      "shown_text_sha256": "c13cb0ebaee2d4378acdf60ceb9299f07f14a7b3334cda1d34bae940e46902f2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "10434cfb3faaf9587d4f6e8e",
+      "text_sha256": "c009da8b0c0479b51b2da4373ed80e367ef1ae83d4749ec85593574c5d1eb724",
+      "shown_text_sha256": "c009da8b0c0479b51b2da4373ed80e367ef1ae83d4749ec85593574c5d1eb724",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "62a814f7cea9f6f00e6661ad",
+      "text_sha256": "88728c632dc40f65264056438c440cb15c4259a00b423567e92198fadd90c34a",
+      "shown_text_sha256": "88728c632dc40f65264056438c440cb15c4259a00b423567e92198fadd90c34a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "8393e51b99d622c74ade8250",
+      "text_sha256": "caa3faffbb783f1e41f562855de8cd34f07a202b168714506ef25ecc203a38e9",
+      "shown_text_sha256": "caa3faffbb783f1e41f562855de8cd34f07a202b168714506ef25ecc203a38e9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "2b933979a3b55c7f54103b91",
+      "text_sha256": "2d26715de468ed08430c1e06ae239cab04d5ae5b1859ce63f63844f7e9e1706b",
+      "shown_text_sha256": "2d26715de468ed08430c1e06ae239cab04d5ae5b1859ce63f63844f7e9e1706b",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Изолированное изложение о вооружении без обращения или личной ситуации; контекста для уверенного разговорного стиля недостаточно."
+    },
+    {
+      "doc_id": "c25147a7a0e540cc013aa648",
+      "text_sha256": "059844f1d588af7a52bb7af73b5b6f24d92448676e890c8681fd5269bf33ca2b",
+      "shown_text_sha256": "059844f1d588af7a52bb7af73b5b6f24d92448676e890c8681fd5269bf33ca2b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "0ff98fbe551a819152d60d4d",
+      "text_sha256": "535452e024d3f7670f33d42d628848b004907cb3a24b5b6706c6607ca0a313d7",
+      "shown_text_sha256": "535452e024d3f7670f33d42d628848b004907cb3a24b5b6706c6607ca0a313d7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Фрагментарный смешанный текст с перечнем групп; связная казахская разговорная реплика не устанавливается уверенно."
+    },
+    {
+      "doc_id": "4fff2ae283f28a4036f6b072",
+      "text_sha256": "d013e710df02ae530d0decf8d0f94be5d3628a5c5939225cb2531f8a8bb81689",
+      "shown_text_sha256": "d013e710df02ae530d0decf8d0f94be5d3628a5c5939225cb2531f8a8bb81689",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "f2fdafcf3be42e53a670a2c4",
+      "text_sha256": "ae73ddebf6f3f7816008576bbc3fa2945e64604940fa5bf8f3989157278e95ef",
+      "shown_text_sha256": "ae73ddebf6f3f7816008576bbc3fa2945e64604940fa5bf8f3989157278e95ef",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a4678ba5952684ca4b7dda5e",
+      "text_sha256": "2556a3847d9b748005784b7cd9ca0050fd69a4e7078cd5b6066f2cf38851b086",
+      "shown_text_sha256": "2556a3847d9b748005784b7cd9ca0050fd69a4e7078cd5b6066f2cf38851b086",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "b91b9a9c703fa9a4bbc72fc8",
+      "text_sha256": "b806ae43765f3060b88eaf292c51d558322e6485cf818df0f63e419bccc2348b",
+      "shown_text_sha256": "b806ae43765f3060b88eaf292c51d558322e6485cf818df0f63e419bccc2348b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "5f8f1aa7de4e3009379291c3",
+      "text_sha256": "a6b03335f12ee9ee23d076794ccac4a1544b0a2835afc88b0aff2e28719d67e9",
+      "shown_text_sha256": "a6b03335f12ee9ee23d076794ccac4a1544b0a2835afc88b0aff2e28719d67e9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9f0a5436ba94d3bef5bd9941",
+      "text_sha256": "010148d2bc15f109ab583f709ca6567a0cd96e9d11e2c2c10a18786de056e0fa",
+      "shown_text_sha256": "010148d2bc15f109ab583f709ca6567a0cd96e9d11e2c2c10a18786de056e0fa",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "ecb1cfdcb11ef5f4f2ed11ff",
+      "text_sha256": "feb6f49842d72660e2e455792ece7fc9d2363a193aa4890a7bb05b7effb4a2e4",
+      "shown_text_sha256": "feb6f49842d72660e2e455792ece7fc9d2363a193aa4890a7bb05b7effb4a2e4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "81b5f9263c9ea82f1f73facc",
+      "text_sha256": "a74287af1051214822d91983648ae75e9dbc1e2593ddf2b5820ef61820109e7b",
+      "shown_text_sha256": "a74287af1051214822d91983648ae75e9dbc1e2593ddf2b5820ef61820109e7b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "8e4279303dd66f460266f4d6",
+      "text_sha256": "71db721602bd19373a41aada9ba47456a948417bd036a9741d7c723158cf1765",
+      "shown_text_sha256": "71db721602bd19373a41aada9ba47456a948417bd036a9741d7c723158cf1765",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "0230b0ec7decd0e563e78a33",
+      "text_sha256": "4c0159f72f4ecece77e3496e0e8b4e55908214df57bce728ab449e87093ad509",
+      "shown_text_sha256": "4c0159f72f4ecece77e3496e0e8b4e55908214df57bce728ab449e87093ad509",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "6f661ef6dbb5c78e5a12ec3a",
+      "text_sha256": "32c2f93069d57ef48f9ccd343c4b31defd5d1544e2669ba88411683950dfb164",
+      "shown_text_sha256": "32c2f93069d57ef48f9ccd343c4b31defd5d1544e2669ba88411683950dfb164",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Неформальная личная оценка игры; основной язык казахский, естественное русское переключение кода сохранено."
+    },
+    {
+      "doc_id": "3c5d665167a841486508f916",
+      "text_sha256": "811e41b40aed8b6be52defcdc1ef6281d77d676852f4386d8bdb0315946334bc",
+      "shown_text_sha256": "811e41b40aed8b6be52defcdc1ef6281d77d676852f4386d8bdb0315946334bc",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6a47f889a2e00a7d50d61dcb",
+      "text_sha256": "f5830281efe5e48e6364cfa8daa969899fb45e6a119b54bab5b3c457f83a4127",
+      "shown_text_sha256": "f5830281efe5e48e6364cfa8daa969899fb45e6a119b54bab5b3c457f83a4127",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "1a6ae7416e92070cc4f99a94",
+      "text_sha256": "1846159a67469e3f34e71157e46c76e5296c8cf2db3c46a03be999da6f5bdd59",
+      "shown_text_sha256": "1846159a67469e3f34e71157e46c76e5296c8cf2db3c46a03be999da6f5bdd59",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "cc3b393586b512778adae71a",
+      "text_sha256": "14e33b74de4725cc6f467d28fefeafafa4dd72ca5f283103cc9e20a0e8597000",
+      "shown_text_sha256": "14e33b74de4725cc6f467d28fefeafafa4dd72ca5f283103cc9e20a0e8597000",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "d1ed11a945c1ba588408c8c9",
+      "text_sha256": "b3db040fec4129fc71c94db9bcc9d171ad4b8e27720d826103828244235808f8",
+      "shown_text_sha256": "b3db040fec4129fc71c94db9bcc9d171ad4b8e27720d826103828244235808f8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "bc2ba2087323b8965f6a7ab4",
+      "text_sha256": "c90047790500d5930c0943c7b048a43257d6853db08232f94a500ec76c4d2aca",
+      "shown_text_sha256": "c90047790500d5930c0943c7b048a43257d6853db08232f94a500ec76c4d2aca",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a8205e16802bce4cbf80aa4e",
+      "text_sha256": "435be277ba7b809155a86b8e71041e46f7d6d50060e1994ee33b72ee0ff59dbe",
+      "shown_text_sha256": "435be277ba7b809155a86b8e71041e46f7d6d50060e1994ee33b72ee0ff59dbe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "040296203d30ccb8feacc6c1",
+      "text_sha256": "8829dd234bf07cdd3569a6584727c107eeb2531fa2494ab3a0e451f16b2eff2a",
+      "shown_text_sha256": "8829dd234bf07cdd3569a6584727c107eeb2531fa2494ab3a0e451f16b2eff2a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a5f1fa7024bc712b01f73a20",
+      "text_sha256": "0077b15aa9222f20d8251e5fcec9530d0ce78c4cb5f6e42c283e699921d86432",
+      "shown_text_sha256": "0077b15aa9222f20d8251e5fcec9530d0ce78c4cb5f6e42c283e699921d86432",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Запрос в основном состоит из цитируемых строк песни; смешанная стилевая единица."
+    },
+    {
+      "doc_id": "a26938cde89fdd56180e6e1e",
+      "text_sha256": "cfccdf11be4aa41c3911256331d73e179b5c304b55e8a833b7b9ef5c1773bd31",
+      "shown_text_sha256": "cfccdf11be4aa41c3911256331d73e179b5c304b55e8a833b7b9ef5c1773bd31",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "8a186952af545657637a0d32",
+      "text_sha256": "856a2d92a91d4a15725d0ce59cae857a18834f73988c3737bfb74ce550230f46",
+      "shown_text_sha256": "856a2d92a91d4a15725d0ce59cae857a18834f73988c3737bfb74ce550230f46",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ba32a301fd266341f8251162",
+      "text_sha256": "a76e1f88aabcb3e0e8ed6e922081e1a910136e5c8e39cea08a692f87896491cc",
+      "shown_text_sha256": "a76e1f88aabcb3e0e8ed6e922081e1a910136e5c8e39cea08a692f87896491cc",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "c1039e3630a682ffbdcf3e9d",
+      "text_sha256": "56652d351bd7c4c0a13bbf2e88ded018cb147c016598968ddc3ebad12c4d2876",
+      "shown_text_sha256": "56652d351bd7c4c0a13bbf2e88ded018cb147c016598968ddc3ebad12c4d2876",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "1816585185870282ebc10452",
+      "text_sha256": "0da0d9e7e1ab2b15d58b8c198fb67d4e332ba82ef4ef29d06973f921a5914320",
+      "shown_text_sha256": "0da0d9e7e1ab2b15d58b8c198fb67d4e332ba82ef4ef29d06973f921a5914320",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "07ce15b7f679d99994cf2fef",
+      "text_sha256": "55014b034ed01febdc49494b38b7bdd6f2d596a3946ab7a0d1f0da20c544315f",
+      "shown_text_sha256": "55014b034ed01febdc49494b38b7bdd6f2d596a3946ab7a0d1f0da20c544315f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "835f7c6fc45e931c5f9febc8",
+      "text_sha256": "5141ce2a7ccfa2079586612307c2a59c88a9b55d14aad316400b8b9d9bc7eeae",
+      "shown_text_sha256": "5141ce2a7ccfa2079586612307c2a59c88a9b55d14aad316400b8b9d9bc7eeae",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "2948533aeb72c913fdfdbf80",
+      "text_sha256": "0a1aed0119d9b9fdbd11ce49caa3badb093a7e346040d96a6ad52f634e594343",
+      "shown_text_sha256": "0a1aed0119d9b9fdbd11ce49caa3badb093a7e346040d96a6ad52f634e594343",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Развёрнутая литературно-критическая оценка книги; граница письменного отзыва и публицистики неоднозначна."
+    },
+    {
+      "doc_id": "985e8f87d28c03c74cb79de1",
+      "text_sha256": "16ea01ede8364a624b4e7725a2d3f14b419204a1621d24fbf5ad653c839f3a51",
+      "shown_text_sha256": "16ea01ede8364a624b4e7725a2d3f14b419204a1621d24fbf5ad653c839f3a51",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "3e009d5c9f36349d1cac6f38",
+      "text_sha256": "03da6105d1e80962862352c47e308e20382a98eb0c2eaa6586e34697234fa9f2",
+      "shown_text_sha256": "03da6105d1e80962862352c47e308e20382a98eb0c2eaa6586e34697234fa9f2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "479d994533b6fa2a8d71abc4",
+      "text_sha256": "5c51e7bcba60225a530f808928f52d2794d22f74d75e6387f5f4aa9515adb622",
+      "shown_text_sha256": "5c51e7bcba60225a530f808928f52d2794d22f74d75e6387f5f4aa9515adb622",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Вопрос сформулирован юридическими канцелярскими оборотами; источник-форум не доказывает разговорный стиль."
+    },
+    {
+      "doc_id": "c02190e7bb90e051e76617ae",
+      "text_sha256": "dbda55d57db949859222c926f131682b11117e579b6c71802e497ddf6afd8771",
+      "shown_text_sha256": "dbda55d57db949859222c926f131682b11117e579b6c71802e497ddf6afd8771",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный запрос совета о покупке автомобиля; удаляется только отдельный завершающий разделитель страницы.",
+      "remove_suffix": "------------------------------------------------------------------------"
+    },
+    {
+      "doc_id": "e6278a320fcb03bb2f7280cc",
+      "text_sha256": "c94fff0cd0e9d9531344062ce3c44e975f4891263a3340ac4716ba4bfa596a42",
+      "shown_text_sha256": "c94fff0cd0e9d9531344062ce3c44e975f4891263a3340ac4716ba4bfa596a42",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e4f2cc512ff0682b1b713fae",
+      "text_sha256": "0e94ec7a9b1db757b0924e72174598f78f3e27947b62dbe4acee99f558c6950c",
+      "shown_text_sha256": "0e94ec7a9b1db757b0924e72174598f78f3e27947b62dbe4acee99f558c6950c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "5e8701dfdb64b545a46ebd37",
+      "text_sha256": "0309abd044c70bfbfe920d945c70a11e9f1310ec23e0694688eab252bc5eb74d",
+      "shown_text_sha256": "0309abd044c70bfbfe920d945c70a11e9f1310ec23e0694688eab252bc5eb74d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "d7b58da559fb734f91472ca4",
+      "text_sha256": "8b1b628c4ed2a039e69f4eed95324be64a6dafef103993a35ce00ec5cb95a84c",
+      "shown_text_sha256": "8b1b628c4ed2a039e69f4eed95324be64a6dafef103993a35ce00ec5cb95a84c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "edf8b526f1e373e9174370d7",
+      "text_sha256": "6fbe007492ead23b22b87c22be67e12f2aeea415cfca535daab98a288937dc5c",
+      "shown_text_sha256": "6fbe007492ead23b22b87c22be67e12f2aeea415cfca535daab98a288937dc5c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "a3cba2a9c2a5d9e1647f19c8",
+      "text_sha256": "7e526906bc897f176cc407bfc5c9355bed2dc3afee2fd16c9f64efaf0954c45a",
+      "shown_text_sha256": "7e526906bc897f176cc407bfc5c9355bed2dc3afee2fd16c9f64efaf0954c45a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "1f227c14381e8d1e81f420ee",
+      "text_sha256": "68c82ccc73df5f59c2e349c544a2ca1398f67dfd201b7dbfd115f80c4318d1be",
+      "shown_text_sha256": "68c82ccc73df5f59c2e349c544a2ca1398f67dfd201b7dbfd115f80c4318d1be",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a339ce7b50f59708dd082546",
+      "text_sha256": "363e5ce4ef3a2599d9e993c06d1a083ec31ddd0eab84c7f74eeca88493a37e97",
+      "shown_text_sha256": "363e5ce4ef3a2599d9e993c06d1a083ec31ddd0eab84c7f74eeca88493a37e97",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "80518774bf8e5467e319ca84",
+      "text_sha256": "b71a65fa20e40482c90959e3bf8425ca277e8f844ffc2bffd00b7b0199422b79",
+      "shown_text_sha256": "b71a65fa20e40482c90959e3bf8425ca277e8f844ffc2bffd00b7b0199422b79",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Отдельный публичный призыв о спортивных школах без контекста общения; неоднозначная граница публицистики и разговорной реплики."
+    },
+    {
+      "doc_id": "ca9b2220ad035a0d9f18d999",
+      "text_sha256": "44b00ed78667c54122f6e8cd2f8edbfcb4fa67897db3f790033b9cea32c493ab",
+      "shown_text_sha256": "44b00ed78667c54122f6e8cd2f8edbfcb4fa67897db3f790033b9cea32c493ab",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "787d70114805c405e23d01f7",
+      "text_sha256": "e7b13f4c7c4d19eecac33d56e4f21e5660696076d65720c33a9edcc4d67d83d3",
+      "shown_text_sha256": "e7b13f4c7c4d19eecac33d56e4f21e5660696076d65720c33a9edcc4d67d83d3",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Формулировка учебного задания с требованием объяснить ответ; не личный разговорный запрос."
+    },
+    {
+      "doc_id": "ae8a08796f5017243a8bb32f",
+      "text_sha256": "b5758435e6d4d48b8dcddc1954e73105b987b2f2e83bec12813ca0c1bf57ffc2",
+      "shown_text_sha256": "b5758435e6d4d48b8dcddc1954e73105b987b2f2e83bec12813ca0c1bf57ffc2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "0290a2b4ee065c2b26afd58f",
+      "text_sha256": "282912b537f496139af0a284eb80fcd2695701cbcda3931f29f2f4a2fc22594e",
+      "shown_text_sha256": "282912b537f496139af0a284eb80fcd2695701cbcda3931f29f2f4a2fc22594e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "b184e08459bf75ef65a29078",
+      "text_sha256": "461ee33a9f55d1b0b2c3742088bcb163815b41b0fbc0c2bba08a0c3dae63596c",
+      "shown_text_sha256": "461ee33a9f55d1b0b2c3742088bcb163815b41b0fbc0c2bba08a0c3dae63596c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "70fca16b6b8d1b85ecff50c4",
+      "text_sha256": "7356e6ce5602b271ad392b4e41fc933f9adfa8f6c7e5d6f1f67af71730584cd3",
+      "shown_text_sha256": "7356e6ce5602b271ad392b4e41fc933f9adfa8f6c7e5d6f1f67af71730584cd3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e45cc8bc0710d7ee6d5e7949",
+      "text_sha256": "e64607475768e9bea46f027dcc672f47ebc530a557a68bd55eb3d61a0c6b5ec9",
+      "shown_text_sha256": "e64607475768e9bea46f027dcc672f47ebc530a557a68bd55eb3d61a0c6b5ec9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "737a5a48553ca7e35dae54fe",
+      "text_sha256": "fc9ad4113b06969897774bbdf0b7e82616a236b77f855712cdde5653b95ce02b",
+      "shown_text_sha256": "fc9ad4113b06969897774bbdf0b7e82616a236b77f855712cdde5653b95ce02b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "aa2e124490524f7076169cf1",
+      "text_sha256": "ad2ba2682b1d80373608df4450e00ef7a0e93fda804041e1d4640c1f2b4a9e3d",
+      "shown_text_sha256": "ad2ba2682b1d80373608df4450e00ef7a0e93fda804041e1d4640c1f2b4a9e3d",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Бессвязная запись с случайными буквенно-цифровыми последовательностями; недостаточно связного текста."
+    },
+    {
+      "doc_id": "1568e88b840a930f31be15ae",
+      "text_sha256": "32b762e82d506f7a97d1be2ba0fee8408b9b924697ec10f8978c75846bd42374",
+      "shown_text_sha256": "32b762e82d506f7a97d1be2ba0fee8408b9b924697ec10f8978c75846bd42374",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Рабочее обращение о счёте-фактуре с реквизитами организации и суммой; смешанный деловой жанр вместо однозначного бытового отзыва."
+    },
+    {
+      "doc_id": "31f6b921fda0495f023b10f2",
+      "text_sha256": "aaf9add26a10f0bf070d61ccd0267663a27713ed99099e2c6bc4cc75603c4a3e",
+      "shown_text_sha256": "aaf9add26a10f0bf070d61ccd0267663a27713ed99099e2c6bc4cc75603c4a3e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6b07012a4c9a00a2683425be",
+      "text_sha256": "a40e45b8372ee6acf00dd5cabb800c15f0e8b49ab3afa82f2781773efae144d0",
+      "shown_text_sha256": "a40e45b8372ee6acf00dd5cabb800c15f0e8b49ab3afa82f2781773efae144d0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "3377231edce039fd94182eb2",
+      "text_sha256": "784d160591171cb091504cebfac3d42185dd880df86530e95596500359e79413",
+      "shown_text_sha256": "784d160591171cb091504cebfac3d42185dd880df86530e95596500359e79413",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Справочное толкование имён, а не разговорная реплика."
+    },
+    {
+      "doc_id": "3c808f113ab0b2a6a4da1511",
+      "text_sha256": "0c7027304c75e988108a397c252ab4e09c7cae30e99c7ad51ff78c039ec991de",
+      "shown_text_sha256": "0c7027304c75e988108a397c252ab4e09c7cae30e99c7ad51ff78c039ec991de",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "f28420849b6df91bddad48af",
+      "text_sha256": "b73cf15036c1bd103c5128cc20615ceedbe82f97affb118903c95548425ea479",
+      "shown_text_sha256": "b73cf15036c1bd103c5128cc20615ceedbe82f97affb118903c95548425ea479",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обобщённое политическое суждение без контекста диалога; граница публицистики и разговорного комментария неоднозначна."
+    },
+    {
+      "doc_id": "f87f35f570cdf5be5b130592",
+      "text_sha256": "7b29a813203ff91cde6b0b3376fdc14901f5478aa070119082a7a0696f92cc03",
+      "shown_text_sha256": "7b29a813203ff91cde6b0b3376fdc14901f5478aa070119082a7a0696f92cc03",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "20fe333af8c42b76efb1faeb",
+      "text_sha256": "da9835af76783633a2ba3cbb5f67516783e5f0cc3d5818123c36dbd028223bf0",
+      "shown_text_sha256": "da9835af76783633a2ba3cbb5f67516783e5f0cc3d5818123c36dbd028223bf0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "041562048ca55efe657f9bf0",
+      "text_sha256": "0de448fde862117691dc48a58628aad47e3bfbb70afbea17d2bf4e1da66064d9",
+      "shown_text_sha256": "0de448fde862117691dc48a58628aad47e3bfbb70afbea17d2bf4e1da66064d9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e948d3feddd822e60cb5314a",
+      "text_sha256": "36f2efd03c8572ad9b247b6b81b810d61406e644b87ff302025349769a54dd86",
+      "shown_text_sha256": "36f2efd03c8572ad9b247b6b81b810d61406e644b87ff302025349769a54dd86",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "903c7e26f61645d12cf231c0",
+      "text_sha256": "2758305b41114faa0333128b5872e3d052b78280a7c7852440a21cd29b600bdd",
+      "shown_text_sha256": "2758305b41114faa0333128b5872e3d052b78280a7c7852440a21cd29b600bdd",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Обращённый к собеседнику совет; его медицинская или психологическая достоверность этим стилевым просмотром не проверяется."
+    },
+    {
+      "doc_id": "7aca78c7e53921191181c7eb",
+      "text_sha256": "d4aa10e1f95b0e8854efb913ea24563e8157be9e1caec657726becb850c98e49",
+      "shown_text_sha256": "d4aa10e1f95b0e8854efb913ea24563e8157be9e1caec657726becb850c98e49",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "453eb9579788d518cc2e7ee3",
+      "text_sha256": "8f7c0faab67b243faa2c72898858a49ae7ccb318eb0cec78925d8982cfdee166",
+      "shown_text_sha256": "8f7c0faab67b243faa2c72898858a49ae7ccb318eb0cec78925d8982cfdee166",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "99a08ed8f9da3427eb37e1ed",
+      "text_sha256": "52487b535c89fc35bf04d5168c032e366523b78ebc09c53a588150f4be944b0d",
+      "shown_text_sha256": "52487b535c89fc35bf04d5168c032e366523b78ebc09c53a588150f4be944b0d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "befd1a266a37d1c248ffef69",
+      "text_sha256": "2714546783edc7adde7c001ef34a1a7ea21f1106e74a4176837fc82a6451b145",
+      "shown_text_sha256": "2714546783edc7adde7c001ef34a1a7ea21f1106e74a4176837fc82a6451b145",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "9e1483759de2214e355dfe80",
+      "text_sha256": "85710e05ee76efe540279798fdedec1970e221c0ed46fa59adec512361fb7122",
+      "shown_text_sha256": "85710e05ee76efe540279798fdedec1970e221c0ed46fa59adec512361fb7122",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "144885423d46788b7016376e",
+      "text_sha256": "72748baa87753edd2655db39bf4b66e61cf885bf53605175da079406666e3101",
+      "shown_text_sha256": "72748baa87753edd2655db39bf4b66e61cf885bf53605175da079406666e3101",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "2c7b44aeedad6ca52f52061c",
+      "text_sha256": "d2bd43f985f81fa29c9bfd9a0766277f130c7ebd75afe2ae4fce8d1b9198b44e",
+      "shown_text_sha256": "d2bd43f985f81fa29c9bfd9a0766277f130c7ebd75afe2ae4fce8d1b9198b44e",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Запись преимущественно содержит цитату песни и пожелания; смешана с запросом об исполнителе."
+    },
+    {
+      "doc_id": "74d3e5fe18a9705c4ae930ae",
+      "text_sha256": "955e49944477f14e9523644da62d7adb6b49db0349064aaea82fece071f3ba5c",
+      "shown_text_sha256": "955e49944477f14e9523644da62d7adb6b49db0349064aaea82fece071f3ba5c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "8f0c3f24ebc6c69d8502be79",
+      "text_sha256": "4d18bccb10f8b702e6abe8a586906dd1efa2f1989144f56edc99aceeede9284f",
+      "shown_text_sha256": "4d18bccb10f8b702e6abe8a586906dd1efa2f1989144f56edc99aceeede9284f",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Изолированное афористическое нравоучение; недостаточно контекста для надёжной стилевой метки."
+    },
+    {
+      "doc_id": "483a70a8814b29b9efe38b98",
+      "text_sha256": "91173a11270662493414a98674f0f10f87d842107a82a959ff59a7341cdd2065",
+      "shown_text_sha256": "91173a11270662493414a98674f0f10f87d842107a82a959ff59a7341cdd2065",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Развёрнутое публичное нормативное рассуждение; граница публицистики и разговорного мнения неоднозначна. Решение не оценивает политическую позицию автора."
+    },
+    {
+      "doc_id": "f93f644c97d4bb24fbf02e24",
+      "text_sha256": "2f1befec6fb832beea15fa1f01363b7156989d228cfb151959226941b82801ea",
+      "shown_text_sha256": "2f1befec6fb832beea15fa1f01363b7156989d228cfb151959226941b82801ea",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "d19d6e32f36263b9dfdf184a",
+      "text_sha256": "d6ecec9951c0c1015e63ca0c0e5217f1f0439cefada32795416dcc555f0dc0c0",
+      "shown_text_sha256": "d6ecec9951c0c1015e63ca0c0e5217f1f0439cefada32795416dcc555f0dc0c0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "04db68083a2bd30ae6499388",
+      "text_sha256": "1ceec70689f4a9b29250679b3e376258fb2e1de99113886c1fca654d8ba08f4d",
+      "shown_text_sha256": "1ceec70689f4a9b29250679b3e376258fb2e1de99113886c1fca654d8ba08f4d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "c8bfc8cd78fa6562aef2529e",
+      "text_sha256": "c983d4069403976b9ced5c8759b37a2163e2edd9523fbb99b4068be5ffb7309e",
+      "shown_text_sha256": "c983d4069403976b9ced5c8759b37a2163e2edd9523fbb99b4068be5ffb7309e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "e8c9dfdaad39994430cc8f43",
+      "text_sha256": "b192c5b6cfafa5f17eca40dc1db4a146fc72fc4ddadff47559909d6794e5993f",
+      "shown_text_sha256": "b192c5b6cfafa5f17eca40dc1db4a146fc72fc4ddadff47559909d6794e5993f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6c2cffc677c01d6cf28fcf7a",
+      "text_sha256": "d76203ac634d2ca17319a340c454a4c931555644248401998cb2fd5d4a43531f",
+      "shown_text_sha256": "d76203ac634d2ca17319a340c454a4c931555644248401998cb2fd5d4a43531f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9e1630f41e547dea1ba31d12",
+      "text_sha256": "7716db0445e3634d8adbffacf28359400b58078c1ba838cfe35775553141b5e4",
+      "shown_text_sha256": "7716db0445e3634d8adbffacf28359400b58078c1ba838cfe35775553141b5e4",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Учебная задача по термодинамике с формулами и ожидаемым ответом; не разговорная реплика."
+    },
+    {
+      "doc_id": "6034296d81f33d64c4fecd5b",
+      "text_sha256": "857c740cb852597178909b6c14f6a11eaab087ee83a557e87a4e5ccb6bffa7b6",
+      "shown_text_sha256": "857c740cb852597178909b6c14f6a11eaab087ee83a557e87a4e5ccb6bffa7b6",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "47a798d67dadbe49f2bc8396",
+      "text_sha256": "41650d40d0d7ce4fc66ec23130e2cab71d7c75f79a4ad4d7a08b51b1c803971e",
+      "shown_text_sha256": "41650d40d0d7ce4fc66ec23130e2cab71d7c75f79a4ad4d7a08b51b1c803971e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "88fa1449e1e07f86b0b4c00f",
+      "text_sha256": "cac94b57cf9fda3583bec3a9c76345afb8f4d1aa0ed6f91b8f290f908ec07104",
+      "shown_text_sha256": "cac94b57cf9fda3583bec3a9c76345afb8f4d1aa0ed6f91b8f290f908ec07104",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f8869533359b763ed9869f0d",
+      "text_sha256": "c1a62cf8688af2c402b2be7cf97e76bb65a03e8ab3eda2eeec7657026c7ab33f",
+      "shown_text_sha256": "c1a62cf8688af2c402b2be7cf97e76bb65a03e8ab3eda2eeec7657026c7ab33f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "2f4278f07ce622d2d572f706",
+      "text_sha256": "08163774b99255efa6858b9f660165c5195fcc47bfdc16f4386f4bcf0c0f80fe",
+      "shown_text_sha256": "08163774b99255efa6858b9f660165c5195fcc47bfdc16f4386f4bcf0c0f80fe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "969c88fb88f754f09a4687c6",
+      "text_sha256": "d2ea9cdbe9fa9506dc84f1e5c747c9b59eb037c14ba3d8d67a146b8adbf196f1",
+      "shown_text_sha256": "d2ea9cdbe9fa9506dc84f1e5c747c9b59eb037c14ba3d8d67a146b8adbf196f1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "dced77128ce1793d2fa9407e",
+      "text_sha256": "de9a5476724d7a63af29e70cf6ae27ca6ee9e69044f0225fbbfb6edc27bcc7f2",
+      "shown_text_sha256": "de9a5476724d7a63af29e70cf6ae27ca6ee9e69044f0225fbbfb6edc27bcc7f2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "bb1a1199305ccd0e9b6f691f",
+      "text_sha256": "49f31764873bb76f6a597b43bb774ea8c70750d6d8dc7e700ca631ec336b889d",
+      "shown_text_sha256": "49f31764873bb76f6a597b43bb774ea8c70750d6d8dc7e700ca631ec336b889d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "04de0208f604bacbef2b9b6a",
+      "text_sha256": "72603969c8eb5e2fe14780e1a427378fe3510d35b2a32a5697aac02b85c9dee0",
+      "shown_text_sha256": "72603969c8eb5e2fe14780e1a427378fe3510d35b2a32a5697aac02b85c9dee0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "c1a39a67650f1a318fe81025",
+      "text_sha256": "63afe341bc4e29ffbbb1faea88594881445b8002245ccd579bc3639fb7b0f5e4",
+      "shown_text_sha256": "63afe341bc4e29ffbbb1faea88594881445b8002245ccd579bc3639fb7b0f5e4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "567d237585f3bf94da9c503a",
+      "text_sha256": "4b9a8e7562bae66e8c35ded4986a2813765bffd74db0e1ea31e5ea82b2989726",
+      "shown_text_sha256": "4b9a8e7562bae66e8c35ded4986a2813765bffd74db0e1ea31e5ea82b2989726",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "2a699d6c07bfd171e3f73ee0",
+      "text_sha256": "5a60de1b0c9669bdcafdcd375947bc241318fc30ca29a77d31858e2f1b64a282",
+      "shown_text_sha256": "5a60de1b0c9669bdcafdcd375947bc241318fc30ca29a77d31858e2f1b64a282",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "c28ade0b03fa56d78bc7a392",
+      "text_sha256": "4a40bbbcc3d34fd336aaadf6c08b2ead3fed8973e0fdc1613f6f84ae96b72b01",
+      "shown_text_sha256": "4a40bbbcc3d34fd336aaadf6c08b2ead3fed8973e0fdc1613f6f84ae96b72b01",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "fe829acc708456c500fc35a1",
+      "text_sha256": "8e2d63e162e306043d6fe61a9c2c9fbe8102069e5d7b90fc4b3c617c211912d4",
+      "shown_text_sha256": "8e2d63e162e306043d6fe61a9c2c9fbe8102069e5d7b90fc4b3c617c211912d4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "4d99b54f3efe57c92e28a27f",
+      "text_sha256": "03b834023bacc8e7aefd41d61ae2a518171fddd5ca516e1c707c765c7e28b285",
+      "shown_text_sha256": "03b834023bacc8e7aefd41d61ae2a518171fddd5ca516e1c707c765c7e28b285",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "260559a5c9785d29f676cbbe",
+      "text_sha256": "ad0d02c31670de26faa6aeefcdb63e043bff83c4d5061efc0a211b4f9b02343a",
+      "shown_text_sha256": "ad0d02c31670de26faa6aeefcdb63e043bff83c4d5061efc0a211b4f9b02343a",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Справочный перечень профессиональных должностей и остаток «Толығырақ»; формальный информационный жанр."
+    },
+    {
+      "doc_id": "25b02e86dbca0853386157f8",
+      "text_sha256": "ad7d8e8277ebfd8c3b47f0e4c640cc5d78e25a47f3c23b06795cb86b295b03b0",
+      "shown_text_sha256": "ad7d8e8277ebfd8c3b47f0e4c640cc5d78e25a47f3c23b06795cb86b295b03b0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "56027aeff425f80afe2a89fc",
+      "text_sha256": "24f932346e91742ac4221a663c6f31e4956c09220f6c4a99b31b922979bf7bfb",
+      "shown_text_sha256": "24f932346e91742ac4221a663c6f31e4956c09220f6c4a99b31b922979bf7bfb",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "4e16da78b53d9eaec8c719be",
+      "text_sha256": "9a359232786367d95105f873019675dbe52180085d071ec698f422830db5ce25",
+      "shown_text_sha256": "9a359232786367d95105f873019675dbe52180085d071ec698f422830db5ce25",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "d3980139576b0da58b357484",
+      "text_sha256": "79ab1038aab802ba0071a7742a941bd3422ab0669ce8f28064bdea5b8dbe819b",
+      "shown_text_sha256": "79ab1038aab802ba0071a7742a941bd3422ab0669ce8f28064bdea5b8dbe819b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "25a09e5fd7ebb75a5c8f08be",
+      "text_sha256": "76223c7707d58b3b1bead635af570f766927f6be745b89bc658dbafa73f1350a",
+      "shown_text_sha256": "76223c7707d58b3b1bead635af570f766927f6be745b89bc658dbafa73f1350a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9346caa30783ccb6795c0b08",
+      "text_sha256": "79f6c7dc03b2d70dc2feaeed294e1abdab50105541279b4e53c916a06a236b2a",
+      "shown_text_sha256": "79f6c7dc03b2d70dc2feaeed294e1abdab50105541279b4e53c916a06a236b2a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "b1ec5056d6466d93a2980dce",
+      "text_sha256": "1d6555030b3033ae957984dcd96f5761022ba6d3de7a4db32e67e734756aaede",
+      "shown_text_sha256": "1d6555030b3033ae957984dcd96f5761022ba6d3de7a4db32e67e734756aaede",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "3b1e1c3212bfcf387a9612dc",
+      "text_sha256": "0995a743efa63379f3fe9caa30f463107e8abdf033dbc4c829a4ac17174ded30",
+      "shown_text_sha256": "0995a743efa63379f3fe9caa30f463107e8abdf033dbc4c829a4ac17174ded30",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ac64afd9ad17140380905a32",
+      "text_sha256": "8d14aa720253b96766e55f480c77e195fb8c964aa8d639d3b06643ec53bb71d0",
+      "shown_text_sha256": "8d14aa720253b96766e55f480c77e195fb8c964aa8d639d3b06643ec53bb71d0",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "acf1c3df5f205d80e57cf95b",
+      "text_sha256": "93351dd4f33a33b2e9a767c8b16cfe1a28991674a360dced9aab8b2a2114c56c",
+      "shown_text_sha256": "93351dd4f33a33b2e9a767c8b16cfe1a28991674a360dced9aab8b2a2114c56c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "7fdf87e74a4db57e40f1eda1",
+      "text_sha256": "263a97da2092011830a02359739e2ff2ef73b1f31b16850c73d88b8eb8bb51f3",
+      "shown_text_sha256": "263a97da2092011830a02359739e2ff2ef73b1f31b16850c73d88b8eb8bb51f3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "2155090327cabc794cd42307",
+      "text_sha256": "9e3fccb24b0ec99d600bad325af3812de71a83c51c96303e829387100b121262",
+      "shown_text_sha256": "9e3fccb24b0ec99d600bad325af3812de71a83c51c96303e829387100b121262",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный технический вопрос о выполненной попытке в программе; техническая тема не делает реплику научной."
+    },
+    {
+      "doc_id": "1b7d2e4389bcea1bc6bc9f9a",
+      "text_sha256": "095813b3d3f3b67f351559604ac815fc94197914f41854cad24c76518067b988",
+      "shown_text_sha256": "095813b3d3f3b67f351559604ac815fc94197914f41854cad24c76518067b988",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "3fea6d2be3f54c940d10720a",
+      "text_sha256": "df0983e2f8d23a6c98fb6be4736e04c4b4a41963837e3eedc744f2140f5f44a4",
+      "shown_text_sha256": "df0983e2f8d23a6c98fb6be4736e04c4b4a41963837e3eedc744f2140f5f44a4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9ef1dd41d8ec3ce718e651ea",
+      "text_sha256": "29741b524510fcf25e3c05a3a34d96eddff25765783def6bb1ab1039ce08ef14",
+      "shown_text_sha256": "29741b524510fcf25e3c05a3a34d96eddff25765783def6bb1ab1039ce08ef14",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Краткая неформальная реплика-предположение; медицинская достоверность не проверялась и не подтверждается."
+    },
+    {
+      "doc_id": "58164822f31801eb229f563c",
+      "text_sha256": "ac5a5ff307530de66f797ade009b885d132f5169772da3e5ff2df68a324812ed",
+      "shown_text_sha256": "ac5a5ff307530de66f797ade009b885d132f5169772da3e5ff2df68a324812ed",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "5742e6a39e3743092fb1e195",
+      "text_sha256": "79986e21311b597b096a56126232eeaf009450f6da52aaf5d7d6d3b2522da51b",
+      "shown_text_sha256": "79986e21311b597b096a56126232eeaf009450f6da52aaf5d7d6d3b2522da51b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "0f335528656e1cad032c7530",
+      "text_sha256": "98e913061e0c1e8e0629cca23b6241c9b40d65e07e70e77f5b173c44d0c2780e",
+      "shown_text_sha256": "98e913061e0c1e8e0629cca23b6241c9b40d65e07e70e77f5b173c44d0c2780e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "d8fa9f95b1ec12880c438961",
+      "text_sha256": "e553054fa2fb7979d91c2938082da1927202a3ae5f4373755e249243b53f666e",
+      "shown_text_sha256": "e553054fa2fb7979d91c2938082da1927202a3ae5f4373755e249243b53f666e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "e0a92aabfaf3f364b4a5ad68",
+      "text_sha256": "221ad213747bb4fab4480d5f08d27da2f8b370c8a815ad7c0aac27c222f09fcf",
+      "shown_text_sha256": "221ad213747bb4fab4480d5f08d27da2f8b370c8a815ad7c0aac27c222f09fcf",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ffa0c2748fdd9dd5e605a0bb",
+      "text_sha256": "63092a7331ec3e1a2c8fe347a7c3087c09e062950c4fd9fa14216379f6e33a1f",
+      "shown_text_sha256": "63092a7331ec3e1a2c8fe347a7c3087c09e062950c4fd9fa14216379f6e33a1f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "bac228a7f0b4ee504137c321",
+      "text_sha256": "b92354258c9f4c11d1ab3e40a6f51c25bcfd9d2cdd6160c7c879267029f1819f",
+      "shown_text_sha256": "b92354258c9f4c11d1ab3e40a6f51c25bcfd9d2cdd6160c7c879267029f1819f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "b204e31d36e521ecb45c26f2",
+      "text_sha256": "a2b0417126894633160a5f59aa472f7e5780db47365cd9a2c0ac41d3d927bd33",
+      "shown_text_sha256": "a2b0417126894633160a5f59aa472f7e5780db47365cd9a2c0ac41d3d927bd33",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "78a9de6d8be5774a4fc0a747",
+      "text_sha256": "24723a88a685aa8e201d733cff030aea588e472db9104711ade0288284a9e746",
+      "shown_text_sha256": "24723a88a685aa8e201d733cff030aea588e472db9104711ade0288284a9e746",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная оценка приложения с эмодзи и переключением кода; эмодзи являются частью сообщения, а не интерфейсом."
+    },
+    {
+      "doc_id": "caaa588f1bbd6ca1565e061b",
+      "text_sha256": "da17d7707229db28557ebde6d0d8c7bd130fec2b3337a02242ac380c2d3d5c37",
+      "shown_text_sha256": "da17d7707229db28557ebde6d0d8c7bd130fec2b3337a02242ac380c2d3d5c37",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "6a161c3dab70eeaf66b9d04c",
+      "text_sha256": "9ab0754bf0378bf2a3eb0eb093f186f08a3887b00032b3a0b64e11db7a0e56d4",
+      "shown_text_sha256": "9ab0754bf0378bf2a3eb0eb093f186f08a3887b00032b3a0b64e11db7a0e56d4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "96a4b9c7d27992e210440fd9",
+      "text_sha256": "de278da04f34e010841259310f5d7b1824b1072a68165eb19144848eba3c4e70",
+      "shown_text_sha256": "de278da04f34e010841259310f5d7b1824b1072a68165eb19144848eba3c4e70",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личная просьба подобрать программу для карты; техническая лексика не заменяет стилевую функцию."
+    },
+    {
+      "doc_id": "a909882f4b93516a69028300",
+      "text_sha256": "aa5a2eba5e17ebf998af17a3d07cdcb310e5ba366514f1c56ad62d944ce1af8f",
+      "shown_text_sha256": "aa5a2eba5e17ebf998af17a3d07cdcb310e5ba366514f1c56ad62d944ce1af8f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f2ac1b5374b7c6c8d2f80a23",
+      "text_sha256": "b58159468b7db183a34abf802db53b8ed4e91b7a4e29716b7ade99026c423b47",
+      "shown_text_sha256": "b58159468b7db183a34abf802db53b8ed4e91b7a4e29716b7ade99026c423b47",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "69eb0385efafcfcf87cf974b",
+      "text_sha256": "dd4b610f9f86d10ffa2cc852e0ef28c0f72d02ab3138fa5d81793f31a97b737e",
+      "shown_text_sha256": "dd4b610f9f86d10ffa2cc852e0ef28c0f72d02ab3138fa5d81793f31a97b737e",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Терминологическое религиозное изложение без явного общения; неоднозначная стилевая единица."
+    },
+    {
+      "doc_id": "a2d8d0e8acf388209febeaea",
+      "text_sha256": "63c005bba368f201bda2dbe0f6bcc007293919984b29115d549449c229e5fb26",
+      "shown_text_sha256": "63c005bba368f201bda2dbe0f6bcc007293919984b29115d549449c229e5fb26",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "4e818b622c44530853542c59",
+      "text_sha256": "96f97d9de4e11391160ee9d99f3e532d59515c23f4fb94467e3dc3e5fa4e9ae1",
+      "shown_text_sha256": "96f97d9de4e11391160ee9d99f3e532d59515c23f4fb94467e3dc3e5fa4e9ae1",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "f35ee94086fd6607b6788a47",
+      "text_sha256": "27a4e2a63f0d527e8bd1a62e5b002230fc110ceb0221b9aa5c03d3e4468728e9",
+      "shown_text_sha256": "27a4e2a63f0d527e8bd1a62e5b002230fc110ceb0221b9aa5c03d3e4468728e9",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ec98859b3abf0ed54b9742f8",
+      "text_sha256": "2476410818c3321b0454aca1f285771bfa6d0d2962e401121c5bd22712c92e53",
+      "shown_text_sha256": "2476410818c3321b0454aca1f285771bfa6d0d2962e401121c5bd22712c92e53",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "aa02b5f4c2121dfebc84372c",
+      "text_sha256": "45970e3d6e9d08eaeab3f11a178888575c8722933958dc64f30a917b2a4fcd7c",
+      "shown_text_sha256": "45970e3d6e9d08eaeab3f11a178888575c8722933958dc64f30a917b2a4fcd7c",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "c6dfff08d4a2346fdcbaef73",
+      "text_sha256": "d9ff522d3c0bb6208caa7206bf47b1927a70dc7866209f777d6c62554112d61b",
+      "shown_text_sha256": "d9ff522d3c0bb6208caa7206bf47b1927a70dc7866209f777d6c62554112d61b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "a0f446025d06f1c994abba07",
+      "text_sha256": "97dea8e4548ea2e2f1136b76a266b0c417cb59b65ff91c4b2aa55902f172ce06",
+      "shown_text_sha256": "97dea8e4548ea2e2f1136b76a266b0c417cb59b65ff91c4b2aa55902f172ce06",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "d6193253f1b824fcdd43a725",
+      "text_sha256": "5e04b8047e6f48f670ae2254d4b8a170c63feafedd6c23cd70c0860f09ae28be",
+      "shown_text_sha256": "5e04b8047e6f48f670ae2254d4b8a170c63feafedd6c23cd70c0860f09ae28be",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "94c26a55a6a1314c485c8517",
+      "text_sha256": "0a752f0ce6cde97dfa77ef6eca33d1a89ae40248ae46aa9ca75f9425bde721a8",
+      "shown_text_sha256": "0a752f0ce6cde97dfa77ef6eca33d1a89ae40248ae46aa9ca75f9425bde721a8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "af235fa63d995b7986b3c613",
+      "text_sha256": "f3ab0a1cdb22fc14da0227c4b44c4727981f72072d4eb2769df85edc4d3f2dcb",
+      "shown_text_sha256": "f3ab0a1cdb22fc14da0227c4b44c4727981f72072d4eb2769df85edc4d3f2dcb",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "e174c07a92ac6f61fd7398a5",
+      "text_sha256": "9ae6a71c555991913d9e47a45c2c88f0b488d14fdd85c34e4de870c056a3bdb2",
+      "shown_text_sha256": "9ae6a71c555991913d9e47a45c2c88f0b488d14fdd85c34e4de870c056a3bdb2",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a2c39898ae3c27101e0d4c20",
+      "text_sha256": "d9171a16eca7c681d76465bf12369ea868de626c37237e72eceef706d660f558",
+      "shown_text_sha256": "d9171a16eca7c681d76465bf12369ea868de626c37237e72eceef706d660f558",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "efd9e8513f91cc170a0b3f92",
+      "text_sha256": "37a8e003aecae356123f3594857ead2c7505392e04175e5cd508b019541292ef",
+      "shown_text_sha256": "37a8e003aecae356123f3594857ead2c7505392e04175e5cd508b019541292ef",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "981e29a68a8c60cecdd06ca5",
+      "text_sha256": "bccf62aca144f7bdb94b35e0b5fd9aa8d1e0e9e98a1bde0e71f000ba1ab74fbe",
+      "shown_text_sha256": "bccf62aca144f7bdb94b35e0b5fd9aa8d1e0e9e98a1bde0e71f000ba1ab74fbe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "8e8a07bb29cf8c198b17f143",
+      "text_sha256": "6f1cb7d4703d3edd4e56d8984c999681f74d5890d61b4a7bc7659d41836fc02b",
+      "shown_text_sha256": "6f1cb7d4703d3edd4e56d8984c999681f74d5890d61b4a7bc7659d41836fc02b",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "09b6d0463321bf7924f46231",
+      "text_sha256": "13b598fb99fc38aa8cdf9abb4a02a793114d43704e141a4974fc374690aaec25",
+      "shown_text_sha256": "13b598fb99fc38aa8cdf9abb4a02a793114d43704e141a4974fc374690aaec25",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Отредактированный рекомендательный текст о книге; разговорная метка не устанавливается по одному размещению среди отзывов."
+    },
+    {
+      "doc_id": "df676af9af24a3d3acdd2f58",
+      "text_sha256": "4f2da9cc065358fe3fda65b3f93c0cf582af4d1ba81eed6986650f9064e10fdb",
+      "shown_text_sha256": "4f2da9cc065358fe3fda65b3f93c0cf582af4d1ba81eed6986650f9064e10fdb",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ef66d3a6b07692d8299de9d7",
+      "text_sha256": "cf5e1caae5a08f8a778a43d44178cbaef5eadd06658ce1d69a4bbb2e90c4ccc5",
+      "shown_text_sha256": "cf5e1caae5a08f8a778a43d44178cbaef5eadd06658ce1d69a4bbb2e90c4ccc5",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "c3f988853edb40df1a8926b8",
+      "text_sha256": "06517e8e8bfa79f4d1211409a6824e31ab21e21aeec5b292dcf9f84bd1f180f3",
+      "shown_text_sha256": "06517e8e8bfa79f4d1211409a6824e31ab21e21aeec5b292dcf9f84bd1f180f3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9f0594600af07ecd7ed72808",
+      "text_sha256": "2435b34430e66e1e1dbf783600d713793815b859797473a755cee836362ac06d",
+      "shown_text_sha256": "2435b34430e66e1e1dbf783600d713793815b859797473a755cee836362ac06d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "fd08443c8592a4a4f11691f5",
+      "text_sha256": "6b0068e3e767a9ab91a91b903813c0e74551a334aec325151a6018fd6ac304f4",
+      "shown_text_sha256": "6b0068e3e767a9ab91a91b903813c0e74551a334aec325151a6018fd6ac304f4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "d28e49302add5b2f4034a169",
+      "text_sha256": "eaa94b54e321338c356e06e3fd7256cd669f73266972023e2c395d84ab437cb7",
+      "shown_text_sha256": "eaa94b54e321338c356e06e3fd7256cd669f73266972023e2c395d84ab437cb7",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "664340be959c15892ff1deb4",
+      "text_sha256": "c8e113171fd00fc8a761f906b0a5cf785ddd754fe44d3f4dfbcc41e78cd6acc4",
+      "shown_text_sha256": "c8e113171fd00fc8a761f906b0a5cf785ddd754fe44d3f4dfbcc41e78cd6acc4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "061788c4e3c7cdab5410f9ae",
+      "text_sha256": "950ffccc9292040f85f01745da17e3817d39725ba0fe1e13dd89871bc154f87f",
+      "shown_text_sha256": "950ffccc9292040f85f01745da17e3817d39725ba0fe1e13dd89871bc154f87f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "a66fbbd2c82b2374045218d4",
+      "text_sha256": "b27683fa915639e3b80512449c965f1d062548be9c59358d34c7fb64c358d5ca",
+      "shown_text_sha256": "b27683fa915639e3b80512449c965f1d062548be9c59358d34c7fb64c358d5ca",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "3901b8c85d18b2a3ef7eeee2",
+      "text_sha256": "df2dacefb0d119b4f9b4b1f1e0895225e4e3825794465ef96d002e9f1d53ca3d",
+      "shown_text_sha256": "df2dacefb0d119b4f9b4b1f1e0895225e4e3825794465ef96d002e9f1d53ca3d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "36f6d11089ba43f2345d4e84",
+      "text_sha256": "f30cca4922c309bc9deb1149f8c01dcbbc3187f92601fd94bea81555cdc5459f",
+      "shown_text_sha256": "f30cca4922c309bc9deb1149f8c01dcbbc3187f92601fd94bea81555cdc5459f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "3a1861995be9c24bee290850",
+      "text_sha256": "79b990a97546b78311da2c941636504e50aad010d7c03410a72b8087de6278e4",
+      "shown_text_sha256": "79b990a97546b78311da2c941636504e50aad010d7c03410a72b8087de6278e4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "cf231ed1a69bc49eaaaf350b",
+      "text_sha256": "3f1ada54538341b4350b4d30a9ba4be161aed29b47ca6811654a7993c4b46a7f",
+      "shown_text_sha256": "3f1ada54538341b4350b4d30a9ba4be161aed29b47ca6811654a7993c4b46a7f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "4839ab7e6dcb6002bcc2015c",
+      "text_sha256": "ee3e3ee7ac35c9bce343c2ab3f0535f2f9228ed87e2f6e9088e10e65e780ff9e",
+      "shown_text_sha256": "ee3e3ee7ac35c9bce343c2ab3f0535f2f9228ed87e2f6e9088e10e65e780ff9e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "47c8c9d004658ec681745d1e",
+      "text_sha256": "0c1e7137ba0dc1994db0770a7463b99c2e6fe6c1c2bd38ee9a3c2a93192bdbc3",
+      "shown_text_sha256": "0c1e7137ba0dc1994db0770a7463b99c2e6fe6c1c2bd38ee9a3c2a93192bdbc3",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "43f4be7597f7242944bccf79",
+      "text_sha256": "161083060c925747d0f59814ada941e57c2e292b347d1f1420de6f8699a7cc04",
+      "shown_text_sha256": "161083060c925747d0f59814ada941e57c2e292b347d1f1420de6f8699a7cc04",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "74d5d17ecfa704f50c0e2b56",
+      "text_sha256": "e943dc81e8fffda7e148a93f05edfb65239649095571a7ceaef663ec6603e984",
+      "shown_text_sha256": "e943dc81e8fffda7e148a93f05edfb65239649095571a7ceaef663ec6603e984",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "0316b834b1db2b0f437ce936",
+      "text_sha256": "650a34efc95dfaf92ecc4d7baddcf32173a72c9e2cfa45a7636151a2e9f1ca0f",
+      "shown_text_sha256": "650a34efc95dfaf92ecc4d7baddcf32173a72c9e2cfa45a7636151a2e9f1ca0f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "27caa82cf0d1254279a1c727",
+      "text_sha256": "1a13e6cc3380b463212ce1933454144aa50692f3b26ffe2b9395e8e2efa815fe",
+      "shown_text_sha256": "1a13e6cc3380b463212ce1933454144aa50692f3b26ffe2b9395e8e2efa815fe",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "e396c94cf05b987f4f8a7a6f",
+      "text_sha256": "fc006eb47f7ccca1f8a1e1bea7ecfb50d0a70fe520c6d8b825b68ef00e19a8c8",
+      "shown_text_sha256": "fc006eb47f7ccca1f8a1e1bea7ecfb50d0a70fe520c6d8b825b68ef00e19a8c8",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "ec045aee223cdd52ba0d38cb",
+      "text_sha256": "ff6903597b4bb24f37cc153c3ca4e5c49db6e7893fb847a49b096ee428a5329f",
+      "shown_text_sha256": "ff6903597b4bb24f37cc153c3ca4e5c49db6e7893fb847a49b096ee428a5329f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "80cd9243b29c07e605f4c7b4",
+      "text_sha256": "d8870cd5bfdcec1529ae7bf01f4f4b61df075c660ccb09046e697435dd3dd8be",
+      "shown_text_sha256": "d8870cd5bfdcec1529ae7bf01f4f4b61df075c660ccb09046e697435dd3dd8be",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "5fd7a896918cddca85dc3815",
+      "text_sha256": "9cbe7c2074f49999167e30ee06197437a28b65b202230952337c7366807ea0c4",
+      "shown_text_sha256": "9cbe7c2074f49999167e30ee06197437a28b65b202230952337c7366807ea0c4",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "a86f47088c6e73962af12b4b",
+      "text_sha256": "02e057961d20e5a3c2ebb8f141863cad871c71b9d935e401693483d711acab5d",
+      "shown_text_sha256": "02e057961d20e5a3c2ebb8f141863cad871c71b9d935e401693483d711acab5d",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "593089ffea5e266e5d26b3eb",
+      "text_sha256": "308c94853384e473801e57ebbbffb8a17d5f49849e29c82b9e77a37fee448b5a",
+      "shown_text_sha256": "308c94853384e473801e57ebbbffb8a17d5f49849e29c82b9e77a37fee448b5a",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "cf859113792cede72ad735c7",
+      "text_sha256": "0e3401f117dee43f8b13cbf90949935c68b9a2a78c8a9eff81bbd7cc4e9cbffc",
+      "shown_text_sha256": "0e3401f117dee43f8b13cbf90949935c68b9a2a78c8a9eff81bbd7cc4e9cbffc",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Описание свойств товара смешано с рекламной благодарностью; неоднозначная граница потребительского и рекламного текста."
+    },
+    {
+      "doc_id": "598bacfccb39b8735c9d6371",
+      "text_sha256": "e2221a0e1ab753c61c87f300f6c5abdeb342b44671df68e96396656cadb21548",
+      "shown_text_sha256": "e2221a0e1ab753c61c87f300f6c5abdeb342b44671df68e96396656cadb21548",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "ed0a062dc094b7560d24c349",
+      "text_sha256": "e4ec7a31eaa567b63aa857ad0ef7445b6a727dc1ca16699e797a521436551170",
+      "shown_text_sha256": "e4ec7a31eaa567b63aa857ad0ef7445b6a727dc1ca16699e797a521436551170",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "d882ab71fd44bd418493446f",
+      "text_sha256": "8205e98b2a3f31eb4a9032b79443176bd7c73d5348257628d22b37289f1628e7",
+      "shown_text_sha256": "8205e98b2a3f31eb4a9032b79443176bd7c73d5348257628d22b37289f1628e7",
+      "keep": false,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Изолированный профессиональный FAQ-вопрос без личной ситуации; разговорная метка требует дополнительного контекста."
+    },
+    {
+      "doc_id": "c0fe1767c255cfa05ecf35f6",
+      "text_sha256": "98f339563c067441110b82d7bc1896b1ab82bd713173ef1ef5e47008f2145eff",
+      "shown_text_sha256": "98f339563c067441110b82d7bc1896b1ab82bd713173ef1ef5e47008f2145eff",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "3ad7e19d8365fc9759aef451",
+      "text_sha256": "ec88a02bdcfe663f267a9919228052f981e3189be9122d4e3b4bc6ba92252436",
+      "shown_text_sha256": "ec88a02bdcfe663f267a9919228052f981e3189be9122d4e3b4bc6ba92252436",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "f09ed939ad381258009f4a08",
+      "text_sha256": "e3437d2dcd8582f0637703642428df433f367e60024f082183ebe3f49723a33e",
+      "shown_text_sha256": "e3437d2dcd8582f0637703642428df433f367e60024f082183ebe3f49723a33e",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный вопрос, ответ, совет или реплика, обращённая к собеседнику; функция неформального общения выражена в показанном тексте."
+    },
+    {
+      "doc_id": "9bc048c8879c24a908784539",
+      "text_sha256": "5a31de32cbaec78aef07e03d19baa7b4af74b9c3ac9a0d2b3b66011adf6b337f",
+      "shown_text_sha256": "5a31de32cbaec78aef07e03d19baa7b4af74b9c3ac9a0d2b3b66011adf6b337f",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    },
+    {
+      "doc_id": "a3ff692d3feca37a1de3fc3d",
+      "text_sha256": "cfb167ca30fca6c1f40988a6c7c63d8040509b862f122d3bd2bc77048c4d9f84",
+      "shown_text_sha256": "cfb167ca30fca6c1f40988a6c7c63d8040509b862f122d3bd2bc77048c4d9f84",
+      "keep": true,
+      "reviewed_extent": "entire_candidate_text",
+      "reason": "Личный потребительский отзыв или неформальная оценка собственного опыта; рейтинг не использован как метка стиля."
+    }
+  ]
+}

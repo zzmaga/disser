@@ -1,0 +1,45 @@
+{
+  "version": "functional_style_curation_v1",
+  "dated": "2026-10-18",
+  "purpose": "Operational instructions for source and AI-assisted style curation, not proof of expert labels",
+  "unit": "The exact shown text. Full-candidate review does not imply that the original publisher document was complete.",
+  "style_labels": {
+    "official": "A document or passage that performs an administrative, legal or business act: request, order, agreement, notice of obligation or formal correspondence. A casual question about a law is not automatically official.",
+    "scientific": "Explanatory or research prose presenting concepts, methods, evidence and reasoned findings. Educational-scientific explanations are included. A copied calculation exercise or lesson timetable requires separate genre review.",
+    "publicistic": "Public reporting, commentary, persuasion or discussion of socially relevant events for a broad audience. A political topic alone does not determine this label.",
+    "literary": "Narrative or poetic construction of scenes, characters and imagery. A reader's informal reaction to a novel is not automatically literary prose.",
+    "colloquial": "Direct informal interaction, personal questions, answers, advice, reactions and experiential reviews, including written online conversation. Polite address alone does not turn a formal explanatory passage into colloquial speech."
+  },
+  "uncertain_choices": [
+    "mixed",
+    "insufficient",
+    "non_kazakh",
+    "noise"
+  ],
+  "decision_order": [
+    "Read the entire shown unit and record whether it is a full candidate or an excerpt.",
+    "Check extraction damage, truncation, interface material, remaining addresses and identifiable contact data separately from style.",
+    "Identify communicative function and register using the text, not the publisher, topic, sentiment or star rating.",
+    "Distinguish the writer's own interaction from a predominantly quoted song, reference definition, exercise, advertisement or copied article.",
+    "If a predominant style cannot be established, retain an ambiguity reason rather than force a class or automatically relabel it.",
+    "Bind the decision to the original and shown text hashes. Record any bounded removal explicitly."
+  ],
+  "colloquial_boundaries": {
+    "retain": [
+      "A personal request for programming help even when it contains technical terms or a short error message.",
+      "A personal question about study materials, as distinct from a copied assignment prompt.",
+      "A review describing the writer's experience, including negative feedback, emotion and natural code switching.",
+      "A direct reply on political, religious, scientific or other topics when its informal interactive register is clear."
+    ],
+    "quarantine_if_uncertain": [
+      "Neutral institutional, product or place descriptions with promotional wording and no clear personal interaction.",
+      "Polished literary criticism or public argument whose written register cannot confidently be called colloquial.",
+      "An isolated aphorism, list, dictionary definition, copied news paragraph or long lyric quote.",
+      "Text cut inside a word, incoherent text, or a passage with unresolved address/contact flags."
+    ]
+  },
+  "preservation": "Keep meaningful Kazakh letters, spelling variation, slang, names, dates, punctuation and emojis. Do not paraphrase data to make models easier to train.",
+  "claims_not_checked": "Style review does not verify factual, medical, legal, political or other claims and does not endorse the author's views.",
+  "evidence_limits": "Assistant decisions are AI-assisted curation. They are not independent human expert labels. Targeted short-text selection does not estimate the corpus-wide label error rate.",
+  "status": "Consolidated after the initial curation rounds; freeze before subsequent reference annotation, not a retrospective preregistration."
+}
