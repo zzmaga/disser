@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "purpose": "provisional_document_corpus",
+  "seed": 42,
+  "inputs": [
+    {
+      "path": "data/external/news_reextracted_20261010/candidates.jsonl",
+      "sha256": "323660e91fd09861e28ca74cc16fed229ded97bf2db7776c02344f7d6ae30a71"
+    },
+    {
+      "path": "data/external/journals_20261006/candidates.jsonl",
+      "sha256": "f64ccfa462c549b0a0710c3d27481f860748eea5fc3fcee0c6d1c950861a9336"
+    },
+    {
+      "path": "data/cleaned/prose_extended_attributed_20261006/candidates.jsonl",
+      "sha256": "99496c2c76b2bcf7a2fe7cec74b00b755b52f1b36ca9b25fc1b792d12ef0a566"
+    },
+    {
+      "path": "data/cleaned/forum_reviewed_20261006/candidates.jsonl",
+      "sha256": "86279934bfe5239ebcbe1188516dbac98396e40a70ec54114787da1d78727a01"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_reviewed_20261006/candidates.jsonl",
+      "sha256": "0d57bda8ad1774ddfb3973c9a909621e96eff7b22ab230ec20abb2c001252f53"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_extra_reviewed_20261006/candidates.jsonl",
+      "sha256": "b7ce484ec115f96e6ba4f17f1080063b9e9c4a33fac25938da47adb85bd18d86"
+    },
+    {
+      "path": "data/cleaned/business_reviewed_20261006/candidates.jsonl",
+      "sha256": "4a1ba97f602874cb90d41ea06b0484a70276ed3f2f6b28b26f156f0d13a5d047"
+    },
+    {
+      "path": "data/external/journals_expansion_20261010/candidates.jsonl",
+      "sha256": "a95979db509d48e5d1f23ae60afdf0a3cfd160f18a1b606afa2a2d53c3e363ff",
+      "require_review": false
+    },
+    {
+      "path": "data/external/prose_expansion_20261010/candidates.jsonl",
+      "sha256": "1ecfbba8127d1f3a939046108f5683d99b437afae182f9459ee28950c6ae29c3",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_expansion_20261010/candidates.jsonl",
+      "sha256": "15a2d01b118bb9801fa53adc0e0ca207fabd67c43488dfa4e56246c1b9f0d632",
+      "require_review": true
+    },
+    {
+      "path": "data/cleaned/legal_screened_20261012/candidates.jsonl",
+      "sha256": "d8d6e433fd23972871410714be6d744d1c9c89b6b9b29f37828a5f450cc04b59",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-history/candidates.jsonl",
+      "sha256": "be8620c801f6ac6352415187b0561bc74958cf046452ebe9e74cefdde0227e15",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-geography/candidates.jsonl",
+      "sha256": "c3a99fb6da33a4da05aa63d84242f9e942f99bee67090262b40703d7c6d74ede",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-journalism/candidates.jsonl",
+      "sha256": "ebe3b2b755e6e89b41a0e16efae51e3608e09946ea200debe4f40a404513dbc2",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/philart/candidates.jsonl",
+      "sha256": "cce2c5f19a8141912674971d3128318b9ab62b84a137921c30b1ef2ae116e365",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261012/candidates.jsonl",
+      "sha256": "285c9511e136bda005a0a9192ffa2272191ec7ef320d2cf29c8eefd0732c8134",
+      "require_review": false
+    },
+    {
+      "path": "data/external/poetry_scale_20261012/candidates.jsonl",
+      "sha256": "c614ef4bd2eae3bd62268ecf7c00997f7fd6c79bf1a2f1521fb3dd653b2a6cec",
+      "require_review": false
+    },
+    {
+      "path": "data/external/stories_scale_20261010/candidates.jsonl",
+      "sha256": "db67b245b858fa18d7b02fab957b5175657686fc324fd1e1b108f6b9ceb342fb",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_scale_20261012/candidates.jsonl",
+      "sha256": "55905d304ae17f2f9e3fb475495ffa90518aff192e117ee6a2e4752307d8bb28",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_replies_20261012/candidates.jsonl",
+      "sha256": "8b244c942d8d50ed8fc03e9c7a29a4e5a8392abac66464d58169d60bb02a5613",
+      "require_review": true
+    }
+  ],
+  "exclusions": [
+    {
+      "doc_id": "b8a920a9f8ed3ea79604c2ba",
+      "text_sha256": "40f340a1b30d78e348ff2858f2a2a542c9d883be734a1d15d3fef9e3005bc3e7",
+      "reason": "Литературная критика о рассказе, а не сам рассказ; видно из заголовка и начала/конца."
+    },
+    {
+      "doc_id": "0fd042e42e623623bd665de1",
+      "text_sha256": "ea18868a73ff915668f53efb10f785c24399c69ba95743ef7bd09dc44980be09",
+      "reason": "Очерк о писателе и оценка его творчества, а не художественная проза."
+    },
+    {
+      "doc_id": "3ffc0c10b6c3d498347e1485",
+      "text_sha256": "55d272bef1a21cc7e208963159b35dd9690d9da3688f8eb1d19a6aa6a1ab0564",
+      "reason": "Литературоведческое обсуждение эпопеи и отчёт о мероприятии; неоднородная публикация."
+    },
+    {
+      "doc_id": "2c3e2b9e6226977f8ee563df",
+      "text_sha256": "e92ecfd05ad101b403bfe27ca2968f0c9be648d1df62fc51e74fed62e8ee501d",
+      "reason": "Повтор публикации произведения Гүлсараның махаббаты; оставить doc_id 79e0fbd74db7d30f4f38a68a. Совпадение подтверждено просмотром и shingle-аудитом."
+    },
+    {
+      "doc_id": "ab42bdc857be7917fb91e2b4",
+      "text_sha256": "b372546a76bebb15f007729cb022cd8a1bb089d3e31948ca1308f3168de456e6",
+      "reason": "Length/content audit: 57,346 words with a very large numbered school appendix; exclude this unseparated table/list from the prose classifier corpus until re-extraction. Raw document preserved."
+    },
+    {
+      "doc_id": "74497d88103bd7c2449f8486",
+      "text_sha256": "33f23e49c79d167c5968ac9a915ee7f56eca7fcb8cca21cd6b8f24848655a012",
+      "reason": "News-domain record consists of a reproduced legal decree, not journalistic prose; keep out of Publicist. Related official texts remain grouped."
+    },
+    {
+      "doc_id": "fe71554b0819ca444559b97c",
+      "text_sha256": "e455e562652dbbd6d8cf5d13eb7bf9cc5d8c37afb25323de4104bbe1101ee4c9",
+      "reason": "News-domain record is almost entirely a legal decree; exclude from Publicist instead of learning source labels."
+    },
+    {
+      "doc_id": "b50fd5050f7fc92343eb3316",
+      "text_sha256": "d5f978bd4a76601870979cb9f70cc1f2869e6bb3d4d85b5c4b88fd4da8612574",
+      "reason": "News-domain record mainly reproduces a legal decree with a short news footer; not a clean Publicist example."
+    },
+    {
+      "doc_id": "2f6e29baf00808a72d4f82e3",
+      "text_sha256": "28bc6e8902e2e53dccbc207ff4a3d128f7521d52d01e0edf3e88b50f0892adcd",
+      "reason": "Long news-domain record reproduces constitutional legal text; not a clean Publicist example. Corresponding official source retained."
+    }
+  ],
+  "limitations": [
+    "Source/category and assistant-screened labels are provisional, not human gold.",
+    "Old development texts are reused; a new split is not an independent final test.",
+    "New author/work grouping remains incomplete when identities or serial publications are unknown.",
+    "University AYU forms are reserved separately and excluded.",
+    "Future training comparison requires a frozen manifest and a predeclared plan.",
+    "Legacy Bilim educational articles require explicit review: the 24-record diagnostic sample included lesson plans, promotion and personal essays.",
+    "New poetry and legal-act batches do not replace prose/business-genre diversity.",
+    "Some inputs are valid saved checkpoints from bounded interrupted collectors; this does not mean collection exhausted the source.",
+    "Forum questions and replies require explicit assistant screening before entering the provisional corpus."
+  ],
+  "passage_grouping": true,
+  "reviews": [
+    {
+      "path": "configs/reviews/corpus_expansion_20261010.json",
+      "sha256": "6e7263f331c97207e59e529d33f12861ebedd625be0dcc5b0ad6f40127bd9146"
+    },
+    {
+      "path": "configs/reviews/style_expansion_20261010.json",
+      "sha256": "6870c6819f22324e308c1f72ca13ba0500906763d8af336280b52e3692bca08b"
+    },
+    {
+      "path": "configs/reviews/prose_scale_20261012.json",
+      "sha256": "d7064ae8fcbc4b22ced1dea0963deb00d72cbfd55bd0c6eaba619567ce1d2cac"
+    },
+    {
+      "path": "configs/reviews/forum_scale_20261012.json",
+      "sha256": "0df9fb28694fd82c9266bf4f10aec1ebb7dafebaa57b3e7b2917403b7ab9d48a"
+    },
+    {
+      "path": "configs/reviews/forum_replies_20261012.json",
+      "sha256": "5c229fe8796f6eaa845240cabced2c7c612bb689a8b9d280937b863a9ab6993a"
+    }
+  ],
+  "require_review_filters": [
+    {
+      "style": "scientific",
+      "source_domain": "bilim-all.kz",
+      "genre": "educational_article"
+    }
+  ],
+  "collection_targets": {
+    "official": 11425,
+    "scientific": 11425,
+    "publicistic": 11425,
+    "literary": 11425,
+    "colloquial": 11425
+  },
+  "target_basis": "User request 2026-10-12: match the previous publicistic document count; 2000/class remains intermediate."
+}

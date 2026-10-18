@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "purpose": "provisional_document_corpus",
+  "seed": 42,
+  "inputs": [
+    {
+      "path": "data/external/news_reextracted_20261010/candidates.jsonl",
+      "sha256": "323660e91fd09861e28ca74cc16fed229ded97bf2db7776c02344f7d6ae30a71"
+    },
+    {
+      "path": "data/external/journals_20261006/candidates.jsonl",
+      "sha256": "f64ccfa462c549b0a0710c3d27481f860748eea5fc3fcee0c6d1c950861a9336"
+    },
+    {
+      "path": "data/cleaned/prose_extended_attributed_20261006/candidates.jsonl",
+      "sha256": "99496c2c76b2bcf7a2fe7cec74b00b755b52f1b36ca9b25fc1b792d12ef0a566"
+    },
+    {
+      "path": "data/cleaned/forum_reviewed_20261006/candidates.jsonl",
+      "sha256": "86279934bfe5239ebcbe1188516dbac98396e40a70ec54114787da1d78727a01"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_reviewed_20261006/candidates.jsonl",
+      "sha256": "0d57bda8ad1774ddfb3973c9a909621e96eff7b22ab230ec20abb2c001252f53"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_extra_reviewed_20261006/candidates.jsonl",
+      "sha256": "b7ce484ec115f96e6ba4f17f1080063b9e9c4a33fac25938da47adb85bd18d86"
+    },
+    {
+      "path": "data/cleaned/business_reviewed_20261006/candidates.jsonl",
+      "sha256": "4a1ba97f602874cb90d41ea06b0484a70276ed3f2f6b28b26f156f0d13a5d047"
+    },
+    {
+      "path": "data/external/journals_expansion_20261010/candidates.jsonl",
+      "sha256": "a95979db509d48e5d1f23ae60afdf0a3cfd160f18a1b606afa2a2d53c3e363ff",
+      "require_review": false
+    },
+    {
+      "path": "data/external/prose_expansion_20261010/candidates.jsonl",
+      "sha256": "1ecfbba8127d1f3a939046108f5683d99b437afae182f9459ee28950c6ae29c3",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_expansion_20261010/candidates.jsonl",
+      "sha256": "15a2d01b118bb9801fa53adc0e0ca207fabd67c43488dfa4e56246c1b9f0d632",
+      "require_review": true
+    },
+    {
+      "path": "data/cleaned/legal_screened_followup_20261012/candidates.jsonl",
+      "sha256": "11646ef336b3959e063fd90f8439a867896455625b78002f742af210247fb0a6",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-history/candidates.jsonl",
+      "sha256": "be8620c801f6ac6352415187b0561bc74958cf046452ebe9e74cefdde0227e15",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-geography/candidates.jsonl",
+      "sha256": "c3a99fb6da33a4da05aa63d84242f9e942f99bee67090262b40703d7c6d74ede",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-journalism/candidates.jsonl",
+      "sha256": "ebe3b2b755e6e89b41a0e16efae51e3608e09946ea200debe4f40a404513dbc2",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/philart/candidates.jsonl",
+      "sha256": "cce2c5f19a8141912674971d3128318b9ab62b84a137921c30b1ef2ae116e365",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261012/candidates.jsonl",
+      "sha256": "285c9511e136bda005a0a9192ffa2272191ec7ef320d2cf29c8eefd0732c8134",
+      "require_review": false
+    },
+    {
+      "path": "data/external/poetry_scale_20261012/candidates.jsonl",
+      "sha256": "c614ef4bd2eae3bd62268ecf7c00997f7fd6c79bf1a2f1521fb3dd653b2a6cec",
+      "require_review": false
+    },
+    {
+      "path": "data/external/stories_scale_20261010/candidates.jsonl",
+      "sha256": "db67b245b858fa18d7b02fab957b5175657686fc324fd1e1b108f6b9ceb342fb",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_scale_20261012/candidates.jsonl",
+      "sha256": "55905d304ae17f2f9e3fb475495ffa90518aff192e117ee6a2e4752307d8bb28",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_replies_20261012/candidates.jsonl",
+      "sha256": "8b244c942d8d50ed8fc03e9c7a29a4e5a8392abac66464d58169d60bb02a5613",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_followup_20261012/candidates.jsonl",
+      "sha256": "fa6b54c9a61bcff2964b4c46d66fd47d7468176a02a6fe32da3d155c815cf1e3",
+      "require_review": true
+    },
+    {
+      "path": "data/external/journals_followup_20261012/candidates.jsonl",
+      "sha256": "24735d82a4f47bbb9cf8a878d6a4b09b1eff446c47b81771353d7e4dec8fe4fe",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_followup_more_20261012/candidates.jsonl",
+      "sha256": "6060b55895ebc0abca21685c9f04542de23c0296b23e92c61e68246b3ad0722b",
+      "require_review": false
+    },
+    {
+      "path": "data/external/customer_reviews_20261012/candidates.jsonl",
+      "sha256": "d1e5beb0080a0065b9cf8af0c7acda266fa0a5af0fda7ff0ec0af356453e1399",
+      "require_review": true
+    },
+    {
+      "path": "data/cleaned/business_forms_followup_20261012/candidates.jsonl",
+      "sha256": "f8d96d49520f5780807bc7a96a69840c7dde2af43423af912b492e95e0c0ff39",
+      "require_review": true
+    }
+  ],
+  "exclusions": [
+    {
+      "doc_id": "b8a920a9f8ed3ea79604c2ba",
+      "text_sha256": "40f340a1b30d78e348ff2858f2a2a542c9d883be734a1d15d3fef9e3005bc3e7",
+      "reason": "Литературная критика о рассказе, а не сам рассказ; видно из заголовка и начала/конца."
+    },
+    {
+      "doc_id": "0fd042e42e623623bd665de1",
+      "text_sha256": "ea18868a73ff915668f53efb10f785c24399c69ba95743ef7bd09dc44980be09",
+      "reason": "Очерк о писателе и оценка его творчества, а не художественная проза."
+    },
+    {
+      "doc_id": "3ffc0c10b6c3d498347e1485",
+      "text_sha256": "55d272bef1a21cc7e208963159b35dd9690d9da3688f8eb1d19a6aa6a1ab0564",
+      "reason": "Литературоведческое обсуждение эпопеи и отчёт о мероприятии; неоднородная публикация."
+    },
+    {
+      "doc_id": "2c3e2b9e6226977f8ee563df",
+      "text_sha256": "e92ecfd05ad101b403bfe27ca2968f0c9be648d1df62fc51e74fed62e8ee501d",
+      "reason": "Повтор публикации произведения Гүлсараның махаббаты; оставить doc_id 79e0fbd74db7d30f4f38a68a. Совпадение подтверждено просмотром и shingle-аудитом."
+    },
+    {
+      "doc_id": "ab42bdc857be7917fb91e2b4",
+      "text_sha256": "b372546a76bebb15f007729cb022cd8a1bb089d3e31948ca1308f3168de456e6",
+      "reason": "Length/content audit: 57,346 words with a very large numbered school appendix; exclude this unseparated table/list from the prose classifier corpus until re-extraction. Raw document preserved."
+    },
+    {
+      "doc_id": "74497d88103bd7c2449f8486",
+      "text_sha256": "33f23e49c79d167c5968ac9a915ee7f56eca7fcb8cca21cd6b8f24848655a012",
+      "reason": "News-domain record consists of a reproduced legal decree, not journalistic prose; keep out of Publicist. Related official texts remain grouped."
+    },
+    {
+      "doc_id": "fe71554b0819ca444559b97c",
+      "text_sha256": "e455e562652dbbd6d8cf5d13eb7bf9cc5d8c37afb25323de4104bbe1101ee4c9",
+      "reason": "News-domain record is almost entirely a legal decree; exclude from Publicist instead of learning source labels."
+    },
+    {
+      "doc_id": "b50fd5050f7fc92343eb3316",
+      "text_sha256": "d5f978bd4a76601870979cb9f70cc1f2869e6bb3d4d85b5c4b88fd4da8612574",
+      "reason": "News-domain record mainly reproduces a legal decree with a short news footer; not a clean Publicist example."
+    },
+    {
+      "doc_id": "2f6e29baf00808a72d4f82e3",
+      "text_sha256": "28bc6e8902e2e53dccbc207ff4a3d128f7521d52d01e0edf3e88b50f0892adcd",
+      "reason": "Long news-domain record reproduces constitutional legal text; not a clean Publicist example. Corresponding official source retained."
+    }
+  ],
+  "limitations": [
+    "Source/category and assistant-screened labels are provisional, not human gold.",
+    "Old development texts are reused; a new split is not an independent final test.",
+    "New author/work grouping remains incomplete when identities or serial publications are unknown.",
+    "University AYU forms are reserved separately and excluded.",
+    "Future training comparison requires a frozen manifest and a predeclared plan.",
+    "Legacy Bilim educational articles require explicit review: the 24-record diagnostic sample included lesson plans, promotion and personal essays.",
+    "New poetry and legal-act batches do not replace prose/business-genre diversity.",
+    "Some inputs are valid saved checkpoints from bounded interrupted collectors; this does not mean collection exhausted the source.",
+    "Forum questions and replies require explicit assistant screening before entering the provisional corpus.",
+    "KazSAnDRA sentiment scores are metadata, never style labels. Only explicitly reviewed candidates are eligible.",
+    "Original customer-review CSV lacks authors/products/source URLs; do not claim independent author-held-out evaluation.",
+    "Prose decisions distinguish full reading from title/beginning/end screening.",
+    "Soft-hyphen repairs are verified against immutable original HTML, historical extraction and repaired-text SHA256.",
+    "New collections and assistant reviews are development material, not a final expert test."
+  ],
+  "passage_grouping": true,
+  "reviews": [
+    {
+      "path": "configs/reviews/corpus_expansion_20261010.json",
+      "sha256": "6e7263f331c97207e59e529d33f12861ebedd625be0dcc5b0ad6f40127bd9146"
+    },
+    {
+      "path": "configs/reviews/style_expansion_20261010.json",
+      "sha256": "6870c6819f22324e308c1f72ca13ba0500906763d8af336280b52e3692bca08b"
+    },
+    {
+      "path": "configs/reviews/prose_scale_20261012.json",
+      "sha256": "d7064ae8fcbc4b22ced1dea0963deb00d72cbfd55bd0c6eaba619567ce1d2cac"
+    },
+    {
+      "path": "configs/reviews/forum_scale_20261012.json",
+      "sha256": "0df9fb28694fd82c9266bf4f10aec1ebb7dafebaa57b3e7b2917403b7ab9d48a"
+    },
+    {
+      "path": "configs/reviews/forum_replies_20261012.json",
+      "sha256": "5c229fe8796f6eaa845240cabced2c7c612bb689a8b9d280937b863a9ab6993a"
+    },
+    {
+      "path": "configs/reviews/forum_replies_followup_20261012.json",
+      "sha256": "e8479dc776b3f304da04299e22e5d904f51026a17908bf7a7ca779b0d60b0854"
+    },
+    {
+      "path": "configs/reviews/prose_followup_20261012.json",
+      "sha256": "852bfd5cefe7d0d16f44bdedaf651da6a1eb68c7a327f94d93f04bc714298aee"
+    },
+    {
+      "path": "configs/reviews/science_followup_20261012.json",
+      "sha256": "bfca48c13db6d6341fdc5ed020ff441318bca4ae6de6e6d4aab7da74e4aac3a7"
+    },
+    {
+      "path": "configs/reviews/forum_followup_20261012.json",
+      "sha256": "001101343265cd20732fdaa9dd67c2931d9ccba665934f8a8c660b1bdcdc3c81"
+    },
+    {
+      "path": "configs/reviews/customer_reviews_20261012.json",
+      "sha256": "d524260ee8339ef3ec8450c123658abd62d2221ff5efd7af068480bbcd5f0190"
+    },
+    {
+      "path": "configs/reviews/business_forms_followup_20261012.json",
+      "sha256": "828e23f2212005b27ffde1a3d4303e4557b3575765595e291439741d2466ec2a"
+    },
+    {
+      "path": "configs/reviews/journals_followup_20261012.json",
+      "sha256": "a7b8db35d0f0e2fc9ca8a1f03dfd3a14cd4138183177f424b84693ca5124482a"
+    }
+  ],
+  "require_review_filters": [
+    {
+      "style": "scientific",
+      "source_domain": "bilim-all.kz",
+      "genre": "educational_article"
+    }
+  ],
+  "collection_targets": {
+    "official": 11425,
+    "scientific": 11425,
+    "publicistic": 11425,
+    "literary": 11425,
+    "colloquial": 11425
+  },
+  "target_basis": "User request 2026-10-12: match the previous publicistic document count; 2000/class remains intermediate.",
+  "source_repairs": [
+    {
+      "doc_id": "2b4b5ef294900fb664d8eb8f",
+      "text_sha256": "f9b2ea1169d1b429ba65b2c4bc47c3e682de22aa0e5e897d8db2a965519d3f9b",
+      "repaired_text_sha256": "20eff7dd8edb37213ab51cd08e52ea8b6fac38fad91a6f01f3f558048ae02273",
+      "source_sha256": "32f6d920182b4dd74b9f7ae087fab5c7697e98a1b186ee65b537e1453ef3d865",
+      "soft_breaks": 80,
+      "title": "Роза Мұқанова. Бағира – Шер…",
+      "words_before": 3707,
+      "words_after": 3627,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "91d0abeb919695a38ee1432e",
+      "text_sha256": "80a2a748a101770e371d92e9cb971542ebe20e9fdb0188c459de6b6c7fd8bc78",
+      "repaired_text_sha256": "afed68d642d9662753c3f3d2807b1e142821c9634bed28ed3f2de7c543eff72c",
+      "source_sha256": "5cdf14e02b678e8780cdf47830b00869c7bb1c5afec0b9eb6ca339ac9259f673",
+      "soft_breaks": 1,
+      "title": "Қазақ әдебиетіндегі Жошы «жорығы». Әлібек Байбол",
+      "words_before": 2728,
+      "words_after": 2727,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a4ef4d2e5ce373417f389282",
+      "text_sha256": "c23655424cedf9ea04332887f22def4dc8680939e51911c685f33d035da0695e",
+      "repaired_text_sha256": "59516643d5b89d70978b52beb9e420dc1d31225a68bbe4dc6593007583a73407",
+      "source_sha256": "68feb3796c8e9deda6092d63d2e36865cedfe11c581984797ecae2c713fb8364",
+      "soft_breaks": 2,
+      "title": "Өнерде кісіліктен асқан мақсат жоқ",
+      "words_before": 1129,
+      "words_after": 1127,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "3674aac539b5681725f48406",
+      "text_sha256": "126d35cf4d6ca7f13870412423242756dec4c1d1b886f9a265248ba8a25f475e",
+      "repaired_text_sha256": "6fc44038490f9414cc10163c659734c3d20bf08f935a0b3f4963f3cba890a5d6",
+      "source_sha256": "ab8ef6cedfc097e9bbb9aee7e755e4c79046b0d752b8810016552f9dd1793ee5",
+      "soft_breaks": 43,
+      "title": "Әкбар Мәжит.  Ақсақ құлан",
+      "words_before": 2565,
+      "words_after": 2522,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "fb96691aaeaab894fd7f64ac",
+      "text_sha256": "f57bd7f712a333aa4cd5e858fade8f1a6923468f9aadf59d9d6e2e52185c9f88",
+      "repaired_text_sha256": "7bf1f9e31d0159fc2d1e659a528df37fcfa24600eeaebe23cf12a8deb5cfebaa",
+      "source_sha256": "1c229502bc50879d1f0504157e69036ed5956ac15c8b94fddc22693593b260c6",
+      "soft_breaks": 8,
+      "title": "АҚ ТОМПАҚ",
+      "words_before": 1479,
+      "words_after": 1471,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "d74339e5ced57b91c166f5fd",
+      "text_sha256": "3f02afb5a29acbbf1c9e70a981981e59ffa1a20c86ee6e4810c2b8378eab8734",
+      "repaired_text_sha256": "0cb7ee6d79d57b17282f6eab493a8f8b643fcb545874476b86ee9407808488a4",
+      "source_sha256": "f396402623b2126edf8123fd1f2f9c4e77aa4b5b27f4e8283c1ec792299b25b2",
+      "soft_breaks": 1,
+      "title": "Сәбит Жәмбек. Наган жыры",
+      "words_before": 2447,
+      "words_after": 2446,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "63191089cdbe3372fd834d4d",
+      "text_sha256": "db1c89b932cc70097f64aeb4ebcffe31bc70f7047764aa186ce9e0166b37cd6c",
+      "repaired_text_sha256": "34eb8f2106896f874f70540a90881334c198a1284999210efa5e9d8224cc2054",
+      "source_sha256": "7f17b6cc2864f3b059f9085e43b599af8e8fe0aa9e49d5b112545d32fdfccecc",
+      "soft_breaks": 536,
+      "title": "Тынымбай Нұрмағамбетов. Қар астындағы ауыл (әңгіме)",
+      "words_before": 7291,
+      "words_after": 6755,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "1619e164565e010867c0e4a7",
+      "text_sha256": "ca68f2a03e73956728ddb4297d7865761a4e124edcb5ce6724eba85c1cfda5d5",
+      "repaired_text_sha256": "4f53a8486caf999732d861bee5f267132af34d4d7b3f5c9bdf2d43ed79ac48c5",
+      "source_sha256": "49065cfb30a491cf8474fd01ff9ece5d56c40f8dd40099be127bba0029555d38",
+      "soft_breaks": 485,
+      "title": "Қанат Тілеухан. Менің шешелерім",
+      "words_before": 4576,
+      "words_after": 4091,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "0ec838a73e6533dd1a45225f",
+      "text_sha256": "cedf7e9f625b789b05843a0ce0886d018bdfedbb48c6b7a4b4b4f15c7bed8984",
+      "repaired_text_sha256": "bd35321ababf81d7e32431023efa9d5aedde8a520e4f3005b7241d990a50419f",
+      "source_sha256": "a061aeb17a3a68d5c683adec4e74228ebb010fdde3d39ebe03b44fb163292f3b",
+      "soft_breaks": 17,
+      "title": "Сайын Мұратбеков: Менің қарындасым (әңгіме)",
+      "words_before": 2044,
+      "words_after": 2027,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "fc1a3747d2d1b7be9d6573f5",
+      "text_sha256": "07a35a29f1175dbba73690a6502030ee3223d2677c80f20a3bf8193635407034",
+      "repaired_text_sha256": "0aa2212623817e7eb1ddce620b083d72f149e3bc024ce27afd119a014b886421",
+      "source_sha256": "3a6f09e9b520baa87f6105cc7e3b681ed2b7c8b554cccdac1c52e9b66829a0e1",
+      "soft_breaks": 22,
+      "title": "Кәдірбек Сегізбай: Махаббат",
+      "words_before": 2917,
+      "words_after": 2895,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "8dc9e71907f28b1e5bd70ec5",
+      "text_sha256": "76907ae1158d785b766d2e15c9eb7479e3f05b1553e192809ed47ba9a0394ef0",
+      "repaired_text_sha256": "ccd21adb37f0cba13ea9ecf763531c757fe763dfaa01b960e8dcb0b0b807fdeb",
+      "source_sha256": "3552e6b8746e9dc6d6e8b5519cfdbf460ae10b06db70b4e70d9f1df108f6d19d",
+      "soft_breaks": 49,
+      "title": "Дархан ҚЫДЫРӘЛІ. Шаңырақ",
+      "words_before": 866,
+      "words_after": 817,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "e32f460dce042808dbed912e",
+      "text_sha256": "46e330d198c30bcad718a88d480c105ce8a8353c57e7bf0e95bf310dad5239a0",
+      "repaired_text_sha256": "70989a47c7028e6e3f64691db8eb169496ce3768be5ad9134f9e0ab8b1273db1",
+      "source_sha256": "3b2b29dc9bf08db6970cbe2f93b572186d8a294aa9a26520d8a258066ec3c0f0",
+      "soft_breaks": 9,
+      "title": "Кәдірбек Сегізбай. Әке",
+      "words_before": 1260,
+      "words_after": 1251,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "54ec41f911702c120207a10b",
+      "text_sha256": "b717e314fec5ad35f4b57a95b5c124b2baf010ebc7721bd088617342f8428ccb",
+      "repaired_text_sha256": "37623823c7a5b520f2afa43edc3608c2a6ebbd6a21b092abfb29279ac8eb23d4",
+      "source_sha256": "56deb54c015035fb853fd4cd1a8ec99622f73c6f0c08e8fc396a25ee96a5f62c",
+      "soft_breaks": 14,
+      "title": "Шәкен Күмісбайұлы.  Атамның аманаты",
+      "words_before": 1254,
+      "words_after": 1240,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a7bd149c6a3f1abf41d22305",
+      "text_sha256": "9566cc52401ffbbe859d300bfe76a4327a456e30be0c34b272a7aff8142ea2ac",
+      "repaired_text_sha256": "89329084cfc344f4d74a7e4a51d97d0c0e6d75c1217cb7e1eeaa4d9d7a6531b4",
+      "source_sha256": "22d78b6f28937adb7dd28ef5005eb5b392aadf375574b1ece2d99aa648e62526",
+      "soft_breaks": 40,
+      "title": "Нұрлан Қабдайұлы: Сұр әңгіме",
+      "words_before": 1164,
+      "words_after": 1124,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a0099ce98a0b3a103c2a104c",
+      "text_sha256": "e881c1147d0803b93695f4489a866d6985739aff021ca855b14c64a9c7bb75af",
+      "repaired_text_sha256": "39d900f078f42b82feb4017772cb22ba83b8b5392dfe4d17b772dfa4137d5f4e",
+      "source_sha256": "5d8dcac7d67c4740b367fa95b2fbabfcfe3d6517f9812a450840d9cc3346e10e",
+      "soft_breaks": 170,
+      "historical_remove_suffix": "«Күнтай»",
+      "title": "Атам еккен үш ағаш",
+      "words_before": 5814,
+      "words_after": 5644,
+      "kind": "verified_prose_soft_hyphens"
+    }
+  ]
+}

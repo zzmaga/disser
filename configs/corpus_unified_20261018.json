@@ -1,0 +1,1813 @@
+{
+  "schema_version": 1,
+  "purpose": "provisional_document_corpus",
+  "seed": 42,
+  "inputs": [
+    {
+      "path": "data/external/news_reextracted_20261010/candidates.jsonl",
+      "sha256": "323660e91fd09861e28ca74cc16fed229ded97bf2db7776c02344f7d6ae30a71"
+    },
+    {
+      "path": "data/external/journals_20261006/candidates.jsonl",
+      "sha256": "f64ccfa462c549b0a0710c3d27481f860748eea5fc3fcee0c6d1c950861a9336"
+    },
+    {
+      "path": "data/cleaned/prose_extended_attributed_20261006/candidates.jsonl",
+      "sha256": "99496c2c76b2bcf7a2fe7cec74b00b755b52f1b36ca9b25fc1b792d12ef0a566"
+    },
+    {
+      "path": "data/cleaned/forum_reviewed_20261006/candidates.jsonl",
+      "sha256": "86279934bfe5239ebcbe1188516dbac98396e40a70ec54114787da1d78727a01"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_reviewed_20261006/candidates.jsonl",
+      "sha256": "0d57bda8ad1774ddfb3973c9a909621e96eff7b22ab230ec20abb2c001252f53"
+    },
+    {
+      "path": "data/cleaned/forum_everyday_extra_reviewed_20261006/candidates.jsonl",
+      "sha256": "b7ce484ec115f96e6ba4f17f1080063b9e9c4a33fac25938da47adb85bd18d86"
+    },
+    {
+      "path": "data/cleaned/business_reviewed_20261006/candidates.jsonl",
+      "sha256": "4a1ba97f602874cb90d41ea06b0484a70276ed3f2f6b28b26f156f0d13a5d047"
+    },
+    {
+      "path": "data/external/journals_expansion_20261010/candidates.jsonl",
+      "sha256": "a95979db509d48e5d1f23ae60afdf0a3cfd160f18a1b606afa2a2d53c3e363ff",
+      "require_review": false
+    },
+    {
+      "path": "data/external/prose_expansion_20261010/candidates.jsonl",
+      "sha256": "1ecfbba8127d1f3a939046108f5683d99b437afae182f9459ee28950c6ae29c3",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_expansion_20261010/candidates.jsonl",
+      "sha256": "15a2d01b118bb9801fa53adc0e0ca207fabd67c43488dfa4e56246c1b9f0d632",
+      "require_review": true
+    },
+    {
+      "path": "data/cleaned/legal_screened_followup_20261012/candidates.jsonl",
+      "sha256": "11646ef336b3959e063fd90f8439a867896455625b78002f742af210247fb0a6",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-history/candidates.jsonl",
+      "sha256": "be8620c801f6ac6352415187b0561bc74958cf046452ebe9e74cefdde0227e15",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-geography/candidates.jsonl",
+      "sha256": "c3a99fb6da33a4da05aa63d84242f9e942f99bee67090262b40703d7c6d74ede",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-journalism/candidates.jsonl",
+      "sha256": "ebe3b2b755e6e89b41a0e16efae51e3608e09946ea200debe4f40a404513dbc2",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/philart/candidates.jsonl",
+      "sha256": "cce2c5f19a8141912674971d3128318b9ab62b84a137921c30b1ef2ae116e365",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_scale_20261012/candidates.jsonl",
+      "sha256": "285c9511e136bda005a0a9192ffa2272191ec7ef320d2cf29c8eefd0732c8134",
+      "require_review": false
+    },
+    {
+      "path": "data/external/poetry_scale_20261012/candidates.jsonl",
+      "sha256": "c614ef4bd2eae3bd62268ecf7c00997f7fd6c79bf1a2f1521fb3dd653b2a6cec",
+      "require_review": false
+    },
+    {
+      "path": "data/external/stories_scale_20261010/candidates.jsonl",
+      "sha256": "db67b245b858fa18d7b02fab957b5175657686fc324fd1e1b108f6b9ceb342fb",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_scale_20261012/candidates.jsonl",
+      "sha256": "55905d304ae17f2f9e3fb475495ffa90518aff192e117ee6a2e4752307d8bb28",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_replies_20261012/candidates.jsonl",
+      "sha256": "8b244c942d8d50ed8fc03e9c7a29a4e5a8392abac66464d58169d60bb02a5613",
+      "require_review": true
+    },
+    {
+      "path": "data/external/forum_followup_20261012/candidates.jsonl",
+      "sha256": "fa6b54c9a61bcff2964b4c46d66fd47d7468176a02a6fe32da3d155c815cf1e3",
+      "require_review": true
+    },
+    {
+      "path": "data/external/journals_followup_20261012/candidates.jsonl",
+      "sha256": "24735d82a4f47bbb9cf8a878d6a4b09b1eff446c47b81771353d7e4dec8fe4fe",
+      "require_review": false
+    },
+    {
+      "path": "data/external/journals_followup_more_20261012/candidates.jsonl",
+      "sha256": "6060b55895ebc0abca21685c9f04542de23c0296b23e92c61e68246b3ad0722b",
+      "require_review": false
+    },
+    {
+      "path": "data/external/customer_reviews_20261012/candidates.jsonl",
+      "sha256": "d1e5beb0080a0065b9cf8af0c7acda266fa0a5af0fda7ff0ec0af356453e1399",
+      "require_review": true
+    },
+    {
+      "path": "data/cleaned/business_forms_followup_20261012/candidates.jsonl",
+      "sha256": "f8d96d49520f5780807bc7a96a69840c7dde2af43423af912b492e95e0c0ff39",
+      "require_review": true
+    }
+  ],
+  "exclusions": [
+    {
+      "doc_id": "b8a920a9f8ed3ea79604c2ba",
+      "text_sha256": "40f340a1b30d78e348ff2858f2a2a542c9d883be734a1d15d3fef9e3005bc3e7",
+      "reason": "Литературная критика о рассказе, а не сам рассказ; видно из заголовка и начала/конца."
+    },
+    {
+      "doc_id": "0fd042e42e623623bd665de1",
+      "text_sha256": "ea18868a73ff915668f53efb10f785c24399c69ba95743ef7bd09dc44980be09",
+      "reason": "Очерк о писателе и оценка его творчества, а не художественная проза."
+    },
+    {
+      "doc_id": "3ffc0c10b6c3d498347e1485",
+      "text_sha256": "55d272bef1a21cc7e208963159b35dd9690d9da3688f8eb1d19a6aa6a1ab0564",
+      "reason": "Литературоведческое обсуждение эпопеи и отчёт о мероприятии; неоднородная публикация."
+    },
+    {
+      "doc_id": "2c3e2b9e6226977f8ee563df",
+      "text_sha256": "e92ecfd05ad101b403bfe27ca2968f0c9be648d1df62fc51e74fed62e8ee501d",
+      "reason": "Повтор публикации произведения Гүлсараның махаббаты; оставить doc_id 79e0fbd74db7d30f4f38a68a. Совпадение подтверждено просмотром и shingle-аудитом."
+    },
+    {
+      "doc_id": "ab42bdc857be7917fb91e2b4",
+      "text_sha256": "b372546a76bebb15f007729cb022cd8a1bb089d3e31948ca1308f3168de456e6",
+      "reason": "Length/content audit: 57,346 words with a very large numbered school appendix; exclude this unseparated table/list from the prose classifier corpus until re-extraction. Raw document preserved."
+    },
+    {
+      "doc_id": "74497d88103bd7c2449f8486",
+      "text_sha256": "33f23e49c79d167c5968ac9a915ee7f56eca7fcb8cca21cd6b8f24848655a012",
+      "reason": "News-domain record consists of a reproduced legal decree, not journalistic prose; keep out of Publicist. Related official texts remain grouped."
+    },
+    {
+      "doc_id": "fe71554b0819ca444559b97c",
+      "text_sha256": "e455e562652dbbd6d8cf5d13eb7bf9cc5d8c37afb25323de4104bbe1101ee4c9",
+      "reason": "News-domain record is almost entirely a legal decree; exclude from Publicist instead of learning source labels."
+    },
+    {
+      "doc_id": "b50fd5050f7fc92343eb3316",
+      "text_sha256": "d5f978bd4a76601870979cb9f70cc1f2869e6bb3d4d85b5c4b88fd4da8612574",
+      "reason": "News-domain record mainly reproduces a legal decree with a short news footer; not a clean Publicist example."
+    },
+    {
+      "doc_id": "2f6e29baf00808a72d4f82e3",
+      "text_sha256": "28bc6e8902e2e53dccbc207ff4a3d128f7521d52d01e0edf3e88b50f0892adcd",
+      "reason": "Long news-domain record reproduces constitutional legal text; not a clean Publicist example. Corresponding official source retained."
+    },
+    {
+      "doc_id": "9fa6ed07cbc146943670b0c5",
+      "text_sha256": "fbe7bbe48feb9488dbc63eb89b7955356220ba9172ea0e270c1e550033c77608",
+      "reason": "Assistant full-text review 2026-10-18: birthday notice, not scientific research; see corpus_pilot_20261018.json."
+    }
+  ],
+  "limitations": [
+    "Source/category and assistant-screened labels are provisional, not human gold.",
+    "Old development texts are reused; a new split is not an independent final test.",
+    "New author/work grouping remains incomplete when identities or serial publications are unknown.",
+    "University AYU forms are reserved separately and excluded.",
+    "Future training comparison requires a frozen manifest and a predeclared plan.",
+    "Legacy Bilim educational articles require explicit review: the 24-record diagnostic sample included lesson plans, promotion and personal essays.",
+    "New poetry and legal-act batches do not replace prose/business-genre diversity.",
+    "Some inputs are valid saved checkpoints from bounded interrupted collectors; this does not mean collection exhausted the source.",
+    "Forum questions and replies require explicit assistant screening before entering the provisional corpus.",
+    "KazSAnDRA sentiment scores are metadata, never style labels. Only explicitly reviewed candidates are eligible.",
+    "Original customer-review CSV lacks authors/products/source URLs; do not claim independent author-held-out evaluation.",
+    "Prose decisions distinguish full reading from title/beginning/end screening.",
+    "Soft-hyphen repairs are verified against immutable original HTML, historical extraction and repaired-text SHA256.",
+    "New collections and assistant reviews are development material, not a final expert test."
+  ],
+  "passage_grouping": true,
+  "reviews": [
+    {
+      "path": "configs/reviews/corpus_expansion_20261010.json",
+      "sha256": "6e7263f331c97207e59e529d33f12861ebedd625be0dcc5b0ad6f40127bd9146"
+    },
+    {
+      "path": "configs/reviews/style_expansion_20261010.json",
+      "sha256": "6870c6819f22324e308c1f72ca13ba0500906763d8af336280b52e3692bca08b"
+    },
+    {
+      "path": "configs/reviews/prose_scale_20261012.json",
+      "sha256": "d7064ae8fcbc4b22ced1dea0963deb00d72cbfd55bd0c6eaba619567ce1d2cac"
+    },
+    {
+      "path": "configs/reviews/forum_scale_20261012.json",
+      "sha256": "0df9fb28694fd82c9266bf4f10aec1ebb7dafebaa57b3e7b2917403b7ab9d48a"
+    },
+    {
+      "path": "configs/reviews/forum_replies_20261012.json",
+      "sha256": "5c229fe8796f6eaa845240cabced2c7c612bb689a8b9d280937b863a9ab6993a"
+    },
+    {
+      "path": "configs/reviews/forum_replies_followup_20261012.json",
+      "sha256": "e8479dc776b3f304da04299e22e5d904f51026a17908bf7a7ca779b0d60b0854"
+    },
+    {
+      "path": "configs/reviews/prose_followup_20261012.json",
+      "sha256": "852bfd5cefe7d0d16f44bdedaf651da6a1eb68c7a327f94d93f04bc714298aee"
+    },
+    {
+      "path": "configs/reviews/science_followup_20261012.json",
+      "sha256": "bfca48c13db6d6341fdc5ed020ff441318bca4ae6de6e6d4aab7da74e4aac3a7"
+    },
+    {
+      "path": "configs/reviews/forum_followup_20261012.json",
+      "sha256": "001101343265cd20732fdaa9dd67c2931d9ccba665934f8a8c660b1bdcdc3c81"
+    },
+    {
+      "path": "configs/reviews/customer_reviews_20261012.json",
+      "sha256": "d524260ee8339ef3ec8450c123658abd62d2221ff5efd7af068480bbcd5f0190"
+    },
+    {
+      "path": "configs/reviews/business_forms_followup_20261012.json",
+      "sha256": "828e23f2212005b27ffde1a3d4303e4557b3575765595e291439741d2466ec2a"
+    },
+    {
+      "path": "configs/reviews/journals_followup_20261012.json",
+      "sha256": "a7b8db35d0f0e2fc9ca8a1f03dfd3a14cd4138183177f424b84693ca5124482a"
+    }
+  ],
+  "require_review_filters": [
+    {
+      "style": "scientific",
+      "source_domain": "bilim-all.kz",
+      "genre": "educational_article"
+    }
+  ],
+  "collection_targets": {
+    "official": 11425,
+    "scientific": 11425,
+    "publicistic": 11425,
+    "literary": 11425,
+    "colloquial": 11425
+  },
+  "target_basis": "User request 2026-10-12: match the previous publicistic document count; 2000/class remains intermediate.",
+  "source_repairs": [
+    {
+      "doc_id": "2b4b5ef294900fb664d8eb8f",
+      "text_sha256": "f9b2ea1169d1b429ba65b2c4bc47c3e682de22aa0e5e897d8db2a965519d3f9b",
+      "repaired_text_sha256": "20eff7dd8edb37213ab51cd08e52ea8b6fac38fad91a6f01f3f558048ae02273",
+      "source_sha256": "32f6d920182b4dd74b9f7ae087fab5c7697e98a1b186ee65b537e1453ef3d865",
+      "soft_breaks": 80,
+      "title": "Роза Мұқанова. Бағира – Шер…",
+      "words_before": 3707,
+      "words_after": 3627,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "91d0abeb919695a38ee1432e",
+      "text_sha256": "80a2a748a101770e371d92e9cb971542ebe20e9fdb0188c459de6b6c7fd8bc78",
+      "repaired_text_sha256": "afed68d642d9662753c3f3d2807b1e142821c9634bed28ed3f2de7c543eff72c",
+      "source_sha256": "5cdf14e02b678e8780cdf47830b00869c7bb1c5afec0b9eb6ca339ac9259f673",
+      "soft_breaks": 1,
+      "title": "Қазақ әдебиетіндегі Жошы «жорығы». Әлібек Байбол",
+      "words_before": 2728,
+      "words_after": 2727,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a4ef4d2e5ce373417f389282",
+      "text_sha256": "c23655424cedf9ea04332887f22def4dc8680939e51911c685f33d035da0695e",
+      "repaired_text_sha256": "59516643d5b89d70978b52beb9e420dc1d31225a68bbe4dc6593007583a73407",
+      "source_sha256": "68feb3796c8e9deda6092d63d2e36865cedfe11c581984797ecae2c713fb8364",
+      "soft_breaks": 2,
+      "title": "Өнерде кісіліктен асқан мақсат жоқ",
+      "words_before": 1129,
+      "words_after": 1127,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "3674aac539b5681725f48406",
+      "text_sha256": "126d35cf4d6ca7f13870412423242756dec4c1d1b886f9a265248ba8a25f475e",
+      "repaired_text_sha256": "6fc44038490f9414cc10163c659734c3d20bf08f935a0b3f4963f3cba890a5d6",
+      "source_sha256": "ab8ef6cedfc097e9bbb9aee7e755e4c79046b0d752b8810016552f9dd1793ee5",
+      "soft_breaks": 43,
+      "title": "Әкбар Мәжит.  Ақсақ құлан",
+      "words_before": 2565,
+      "words_after": 2522,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "fb96691aaeaab894fd7f64ac",
+      "text_sha256": "f57bd7f712a333aa4cd5e858fade8f1a6923468f9aadf59d9d6e2e52185c9f88",
+      "repaired_text_sha256": "7bf1f9e31d0159fc2d1e659a528df37fcfa24600eeaebe23cf12a8deb5cfebaa",
+      "source_sha256": "1c229502bc50879d1f0504157e69036ed5956ac15c8b94fddc22693593b260c6",
+      "soft_breaks": 8,
+      "title": "АҚ ТОМПАҚ",
+      "words_before": 1479,
+      "words_after": 1471,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "d74339e5ced57b91c166f5fd",
+      "text_sha256": "3f02afb5a29acbbf1c9e70a981981e59ffa1a20c86ee6e4810c2b8378eab8734",
+      "repaired_text_sha256": "0cb7ee6d79d57b17282f6eab493a8f8b643fcb545874476b86ee9407808488a4",
+      "source_sha256": "f396402623b2126edf8123fd1f2f9c4e77aa4b5b27f4e8283c1ec792299b25b2",
+      "soft_breaks": 1,
+      "title": "Сәбит Жәмбек. Наган жыры",
+      "words_before": 2447,
+      "words_after": 2446,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "63191089cdbe3372fd834d4d",
+      "text_sha256": "db1c89b932cc70097f64aeb4ebcffe31bc70f7047764aa186ce9e0166b37cd6c",
+      "repaired_text_sha256": "34eb8f2106896f874f70540a90881334c198a1284999210efa5e9d8224cc2054",
+      "source_sha256": "7f17b6cc2864f3b059f9085e43b599af8e8fe0aa9e49d5b112545d32fdfccecc",
+      "soft_breaks": 536,
+      "title": "Тынымбай Нұрмағамбетов. Қар астындағы ауыл (әңгіме)",
+      "words_before": 7291,
+      "words_after": 6755,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "1619e164565e010867c0e4a7",
+      "text_sha256": "ca68f2a03e73956728ddb4297d7865761a4e124edcb5ce6724eba85c1cfda5d5",
+      "repaired_text_sha256": "4f53a8486caf999732d861bee5f267132af34d4d7b3f5c9bdf2d43ed79ac48c5",
+      "source_sha256": "49065cfb30a491cf8474fd01ff9ece5d56c40f8dd40099be127bba0029555d38",
+      "soft_breaks": 485,
+      "title": "Қанат Тілеухан. Менің шешелерім",
+      "words_before": 4576,
+      "words_after": 4091,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "0ec838a73e6533dd1a45225f",
+      "text_sha256": "cedf7e9f625b789b05843a0ce0886d018bdfedbb48c6b7a4b4b4f15c7bed8984",
+      "repaired_text_sha256": "bd35321ababf81d7e32431023efa9d5aedde8a520e4f3005b7241d990a50419f",
+      "source_sha256": "a061aeb17a3a68d5c683adec4e74228ebb010fdde3d39ebe03b44fb163292f3b",
+      "soft_breaks": 17,
+      "title": "Сайын Мұратбеков: Менің қарындасым (әңгіме)",
+      "words_before": 2044,
+      "words_after": 2027,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "fc1a3747d2d1b7be9d6573f5",
+      "text_sha256": "07a35a29f1175dbba73690a6502030ee3223d2677c80f20a3bf8193635407034",
+      "repaired_text_sha256": "0aa2212623817e7eb1ddce620b083d72f149e3bc024ce27afd119a014b886421",
+      "source_sha256": "3a6f09e9b520baa87f6105cc7e3b681ed2b7c8b554cccdac1c52e9b66829a0e1",
+      "soft_breaks": 22,
+      "title": "Кәдірбек Сегізбай: Махаббат",
+      "words_before": 2917,
+      "words_after": 2895,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "8dc9e71907f28b1e5bd70ec5",
+      "text_sha256": "76907ae1158d785b766d2e15c9eb7479e3f05b1553e192809ed47ba9a0394ef0",
+      "repaired_text_sha256": "ccd21adb37f0cba13ea9ecf763531c757fe763dfaa01b960e8dcb0b0b807fdeb",
+      "source_sha256": "3552e6b8746e9dc6d6e8b5519cfdbf460ae10b06db70b4e70d9f1df108f6d19d",
+      "soft_breaks": 49,
+      "title": "Дархан ҚЫДЫРӘЛІ. Шаңырақ",
+      "words_before": 866,
+      "words_after": 817,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "e32f460dce042808dbed912e",
+      "text_sha256": "46e330d198c30bcad718a88d480c105ce8a8353c57e7bf0e95bf310dad5239a0",
+      "repaired_text_sha256": "70989a47c7028e6e3f64691db8eb169496ce3768be5ad9134f9e0ab8b1273db1",
+      "source_sha256": "3b2b29dc9bf08db6970cbe2f93b572186d8a294aa9a26520d8a258066ec3c0f0",
+      "soft_breaks": 9,
+      "title": "Кәдірбек Сегізбай. Әке",
+      "words_before": 1260,
+      "words_after": 1251,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "54ec41f911702c120207a10b",
+      "text_sha256": "b717e314fec5ad35f4b57a95b5c124b2baf010ebc7721bd088617342f8428ccb",
+      "repaired_text_sha256": "37623823c7a5b520f2afa43edc3608c2a6ebbd6a21b092abfb29279ac8eb23d4",
+      "source_sha256": "56deb54c015035fb853fd4cd1a8ec99622f73c6f0c08e8fc396a25ee96a5f62c",
+      "soft_breaks": 14,
+      "title": "Шәкен Күмісбайұлы.  Атамның аманаты",
+      "words_before": 1254,
+      "words_after": 1240,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a7bd149c6a3f1abf41d22305",
+      "text_sha256": "9566cc52401ffbbe859d300bfe76a4327a456e30be0c34b272a7aff8142ea2ac",
+      "repaired_text_sha256": "89329084cfc344f4d74a7e4a51d97d0c0e6d75c1217cb7e1eeaa4d9d7a6531b4",
+      "source_sha256": "22d78b6f28937adb7dd28ef5005eb5b392aadf375574b1ece2d99aa648e62526",
+      "soft_breaks": 40,
+      "title": "Нұрлан Қабдайұлы: Сұр әңгіме",
+      "words_before": 1164,
+      "words_after": 1124,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "doc_id": "a0099ce98a0b3a103c2a104c",
+      "text_sha256": "e881c1147d0803b93695f4489a866d6985739aff021ca855b14c64a9c7bb75af",
+      "repaired_text_sha256": "39d900f078f42b82feb4017772cb22ba83b8b5392dfe4d17b772dfa4137d5f4e",
+      "source_sha256": "5d8dcac7d67c4740b367fa95b2fbabfcfe3d6517f9812a450840d9cc3346e10e",
+      "soft_breaks": 170,
+      "historical_remove_suffix": "«Күнтай»",
+      "title": "Атам еккен үш ағаш",
+      "words_before": 5814,
+      "words_after": 5644,
+      "kind": "verified_prose_soft_hyphens"
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "0165f465155b3885fa602aab",
+      "text_sha256": "b18b1831521ffea8ba14cfa3b70426c393f503d5f649eb5a155933deb93221c1",
+      "source_snapshot": "data/external/genres_20261002/pages/0165f465155b3885fa602aaba852233821f9c344e5b09fd318af8086282ecdf5.bin",
+      "source_sha256": "44800a378e68f69a75cf9929c8a122fef8ddfcdceb3ebf409831f9bb24842660",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "83b300338d93f1554f493b819666e01434e17016292a279ebd7129e21da8a493",
+      "words_before": 361,
+      "words_after": 376
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "04acdc86b8e9ced53bd5e7b0",
+      "text_sha256": "2431b2f44e98bde3704c12151b3ec30007b0185bb0a56acb1121382338f5755f",
+      "source_snapshot": "data/external/genres_20261002/pages/04acdc86b8e9ced53bd5e7b0fe337fd823f95d10db6ec6924242f85486d39011.bin",
+      "source_sha256": "9e367a612ee99052fc8ab9b81f62300d0b607e93c95d895067b7e441cd4c6d12",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "8da2f56c46cf847492cf0eeb2e341e6080e5c1646e9a9507e3405585412c49f1",
+      "words_before": 311,
+      "words_after": 326
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "066d7e0f6cce33092087ac9d",
+      "text_sha256": "84791d759be691882e683f2ff42921ecd65f1c02be9f876d79f6d7558aa22f67",
+      "source_snapshot": "data/external/genres_20261002/pages/066d7e0f6cce33092087ac9d77f3d11b7ea5eb18b3cd10c7cb0548a841c5e9ea.bin",
+      "source_sha256": "a4a6f053c493fcb359c8b1d5d77e744a14787226f0279d2a8581b8e1150a6d13",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "26bac486cac26a2771d165f9a6e1c8350c5beedaa0194248f8d7d378ef7a4d31",
+      "words_before": 198,
+      "words_after": 213
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "0a9d04299baa02ecf1ff068c",
+      "text_sha256": "2cd0815969a3cd8ca8dd6607200e5268a38ee180fca4d29487244dad09303063",
+      "source_snapshot": "data/external/genres_20261002/pages/0a9d04299baa02ecf1ff068cb7f310578f0f0fc2f5342de403f15cf601dbe4eb.bin",
+      "source_sha256": "02bd6c90a327f18c4a6b2b375e783d94a9f369f1146afcc4646e87ff7abc47a3",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e12ed6a247df5cc1adbe67172269443be41ed90448e583aeeed4a96c2ff77a16",
+      "words_before": 1075,
+      "words_after": 1090
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "0adf4f9c419d85096e48370d",
+      "text_sha256": "b7178665a9e7966b353a5e5ec2ec27a3e919de742c573c9ab80eb9b85a13a379",
+      "source_snapshot": "data/external/genres_20261002/pages/0adf4f9c419d85096e48370da454e96b6c4288a376abd6134d04271aab817903.bin",
+      "source_sha256": "1097b02d5c19fd88f252d3a2ee6f3c7a03844b6d2c16cabd430fbdbf2da578f3",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "053f4c03149018c39d3c0d33930e1ad3a55a8d081c6880f8c38f3dcb4f3fa8fd",
+      "words_before": 646,
+      "words_after": 661
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "0c3dbc2b68d6f6d8b1c9dfec",
+      "text_sha256": "541f048b8bfd4dc117474e6b8badd8c3adcba19e53f2939f097b72a63e4f82db",
+      "source_snapshot": "data/external/genres_20261002/pages/0c3dbc2b68d6f6d8b1c9dfec8c3bcab9c06e92bff120483045917002f85e46e7.bin",
+      "source_sha256": "f3b2e4367732d139c263b2d59df113debab9b713403a7c7dda65e0209d04e4b3",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "80da12f7e584c3a6458a10718437d7e81d23b40b24bea2a0a12e435d609afafc",
+      "words_before": 227,
+      "words_after": 242
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "10986f2f64b23a82792aee19",
+      "text_sha256": "d834bb66bcc7cea444f6d4a6e861f69cce5d014dfad8c9c4b333bceda67f447a",
+      "source_snapshot": "data/external/genres_20261002/pages/10986f2f64b23a82792aee19e65179c312a6fd1308ff4935d8f26f1b034988b9.bin",
+      "source_sha256": "d24914844b43d5d15a39bd7491fd82177c83c138e43d2ba1f1e82ee012ee2b54",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c2cd2c2532cffcdf0ddd1cd91eb428290c0438f871655d9691159f7ea6f38ab8",
+      "words_before": 361,
+      "words_after": 376
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "11bd67c440026fbef0864d37",
+      "text_sha256": "8967017e9475461e2941b0a5aab9a77d527fd5fb7d4e9bd91779f44500636380",
+      "source_snapshot": "data/external/genres_20261002/pages/11bd67c440026fbef0864d372ba84453cedfec25680974ffd55cbe1bad37551e.bin",
+      "source_sha256": "48eb830ef63df0b70a4801e25c9efe9a711fdabed7ec549ec82d3f82722063b3",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "40f2ac896fadacaeacafb6223fd5676bd204dec6dd3552ea3f6e0156811348bb",
+      "words_before": 1555,
+      "words_after": 1570
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "1210314cc9f0a84237c7ace2",
+      "text_sha256": "882c6e5ec7024891292300529f03c81651ae1e35700259c2bf785574597a1088",
+      "source_snapshot": "data/external/genres_20261002/pages/1210314cc9f0a84237c7ace2415a55d47c751e1dcb603388fb9cd43fa69da1d7.bin",
+      "source_sha256": "13b09a70885fdbce10aaf45c57d8744e1b3014f38a2daccb0f48e8cb94e9607f",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "bab7d1bc238b619c2411ff6a778be71255f58dc7b7bfc8260647ed0980d59078",
+      "words_before": 215,
+      "words_after": 230
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "1271e5fda6fec943bb141fbe",
+      "text_sha256": "7072ab7667b29b095d01ddaaeb7cb6a2d1526e8ca18ed62e2de3b3564cc7e06d",
+      "source_snapshot": "data/external/genres_20261002/pages/1271e5fda6fec943bb141fbe1ac72c92840d765c37a1136e9bdde12e0fcfc521.bin",
+      "source_sha256": "299ece37b081291af325d327b6a7118bbeaf8f35a6d0b9a288847b01bc38439d",
+      "inline_word_buttons": 14,
+      "repaired_text_sha256": "52fcdd36de14e0dc5648694f28090981cde253b84a70f55913bee6298f6f51dd",
+      "words_before": 1095,
+      "words_after": 1109
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "16c2a082da316240e9f24b0d",
+      "text_sha256": "9e69b7e9858325c920627aaa0af44cf42f2c17c7ebfedd2fe77e18a05596abae",
+      "source_snapshot": "data/external/genres_20261002/pages/16c2a082da316240e9f24b0dc493355b193b88708ede0d4fe986aaafb1187974.bin",
+      "source_sha256": "432548bcd45a3392369a2d0fe2b355b79e6b4242da358a3d47389310e8119bb8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "b5584d0efb484339f133aa721d623be581f101242ecfdb73439082eebe235ac7",
+      "words_before": 647,
+      "words_after": 662
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "1ad930b97e34e79913b4ecb8",
+      "text_sha256": "c35a7f111a5b09abe606c6362d135d5779f190f7d28d8f76ced0e53e90267aa7",
+      "source_snapshot": "data/external/genres_20261002/pages/1ad930b97e34e79913b4ecb81927d78976a1c2178943b0bb66214a05901110b6.bin",
+      "source_sha256": "5761ecb5fc639ef375055009da4a16d3291d3f572794a9a271776632e1df34d5",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "099054106042524cc5ae92c86c31eb11ddcffe223c52b42a63e04aae93e893a2",
+      "words_before": 3705,
+      "words_after": 3720
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "1c2be79d454738ee33278c8d",
+      "text_sha256": "b59c3588eb18d00ac22db694b08ae10b11870c863d2661b2b5c4f9d806a6ff62",
+      "source_snapshot": "data/external/genres_20261002/pages/1c2be79d454738ee33278c8d0e646b08b1b4533fa5562876f4db4c80cd3d33b6.bin",
+      "source_sha256": "52482c68ca62d37e3d1e569c3247cf5b570161d076f1038bc60cbf56fe9a38eb",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "0821cc0dd79771f22a357c105499aaa00d91489600989f07728d9777e82d876c",
+      "words_before": 286,
+      "words_after": 301
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "1e59d28dcbf3ecefc6fb8399",
+      "text_sha256": "58af9dc61aaeb07d02cd46d3ddf75fcf1a6588e71b751ba4c6b1aaf6de198602",
+      "source_snapshot": "data/external/genres_20261002/pages/1e59d28dcbf3ecefc6fb8399f07b0076a2e6e2504331318f2d9315e24849af5a.bin",
+      "source_sha256": "4c7dceef31486b3ae1db6f17e90b92b45b69e72c41e17a7df873c1c3d006908b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e43924f647fb07e9d144618e3ba0f5df22777e30970073a7b0b4be013e10f29a",
+      "words_before": 707,
+      "words_after": 722
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "216c20b8dee34b3e45a39a55",
+      "text_sha256": "4ba52b50575ece941b76e634641932472296f1dc2154e2067bbae55f79b6143e",
+      "source_snapshot": "data/external/genres_20261002/pages/216c20b8dee34b3e45a39a55b7f299bac4049258f8a23ae47f236ca7cf643154.bin",
+      "source_sha256": "e25be3f2b52668963bda4b39f4961cc682396ab4ad78798b803db9a7d21be0eb",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "a31f62fcb03a1eace78c77f192fe2e6daa370f278012c713357d59a0f3046857",
+      "words_before": 1666,
+      "words_after": 1681
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "217939c2be7014598ff80b1a",
+      "text_sha256": "06a7d97ef927815d2f5a3d65dc540a007955fa8812d95d28190260660e25cf53",
+      "source_snapshot": "data/external/genres_20261002/pages/217939c2be7014598ff80b1acbf175733423db301fc713b2329b5c3f59890fcc.bin",
+      "source_sha256": "88ec5cb353b2d1108b4314adb4dd4a33ab245668993c785553c731747d40a185",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "4dce653963b0cedbfed5f0b33950ef7b54dfda8b9d14dbf72eb7c500102eaea7",
+      "words_before": 1447,
+      "words_after": 1462
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "22d47af6b3a553f34869f62c",
+      "text_sha256": "4763628f56abacfab98cac18573e9c675af1e230e9ad9c61d80bfb5aaa933a52",
+      "source_snapshot": "data/external/genres_20261002/pages/22d47af6b3a553f34869f62c85f8b378736d5aa32bef87dab578bc0c32436180.bin",
+      "source_sha256": "0ccb3041518a869545bb28758bb8a66201d171b790f674025c89c4c40298565a",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "ef33f4333d7df1129b38c00cf3c78464eb32f3adfc21859303de42c6bccf27ef",
+      "words_before": 49,
+      "words_after": 64
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "22fc07b6bc9d2b03779e92bc",
+      "text_sha256": "12e8ebefcf85e2f1dfacc6d8612a04edc9e1b01bca87c29229a7cad8c8019224",
+      "source_snapshot": "data/external/genres_20261002/pages/22fc07b6bc9d2b03779e92bc7fdd5d9ec9d01b50e3f369ee9e48e8fcf58a3a2b.bin",
+      "source_sha256": "523237e3396f55fd14877894b74d8ef3d88de6be2ec429c7b336d08a71703fff",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "5c99ae2e0aa33b65966ed65a7a44cae1f5e3d4f2a2a2b4d703397fb7bdae0f81",
+      "words_before": 643,
+      "words_after": 658
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "23fe61251e8cd976c29a29d0",
+      "text_sha256": "15efb5a2c726b363cc388e745b5ab16b120db8c828e94f722ada4b6c5737fa6a",
+      "source_snapshot": "data/external/genres_20261002/pages/23fe61251e8cd976c29a29d0bb409cd5367790ed323eacef4897a3dcf8ccb0ef.bin",
+      "source_sha256": "da6b3572fff8a1766a7c42bb24950b6fa981e2ce533bcd058f895377cffe4f80",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "d50944f6e3669ded9123c74aaaa56dcfc69ab8a65cd531cb48f3e1bd30ac2cb6",
+      "words_before": 3948,
+      "words_after": 3963
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2741ef55de7eb295568e8a5c",
+      "text_sha256": "5c90d239388cfe0628d5c719f5cad0c8c041e741975d6fe136f04113bfe6cd07",
+      "source_snapshot": "data/external/genres_20261002/pages/2741ef55de7eb295568e8a5c890ab65c25a1f6dfa5c317fab55bfe4f7da20923.bin",
+      "source_sha256": "c4e496336bd0ddf764d4222d45271f4b2440adbfa6ba9628a77455ad291236e6",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "cf3c1043286f31827e38939a6bf37df8d7bbac9a3ccbff10017df2012fbdc4d4",
+      "words_before": 241,
+      "words_after": 256
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2b075e877a93efe7505a651f",
+      "text_sha256": "a5830bb6407f5b45a3bdec3c03f7ef06342580548f4f98f7c39993163d022e0a",
+      "source_snapshot": "data/external/genres_20261002/pages/2b075e877a93efe7505a651fd5d25c56b3e4809b8c4291bccb63c11d925486e2.bin",
+      "source_sha256": "041b556e48d3a6ac5cf88d8ebdd23a56a096de09b1a91555ab09243f943616d2",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "714ac4a7f9ec8e8af4e261e619813b1a78e37d4bd71463a3098b2b9131bec87c",
+      "words_before": 1062,
+      "words_after": 1077
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2b3051e2d9bf44897fa36973",
+      "text_sha256": "9ade3f72288df9e103b4ffb5b6596a03cbe88618c87a0fb7daeea7599da277e4",
+      "source_snapshot": "data/external/genres_20261002/pages/2b3051e2d9bf44897fa3697326831e965d9d17c0b7ecfe7167aec3a5f5a4dea3.bin",
+      "source_sha256": "4db2273e482183afc2fdb712901439cd93e45813653055901dc67c3d51c1959e",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "81da0c05587a627cff6347af22c87b62181d004cd6eb44314d4546b2f3dd378d",
+      "words_before": 160,
+      "words_after": 175
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2b6c95d15195832be2590310",
+      "text_sha256": "c2c3b21d3bd6aa9ec0c24f8af93978ab0c2c37a669f8c61e2e4180d1ad5479ee",
+      "source_snapshot": "data/external/genres_20261002/pages/2b6c95d15195832be2590310359aa7d2aa04edfc68739ef8b1e151d9fb191519.bin",
+      "source_sha256": "d40252fa74e35b6f7761b4e7cab2f2b2bf064a2246025a390454615befdc42bd",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "309cb2f19d11cdf4607b0aabdfe12aca29c79ee3aab65b5a9c1d72b68b7ae5e9",
+      "words_before": 254,
+      "words_after": 269
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2e63d862e3a8969c5654e15f",
+      "text_sha256": "29099150e44af12cbba9dc27907717b3153e74ffc4377513c313adf25021e494",
+      "source_snapshot": "data/external/genres_20261002/pages/2e63d862e3a8969c5654e15ff9a35d7855d60bdf092fb8201be7ef9b5e9ac954.bin",
+      "source_sha256": "2e42f837f33cde8aea00498d0f12df19c6c7645881cbe59360824a4cb14bc2e8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "1a43eaad386a9136273ff8fd587d6dbaac1f69a917e50bb3193eeb34a3b2c4d1",
+      "words_before": 247,
+      "words_after": 262
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "2fef6f3cdd535a613c148cf0",
+      "text_sha256": "525169bd8f73b193a3dc550035e0cacefda5c9a15480f2dc12348e691fbd2428",
+      "source_snapshot": "data/external/genres_20261002/pages/2fef6f3cdd535a613c148cf02d1dc7fa9ba76fff903d1ccadafc53a00879d3f1.bin",
+      "source_sha256": "45a79d5738d7880c6c879dc25df186d58109e4ba31d588027f85a3d3145fe0d2",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "291906c49c357b12de3f6e50ba7a9a5992dfd4d85d6b3142ebe439bb1d77a98a",
+      "words_before": 340,
+      "words_after": 355
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "3500bb6047f75de3d3ff551e",
+      "text_sha256": "61e72dc17c473b3574a04c2c4ec21f3f551f5e6df51b6bbb851f585b0d04639f",
+      "source_snapshot": "data/external/genres_20261002/pages/3500bb6047f75de3d3ff551ea41d26835194dcd5cfe197092f578ae5f979ec32.bin",
+      "source_sha256": "801bf7e02c53868690d257799fb0c6104327e0cdbb93943b3ca2e0dbf0e8b5aa",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "4f67a48b02563b438f907a85bae4c3cb54f063f5a26a19b401a460f2d1042b3a",
+      "words_before": 4316,
+      "words_after": 4331
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "36017a51e571b279e56d686b",
+      "text_sha256": "d90591eb9b5b6e286004c90ad95c85a9433bfe873fd0a900830aebad047dfa2c",
+      "source_snapshot": "data/external/genres_20261002/pages/36017a51e571b279e56d686ba2a44e7ebf78333de495e81ec52bcd2e842ae899.bin",
+      "source_sha256": "9b63e9d4cd934505f560cf5a5caa7b110753be8433c278b7a6acc3ab35c72719",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "8a9bdc8b5cacedd67cf90d9a41b0c44eb63d0df81f12a56379a08c6aca93355b",
+      "words_before": 228,
+      "words_after": 243
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "37c6c74ce45d1d0d44258bb0",
+      "text_sha256": "4ada02e55d7368e995eb44eb54f91394025457a657edbb0f7baa7674f2219ca5",
+      "source_snapshot": "data/external/genres_20261002/pages/37c6c74ce45d1d0d44258bb07a3c2cfb528b14df76c7cc7185b13d034d501013.bin",
+      "source_sha256": "1bb455b0137c938496912f36761bfaaa6669143266a94d691e4d9f2775ae1fae",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "ac152da4e328b448d3d3e1374cea213bd624a8d99ef4f8ca60635bd4bfb9b99b",
+      "words_before": 178,
+      "words_after": 193
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "3b0fedfaf0f39162d2d9b730",
+      "text_sha256": "7cc54239513f3b79f392dc7f8ff50de5b40f762599ee444299b997f0c15d5256",
+      "source_snapshot": "data/external/genres_20261002/pages/3b0fedfaf0f39162d2d9b73048ded6ee8252ea1b7601e144f1f1a1be84466e11.bin",
+      "source_sha256": "7fd47607c6ad4e8177e8496e35681434d7280985045c7beb228e0e75d5873007",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "09c22ea5468432d1c047344c2c4771392cb88ba0a4c103cf28dbc015d91a1d28",
+      "words_before": 248,
+      "words_after": 263
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "3cc1fbd14ee932c8e4eef15a",
+      "text_sha256": "123676c0f59d6bcdf1e1331864a001acd481a992ef7d53e765fe1fd7b77d5925",
+      "source_snapshot": "data/external/genres_20261002/pages/3cc1fbd14ee932c8e4eef15a7c1749e09ae1e9cdfbc1e0553e30779bcd058793.bin",
+      "source_sha256": "f7fd4d80711c24ec062a7a6a44f8b39925f425d46286a36454828b17180f0741",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "3e797c2bdcbc972ef9572dcb0141f19c43c3fc201af14ec7a898db6cfaa619fb",
+      "words_before": 317,
+      "words_after": 332
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "3fcf61cba323d4fed18ec5c5",
+      "text_sha256": "2f4347cde808605e1fa850952a1fbd5eb20d552e877503ffd86e4e886255fbd4",
+      "source_snapshot": "data/external/genres_20261002/pages/3fcf61cba323d4fed18ec5c5c968fdaffe8d8cfbf9243a225d5885a576c1a131.bin",
+      "source_sha256": "9f89a25de4bd1fd9c4f0ad18f1ae543aae33225b4dd0ffa02733aeecfccd3294",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "9c05d8c4ffc96a1a52adca0dd57dce33c0bd59645217d874e8dc75b82fdbaa08",
+      "words_before": 618,
+      "words_after": 633
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "413015e4b59ee2a0bd70a8b2",
+      "text_sha256": "ff379b1222a62d7d1a68fa9d600728bf8e2bdf7e441fdd4e0c908fc78342a12a",
+      "source_snapshot": "data/external/genres_20261002/pages/413015e4b59ee2a0bd70a8b21930243b794b9002c49dd0549f70789648b69d82.bin",
+      "source_sha256": "617e62c5abda0997355c6f04c626eebad8e7b6f016e9f350964ef3965606dbf8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "23d50d9b08c5321c6771121962fefa6cca38fd69d47315b96c71795a6ece0b2f",
+      "words_before": 229,
+      "words_after": 244
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "446b69a9642ed3ba9b0d4f2a",
+      "text_sha256": "1c92056f28fb180c6c155ea49dfe79fecfde11f1c684ec353ceedf7ab8da0533",
+      "source_snapshot": "data/external/genres_20261002/pages/446b69a9642ed3ba9b0d4f2aad0d585042584b52632e7fd9c45f638246c9996a.bin",
+      "source_sha256": "40794aa73a8446514e36e8c2af28b2a31ea8b662d8b7500849604a72d7f4608f",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e1fee9be9a9185e7fe1926e0842ea3e3733918f249b94a7eb86b2aa598d1889b",
+      "words_before": 174,
+      "words_after": 189
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "449bb2770007c09415111ee5",
+      "text_sha256": "5f86fa6ad7795ce06018e6fe2e44c2130f6118817b4c145630115873aa42b0e8",
+      "source_snapshot": "data/external/genres_20261002/pages/449bb2770007c09415111ee5416562b7691e212b8f2ae6088e328f54546d2e4a.bin",
+      "source_sha256": "10e51fcd3fa665de4360b19b463bd6b4fc8c95e873f464db2eeb4a1cf918002c",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "a47338b818d57f84a47e30890fca95d9fe789b8042c5bd22f3479b8ffca20a0f",
+      "words_before": 1226,
+      "words_after": 1241
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "4d9b2c6365a758dd58b8c51e",
+      "text_sha256": "ee763c020608679262b36a24ed6e4c58396c42bebd313c8d892dde5dc3f2b5fc",
+      "source_snapshot": "data/external/genres_20261002/pages/4d9b2c6365a758dd58b8c51e1ef82a41301ddacc48cd0c38decf19c5fb177ae4.bin",
+      "source_sha256": "d6abcbbadd70deb927b69cc2c662ea5c6005dac6d6538fc07a7b7a4d28284235",
+      "inline_word_buttons": 7,
+      "repaired_text_sha256": "1234aaa58667633b71a5043fd4861637aafcc73aa6f23469fcfcc1903ae38a9c",
+      "words_before": 240,
+      "words_after": 247
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "4e2820bed7d1c20bb86b26af",
+      "text_sha256": "7cfaf5e15b97a19c557cd21fae12556ccac9adff2f8f002e50ccd920b2e8b2a9",
+      "source_snapshot": "data/external/genres_20261002/pages/4e2820bed7d1c20bb86b26af8fc9f823bcbeb6b3dd5ff6c6d69204a6c4c29aa2.bin",
+      "source_sha256": "9306a0ebd04d6e46b4890c2c10a5cd524624a9d1b7d86204af7588c0a5fab8a9",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "13b89730b56471bbde785039a66d12d4ef42b7d861d6e66901fe6843dbd6e510",
+      "words_before": 272,
+      "words_after": 287
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "4ed8f1bcbf1a4d96797f7fc4",
+      "text_sha256": "0382f1ad4dc1076f31649675c604d23035a543065278bbe525b82248024808fb",
+      "source_snapshot": "data/external/genres_20261002/pages/4ed8f1bcbf1a4d96797f7fc47463e28eec0979753e8ca3af02304b41462015dc.bin",
+      "source_sha256": "ad7594af551acc6607c53be62004dccb333f139c0dbfbc4a29e33dd780c94993",
+      "inline_word_buttons": 12,
+      "repaired_text_sha256": "b7f7b0d6d7b3165b47bf2a09e73ba8410839d5ee8200bfe9aa70f076bede4fa4",
+      "words_before": 1056,
+      "words_after": 1068
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "516b83c06e88614d0c8446b4",
+      "text_sha256": "a014d42b794a7c6ff6485bd6175244be9814872ef3e19c19034bc8941aa27060",
+      "source_snapshot": "data/external/genres_20261002/pages/516b83c06e88614d0c8446b41985547a09d47d83e5f2e27895e4f9b1340f6463.bin",
+      "source_sha256": "821fb02ddc22f08cee89ad130ff77919f5840a5c8bc421c6676e222c9c01cc43",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "467a90eae2674967e1816cdbd5f1b023fce8afab3f60d942720b94a4f9415c92",
+      "words_before": 455,
+      "words_after": 470
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "52a640e875c3a9ecef0962cb",
+      "text_sha256": "10ed84594b474de9086318b42bb833b1d9f76a751bdfb914f599d22ecfea106b",
+      "source_snapshot": "data/external/genres_20261002/pages/52a640e875c3a9ecef0962cb402c8d4040314a73e4b9cae9593608fbe386e865.bin",
+      "source_sha256": "8e71fc6222c40d71d24e2ec35e1aa7770e66a7dc6bfe8bbc1bf5231645039ad6",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "523e67235c24e72f6de019877c4829301fd708f8cd1f89ffac1240e1221e11c5",
+      "words_before": 1264,
+      "words_after": 1279
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "54a963376feac5eabfb43a80",
+      "text_sha256": "52b01a08490c4544d33e46e0a62ead19080326a0d11215d9669ccd5cbdf7ff7c",
+      "source_snapshot": "data/external/genres_20261002/pages/54a963376feac5eabfb43a8087f6cd8ee6ef80ce6c281046b4e68317699ff032.bin",
+      "source_sha256": "8b75beb5790c3765f78e69734e08be0dd1c4ab07da6ad26356e5afe2279c7300",
+      "inline_word_buttons": 8,
+      "repaired_text_sha256": "7a2483f51e6eb3fec2308450f72ee7e5a089cb9184c5e983e72dacc70e7baebb",
+      "words_before": 1254,
+      "words_after": 1262
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "55f09d351c4e010188886ece",
+      "text_sha256": "72c3da6ba83b1ae887aa7e9216e0652eb8b5f9267876835a493b2a0745106ceb",
+      "source_snapshot": "data/external/genres_20261002/pages/55f09d351c4e010188886ece651094b78e2d84a7c98b705d0a848c434dbb4823.bin",
+      "source_sha256": "21999c6c787bce16853317ab21296e98c55d60f399214c07d623954235b23015",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "71f8e0150587dc7a0c90da91e6d7c57c34eda259b98b880e632b8886543a7902",
+      "words_before": 418,
+      "words_after": 433
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "59f113cc500358dac290cc7b",
+      "text_sha256": "31d071c9b1a9224c9d6508b2feda3b79cd5df5c546387be86abf3d3c673ab592",
+      "source_snapshot": "data/external/genres_20261002/pages/59f113cc500358dac290cc7ba0ab9ad7e92f4d7efda2947ad1adae14528bba65.bin",
+      "source_sha256": "8b3cfd8337380fb0010ada6910165c06022b63d951fe4632d5a1a22a4a9ad2de",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "ec40fb70be3749a68af0dc94007ec361b09f1556007eda0f27d8d05b578991a3",
+      "words_before": 515,
+      "words_after": 530
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "5a1b1edaf9a0de630124bf36",
+      "text_sha256": "2823dcecec7f38dc835ce648a8c11c55f62970671f1a797396660874a0c38ea6",
+      "source_snapshot": "data/external/genres_20261002/pages/5a1b1edaf9a0de630124bf366b3d425a7f93cfd1793c043d75889942ce7ea13f.bin",
+      "source_sha256": "71161f978620cb8432e13d351d9647ac8612a6ac58387e47d26d6525db25cdde",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "dad57c0ede1a573b4ed283d54dda55511f241e6d75db0d3862a7475fef488c1a",
+      "words_before": 76,
+      "words_after": 91
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "5d925e1e3510be0a61b19d87",
+      "text_sha256": "e7ecd300d8c6a4614486c5d68c04f3bc02a008423372d0be93284eaefa3f5f29",
+      "source_snapshot": "data/external/genres_20261002/pages/5d925e1e3510be0a61b19d87d512b6aaa53539c688ea6668db09eed524e90ccd.bin",
+      "source_sha256": "b28be62786f6fb7f883674e285767c525340ddfc12dfd673e81aacf408142c6b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c563c970aeabae82e9bd69af4eaed1d8877a780128eee6ed35567055d06d295d",
+      "words_before": 4419,
+      "words_after": 4434
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "5e1685e69e2ccd64c8d4e114",
+      "text_sha256": "fe98148b1045fe2380627c4074adb801a5c33912835b616166de662f70ddeac6",
+      "source_snapshot": "data/external/genres_20261002/pages/5e1685e69e2ccd64c8d4e1143c71bbf1d87ce1fd177614ea34e73c6938c5972d.bin",
+      "source_sha256": "377c9f6bc96c1bc19ae4ab9c58563755d29663adbb73987830d1531b6e1b3374",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e939ebb7e3766a9a31c1badcd8f52f41ba62f244f5622ab03f93781b251a9def",
+      "words_before": 409,
+      "words_after": 424
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "611c80ba66706102a6a852c7",
+      "text_sha256": "4384a806d0cf691b79a9a5a724dc8009a052463cc9af310d74ccaf73b0e62cf5",
+      "source_snapshot": "data/external/genres_20261002/pages/611c80ba66706102a6a852c7cf22c3645682368e1343042c8ca31f413de244ac.bin",
+      "source_sha256": "c15656c7ed79ceece3f2c190e712485b17f5984545daa13bd12e82a2266e6188",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "500021a1b1c2a89a7c6d54e9f56fff256a2ddc9d5e07f5555831c1071f7d7183",
+      "words_before": 659,
+      "words_after": 674
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "61377c8f266ad2a0bebb8b0b",
+      "text_sha256": "71928dbbf6597e148f67d2b1c388dcd471b0a7951efc93f9b7bf9282aca35ffd",
+      "source_snapshot": "data/external/genres_20261002/pages/61377c8f266ad2a0bebb8b0b0fa9b4eb490b33783ebc78f21614778134014527.bin",
+      "source_sha256": "4c89f02954a531337df7e9abda644e97dafaea4b4d1b628ea7d70a552db01967",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "6287f9d86611e238f672dc7c3a91541b7f83f93ccc72b0a33ee38f9c20f4dc50",
+      "words_before": 167,
+      "words_after": 182
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "677ff56b5932306dcadd7a9b",
+      "text_sha256": "10be5fb8f4f9a33bde1c7067d34c4cf4fef52e53b4d2b4cca9819b2268a7c4f0",
+      "source_snapshot": "data/external/genres_20261002/pages/677ff56b5932306dcadd7a9b7427607ad301db830c20f529a2946a08497293e6.bin",
+      "source_sha256": "588c74e7e9c447f0cc3222c6d8ccaf54237e378c62cafa04b85d86e8788431b8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "10c11faf35b1f459e051cf096069f3bf2cea155e9b084e86eb1be475d4854c1f",
+      "words_before": 2346,
+      "words_after": 2361
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "68004311bc7d29054e1989cd",
+      "text_sha256": "050fab201c4e9af02aab52167321ae28751bdbe89330b76d4abc7352210d33f4",
+      "source_snapshot": "data/external/genres_20261002/pages/68004311bc7d29054e1989cd2b06a1cc7659b5886b9453ebf5f60d79703b1dd7.bin",
+      "source_sha256": "9a96eb0c788ee01544db003b9ed0df5a374ac74b53ac3fadbccf5aae0579392d",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "18d87f4f924094b7b0a413741ea8ce9520c5004b27bddfdab195adc2825ce221",
+      "words_before": 814,
+      "words_after": 829
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "6b4340ba8f764fe0947042c0",
+      "text_sha256": "bd2d6406a32cb0a60091160b9f23082e6d00739a2031afc95156c96b326b7a3c",
+      "source_snapshot": "data/external/genres_20261002/pages/6b4340ba8f764fe0947042c0d3a925134795ce1af6e2643969bce4b54300dfcc.bin",
+      "source_sha256": "7c940ca3f88506b42dce2a89a4c28f0254f0cdb250212e48cb543cf5135692e2",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7ca9f7ff6340c78afec88936aa263bef1cad4ff8b8a19dc753ea884c168d68f9",
+      "words_before": 1177,
+      "words_after": 1192
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "6bdc3129918e029c5afc645f",
+      "text_sha256": "26f3853e63e168fc441d68028d669db153dc5f5e753cd673350648bccbdd19fb",
+      "source_snapshot": "data/external/genres_20261002/pages/6bdc3129918e029c5afc645fcb16a6599eb54e7904cae211cbb1313ad481c0b7.bin",
+      "source_sha256": "8ad967cebc29b545e886da4af9cbbf726750d4d5d4b711e1c369ddd53373894c",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "60db5f8eac826c909a54dd5604df92f6637733c17237660cdf0b042feea783ac",
+      "words_before": 608,
+      "words_after": 623
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "6bf8b2b1a50123c1e252b5f4",
+      "text_sha256": "ac30eb09f58c30989fa148724363b0345c5c4d3ece5bcef41b5adafdbeee6c34",
+      "source_snapshot": "data/external/genres_20261002/pages/6bf8b2b1a50123c1e252b5f42923e61226694f8cb92844c0362a25bedbc5deef.bin",
+      "source_sha256": "88932ad51ce3f02e15dfa07ad1cd966ff2649d20cb13b5cbf9cfbc13e3cc8395",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "38efb44dd8af35d7f0194ed319fde45c3361cecb959d64fb04b29d39241f1d1e",
+      "words_before": 1803,
+      "words_after": 1818
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "6ecb1d6d348ac69824cfc6e3",
+      "text_sha256": "f0ca4ccafe456ae78bd5e8b941340e6782b4270837d9266f95d0c5563188bee8",
+      "source_snapshot": "data/external/genres_20261002/pages/6ecb1d6d348ac69824cfc6e3270757273a8e9cdc4cda03732b6a2211056c4b00.bin",
+      "source_sha256": "e99c9ad26fb4c900b5c7ab4762cee8b159fded75cb4b017f7e244f6881e557fc",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "22bf600e38e14eb529a7be7ff5bce067e8347ce321a5d4558a4a23ddf148cfb8",
+      "words_before": 103,
+      "words_after": 118
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "70f5614a002ad567897b9f50",
+      "text_sha256": "bae28ee1ffa1f72cd6d55080192a822a0e0634fd39b71dfaf40b5d06751ff53c",
+      "source_snapshot": "data/external/genres_20261002/pages/70f5614a002ad567897b9f501e212bc380f58d0b020d391eb940b81e5a1ecb6d.bin",
+      "source_sha256": "53859811349eae6cfd0a5df92a16bd0346e1b14029c6f4f3e61d4462ab3a95a1",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "09636f00e41fea601220198b29492dd5e6908faa4f887d0d062778e763e16dc5",
+      "words_before": 323,
+      "words_after": 338
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "72102cac3a9baeab25ba5569",
+      "text_sha256": "7f85f6a5b8d38fbe21f3d01faa90c738a4f2fa0220c8c9f4844a1923bb71af76",
+      "source_snapshot": "data/external/genres_20261002/pages/72102cac3a9baeab25ba5569516733ec5b5f1872aafefd74bdbef949f45e19fe.bin",
+      "source_sha256": "c76f7a9129facaa85118777bd9e4397d256f77998f4d036b5c6a5ba6b379af35",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "29fdd3a874c6f3de357000899fc193d83465ad7c8e4effdef7a90f69c3574964",
+      "words_before": 3887,
+      "words_after": 3902
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "740649f632f4d2fced4d6f32",
+      "text_sha256": "4dfe7438ca176fe75ae492a19b9b4562598050511eedf6e1e157af084d28c05d",
+      "source_snapshot": "data/external/genres_20261002/pages/740649f632f4d2fced4d6f3273d8124302f1f5af3fedb127b3238480c9a5a245.bin",
+      "source_sha256": "554c1e3b18ba60a709f045e41786f40467e8c3795de2ea0c7c6c36819ab5fe02",
+      "inline_word_buttons": 8,
+      "repaired_text_sha256": "ba3ec4c29481a377467c7e482dbcb31b2eecf8c210a1af0adf9af983d848411e",
+      "words_before": 877,
+      "words_after": 885
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "76a82f5259bde894d4241ae9",
+      "text_sha256": "4950e98c086775bb179790628743a662ffc0059740b4b87e8eba65eb1f10b48d",
+      "source_snapshot": "data/external/genres_20261002/pages/76a82f5259bde894d4241ae93d18914bc52917443b7c6f717cb734419c173723.bin",
+      "source_sha256": "8196aec2e0a84ed7b8b6edda16521bf2552af02e744bfffc4124a19eb15b6aae",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "566d5b369aeb8a450fb1c6980b9ce099cac49c534731beb5362374263b2210ac",
+      "words_before": 94,
+      "words_after": 109
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "7e3e526f4e86f1c8fc0575e9",
+      "text_sha256": "c31a6cbd4848ae82994cba0bcd88ef8c79cf9f49d2ef283d75c0f279bd5bbbd2",
+      "source_snapshot": "data/external/genres_20261002/pages/7e3e526f4e86f1c8fc0575e902948a0d5d17187ea2c4d29adee1970e3eb83949.bin",
+      "source_sha256": "3717ab99b4d3787d074825b1043e3ed187e5ce7e142783264fa2f337f077a305",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7ea37cb2997c38f27f1a319bfbb039f7975ae9699cbb79017e86a9e674efa585",
+      "words_before": 46,
+      "words_after": 61
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "7e66f1f966900dee8014f601",
+      "text_sha256": "e523ffd81c41e2a7a4b8a7dc0c057fabd52a362bcbeffaeddcbb744c77eeef16",
+      "source_snapshot": "data/external/genres_20261002/pages/7e66f1f966900dee8014f601b854b74da71353b53f4a3f6cfa1970b63bad87b3.bin",
+      "source_sha256": "3583fd21ebdd5fd43f2b27952fb4904f6959ca8d0299cd9166982c3bed0bb94e",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "a79b86d2e223d42528df042204e81491d17c9aa2692a88a834da8e7dba662bed",
+      "words_before": 207,
+      "words_after": 222
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "811c40d74d44835597cb438d",
+      "text_sha256": "cf3c60e72cc37c4ed1c540e64bf2d5e7d08a947234d8ea9c8d13ee33e7f1f2b0",
+      "source_snapshot": "data/external/genres_20261002/pages/811c40d74d44835597cb438d89a7907ccde33a5f6dc407bf2b346b9ba8ad1e50.bin",
+      "source_sha256": "86f2bc26424580edba31f3386f052b0e0c322e30dbfc45fba5c9a92b9c1dc3f3",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "3f038b36a7284cbac42079179589b13ed6fa8d594d659932675dd15682af653f",
+      "words_before": 233,
+      "words_after": 248
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "8248c8ba308d6aa133ce0328",
+      "text_sha256": "65e6310b6f119fedb4637635a673c9dd85a2017e99869e830d6a84e90329a6ef",
+      "source_snapshot": "data/external/genres_20261002/pages/8248c8ba308d6aa133ce03288f930916ef86e17890ff267720c24327827d7a98.bin",
+      "source_sha256": "7b2b320b6e5f8ca982e09170cbdda4444b212a1450f4a8ec58c52af0eab06fc4",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "915f4c594788a6843021b2e5bec450b407d252f116a3ba406c651e75c22f6906",
+      "words_before": 124,
+      "words_after": 139
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "844c912fcdcaa1cc44a98cf9",
+      "text_sha256": "477a11ba9294e210495cecf61c9b68544eeb660dce05a818d2b6a23a2a597eee",
+      "source_snapshot": "data/external/genres_20261002/pages/844c912fcdcaa1cc44a98cf9cd1fb3e132494fe048fd9214c5d783be08988a21.bin",
+      "source_sha256": "d4825a2ba5db2361426145f2d287f4f11fad4d27bbe5d89fd2f5f14cd1ac04e8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "1bf32fe73874a30f0880e0144adc205bd13936d3054ab36ed5b05e55748207d5",
+      "words_before": 638,
+      "words_after": 653
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "84f147f1d8e971130375bc79",
+      "text_sha256": "2a08a5dc6bda97fbecb6b6c95ba8f4efb5e4faa3ff9df26a639ca72cc3693d4a",
+      "source_snapshot": "data/external/genres_20261002/pages/84f147f1d8e971130375bc796e20749fdd16dbe19ea7e80d88e1151451245380.bin",
+      "source_sha256": "35ba8ab8b57933eed2a7ccce5774f89d3fa404565216fbd0c8548a9569c4c1af",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "777db18f3e17d553acfdd282b75902ddb3756e30543150be486b14f419039c38",
+      "words_before": 235,
+      "words_after": 250
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "85f7fd9f438cb1c090be4c33",
+      "text_sha256": "78227edc38f2d1f1a9b52122c45ebb19881f709cd66627bf5183a9b5537a141c",
+      "source_snapshot": "data/external/genres_20261002/pages/85f7fd9f438cb1c090be4c33a6dd8f020420c902bbb44f68e1a340547a7fca04.bin",
+      "source_sha256": "4ca1be8b98c86dd69e13f2d59b7419938d730e55a3f51ed8a28faaa65eac3a48",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e0b016ea2b27cc7a9603a26315261dc42320401821fba4816d4e9e05b12ff7ae",
+      "words_before": 246,
+      "words_after": 261
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "8627be16e58dbaa83d0e4578",
+      "text_sha256": "aec910a96548b22cf8f7662764781636af5b4ecec54222b3bbd19cb40634ab44",
+      "source_snapshot": "data/external/genres_20261002/pages/8627be16e58dbaa83d0e457879bd955ee758c33e58449e483bb89b86dfd0c1bd.bin",
+      "source_sha256": "ef579f04e1f03ed02d8acc6c4bd750a60e6b0a46eb0c2ba96db75364dd7828ca",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "78d231693f794cef9f7feeb859849210b2c59623ff15adc45d19535de7243695",
+      "words_before": 333,
+      "words_after": 348
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "88c1efc44757ae8c909e40c4",
+      "text_sha256": "e9b480cdcef3327580eaa8f318ee5d4aad9d6db444a7a45373d6ef005ec16f59",
+      "source_snapshot": "data/external/genres_20261002/pages/88c1efc44757ae8c909e40c4b733f81b3563eb00576174040c4b6a7674f2bb67.bin",
+      "source_sha256": "61b45f35617424085700d4b6b1f3a5b314d6f9d078c4144cc79d153dca3b15b6",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "88cd9d172a81709ec7636451ace38cb1c5244ce47d73c08b5eb21db4a1183bd4",
+      "words_before": 1201,
+      "words_after": 1216
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "8a2d0cf6eb7245275fda2a10",
+      "text_sha256": "9657d82d65989b69284b1a62a8e16b508c73f776ca7cfcd4bfd7660a1d57b267",
+      "source_snapshot": "data/external/genres_20261002/pages/8a2d0cf6eb7245275fda2a10fb1f9de115096df850448be878569ff73a5b1948.bin",
+      "source_sha256": "98f842350f5d451ce607cbb9fcb450a0112bc36a5149da88d4957ca9dab4103c",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "cd384f636aad238110224e65321f2e4b47d928030704e03b8d41bb51c4dd65bf",
+      "words_before": 115,
+      "words_after": 130
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "8c16c1ce415b4870084df595",
+      "text_sha256": "65e8c4a71afc0d4db10f4c2133c5cb87c748ff38f2bab9efacd9f5b32cade0f7",
+      "source_snapshot": "data/external/genres_20261002/pages/8c16c1ce415b4870084df59501fbe047976ad8c87e9da525ddac32e3c23d9783.bin",
+      "source_sha256": "87b0804af78c8d3dccc44c6602cdc9000798a008b5ea278c8b2d30bd74b0324a",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "22870d54180fa5e80e56891b3a2322602d3ad19796d7b1d169c1a13e0eb98724",
+      "words_before": 155,
+      "words_after": 170
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "8e2ae4acc86d1afcf887970b",
+      "text_sha256": "3c798ce52fb20563aca7063f87706b894c6d9fae8f5a2e138321ba2a3fffe46a",
+      "source_snapshot": "data/external/genres_20261002/pages/8e2ae4acc86d1afcf887970b9fd0ab58b172d46fe6447512396518f8aa1b152d.bin",
+      "source_sha256": "339c0c99cddda6b6b2e9f85de4ff3b5b9afeef83b61922d9427989e87244bb1b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "b25f467ce068b58a555c737ba30790c64d5aabe277e449651215fcd3d04c2c86",
+      "words_before": 960,
+      "words_after": 975
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "90c0053da9eb31971267c1ee",
+      "text_sha256": "eb12d4500a5e3a38d6cfdd1c88964f535cb805d979bfb159aa29abf935976712",
+      "source_snapshot": "data/external/genres_20261002/pages/90c0053da9eb31971267c1ee7dc5ec06fb225d703f1aeb1516fcea548bf48837.bin",
+      "source_sha256": "b61b759cd113779c2ce8a148c22c0865ee41e85e6e4965e41b838cce192afb84",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "8d5458ca773de3e445cbcc1f4e683741dc8dc0708f9c19bc2e46ea4503724f90",
+      "words_before": 1201,
+      "words_after": 1216
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "914b70c6a4bee5b03099a9dc",
+      "text_sha256": "aaa76ff335dcbc413f937af3b4caccbc47f7b454fb574f6724ed15be01d53328",
+      "source_snapshot": "data/external/genres_20261002/pages/914b70c6a4bee5b03099a9dcd2fe70c6cda16c4a458582511657a0b065b4b203.bin",
+      "source_sha256": "3614bd1859cc0922312454de507a534d7b17863a4172ac7fdfbb54119cc1dba0",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "66f8f86c13e1d431a65e4314b7bcf33758d1c2d2758f505c679cee57b351ef4c",
+      "words_before": 809,
+      "words_after": 824
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "921319f521fbcefe563a4cc7",
+      "text_sha256": "cdca71a0cd44ed0c550e90b5c0d13fc354bd8bb39744baa492ca516ed493fd82",
+      "source_snapshot": "data/external/genres_20261002/pages/921319f521fbcefe563a4cc75dca57d60f886b10adbf44764a4c45136f07a8b3.bin",
+      "source_sha256": "a7a57d1db39d7defbe8162c102009ef3b27ce14762642214037c3a2a8d387645",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "9465f53b64c7b01223f84ecb66aa3b3c69b8368a024a2dadd5335354560cd03f",
+      "words_before": 537,
+      "words_after": 552
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9600891a6bb826a218fea0fe",
+      "text_sha256": "dc4cd643cd1a4f87a199f15f5909b453f44db80f65c9aaed02d2d26415df7966",
+      "source_snapshot": "data/external/genres_20261002/pages/9600891a6bb826a218fea0fe43e6406bb8e39aaf81cf26541f156de08ff470ce.bin",
+      "source_sha256": "1a07723c3c4bee6e212e6b693c8ad956d6faab407397788f0a9f263be2718528",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "f37c5486b8c69c071f788dd5fd92d7369dfa4aef60e3274259283a68e5879cc8",
+      "words_before": 171,
+      "words_after": 186
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "96cd76923272be562e36d5e5",
+      "text_sha256": "eb93721c7b7a5be1023092eb3bb267b565faa306cfe262d5c892842fbd6da504",
+      "source_snapshot": "data/external/genres_20261002/pages/96cd76923272be562e36d5e51a987758d6de36b055b1eb8109dac286b4adc714.bin",
+      "source_sha256": "ec2105b70330666f70ba03a9718032575499da9c87aabea9748ccf1de1d10d15",
+      "inline_word_buttons": 3,
+      "repaired_text_sha256": "4c1be0719b0003435f73b7830d84666c64537b0941365b6e96510f678b09b2c1",
+      "words_before": 103,
+      "words_after": 106
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "97dcff86c0765b7eb73ac055",
+      "text_sha256": "8e302ea46d2aae00a932b06dcc7c5732daceecb1bd300529a389595b93a05f30",
+      "source_snapshot": "data/external/genres_20261002/pages/97dcff86c0765b7eb73ac055bc4e8144a2b3bef185e703fd91557e58893ec22f.bin",
+      "source_sha256": "0c71bdbf00dc514fbc6ae00489c39a776b50c21011d3fa8321afac4797629b42",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "5ccb90deed8a30104ba0b11e5406391baa994cdca46960f8d5aa0f6545399364",
+      "words_before": 354,
+      "words_after": 369
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "98f67a2b62e37781ddeb88e4",
+      "text_sha256": "75010e5427454f81028c1a7da70f49edaf295deaab3cb467f0e0d50975f55f11",
+      "source_snapshot": "data/external/genres_20261002/pages/98f67a2b62e37781ddeb88e4d92c28b0da8ebe871bd29d0b08d13ff2ee000c67.bin",
+      "source_sha256": "14ed09ec485843dacceb7f58898fe44f79d3183f4d8d476dd2168db4c8c33f94",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "1040ee1205175e7cf11b79c92473d0a8f258650f0a9fdfbdf6a25ce7a60da176",
+      "words_before": 179,
+      "words_after": 194
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9bd9d03ce1dc7b1d57e6242b",
+      "text_sha256": "35d8718a9cce300ea0c1f49761a29794136e6fbcd27ff75bc00967a906a8158a",
+      "source_snapshot": "data/external/genres_20261002/pages/9bd9d03ce1dc7b1d57e6242b4366e671d7c9b12bb85aab6b0da13676bf17821a.bin",
+      "source_sha256": "e3426ce18e9e4a69ab688bf580fcb75786a328cd8709c579e8672ff34b3bfc7d",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "11709ae142cbf8aa6e6b0c5e21a76cd4f281d2963c3e64d59e00cae99b52fd15",
+      "words_before": 392,
+      "words_after": 407
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9cc263b3c82ea28c2425e217",
+      "text_sha256": "83afc32978088898f0a871588f2093b86a16458338ad6dd5c395b2de9d8f3d6b",
+      "source_snapshot": "data/external/genres_20261002/pages/9cc263b3c82ea28c2425e2177a81bdf64e46ef924c6f98ce99f613498e6081c1.bin",
+      "source_sha256": "0bee62dce87b5c6f6faf623f938cb66f78b2961e124d8666cad2a55ed8d322d8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "18cb194b08791ce7904255e4849dce5bacf83f17eded433dade41fe41c92adcd",
+      "words_before": 177,
+      "words_after": 192
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9e3ce569ec6074ed46794760",
+      "text_sha256": "138ecb759dfc627f4e7dbb567706c316d185d1fce2d838e56e995cb1ad72b6e6",
+      "source_snapshot": "data/external/genres_20261002/pages/9e3ce569ec6074ed46794760b8bd60ee360e182e67517eeb0f70f938ae283c74.bin",
+      "source_sha256": "5e899a5fe79f9054630a56971358a031bcd84de2596c57340aa509fbb8869632",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "93a0db65c0479a2df7afe96eff93816e294ae6f62d003ba4a355e1c0a12e3254",
+      "words_before": 370,
+      "words_after": 385
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9f2b71956ca2a41f2f25abc5",
+      "text_sha256": "69d01268f6df476c3f4bb84e9f1387e6095eac932efbb691879587bcafe56201",
+      "source_snapshot": "data/external/genres_20261002/pages/9f2b71956ca2a41f2f25abc5930a74b364d17f3697bdf3e153de57abdaaf517c.bin",
+      "source_sha256": "45112a665b4167742f9e3ccb139c943036ddcf5caecd798a5262580f3f305dd5",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c54cb3284f5ac4669b7fd43f8c39c74a688af153af1f3e012691c695caf9262b",
+      "words_before": 809,
+      "words_after": 824
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "9f7f8a8a86e54cde63910cf9",
+      "text_sha256": "b72915c77f12f75c61f23a2c86866c4054addc29601d3fe96f48d94ae2955fde",
+      "source_snapshot": "data/external/genres_20261002/pages/9f7f8a8a86e54cde63910cf905ed7519af8fe5d6c705a98dd99f4c34b7e93c6e.bin",
+      "source_sha256": "78fbaa26df5c8209c19d451299b9b1bf04b4c2aa4d0260e72de0a77caa667141",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "0b6421d7677dcd1524ed2a5a520dfc478d171bcdd64d0eb0d7b8efa1deb70f4e",
+      "words_before": 102,
+      "words_after": 117
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "a45151de6db9dbbfabc79ea4",
+      "text_sha256": "1effdade3b874372bdeba29355e78ab76182cccc2f8c6384ca166c7bfc970a4e",
+      "source_snapshot": "data/external/genres_20261002/pages/a45151de6db9dbbfabc79ea46690fca006e403f319186d6ab36abe180d2499bc.bin",
+      "source_sha256": "6fe247a640f8f7bfa2cc732f48b4800c2b3cdbc0648b5b9e556940090c928f7e",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "9112412bfcaf10a79615af9a8d6efb176d1b9f7d4aaa4cfce6f61b683640b141",
+      "words_before": 407,
+      "words_after": 422
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "a4bde30a5077827be184e12e",
+      "text_sha256": "bd7791a9746a423c1f4e0e0a8047b152fa7339798574bd5d7d87f3d961068068",
+      "source_snapshot": "data/external/genres_20261002/pages/a4bde30a5077827be184e12eda2e818b20cc49a29cc0b335a6f074fd40ec64a1.bin",
+      "source_sha256": "e7e17063fc769a97aeefe11584f7a993b204fe3526ddb543dc99c08ae37e7258",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "289dc17f411cf361f4ffee8a8c0b9e43b47d9776b27de86e95e0102febed5264",
+      "words_before": 5849,
+      "words_after": 5864
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "a9cd4a9a9179edaea968013c",
+      "text_sha256": "cac6bcadc9bf1823622158266b5e2d6e7c0c07d756a7dc63075f14ad473be59b",
+      "source_snapshot": "data/external/genres_20261002/pages/a9cd4a9a9179edaea968013cc1c3179e7e6efcd11fec05ae0f98580bb32b9fec.bin",
+      "source_sha256": "a1986a28085e081a0e3ba87e5823bfccd699697217e8b66b943dda8f4d40cbf2",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "b14cb147919c1283dddae4f1ae1da43e27274b11b093a5fd5c7586019db082db",
+      "words_before": 1096,
+      "words_after": 1111
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "adc63acc9e8b1ff0de3e620b",
+      "text_sha256": "265795beac38f3be1905765277c6df85551b49bf143d03e449172d4d206ae2fd",
+      "source_snapshot": "data/external/genres_20261002/pages/adc63acc9e8b1ff0de3e620b4829e1c6eb1f45be8a030e4c71ad4476e596d14d.bin",
+      "source_sha256": "1e5a88c3eae06b495a368cad4ba38306340d559a21a17f4d860faa4abc10876b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "96fdb360eafa067abaf5fe6939208ba860019f35a282f5a0c3888d293f836d81",
+      "words_before": 1244,
+      "words_after": 1259
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "aebeb3f3e9837af5cbf4adc4",
+      "text_sha256": "58b60e92531454621b92c288031fddec27a9104378759818d7074e695c94a384",
+      "source_snapshot": "data/external/genres_20261002/pages/aebeb3f3e9837af5cbf4adc41ceefc5af863bdbcb40d51591b360c2441eed6e8.bin",
+      "source_sha256": "4420228b35a0ffb5e64b2199f88bf7836094e45a6d51cba59164d48e88e673e7",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c415c47f07d4d7ebed7b823bc773f81edf92269d1b1379c7c4475f9f5d679263",
+      "words_before": 648,
+      "words_after": 663
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "aeffc2e011fe60637b258c10",
+      "text_sha256": "02e19c375bea8bb8a25aafd86d5771a0550d1967be45141512f0d81e010e8594",
+      "source_snapshot": "data/external/genres_20261002/pages/aeffc2e011fe60637b258c10274abea4fafa166eb0eba88439f499aefbae4b82.bin",
+      "source_sha256": "833aadf2b7edf700a049d3e6787e61e9f8d015301fe57b324c4789426db3afe0",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c2a6eb456cfec49ef7c7309bba3646f454160a43fa7d7d68120e7a2d73d60177",
+      "words_before": 409,
+      "words_after": 424
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b0560e02e6e50deec6428210",
+      "text_sha256": "30dc5c99d3ec6a3016321aa6ab158338cea3916214c9146656158a054a465d33",
+      "source_snapshot": "data/external/genres_20261002/pages/b0560e02e6e50deec642821040940d1c0db2c447a6ce647b1fc8918925cd59d7.bin",
+      "source_sha256": "a9efbc757ec15144807ae400d09b29273d068d33b801445ebd50306e0264fade",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e90e79d91b0cf38ef495678cf1994ac0697bb9bee5605068b6451423ee1cba67",
+      "words_before": 406,
+      "words_after": 421
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b0674e0ce3e22641ddca58a8",
+      "text_sha256": "fab3b6638aa2841e2c62984f8981835a3a0086b80dfd5d8d0098dd736dec02d5",
+      "source_snapshot": "data/external/genres_20261002/pages/b0674e0ce3e22641ddca58a87a4981ee0b282dd1e36d0596c8f592d2d9deec4f.bin",
+      "source_sha256": "7a8060317ac07ad888a9e3659f3d71dfe051aae8fc0e6c51b0e43ebb1863970b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "47f48d3cf708dd49ba6101ac5192188f3a49a57c3cd0c30f07d21c4fa79e6cd4",
+      "words_before": 371,
+      "words_after": 386
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b0fc714c426fd42301159f01",
+      "text_sha256": "5a0e5af909ce39bf90c07baf4257d91c44ebb20d93036e3cc45aa5c0a117155f",
+      "source_snapshot": "data/external/genres_20261002/pages/b0fc714c426fd42301159f01331afacbe5202bd020296e6e52008593c12b907b.bin",
+      "source_sha256": "5ee28b91813157ba7dea46c3e2376ab917a961bd533250b1ff0245c86beb6717",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "152806bda03c946f3293f0c0dc467bd503e1cffaaffc1b67285e455f62366635",
+      "words_before": 67,
+      "words_after": 82
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b2355767c99a91752fe15186",
+      "text_sha256": "07fdfb130ecaad967ae0cb36315cb6e92c95cf1c0ca4ab6cc211dedff3694ee9",
+      "source_snapshot": "data/external/genres_20261002/pages/b2355767c99a91752fe151865e1c872d69fa1cbcbbaab6f9fceef7187c9120d0.bin",
+      "source_sha256": "3d9b8205ac64edbc46638180e4e92068ad91ca87acd06afb1fe59d0fc16b37bf",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7311b14ec27c3c22363aceb473adbe2badfbd64c738a4f951c0c182cc7c1cac2",
+      "words_before": 477,
+      "words_after": 492
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b32e5554ead8e9acb0ba031f",
+      "text_sha256": "f546842cc07b1cdc5e2ca759cd8cc807ebe1c361d3595c2c04892810f9e6e48e",
+      "source_snapshot": "data/external/genres_20261002/pages/b32e5554ead8e9acb0ba031fda80daf75aca001381dd2e90adb4fbefdcd91f04.bin",
+      "source_sha256": "c384cffcf2e01c4384e6116f71a872a5bd0eb70f6016b01e5b5406af60969d4f",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "05e90a2750a8aa0500d0e5cf075e4c50067f2190b04f219eeba715424b17692a",
+      "words_before": 788,
+      "words_after": 803
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b72a285c1263fb24e86822fd",
+      "text_sha256": "6833eb9256789f551697478980b138e21a3a6cf1ce5e02fee94279c863aba9a8",
+      "source_snapshot": "data/external/genres_20261002/pages/b72a285c1263fb24e86822fd01af7db3802b3bc86ce788b7dbcb399264343a44.bin",
+      "source_sha256": "7bcde19e733c5df4ebdd879e6bb1e20cfc172071c0cab87ed8284ef557f21375",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "cabde988a377a5349d85cfb217005315a388eda16e0c4061eac3df947909e9d4",
+      "words_before": 270,
+      "words_after": 285
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "b997bbfc0c5ddd6c5d324b42",
+      "text_sha256": "5adcc69d3ee8cd4abf18235f8c5872986cd293e23ef697906d0198d1a5682de7",
+      "source_snapshot": "data/external/genres_20261002/pages/b997bbfc0c5ddd6c5d324b42c930e235c899df1a40ca831afc10cf04e9595661.bin",
+      "source_sha256": "715b1e2237bdd8c69368c9646a48448ce3a63d5d75f829556cb196a66fca5dde",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "d1aaa6fe6ffe02c6d526f10f2daca2bfda6f1cebf3224d9bc0608fe86abc7d0e",
+      "words_before": 2093,
+      "words_after": 2108
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "bdd44608d332ecd7af64144a",
+      "text_sha256": "654071deef8f5b9a8c429ab98b171cdc407fe8d206aede83e2197807d37e4df0",
+      "source_snapshot": "data/external/genres_20261002/pages/bdd44608d332ecd7af64144a54a069c907a6e69756f01f97022d932d9c7d5f7c.bin",
+      "source_sha256": "3e7f89d93faf55523a11ab1e92bdbf218755681e1bb1e19e58e1db2702c01c29",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "51b6a672a5f7f0aea5755174f584c3bb41ae0947560adf0c34bce5fba95130c7",
+      "words_before": 1229,
+      "words_after": 1244
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "be010129a0cd503f88e9733c",
+      "text_sha256": "f8086d2bc5a365ec24c754860e44f7f3c88d529d1ccef5e39b883fc1f87b4860",
+      "source_snapshot": "data/external/genres_20261002/pages/be010129a0cd503f88e9733c8ed769e94c4ebb05ecabcbef8c5660af178559b6.bin",
+      "source_sha256": "1848502ce6c0a6faca9e3aa3429b2a6e5d499e010bf0f683af22875ef9821c95",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "c457278a7494f60c3979879a8a2e9a2d82b496ed1707d216f07242d22c0091d2",
+      "words_before": 1113,
+      "words_after": 1128
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "c33512215efb4efe59927f10",
+      "text_sha256": "4774b38fb58b1b59a4722551577c2797c0db20c16b535b7236c6464eabbaf92b",
+      "source_snapshot": "data/external/genres_20261002/pages/c33512215efb4efe59927f1062528c0b711734a724e2e26e0cb4b787bbdd8cac.bin",
+      "source_sha256": "2387daf01858ec7af8906e76645c4bcb4cf0984f5e95f55010814ca2e8b00e5b",
+      "inline_word_buttons": 7,
+      "repaired_text_sha256": "a05b5bcd48e20648f45a97979bf99e14e526a9c2574ef506dfbd0be677a0a844",
+      "words_before": 813,
+      "words_after": 820
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "cc1962db0e9bfe2318a089c5",
+      "text_sha256": "964b223ccdb55ce8e2b312d40f3601b4b0ae92cc83029876d449858012fdd51b",
+      "source_snapshot": "data/external/genres_20261002/pages/cc1962db0e9bfe2318a089c53dda32b875b4f2d9d554fb999051d21776c566d5.bin",
+      "source_sha256": "773b5b1723fdfd356ec9a864b8dc9e8ad2d23eef9bfc3ab3df3901eef64089b5",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "5bd060e026255989bda5894a503463180976301546bb692751569f186fb8c5f8",
+      "words_before": 122,
+      "words_after": 137
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "cd0aa9a529ff8437fe6aa387",
+      "text_sha256": "eaa360b082d9b8a0f803ddc76f7e5851fc646ddfb36d9a5c681c002e7f4445b7",
+      "source_snapshot": "data/external/genres_20261002/pages/cd0aa9a529ff8437fe6aa3876852658e7c7d138e31c3fa9dc1413d0f62cdd663.bin",
+      "source_sha256": "0371fa47b59c9bdb03ee527a3b0f2a399e1e8220adbe77b2ea2ff8bca145ebcb",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7213781372e8b8286cf76de2e88f89c68e5a7113431c6eaf9b0e96d1b86fac6b",
+      "words_before": 140,
+      "words_after": 155
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "ce0449aeddf831bc21c50e0c",
+      "text_sha256": "ea78983897ec8c471577a93a556751509b31f97181fa7c9a40c9c45686ca2680",
+      "source_snapshot": "data/external/genres_20261002/pages/ce0449aeddf831bc21c50e0c72a41644941146532e5614fb3d6df319a7e5eebf.bin",
+      "source_sha256": "a91de3ebf1c70f8e2f7433042e17732f16d211a071840359e0d5620ff8747384",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "ee1fc5220488bbfa5e045e709bda8de8916a31aa8bd3aa92143024b66a35be65",
+      "words_before": 507,
+      "words_after": 522
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d26ca8a6260426fc588238a1",
+      "text_sha256": "42598e5b23a6d579c8452f8e330965371b7db79679bda73726cea56a55d531a1",
+      "source_snapshot": "data/external/genres_20261002/pages/d26ca8a6260426fc588238a12b2320a869c548a2b178f951d193b7c8d71e7ab4.bin",
+      "source_sha256": "782d38c45eea36deabc7ef462061b0fb4a37fa8e46876eb3b1dfb34a526d6681",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7fd9daef9625c76779558e50b986e729a8a565c04d293a0eacaf5bb2d8df7d3e",
+      "words_before": 246,
+      "words_after": 261
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d38c9c4ed79e366117354b21",
+      "text_sha256": "3afbefd2468050bf8adabe7b2b168359239af2e77c72e2767e13e107a809be3a",
+      "source_snapshot": "data/external/genres_20261002/pages/d38c9c4ed79e366117354b2161e27c8d267ae9ab3d1a74590f0c5da4b6f19c4e.bin",
+      "source_sha256": "8ea2ae5c4231c3a8517f5b598b3057922ca1174669c88b0de0471832de176229",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "fd91e81331e01c3714def73b79ad16ca293e93dff8214a18297203f7b3150174",
+      "words_before": 785,
+      "words_after": 800
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d540081be59401bff121c8cd",
+      "text_sha256": "1a897b889e053d4e907900fefb5b490b9e354397253741c0852df67066020609",
+      "source_snapshot": "data/external/genres_20261002/pages/d540081be59401bff121c8cde272403dc6e8c6362b2eb520e8df684e449a0d23.bin",
+      "source_sha256": "85d5123ef55f73ec81aa807bee7388b0db8a0f0c80fa2fa61cb6134a1f96ef3f",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "7f7f3e98cb757eac66a020ba09077c7ae159f7383787521a65071ca5df30bb89",
+      "words_before": 421,
+      "words_after": 436
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d5e7cebbeea992744993ffd0",
+      "text_sha256": "82532c7b1b7d69966f346cac34f6f419b53c67593b59819ce2886fb3eb399222",
+      "source_snapshot": "data/external/genres_20261002/pages/d5e7cebbeea992744993ffd035a25207c118413d2652fe9c8fd2195845e39b11.bin",
+      "source_sha256": "c3632d3290645b2810aab9b91423a85b503f1d0f45b6461abfa4b947400b7500",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "17104295646da9c11b03f23bf6ea4c656e101bcc336f35944a88207ba41cbc35",
+      "words_before": 2016,
+      "words_after": 2031
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d6e0bf99be19f7cd37f3489c",
+      "text_sha256": "30cd83af38f3b68f37b18669a80a14113b5a99f1b0121db4435709fa7fc80abd",
+      "source_snapshot": "data/external/genres_20261002/pages/d6e0bf99be19f7cd37f3489cb1e01aeb05ef30cd9f930cd413557cabe9abac20.bin",
+      "source_sha256": "f310a713d816d57918b2dd9d3e7ac68b0eb1e48130e0e12c196e269236898f36",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "94c0c07754d31b217488fb9051a9895f04ba8e43680134d500ce804dd7008c91",
+      "words_before": 460,
+      "words_after": 475
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d98e0ede20420976f81e93cc",
+      "text_sha256": "63a1481d0576a6e39c9e3f551a994042f8c19bce5b25892ce29f704f01d0ae59",
+      "source_snapshot": "data/external/genres_20261002/pages/d98e0ede20420976f81e93cc7785a88aa8cf1c378a78a3d2d738a42e0b8bb252.bin",
+      "source_sha256": "de20ed2547ed3255a4c46b0e517af12a6165f354589af7aa3d6f80cf39a02c8f",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "d245bda24ede43f1227f3247ff4cc01c5b03b623ef611895ad4aef9ca4024f65",
+      "words_before": 226,
+      "words_after": 241
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "d9cacd8d08fefa35488e45c6",
+      "text_sha256": "f7c7bc9f8e2d1368dd6d591810247b1a87b21290280dbf325400b76e14ee815c",
+      "source_snapshot": "data/external/genres_20261002/pages/d9cacd8d08fefa35488e45c68904a8f682a63521ba22db9b67b14eaf015d10c2.bin",
+      "source_sha256": "ea15081f85bccd31c9aacf94949a01d67c820f65944ae3d2688334a325d565a2",
+      "inline_word_buttons": 12,
+      "repaired_text_sha256": "474212b9424676bf1d1808d95f619085e48aa5120a277daa390b0e196df6a892",
+      "words_before": 444,
+      "words_after": 456
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "da7eed0508299118e69977b7",
+      "text_sha256": "35316f90e593c856823de0cb9f312b750ca31b0dc5005e90a2a812b3a5bff0b5",
+      "source_snapshot": "data/external/genres_20261002/pages/da7eed0508299118e69977b70a92ff7eb17d8af901bffe219953762af1e6031f.bin",
+      "source_sha256": "bed2a9df09e376d27468091aaa72f4ff8531abd1b2623a467b9871c9057f9f6f",
+      "inline_word_buttons": 8,
+      "repaired_text_sha256": "ff5e77ecbc05af2980975dd63ad75140d13ac86cdf68bfa3085967073a5e9361",
+      "words_before": 1017,
+      "words_after": 1025
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "db345f17d6ad299dd1af6d53",
+      "text_sha256": "f2211ca69f2b340447819e24463bd036eda51ac0838fb5a70e9d98a646738158",
+      "source_snapshot": "data/external/genres_20261002/pages/db345f17d6ad299dd1af6d535ac3372db31fc1526f49a3c83b82effc61789cfe.bin",
+      "source_sha256": "1a213b9b992e02df495d6e6ef918c151c7c23bad4bbd92a7516ca52b8fcd5b3e",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "0afeff16a784b91baeb9576d5f73b369961cee6bcb74e860fcbeac348c401429",
+      "words_before": 438,
+      "words_after": 453
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "dbb36876c42cb85fe23e49f3",
+      "text_sha256": "4f3057518c88232c84725716cbea83859939f238baebeda7cbf3f6e7d0f608d9",
+      "source_snapshot": "data/external/genres_20261002/pages/dbb36876c42cb85fe23e49f3f23678b355f74b824f64707b8ddab0dfcba7d76b.bin",
+      "source_sha256": "e682761604bbf325d38360153dac235313632d5549c0c3f8ade0de310ab29d95",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "d4858be3caaf5d462479216a8ca947026755caf173ada51b50145ddbacb32c42",
+      "words_before": 516,
+      "words_after": 531
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "ddc28e45fa0bf7ed829f5697",
+      "text_sha256": "67190c85ab7e7d62e90fc5bc71bf40e6c262ca62a50ff5b1211f73d25eed3a86",
+      "source_snapshot": "data/external/genres_20261002/pages/ddc28e45fa0bf7ed829f56975ef3b35ae8bb7c5f3f4ce3572d6d5dc39551ef1b.bin",
+      "source_sha256": "de6c473a7bd69668f31a1a922aa222f475a5fd765d02e6f72530768aacaad4c1",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "151ae7c7f0b54be54bd3f8a5b1d535349718370b3a4af1402b8802566db342ca",
+      "words_before": 252,
+      "words_after": 267
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "e288c38d001620ee7826df95",
+      "text_sha256": "2935906cd128d558a72e2db6cbbef6516de2162272e582d7b3a9b5030de23d78",
+      "source_snapshot": "data/external/genres_20261002/pages/e288c38d001620ee7826df95751306907b3c2aa23588e7a7b6f533d26a474c9c.bin",
+      "source_sha256": "9a5fa6aaaa5f94ae0699ca9fe56ee11ba52ff89ea399ef76ed5e130ee144f4be",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "36b0c0dc34ce19a442f9df80ed72512a552f5a29d8ca078bf17c827fb0ec6e90",
+      "words_before": 124,
+      "words_after": 139
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "e42a56bcb93cde8864fda838",
+      "text_sha256": "4751200f39a79b02f0cbcc3b6f4773a57d296fd5d5b266be1f27397a6b6bdfd4",
+      "source_snapshot": "data/external/genres_20261002/pages/e42a56bcb93cde8864fda8384015eb76252a9b819d7dc176cb418e9311b44e7d.bin",
+      "source_sha256": "963422e763592d3da22f33beb1e605f1410ff851af7e4314f43cbc85e6ff7d71",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "e72ee2d352af52b40d4825f9e92c59d5d04bc87afd10dc5bf16d82682fe5695f",
+      "words_before": 722,
+      "words_after": 737
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "e6c709b4870cd56ee7d4e8a7",
+      "text_sha256": "9a0b8cb3eff3730080d762cf2216acb015f95416eb3717d8d187f33d2590c350",
+      "source_snapshot": "data/external/genres_20261002/pages/e6c709b4870cd56ee7d4e8a7086c092e99e51d4f5acb44d088bf665e5340638f.bin",
+      "source_sha256": "2deb11bac4674e4e2a9e52d28363a3bcce92aedd029b34c755ab654ad18af897",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "35a36dfcb5984cb9cb73e5dcc2e1927183a9ec0880a108d5cdca9d6431a2d567",
+      "words_before": 695,
+      "words_after": 710
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "e87705641c4ed0114701ab74",
+      "text_sha256": "ceee64721415b040eed80b7a9c4386a3cefc9cb9b5d859b4d685bd30709fbda1",
+      "source_snapshot": "data/external/genres_20261002/pages/e87705641c4ed0114701ab74d9e9ef903068ed5e1ae4d46803f6f62dfbc67b59.bin",
+      "source_sha256": "a070e0985ca648aead7b79ab74f9ad087b644e01075351cd3570bf88cbca9225",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "4ad7d9897f515b1a99d221a54e95dbab82e43af155cfb24eb5d58f82c6de98c9",
+      "words_before": 444,
+      "words_after": 459
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "eba4731cda64effed70bc7ad",
+      "text_sha256": "bbf583c565d2264c9e2c2190f65be4ac17c6a54eef61efa4a1098f9bd32c41bf",
+      "source_snapshot": "data/external/genres_20261002/pages/eba4731cda64effed70bc7adef1e26c6b9756a83645d962448bb9154390781fd.bin",
+      "source_sha256": "0f7e0451769fffdf370b0138299ae64793ed6d0aa5e1f59518d9dcd38f2e441d",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "657c0aed63d61c211395d0dff02efa4cdcd01ec422cedfaa09f31d1ac0421632",
+      "words_before": 337,
+      "words_after": 352
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "edcb1660cc17c386c696366a",
+      "text_sha256": "b63a1f6dfced12da039d33207d9436e21fdeb5d93d9ac82a6e23c8880c7189fc",
+      "source_snapshot": "data/external/genres_20261002/pages/edcb1660cc17c386c696366ae78cf436b5a42055809bbc4dc6a14b8083e7f6cc.bin",
+      "source_sha256": "cc67b56ef65cd63ecb63cc475e0b214537ac5073edf2edaf310703c8d34b7c62",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "8cbd68c9707a2c67ec5bce6ba524c7cfaa27b0fed93311b72c939c60bd4bbf13",
+      "words_before": 98,
+      "words_after": 113
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "ef263568e3f735bdc5fd0e29",
+      "text_sha256": "a905a072dd7d82b284d9f8321965410ccbc9ed96fbe9b4bd40898c7bda3c5530",
+      "source_snapshot": "data/external/genres_20261002/pages/ef263568e3f735bdc5fd0e29628db94f6f2f70b5d79bc99d69066e5a87e5c6f0.bin",
+      "source_sha256": "af337f12125e29de769789632c854c46fb7d7c56abb3e21b73a47b15cac1b0ca",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "eee11f46c5844a3b8437755e0f95c66df1aee2e9b28bf416c2d00a841a5fd60a",
+      "words_before": 309,
+      "words_after": 324
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "f1c72bbe93c46aa64118a947",
+      "text_sha256": "2369d611f5970f07ef1e93c20bde356063425df23d9ede634066552f8e3f9540",
+      "source_snapshot": "data/external/genres_20261002/pages/f1c72bbe93c46aa64118a9475022ba5add3e94d55c1ded10691e87dc15e30fc6.bin",
+      "source_sha256": "e6084cfc8046dca5bb6eb2bc4e10aeecb14cd34baad470f3fb2f858e3905dd2b",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "0ad77d0692b144a418f209fcde87b3a7ac0f22b16fb722eeb3d67a8d59f6a235",
+      "words_before": 668,
+      "words_after": 683
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "f34a2741d3aaf9efaf46f282",
+      "text_sha256": "8c36e3cafeb85aede22e781af6e6deb023985f7d3cef93630dd789540896da7e",
+      "source_snapshot": "data/external/genres_20261002/pages/f34a2741d3aaf9efaf46f2827523ab7ab55eac393261c56524669b903d117892.bin",
+      "source_sha256": "0f229c4c75406c73b544e48a0a928f99957a1db436780cea47652962522118f7",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "64262ead8b9ef4df4315584c38d8e6e4daf6760dcd2b709216472884da069bed",
+      "words_before": 861,
+      "words_after": 876
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "f5d08b7ca7008883eb82ac81",
+      "text_sha256": "5e074385e778d73429717dfe44e858dadbd1020570f5cc349d97430ca76c25c5",
+      "source_snapshot": "data/external/genres_20261002/pages/f5d08b7ca7008883eb82ac818296abc6530effdd54c583889ddb2ac2f98d8fd0.bin",
+      "source_sha256": "5306e02270459a37479cf27b58bc5d0784f58ccfe18e74f429a40db73f641281",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "f3d20308c26002094bd1642abb641945a973be2549a7ce9218d1631d6173fdaa",
+      "words_before": 156,
+      "words_after": 171
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "f70eb5d9a9ab2a08ec91cc9c",
+      "text_sha256": "cc3c07babb35fb2d90e64ee3926126663af791e2d13cf0977905c63902e70000",
+      "source_snapshot": "data/external/genres_20261002/pages/f70eb5d9a9ab2a08ec91cc9cf3657da8aed53b2a941e06bbed33b1393d548e15.bin",
+      "source_sha256": "fad1146f15e33fc24d954de6764e85d849ae390228ad203d9ec115499b91f591",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "126f2ef86c61fe81ff4e7b43cc46cf9cbf5ea238eb800dae876ee98722acd564",
+      "words_before": 546,
+      "words_after": 561
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "fa7dd755317f4f6b0dff84ec",
+      "text_sha256": "96c62ade3e26ab1b07ec71a1b19169760fb0b59a1742fed8caa05e13e44c2631",
+      "source_snapshot": "data/external/genres_20261002/pages/fa7dd755317f4f6b0dff84ec7aa5ad2b147fdc5e8a98b34410daab4aa268d80c.bin",
+      "source_sha256": "dee3dc11da05c8325c95e0e48a77ed1237d64bec3f8af0b904fa223a11a94748",
+      "inline_word_buttons": 8,
+      "repaired_text_sha256": "17b7aa2d371d40e16aaaac9c40e28e52c1b57f4245f161c2c74d767dae51c41b",
+      "words_before": 1298,
+      "words_after": 1306
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "fb22bfa317a903ae3463e1c6",
+      "text_sha256": "3e90661ea739b31b99ccd1859b17b893709778ed45e097c83c4ff9a79374a42f",
+      "source_snapshot": "data/external/genres_20261002/pages/fb22bfa317a903ae3463e1c690c2e4c755e40f4d212a22f30893cd07390192f2.bin",
+      "source_sha256": "fb1d6ff3cfb16f6ffd1335e86823f1b111783396835d6fd1d7be9ff2f258e306",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "6e67d6a0fcc64e0f4efa06cd1c1e425f59ea05db1fc2217e9863815c2244ae35",
+      "words_before": 405,
+      "words_after": 420
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "fdfe29a8fd51c00462bc52de",
+      "text_sha256": "3997d4a296662b6eb6cbcd87ea48172fb320314695e200786b5572435c40833b",
+      "source_snapshot": "data/external/genres_20261002/pages/fdfe29a8fd51c00462bc52defbaae21738b7d4accee8002d3dfad70391160914.bin",
+      "source_sha256": "1befa505b33255fc07b5c16ed69b381287c1a9024edfec628f018b16085047a8",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "092144a89ff40282d944cdaf430fe7ee0a268980b2b8cad404376defd2775b7c",
+      "words_before": 1517,
+      "words_after": 1532
+    },
+    {
+      "kind": "verified_folktale_vocabulary",
+      "doc_id": "feaa775635e243dfef037019",
+      "text_sha256": "2ba65e6c19d03cb08c72e4df880eeaf270db963a707bf284ddb9d547f1d6b2b1",
+      "source_snapshot": "data/external/genres_20261002/pages/feaa775635e243dfef037019cb04fcb2358fc271d5aadaf9bbf77bb2e5db2c0b.bin",
+      "source_sha256": "74fbcf769beac745be4fcefc5fe988493e924d73c6174dbdf20d3c9c49a5f1ee",
+      "inline_word_buttons": 15,
+      "repaired_text_sha256": "cfa2d47f8ef577c2aa197ce846afa80719259fa984fed5f91a02978b42ca3f33",
+      "words_before": 375,
+      "words_after": 390
+    }
+  ]
+}
