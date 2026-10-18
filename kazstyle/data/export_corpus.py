@@ -21,7 +21,9 @@ from kazstyle.data.forum import has_contact_identifier
 from kazstyle.data.news_cleanup import revise_text, review_flags
 from kazstyle.data.quality import assert_text_only, inspect_text
 
-VERSION = 'document_csv_v3'
+VERSION = 'document_csv_v5'
+SNAPSHOT_MODULES = ('export_corpus.py', 'news_cleanup.py', 'news_html.py', 'quality.py',
+                    'forum.py', 'corpus.py', 'grouping.py', 'overlap.py', 'prose.py', 'folktales.py')
 DEFAULT_TARGETS = {style: 2000 for style in STYLES}
 ARTICLE_TARGETS = dict(official=4200, scientific=1800, publicistic=6500,
                        literary=2100, colloquial=8000)
@@ -30,7 +32,8 @@ ARTICLE_TARGETS = dict(official=4200, scientific=1800, publicistic=6500,
 DOMAIN_LIKE = re.compile(r'(?<![\w@])(?:[a-z0-9][a-z0-9_-]*\.)+[a-z]{2,24}\b|'
                          r'(?<!\w)[a-z0-9][a-z0-9_-]*\s+\.(?:kz|ru|com|org|net)\b|'
                          r'(?<!\w)[a-z0-9][a-z0-9_-]*\.\s+(?:kz|ru|com|org|net|by|tv|jp)\b|'
-                         r'\bwww\.\s+\w', re.I)
+                         r'\bwww\.\s+\w|'
+                         r'(?<![\w@])(?:[\w-]+\.)+(?:kz|ru|com|org|net|қаз|рф|кз|ру|ком|орг)\b', re.I)
 
 
 def normalized_hash(text):
@@ -143,11 +146,18 @@ def read_recipe(path):
     repaired_ids = set()
     for decision in recipe.get('source_repairs', []):
         row = by_id.get(decision.get('doc_id'))
+        kind=decision.get('kind')
+        prose=kind=='verified_prose_soft_hyphens'
+        folktale=kind=='verified_folktale_vocabulary'
         if (row is None or decision.get('doc_id') in repaired_ids
-                or decision.get('kind') != 'verified_prose_soft_hyphens'
+                or not (prose or folktale)
                 or digest(row['text']) != decision.get('text_sha256')
-                or row.get('source_sha256') != decision.get('source_sha256')
-                or type(decision.get('soft_breaks')) is not int or decision['soft_breaks'] <= 0
+                or (prose and (row.get('source_sha256') != decision.get('source_sha256')
+                    or type(decision.get('soft_breaks')) is not int or decision['soft_breaks'] <= 0))
+                or (folktale and (row.get('source_domain')!='ertegiler.kz'
+                    or not isinstance(decision.get('source_snapshot'),str)
+                    or not re.fullmatch('[a-f0-9]{64}',decision.get('source_sha256',''))
+                    or type(decision.get('inline_word_buttons')) is not int or decision['inline_word_buttons']<=0))
                 or not re.fullmatch('[a-f0-9]{64}', decision.get('repaired_text_sha256', ''))):
             raise ValueError('Invalid, repeated or stale source repair')
         repaired_ids.add(decision['doc_id'])
@@ -195,12 +205,8 @@ def verify_export(out):
             'metadata_alignment': True, 'addresses_in_model_text': 0, 'per_style_csvs_match': True}
 
 
-def load_documents(out):
-    """Read the canonical CSV plus metadata without storing another full-text copy.
-
-    This supplies records for future data preparation, not an automatic training
-    approval. The caller must respect split groups and provisional label status.
-    """
+def verify_integrity(out):
+    """Verify the completed files without repeatedly parsing every document."""
     out = Path(out).resolve()
     manifest = json.loads((out/'COMPLETE.json').read_text(encoding='utf-8'))
     for name, sha in manifest.items():
@@ -210,6 +216,13 @@ def load_documents(out):
     for required in ['corpus.csv', 'metadata.jsonl', 'summary.json']:
         if required not in manifest:
             raise ValueError('Incomplete corpus manifest')
+    return manifest
+
+
+def load_documents(out):
+    """Read verified CSV/metadata; this does not approve labels or a training split."""
+    out = Path(out).resolve()
+    verify_integrity(out)
     verify_export(out)
     metadata = [json.loads(line) for line in (out/'metadata.jsonl').read_text(encoding='utf-8').splitlines()]
     with (out/'corpus.csv').open(encoding='utf-8-sig', newline='') as stream:
@@ -255,13 +268,20 @@ def build(recipe_path, out):
     recipe_path, out = Path(recipe_path), Path(out)
     if out.exists():
         raise FileExistsError(f'Choose a new corpus version: {out}')
+    recipe_sha256=file_hash(recipe_path)
+    source_hashes={name:file_hash(Path(__file__).with_name(name)) for name in SNAPSHOT_MODULES}
     recipe, rows, repeats = read_recipe(recipe_path)
+    if file_hash(recipe_path)!=recipe_sha256:
+        raise ValueError('Recipe changed while reading corpus inputs')
     processed, text_groups, changes = [], defaultdict(list), []
     for i, row in enumerate(rows):
         raw_text = row['text']
         manual_removed=[]
         if row.get('source_repair'):
-            from kazstyle.data.prose import repair_verified_source
+            if row['source_repair']['kind']=='verified_folktale_vocabulary':
+                from kazstyle.data.folktales import repair_verified_source
+            else:
+                from kazstyle.data.prose import repair_verified_source
             raw_text, repair_log = repair_verified_source(row, row['source_repair'])
             manual_removed.append(repair_log)
         for field in ['remove_prefix','remove_suffix']:
@@ -299,6 +319,9 @@ def build(recipe_path, out):
             cleaning['html_removed'] = html_removed
         stats, quality_reasons = inspect_text(text, min_words=8)
         flags = review_flags(text, original_text=raw_text)
+        title=row.get('title') or row.get('metadata',{}).get('title','')
+        if row['style']=='scientific' and re.search(r'[-–—]\s*\d{2,3}\s*жаста\b',title,re.I):
+            flags.append('commemorative_title_requires_review')
         if DOMAIN_LIKE.search(text):
             flags.append('residual_domain_like_token')
         if has_contact_identifier(text):
@@ -359,7 +382,9 @@ def build(recipe_path, out):
             frame['split_group_id'] = assign_split_groups(frame)
             for row, (_, group) in zip(accepted, frame.iterrows()):
                 for key in ['parent_group', 'passage_group_id', 'split_group_id']:
-                    row[key] = group[key]
+                    # Pandas represents an absent passage group as NaN. Persist
+                    # JSON null instead: NaN is not valid interoperable JSON.
+                    row[key] = None if pd.isna(group[key]) else group[key]
             sizes = frame.groupby('split_group_id').size()
             grouping = {'performed': True, 'shared_passage_edges': len(edges),
                         'split_groups': len(sizes), 'largest_group_documents': int(sizes.max()),
@@ -369,6 +394,10 @@ def build(recipe_path, out):
     for item in [*recipe['inputs'], *recipe.get('reviews', [])]:
         if file_hash(item['path']) != item['sha256']:
             raise ValueError('Source changed during export')
+    if file_hash(recipe_path)!=recipe_sha256:
+        raise ValueError('Recipe changed during export')
+    if any(file_hash(Path(__file__).with_name(name))!=sha for name,sha in source_hashes.items()):
+        raise ValueError('Source code changed during export')
     out.mkdir(parents=True); (out/'by_style').mkdir(); (out/'code').mkdir()
     write_csv(out/'corpus.csv', accepted, ['text', 'label'])
     for style in STYLES:
@@ -387,12 +416,17 @@ def build(recipe_path, out):
     write_jsonl(out/'passage_edges.jsonl', edges)
     write_json(out/'repeated_inputs.json', repeats)
     shutil.copy2(recipe_path, out/'recipe.json')
+    if file_hash(out/'recipe.json')!=recipe_sha256:
+        raise ValueError('Recipe changed while saving its snapshot')
     for i, item in enumerate(recipe.get('reviews', [])):
         shutil.copy2(item['path'], out/f'assistant_review_{i+1}.json')
-    for name in ['export_corpus.py', 'news_cleanup.py', 'news_html.py', 'quality.py', 'forum.py', 'corpus.py', 'grouping.py', 'overlap.py', 'prose.py']:
+    for name in SNAPSHOT_MODULES:
         shutil.copy2(Path(__file__).with_name(name), out/'code'/name)
+        if file_hash(out/'code'/name)!=source_hashes[name]:
+            raise ValueError('Source code changed while saving its snapshot')
     counts = Counter(r['style'] for r in accepted)
-    summary = {'version': VERSION, 'documents_before_screening': len(rows),
+    summary = {'version': VERSION, 'recipe_sha256':recipe_sha256,
+               'source_code_sha256':source_hashes, 'documents_before_screening': len(rows),
                'accepted_provisional': len(accepted), 'by_style': dict(counts),
                'review': len(review), 'review_by_style': dict(Counter(r['style'] for r in review)),
                'excluded': len(excluded), 'excluded_reasons': dict(Counter(v for r in excluded for v in r['quality_reasons'])),

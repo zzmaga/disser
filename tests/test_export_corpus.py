@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from kazstyle.data.corpus import digest, file_hash
 from kazstyle.data.export_corpus import build, verify_export, publisher_groups, load_documents, DOMAIN_LIKE, read_recipe
@@ -12,6 +13,62 @@ TEXT = 'Қазақстанда жаңа кітапхана ашылды, онд�
 
 
 class ExportCorpusTests(unittest.TestCase):
+    def test_recipe_changed_during_export_is_rejected_before_output(self):
+        from kazstyle.data import export_corpus
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);_,recipe=self.fixture(root,[self.row('a')])
+            original=export_corpus.revise_text
+            def concurrent_change(*args,**kwargs):
+                config=json.loads(recipe.read_text(encoding='utf8'))
+                config['concurrent_change']='new conditions'
+                recipe.write_text(json.dumps(config),encoding='utf8')
+                return original(*args,**kwargs)
+            with patch('kazstyle.data.export_corpus.revise_text',side_effect=concurrent_change):
+                with self.assertRaisesRegex(ValueError,'Recipe changed during export'):
+                    build(recipe,root/'out')
+            self.assertFalse((root/'out').exists())
+
+    def test_absent_passage_group_is_json_null_not_nan(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            _,recipe=self.fixture(root,[self.row('single')],passage_grouping=True)
+            build(recipe,root/'out')
+            def invalid_constant(value):
+                raise ValueError('Non-standard JSON constant: '+value)
+            rows=[json.loads(line,parse_constant=invalid_constant) for line in
+                  (root/'out/metadata.jsonl').read_text(encoding='utf-8').splitlines()]
+            self.assertIsNone(rows[0]['passage_group_id'])
+
+    def test_source_verified_vocabulary_repair_is_exported_without_new_document_id(self):
+        from kazstyle.data.folktales import parse_folktale
+        from kazstyle.data.quality import clean_text
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);snapshot=root/'story.html'
+            raw=f'<div itemprop="articleBody">{TEXT} <button class="vocab-word" data-vocab-id="7">Торғай</button> ұшып кетті.</div>'
+            snapshot.write_text(raw,encoding='utf-8')
+            old=clean_text(parse_folktale(raw,preserve_vocabulary=False)[0])[0]
+            repaired=clean_text(parse_folktale(raw)[0])[0]
+            source,recipe=self.fixture(root,[self.row('story',text=old,style='literary',source_domain='ertegiler.kz')])
+            original=source.read_bytes();config=json.loads(recipe.read_text())
+            config['source_repairs']=[{'kind':'verified_folktale_vocabulary','doc_id':'story',
+                'text_sha256':digest(old),'source_snapshot':str(snapshot),'source_sha256':file_hash(snapshot),
+                'inline_word_buttons':1,'repaired_text_sha256':digest(repaired)}]
+            recipe.write_text(json.dumps(config),encoding='utf-8');build(recipe,root/'out')
+            rows=load_documents(root/'out')
+            self.assertEqual([(r['doc_id'],r['text']) for r in rows],[('story',repaired)])
+            self.assertEqual(source.read_bytes(),original)
+            self.assertEqual(file_hash(root/'out/code/folktales.py'),
+                             file_hash(Path('kazstyle/data/folktales.py')))
+
+    def test_birthday_notice_in_a_journal_is_quarantined_not_expert_scientific(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            _,recipe=self.fixture(root,[self.row('birthday',style='scientific',
+                genre='research_abstract',metadata={'title':'ҒАЛЫМ — 60 ЖАСТА'})])
+            result=build(recipe,root/'out')
+            self.assertEqual(result['accepted_provisional'],0)
+            self.assertEqual(result['review_reasons']['commemorative_title_requires_review'],1)
+
     def test_keyword_cleanup_does_not_hide_multilingual_abstract_flag(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp)
@@ -126,6 +183,19 @@ class ExportCorpusTests(unittest.TestCase):
         self.assertIsNotNone(DOMAIN_LIKE.search('polese.by'))
         self.assertIsNotNone(DOMAIN_LIKE.search('Alash_11 .ru'))
         self.assertIsNone(DOMAIN_LIKE.search('STEM. This is a sentence. 0.25'))
+        self.assertIsNone(DOMAIN_LIKE.search('т.б. т.с.с. ҚР. Астана'))
+
+    def test_unicode_spelled_addresses_are_quarantined_without_deleting_source_text(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            text=TEXT+' Керекинфо.кз сайтындағы мәтінді оқыңыз.'
+            source,recipe=self.fixture(root,[self.row('unicode',text=text)])
+            before=source.read_bytes();result=build(recipe,root/'out')
+            self.assertEqual(result['accepted_provisional'],0)
+            self.assertEqual(result['review_reasons']['residual_domain_like_token'],1)
+            self.assertEqual(source.read_bytes(),before)
+            for value in ['Қазақша.com','ақпарат.қаз','Керекинфо.кз']:
+                self.assertIsNotNone(DOMAIN_LIKE.search(value))
 
     def fixture(self, root, rows, **extra):
         source = root/'source.jsonl'

@@ -70,8 +70,12 @@ def collect(out, per_source=200):
                             if author is None:continue
                         body=article.select_one(body_selector)
                         if body is None:raise ValueError('Article body selector missing')
-                        for el in body.select('script, style, nav, footer, form, button'):el.decompose()
-                        text=body.get_text('\n',strip=True)
+                        if name.startswith('ertegiler_author_'):
+                            from kazstyle.data.folktales import extract_body
+                            text,_=extract_body(body)
+                        else:
+                            for el in body.select('script, style, nav, footer, form, button'):el.decompose()
+                            text=body.get_text('\n',strip=True)
                         if len(text.split())<12:continue
                         title=article.find('h1')
                         save(text,link,'literary','folktale',extra={'source_section':name,'title':title.get_text(' ',strip=True) if title else ''})
