@@ -20,7 +20,7 @@ python -m venv .venv-gpu
 длинных **train**-фрагментов, делает три обновления и не сохраняет веса:
 
 ```powershell
-.venv-gpu/Scripts/python.exe manage.py gpu-check --dataset data/processed/text_only_v4_shared --model-name google-bert/bert-base-multilingual-cased --revision 3f076fdb1ab68d5b2880cb87a0886f315b8146f8 --head last --fused-adamw --out-file reports/my_gpu_check.json
+.venv-gpu/Scripts/python.exe manage.py gpu-check --dataset data/processed/text_only_v4_shared --model-name google-bert/bert-base-multilingual-cased --revision 3f076fdb1ab68d5b2880cb87a0886f315b8146f8 --head last --fused-adamw --eligible-only --out-file reports/my_gpu_check.json
 ```
 
 В отчёте проверяются `optimizer_updated`, конечные loss и выделение памяти.
@@ -29,12 +29,42 @@ python -m venv .venv-gpu
 
 ## Полный запуск
 
+### Проверенный новый encoder: mmBERT-small
+
+В ходе продолжения 18–19 октября mmBERT-small закреплён на ревизии
+`abc32620dd4f6ab06f5fbe905dc25f310618e09f`. Три discarded train-only шага
+прошли: 140 495 621 параметр с пяти-классовой головкой, 256 токенов,
+allocated 2,115 GiB, reserved 2,211 GiB; 3 успешных обновления, без OOM.
+Использован штатный ModernBERT из Transformers 5.17.0; FlashAttention не установлен
+специально. Это измерение одного входа, не замена полной проверке обучения.
+Доказательство: `reports/technical/dissertation_completion_20261018/encoder_compatibility/mmbert_gpu.json`.
+
+Уже выполненную проверку не повторять ради числа. Для воспроизведения на новом
+компьютере с новым именем результата:
+
+```powershell
+.venv-gpu/Scripts/python.exe manage.py gpu-check --dataset data/processed/expanded_v6_shared --model-name jhu-clsp/mmBERT-small --revision abc32620dd4f6ab06f5fbe905dc25f310618e09f --head last --fused-adamw --tokenizer-reference data/processed/tokenizer_reference_v7_20261018 --eligible-only --fit-reference-view --allow-download --out-file reports/technical/NEW_MMBERT_GPU_CHECK.json
+```
+
+`--eligible-only` удаляет резервные строки из старого **train** до выбора входа.
+`--fit-reference-view` явно удаляет хвостовые целые слова до ограничений всех
+трёх токенизаторов только для технического probe. Исходный dataset не меняется;
+его прежние `sample_id` и хешы показанного probe-входа записываются отдельно.
+Первый preflight без этой проекции остановился до загрузки модели из-за длины.
+Веса трёх шагов отброшены, validation/test не оценивались.
+
+### Настройки основного обучения
+
 На 4 ГБ используйте microbatch 1, накопление градиента 8, float16,
 gradient checkpointing и fused AdamW. Эффективный batch size равен 8.
 Путь вывода всегда должен быть новым.
+В примере заменить `NEW_FROZEN_UNRESERVED_DATASET` на новую зафиксированную
+выборку после проверки меток и резерва. Старые v4/v6 содержат теперь
+зарезервированные source units: новый trainer правомерно отклоняет их повторное
+обучение; проверка сохранённых исторических весов продолжает работать.
 
 ```powershell
-.venv-gpu/Scripts/python.exe manage.py train-transformer --dataset data/processed/text_only_v4_shared --out-dir artifacts/my_gpu_mbert_s42 --model-name google-bert/bert-base-multilingual-cased --revision 3f076fdb1ab68d5b2880cb87a0886f315b8146f8 --head last --epochs 2 --batch-size 1 --gradient-accumulation 8 --lr 2e-5 --seed 42 --threads 2 --device cuda --precision float16 --gradient-checkpointing --fused-adamw
+.venv-gpu/Scripts/python.exe manage.py train-transformer --dataset data/processed/NEW_FROZEN_UNRESERVED_DATASET --out-dir artifacts/my_gpu_mbert_s42 --model-name google-bert/bert-base-multilingual-cased --revision 3f076fdb1ab68d5b2880cb87a0886f315b8146f8 --head last --epochs 2 --batch-size 1 --gradient-accumulation 8 --lr 2e-5 --seed 42 --threads 2 --device cuda --precision float16 --gradient-checkpointing --fused-adamw
 ```
 
 Для Kaz-RoBERTa замените имя на `kz-transformers/kaz-roberta-conversational`,
@@ -51,7 +81,7 @@ GradScaler начинает с масштаба 128; scheduler не продви
 После обучения проверьте восстановление без сети:
 
 ```powershell
-.venv/Scripts/python.exe manage.py verify-model --run-dir artifacts/my_gpu_mbert_s42 --dataset data/processed/text_only_v4_shared
+.venv/Scripts/python.exe manage.py verify-model --run-dir artifacts/my_gpu_mbert_s42 --dataset data/processed/NEW_FROZEN_UNRESERVED_DATASET
 ```
 
 06.10.2026 выполнены полные проверочные эпохи mBERT и Kaz-RoBERTa concat4:
