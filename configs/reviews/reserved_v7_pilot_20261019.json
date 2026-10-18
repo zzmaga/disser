@@ -1,0 +1,551 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-19",
+  "purpose": "reserved_exact_view_diagnostic_curation_NOT_final_reference_approval",
+  "packet_sha256": "9a82b974821b0cf9f2ac3eb8a0de9e968f82c13a9a1d82a41b7b2b180c346372",
+  "guidelines_sha256": "522c7188d3b9a7afe23b7d580ea32fe4832896baea79b372f641986e3fb9c792",
+  "source_hidden_in_display": true,
+  "reviewer_has_project_context": true,
+  "independent_human_review": false,
+  "expert_verified": false,
+  "human_reviews_received": 0,
+  "model_predictions_used": false,
+  "read_entire_shown_units": 50,
+  "retained_provisionally": 43,
+  "needs_review": 7,
+  "sampling": "10 per provisional style, round-robin source/genre/length. Not a corpus-wide error-rate estimate.",
+  "source_word_check": {
+    "doc_id": "b4a5e101cebc353a6dac5c6d",
+    "saved_html": "data/external/forum_scale_20261010/pages/62e390dbde6c56bc119dc777a4cb255ef8d56c34aad4ca53d69171f36a7cebd9.html",
+    "saved_html_sha256": "058cb52afb12382455455804ff9aa8a5ddd6de39392da71f127cf254dc71b5ed",
+    "finding": "Opening is already present as мет in original saved comment; no extractor loss established, no invented repair.",
+    "prior_ai_approval_is_not_final_reference_validation": true
+  },
+  "decisions": [
+    {
+      "packet_item_id": "338c74072da561bbc7ed",
+      "doc_id": "4d93a245f955e52824563aee",
+      "shown_text_sha256": "629682f8bbcb88e25166dbad9f31c572d85a6e3cd1dbc425486da251dc6238db",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Legal preamble cites statutory authority and an administrative decision; strong legal-header signal remains.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "8f94165dea791529f1a6",
+      "doc_id": "11f8f9f6bd3bfe24289b0cad",
+      "shown_text_sha256": "70fb30a4fec73fbb4934d4a9ea99e8d1801be05f69963c2a194dc727c866da09",
+      "suggested_style": "insufficient",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "The shown unit only announces a monograph and a publishing series. It lacks sufficient analytical context to resolve scientific versus publicistic presentation.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "a6edbdac9f7369d02373",
+      "doc_id": "fb22bfa317a903ae3463e1c6",
+      "shown_text_sha256": "447107e0e2eaf96a8441a6882ab678050c52227adfe66b4b7026bd1d75dc33b7",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Fictional characters and staged dialogue within a folktale narrative.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "8b02816fd228146469f3",
+      "doc_id": "2e5bf558e27a4139f5522614",
+      "shown_text_sha256": "5a634a032f0fbc04a0b0b8bb901ec29ece33974a053c133bcf22566a321e9d0f",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Rhythmic lyric voice, recurring refrain and emotional imagery.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "a9f9da3d8f7287944522",
+      "doc_id": "051fd811a64e6cc7c40c79f7",
+      "shown_text_sha256": "bfce98fca3acae81f14a2c0ad955378c5879aef6420e02d240a3d57bc4ec8987",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Explicit research aim comparing political-authority principles in two philosophical works.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "32bd6c4ebe4a2ab2dc18",
+      "doc_id": "4ab336111a0c09f43e17e722",
+      "shown_text_sha256": "6678c81f5e78d2f390cebd2a3b41bc3c9b2db643cc99d74ed733303dcc3b3d4d",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Operative amendment instruction specifying changes to a legal article.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "53299ebc029ebdbb6e74",
+      "doc_id": "2a4d4b295281736c55b5068f",
+      "shown_text_sha256": "666bbf40d91c26a7e677969b9f71c7c90697e629c459197a2f1997481350d541",
+      "suggested_style": "official",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Legal register title/date/repeal metadata dominate; no substantive operative provision is shown. Retain provisional official label but quarantine this reference view.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "8d4e1d85f448d291ef75",
+      "doc_id": "40a3fd243a7580f644834dbc",
+      "shown_text_sha256": "6dbf06f0f6126c591cbdfe5f021d015dbf1d18116ccaa55f173a888d273a8eef",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Explanation of adapted language materials and an explicit study purpose.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "35ab8e6693ed9077b9bd",
+      "doc_id": "00d649b13305b8612f54427d",
+      "shown_text_sha256": "6dc6fcb278ca13ac2653771c33dedefcd109a736ad62f0beb746ff40f8a15868",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Personal account of buying a washing machine, delivery experience and informal evaluation.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "6147cbfb0950ab8c9dec",
+      "doc_id": "56a442cac36ee62fcd87878f",
+      "shown_text_sha256": "01766a767ad3feda47cc5f5e9ee1e2f8b4189ca5dc1182b0cd61fac79fd5de64",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Public report on polling-place accessibility arrangements, presented descriptively rather than as an operative order.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "76f0b65fdc530e0a6c8d",
+      "doc_id": "3af6f46d3d1976e9507a13b7",
+      "shown_text_sha256": "f7f8caea40e3209c836e5622994454716a57927fb3c9ca45f965a7f238466470",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Direct informal thanks and personal reaction to a literature collection.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "66eaef440ac6b023bccc",
+      "doc_id": "e7b607bfbd494592a6bf64b9",
+      "shown_text_sha256": "9ba30e7e0d812c115c9e387741c1ea3b58d0a6fa0fb84aefc527d30cf9eb66cc",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Event report about a landslide cleanup, attributing information to an authority.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "754aaaa64eda25c8d780",
+      "doc_id": "6522873c19eb32b346a3a9c9",
+      "shown_text_sha256": "d9bf943b9d7ca9b5b557d0852b6ad0e43fb77b06af11c6bbfa806bb9d484db19",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Summarised analysis of protected-area indicators, problems and recommendations.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "39ed81245ec0d2564c6c",
+      "doc_id": "b4a5e101cebc353a6dac5c6d",
+      "shown_text_sha256": "ea5580d1639bc0a71da494bb4cafe606da7d125a88b2156a63ba95c6b88c3926",
+      "suggested_style": "colloquial",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "The informal appeal is clear, but its opening starts with an incomplete-looking word. Saved original HTML has the same opening; no missing letters are reconstructed.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "be0ffc3a033de4c379bf",
+      "doc_id": "ec7111f5137487ae1f90f2f2",
+      "shown_text_sha256": "31ec65ff68bf02ef850f644f3d5d2854fd13120dc41b1e8448c924150a4ab9ff",
+      "suggested_style": "official",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Legal title/date/repeal metadata without an operative body; unsuitable as a body-text reference despite recognisable official register.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "1014adbe091f58baf163",
+      "doc_id": "1a41abe7ee60a9dd3845fa6b",
+      "shown_text_sha256": "f9e4cbde8fbba467ab26c21114d7a7d5ff792acbae47e98b0362e3c936bbbcf9",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Performative ratification clause with formal document identifiers.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "24ec1b3c845e79e4583d",
+      "doc_id": "29fc0c82a4611da6cf51a856",
+      "shown_text_sha256": "06cb1d91b44be6fc17bb5009276b8290980eee6bd893f2e2e34a20118614cbec",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Direct experiential praise of an application; spelling variation and repeated emojis are preserved as published, not used as a sentiment label.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "bc787aadc57adb111314",
+      "doc_id": "817a01e9690581306009f416",
+      "shown_text_sha256": "65fb2a89de65c933141f7f3446285b9378f82aae74b12c35d7d0ae9a9f00ceed",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Informal advice addressed to a conversational partner.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "c0d9a1d686e449821bc3",
+      "doc_id": "cd2b826a8f026dad363d34bb",
+      "shown_text_sha256": "14cb9013d55d37654d8d0bfe7c717fd245897519d1f895f01b521fe45abccf1c",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Personal phone-purchase question with natural Kazakh/Russian code switching.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "04fb2f2652e44b7364bd",
+      "doc_id": "41afa1b03c492f49ce0e7947",
+      "shown_text_sha256": "f999ccb63e995fd6c89618a347974899a5f4fdb6a7517833492ebe7d6e708976",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Poetic stanzas, refrain, metaphor and a lyric speaker.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "7c67f2736aa8ec727181",
+      "doc_id": "d191a68f51cbe0151626601f",
+      "shown_text_sha256": "edd186709b608b429ea899e37666c3317e05dc64ab8e879e789d78b8f237cc58",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Short public event report identifying a fire location.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "6319cd80e008b497afca",
+      "doc_id": "393b50ca9c28c27adbb93e59",
+      "shown_text_sha256": "8a6ab3dde76a8052754d38aeef3e7ed503d06207bcdbba2eec04b69a342555c5",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Podcast preview addresses a public issue and attributes an audience question within an editorial frame.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "edc781b8cc2ad381efcc",
+      "doc_id": "733ebac959e417cae4f51c64",
+      "shown_text_sha256": "7ac7eabcf09745b771a0e9b85d628ebf58f2c249d9bd08cf0b3ae2fb34371dad",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Event report about discovered undocumented cargo; not an administrative instruction.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "4847111a9f9885255558",
+      "doc_id": "e1c182abc278e8ef367b7563",
+      "shown_text_sha256": "f9d5d870687538fdef8d8320042f32d840c63909f788f9031cbb5308ef4ed48e",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Journalistic framing combines an attributed police statement with reported surrounding events.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "b8491cb276046f2e17d3",
+      "doc_id": "3f854a4afa2b8fd7bf5d49df",
+      "shown_text_sha256": "c9f77d0454b1b1d1c5f1578b0d73e83274042e2ed3100616ea1ff7b52115c200",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Personal verse constructed through line-like poetic phrasing and emotional address; spelling quality does not change the literary function.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "391f5afc80c51e28f7e0",
+      "doc_id": "f6c3ce722ab30d7b0345b735",
+      "shown_text_sha256": "13b030ae87f664414fa0b4ada9ba46c10619ace71192b74184db8e6569d4dbf8",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Numbered conditions and procedure for allocating public subsidies.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "6da59c51163a92d485ae",
+      "doc_id": "b7e28bc7bf825d0fafd19f42",
+      "shown_text_sha256": "930ffc473f21aa65d5af8cf7e507b270a8dffb87fb776f5ccc1a2a1ac7552e2b",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Informal request to identify a song; the short lyric quotation does not dominate the writer's own question.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "42b91125c10e0ae36189",
+      "doc_id": "c5cda408abbef31ac03b1e69",
+      "shown_text_sha256": "b048d3e1b133c5e21a394344fddd5ac2e3e5a959e2394e12141e63e3494d3123",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "First-person account and opinion about the writer's own education, in informal spelling.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "ee84469d492277ff9712",
+      "doc_id": "2a25ce237475784786925036",
+      "shown_text_sha256": "1c82acb8e4e133fbb5e0a519425e1d355a3f30a8e188dd6262177e8e09249276",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "A reported administrative announcement with an attribution and follow-up news context.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "4acf400e469d28f7770b",
+      "doc_id": "b17f5ce8bf9d38766d14bce0",
+      "shown_text_sha256": "77ac542b9fae54e7314194e97b7414071e58919ed94f5c49436c7913fcc00e7b",
+      "suggested_style": "official",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Legal title and repeal metadata without a substantive body; do not certify as a body-text reference.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "a1e958341598527a3704",
+      "doc_id": "4876a55ec23d6bf16e624e3b",
+      "shown_text_sha256": "f1ee8ee279a677bce6e211923c6dde34b7102165c6f5d281db8b6712040bde29",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Poetic invocation of the New Year, figurative language and rhythmic wishes.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "63a0c67571043aa82702",
+      "doc_id": "2b103969a5c49990fe17e76e",
+      "shown_text_sha256": "c49e172afcd67688a16e856f25f179e5aba3cd8abf6fd7f9cb1e83f3ef1a32c5",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Conceptual biological explanation of hypotheses about the genetic code.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "1b13eb7a5a0916f60355",
+      "doc_id": "f8f53089b07361e2c9054101",
+      "shown_text_sha256": "e72e47fc1c984c05fc98d307e15cbd199facf2187e5b8a9842a8072f5d7a170f",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Formal decision formula and operative numbered amendment.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "3dd41103dbb47d275fbe",
+      "doc_id": "1c2be79d454738ee33278c8d",
+      "shown_text_sha256": "e504ad586d794ce4fcfd9dde7c5bac4f85a4b2c68c1f5f249d74a8a2b6cf74f8",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Folktale scene with named characters and a chain of narrated dialogue.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "9801e183f73591f155e4",
+      "doc_id": "e13b62be7177e99afd65744b",
+      "shown_text_sha256": "026d23a58b11f584107869d1fc5aa815d8a5c6a8242aed2131cd20d7ab653942",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Attributed public report about an alleged detention and ongoing investigation; factual claims are not verified by this style review.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "7077c26536de955caeea",
+      "doc_id": "8b9b075aadf71b54c210cdc2",
+      "shown_text_sha256": "0f5b4b31c05aabf1f30242c56ddce6dd7917c825d9e9265463b6f24d77b2e5e8",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Academic metadescription analysing authors' work and psychological/social themes.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "4abd84d667ccaca3a3db",
+      "doc_id": "859a4ad61d4bfed9e357a1de",
+      "shown_text_sha256": "e8711d0aacf4abaf592cf46df56ba46576a094de3a54966fbb2b79ddeb71172f",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Performative instructions to remove and add specified words in a normative document.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "f81083ab5e9188c44b43",
+      "doc_id": "81df71d79405dbc9f6c0a77d",
+      "shown_text_sha256": "7bef750f573c1d5787d6f8775d2de13a4ab2f6b20cddeffeb5ab86a713669758",
+      "suggested_style": "mixed",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "The passage combines an article-description frame with public-value praise of an institution. The exact excerpt does not support a clear scientific/publicistic boundary.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "3aa3cb04740429064a31",
+      "doc_id": "01077f5eae909b252f91e3bd",
+      "shown_text_sha256": "02cdda81e35ad82026e514f4159c6d98da28bf6055a18c6a68ba59381e61b1c0",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Public weather forecast listing regional conditions; no scientific explanation of mechanisms or operative order.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "8a8eccf4d6385dea72e9",
+      "doc_id": "0b0d81989a892658f4a259c4",
+      "shown_text_sha256": "303076f059c6a75531ab1810471957407dced1f8dc35a9d069e38604670a5602",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Informal first-person emotional reaction and direct address to another person.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "dfaaaa67cf051f69766a",
+      "doc_id": "46d6a924c1c7110156638c60",
+      "shown_text_sha256": "3317e458f72bb44f3c746173e0dc99b57e11e1b1e7a1efa97015ce59604d9234",
+      "suggested_style": "official",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Numbered institutional duties, even though scientific expertise is among the topics.",
+      "provisional_source_style_after_review": "official"
+    },
+    {
+      "packet_item_id": "fdafa9ddf94ac7ce72a8",
+      "doc_id": "0459374eb4057d0dfb6b3a53",
+      "shown_text_sha256": "a117cdfcf74b5848e0feeca544f9bfc1a68b87ac5359d630ca25053074d02ae0",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Literary narration presents characters, feelings, memory and a developing scene.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "327a55aad7d3191068be",
+      "doc_id": "ecd3d5dcbdffa503dd84bcf8",
+      "shown_text_sha256": "9d53791aab87e2184c09d4aa46857a2bfc3f3a20e274cc6f380d2a9b5e9c46e4",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Research purpose, chemical/microbiological explanation and an explicitly stated evaluation method.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "8b74969488f7fdc5d430",
+      "doc_id": "dac3f4fc93c6f634321af204",
+      "shown_text_sha256": "dd55e8806663448b4d9ff8e58d8a3d457c25f8a36a2c4d90b16916ea7ccb8e18",
+      "suggested_style": "insufficient",
+      "keep_shown_text": false,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "The shown introduction describes a social problem and institutional responses but provides no distinctive research method or reasoning. Scientific versus publicistic function remains unresolved from this view.",
+      "provisional_source_style_after_review": "scientific"
+    },
+    {
+      "packet_item_id": "a9575089f55e894cca25",
+      "doc_id": "3b95449d19f7cc68f3fa2692",
+      "shown_text_sha256": "7494debb0d8bee05d841d3f27fb14b5d099e11f6805a05355f2ee51a6f47f89f",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Folktale narrative develops a fictional plan through characters and dialogue.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "8e9591766ed845dc1576",
+      "doc_id": "8ee7fbf6f3cb54c8d655937f",
+      "shown_text_sha256": "67a7f5b5e2976f6286a68a19827c04ba00377ed1a1cd033c66095b9bd55a7e06",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Translated poetic voice, imagery and rhythmic construction; attribution remains metadata-like content within the published poem.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "285bc1a3a171ff5e5d20",
+      "doc_id": "02250dfce362e1a1d251ac7c",
+      "shown_text_sha256": "f44eee29680d02b9fc07be0e6c54ff626d8fe910a6760949bf830faa35be1e6a",
+      "suggested_style": "literary",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Framed anecdotal narrative with a character's quoted dialogue, rather than an unframed forum exchange.",
+      "provisional_source_style_after_review": "literary"
+    },
+    {
+      "packet_item_id": "57759a08541d7ba295e9",
+      "doc_id": "76a84aaec07a4575e0f21885",
+      "shown_text_sha256": "3bacae5f216cfd4c26febf3ca754e5e7950640b918735d5ce31f8433f427477b",
+      "suggested_style": "publicistic",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Attributed mayoral statement framed as a public report; quoted first-person speech does not by itself make the whole text colloquial.",
+      "provisional_source_style_after_review": "publicistic"
+    },
+    {
+      "packet_item_id": "ba1776f1422168fc5f0a",
+      "doc_id": "c56177145ba7a84f417f4aeb",
+      "shown_text_sha256": "bc527b1bd32c7aaa6d42313e3a9411f9cc6e1e217c76c1995443b449fcfcd6d5",
+      "suggested_style": "colloquial",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Informal first-person answer about attendance and tuition.",
+      "provisional_source_style_after_review": "colloquial"
+    },
+    {
+      "packet_item_id": "2cff2b24e641c6c7a45e",
+      "doc_id": "81210d0e4a780f22a13dd9f1",
+      "shown_text_sha256": "0097cbc6d71b54b6c1b7c142bb4f60271658228d3ce6c923c677cb254200be34",
+      "suggested_style": "scientific",
+      "keep_shown_text": true,
+      "reviewed_extent": "entire_frozen_model_view_not_entire_source_document",
+      "reason": "Academic account of pedagogical ideas and their conceptual scope.",
+      "provisional_source_style_after_review": "scientific"
+    }
+  ],
+  "additional_reserved_source_checks": {
+    "input": "data/external/ayu_forms_reserved_20261006/candidates.jsonl",
+    "input_sha256": "32de5ba854ae43a99637256c6d1220f1d0b00c8780feabb8967d328c814bc6ec",
+    "outside_the_50_item_packet": true,
+    "model_predictions_used": false,
+    "not_a_new_test_set": true,
+    "decisions": [
+      {
+        "doc_id": "d4915c974a239c190a5700e2",
+        "text_sha256": "0cc58339f3cc209bd1b17ea59eb683fd2f970a2d1b772510a264103d7df689e4",
+        "reviewed_extent": "entire_extracted_candidate",
+        "suggested_style": "official",
+        "final_reference_approved": false,
+        "reason": "Enrollment request, form fields, consent, signature and date are recognisably administrative. Exact short-form view still needs separate freeze before any model query."
+      },
+      {
+        "doc_id": "c5feda0b559ad7d19a8c3b5f",
+        "text_sha256": "73744427bcd451883257a67f48abbee71e7ccfc627aff4868756e6655652d1c5",
+        "reviewed_extent": "entire_extracted_candidate",
+        "suggested_style": "official",
+        "final_reference_approved": false,
+        "reason": "Administrative request is recognisable, but repeated approval-role headings and merged words require source-layout/extraction review. Do not silently delete repetitions or certify as a clean reference."
+      }
+    ]
+  }
+}

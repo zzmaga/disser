@@ -1,0 +1,87 @@
+{
+  "version": "prospective_reservation_v1",
+  "reservation_id": "v7_20261019_view_overlap",
+  "status": "conservative_reviewed_passage_extension_NOT_duplicate_or_label_judgement",
+  "corpus": "data/cleaned/unified_corpus_20261018b",
+  "corpus_complete_sha256": "178660e1ab1cf34621bf4f5a76c548cf8c38c8228b29d3b82a759d4063cfcac8",
+  "source_selectors": [],
+  "protected_identities": {
+    "doc_id": [
+      "2afe1d176d7ace5d5523fde2",
+      "3b4fb8c5f7caf44cb2f412c5",
+      "7c2e5540ad2a2fbb341a8c3e",
+      "9a502dda5b32d393a5f2ab1a",
+      "dd73cbc2e8ce9db0b59b8518",
+      "e21c347d910af6962430403e",
+      "e74089d2a12c39721252ce1d",
+      "e7a3e258fb0a6ccffc81d142",
+      "f0109d095dbb740a9f3cf065"
+    ],
+    "parent_group": [
+      "bm.kaznu.kz/article/478",
+      "bm.kaznu.kz/article/575",
+      "zan_registry_document:20518",
+      "zan_registry_document:21740",
+      "zan_registry_document:5830",
+      "zan_registry_document:5832",
+      "zan_registry_document:5833",
+      "zan_registry_document:5849",
+      "zan_registry_document:5850"
+    ],
+    "passage_group_id": [
+      "8baef4ea12fae5c69bce8ee9"
+    ],
+    "source_url": [
+      "https://bm.kaznu.kz/index.php/kaznu/kk/article/view/478",
+      "https://bm.kaznu.kz/index.php/kaznu/kk/article/view/575"
+    ],
+    "split_group_id": [
+      "271c7c926cda976e975e675c",
+      "29191eaf447011ca017763ca",
+      "3f730a9ceacd86f5ee5837d9",
+      "96947415a56319043e9f5762",
+      "c2fcb0e4a2cec0d2dc3e5fae",
+      "fc1159ffde165874db0361ae"
+    ],
+    "text_hash": [
+      "010eaa41516c186ae1a34ad497899a78618e01a7984304504ebada58efd1ecaa",
+      "21fec87a1ce79abd7d2bffe5fb507f9315c2a6247395a858f9a9303745d6d54f",
+      "224a90d5138429456268acca73dfa5b01e83e6f238ff6400d6ddb72b2ad7820d",
+      "25cb61f36ce71095d2f949bae7dc7f79e1b4bf9fcdf0abac754f4ee358fed0da",
+      "274ef4f875b7b8d2bf7f5e7e49e2ed87b261a77bd55001ecb7536c6d33ae7d22",
+      "2975fe22eb69822a1db46950912b90f5bab01f4dc1d74cda88517c32acecf4e2",
+      "38b3c0b1e1e9653bf5264ce01c7051872b77bd98b4f6a12d56c424012e9a7deb",
+      "507d47472aaec6432322998ff332a4ff1bc5575f33d2a64ce8b8bd271279e175",
+      "5521d9568b64f5c9e826b870a945dade8eeae5ed77279d215be6198ac13c94e3",
+      "72c25bb6a334eb2d6c6841b39fce5682490ed6fd665a50b0a59eeb29f91b6bb1",
+      "7dab14f17684d7faa3bab5e4b47949747157c08b464e27687f19ebf4071b9ac2",
+      "9fe8485fd74b6ae452ddcc036bfbf7472aed55731eeaee0dd32351ca42c49d69",
+      "ae05950f4d640e9cc02599a5f5d78d72c355ca4188e1bcddebdf70b401befe98",
+      "b20bc8e0df3dc152cfc846be64b7f665c339ab57258409af7dda1dbd8ca5d991",
+      "c70245c01b2040d3c4e8f7a4b27597a4b94febe001e685dda3f1f04cb5ca9ad8",
+      "d4c329d0c5cadaf8d604a3afbdd799be3cd5c45bb161f3fc8759e81cf8c1306a",
+      "db1ac096f3566c77d6934efd6cf867f08b2415b9ef73411ca575053b05e6e3b8",
+      "f37272b5654965fb28fc92657eb81225eeb12de17a45d2910bbcb6fe0619363f"
+    ]
+  },
+  "inputs": {
+    "data\\cleaned\\unified_corpus_20261018b\\COMPLETE.json": "178660e1ab1cf34621bf4f5a76c548cf8c38c8228b29d3b82a759d4063cfcac8",
+    "data\\cleaned\\development_v7_views_20261018\\candidates.jsonl": "77a3d459a7f9c8978092188c89bd82e3557ce03f5f2edca36b6c3b05547aaaeb",
+    "data\\cleaned\\development_v7_views_20261018\\COMPLETE.json": "a610cfbdbbc57b0496f34f36c42535f7bad7d60a296ef06e7c5a69b73f85503f",
+    "data\\annotation\\reserved_v7_views_20261018\\candidates.jsonl": "2dbb8f3c780b2bcc55172f7c4661cef9da1f4c2f862632a1b8dbfd07bff1feb6",
+    "data\\annotation\\reserved_v7_views_20261018\\COMPLETE.json": "bda91152f41e0a39a63e7a2186fb96066f53e266cb7c19b3da6a7b9ebc9d8a95",
+    "reports\\technical\\dissertation_completion_20261018\\curation_followup\\reserved_development_overlap\\protocol.json": "d3cabc2a36a9ce680b7f67045f6bf012a20453760b59d874734f62bf35032be5",
+    "reports\\technical\\dissertation_completion_20261018\\curation_followup\\reserved_development_overlap\\findings.jsonl": "0b7bc1ff875266a080dfd2f0f4b4cf07be7fbeca6513aaf701fe75c66859e652",
+    "reports\\technical\\dissertation_completion_20261018\\curation_followup\\reserved_development_overlap\\COMPLETE.json": "367d11d78904d438125ecc4a4bd242e61f05c378a82eccc0a9ad347c762e6cb2",
+    "configs\\reviews\\view_overlap_v7_20261019.json": "11a84b32705fc0a7f814d73c44bae593ca82cacc930eca19f8e1c68640896215",
+    "configs\\evaluation_reservations.json": "f627800be72ca2998563a8f0ba80ffcc3f472fd02a032a63b88db89c64adbf25"
+  },
+  "extension_script_sha256": "f74321ea37b79ff3964d0136a9d4f0f87980f1cf00a00156158d599c895af1e8",
+  "review_sha256": "11a84b32705fc0a7f814d73c44bae593ca82cacc930eca19f8e1c68640896215",
+  "expert_verified": false,
+  "model_predictions_used": false,
+  "limitations": [
+    "Shared boilerplate or method wording does not prove duplicate documents.",
+    "Only embargo membership changes; original texts and labels are preserved."
+  ]
+}

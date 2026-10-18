@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "note": "Prospective embargo for NEW training/validation; historical restoration remains unchanged. Labels and exact model views still require review.",
+  "ledgers": [
+    {
+      "path": "configs/reservations/v7_20261018c.json",
+      "sha256": "70a502debcf1df0b280b9ea9f1ac93f72ea64eb211fe372ad02e40f851d297b5"
+    },
+    {
+      "path": "configs/reservations/v7_20261019_view_overlap.json",
+      "sha256": "04f5870b8552a16fe8d9adace70f16331a51e1e990e6236afe6f977bf2fcf59b"
+    }
+  ]
+}

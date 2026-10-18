@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "reservation_id": "v7_20261018c",
+  "dated": "2026-10-18",
+  "corpus": "data/cleaned/unified_corpus_20261018b",
+  "corpus_complete_sha256": "178660e1ab1cf34621bf4f5a76c548cf8c38c8228b29d3b82a759d4063cfcac8",
+  "guidelines": "configs/style_annotation_guidelines.json",
+  "guidelines_sha256": "522c7188d3b9a7afe23b7d580ea32fe4832896baea79b372f641986e3fb9c792",
+  "known_development_inputs": {
+    "data/processed/text_only_v4_shared/manifest.jsonl": "a42109bbc024bea934e1c5821c7d00c1b9ab150f81f19e3c6a1e9bcba9681c83",
+    "data/processed/expanded_v6_shared/manifest.jsonl": "9713b9ba9ca8c6d45f39ca8104e9e04d3dddc81b5f47cf3cfc4ffffc471eff0c"
+  },
+  "styles": [
+    "official",
+    "scientific",
+    "publicistic",
+    "literary",
+    "colloquial"
+  ],
+  "seed": 20261018,
+  "candidates_per_style_per_role": 100,
+  "source_selectors": {
+    "official": {
+      "source_domain": "adilet.zan.kz"
+    },
+    "scientific": {
+      "source_domain": "bulletin-ecology.kaznu.kz"
+    },
+    "publicistic": {
+      "source_domain": "abai.kz"
+    },
+    "literary": {
+      "source_domain": "adebiportal.kz"
+    },
+    "colloquial": {
+      "source_family": "KazSAnDRA",
+      "upstream_domain": "bookstore"
+    }
+  },
+  "selection": "Round-robin genre/source/upstream/length strata, deterministic SHA-256 order; one per canonical component before additional members. All component members embargoed. Document-group role consumes at most 400 full-component documents per style; unused members of selected groups remain embargoed. Large-family coverage is limited by this budget.",
+  "role_definition": {
+    "document_groups": "New recorded document/group identities outside withheld source units; previously inspected v4/v6 groups excluded.",
+    "source_shift": "Source units withheld from the FUTURE v7 training and validation; some sites were used by historical v4/v6 models. Not a universal unseen-publisher test."
+  },
+  "training_only_genres": [
+    "application_form",
+    "personnel_order",
+    "contract",
+    "service_memo",
+    "explanatory_note",
+    "business_form",
+    "order_extract",
+    "administrative_order",
+    "procurement_order",
+    "procurement_contract",
+    "business_letter"
+  ],
+  "limitations": [
+    "Candidate labels are source-provisional/AI-assisted, never independent human gold. Exact future model views need semantic review before reference freeze.",
+    "Source-shift units are portal, journal site or upstream platform strata, not five independent publishers. Adilet and Zan are related legal portals; all scientific journal sites are KazNU.",
+    "Several source units were used by historical models. The embargo is prospective for v7; legacy metrics and historical prediction restoration are unchanged.",
+    "Known v4/v6 identity, hash, provenance and canonical-group matches are excluded from candidate evaluation. Other past diagnostic texts require an additional exact-view overlap audit.",
+    "Unknown cross-site author aliases, review product/author IDs and encoder pretraining overlap remain unresolved.",
+    "This deliberately diverse sample does not estimate corpus-wide class prevalence. Reserve selection does not certify correctness of the full corpus.",
+    "The 400-document per-style group-embargo budget limits representation of large author/passage families. Candidate counts are fixed, group counts may differ."
+  ],
+  "document_group_embargo_budget_per_style": 400,
+  "min_remaining_per_style": 1200,
+  "supersedes_unregistered": [
+    "data/annotation/reserved_v7_20261018",
+    "data/annotation/reserved_v7_20261018b"
+  ],
+  "supersession_reason": "Preflight builds not used by any training. Final version distinguishes registry/archive transport URLs from individual document URLs and verifies that the guard blocks exactly the canonical reservation closure."
+}

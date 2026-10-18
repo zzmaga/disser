@@ -1,0 +1,35 @@
+{
+  "reviewer_kind": "assistant",
+  "reviewed_on": "2026-10-19",
+  "expert_verified": false,
+  "source": "exact_model_views",
+  "findings_sha256": "0b7bc1ff875266a080dfd2f0f4b4cf07be7fbeca6513aaf701fe75c66859e652",
+  "model_predictions_used": false,
+  "shown_views_read": 6,
+  "decisions": [
+    {
+      "left_doc_id": "dd73cbc2e8ce9db0b59b8518",
+      "right_doc_id": "e74089d2a12c39721252ce1d",
+      "left_view_sha256": "b30513056674a0afd88e3a69168b071700acbe0e5994aef5badf1fb7b789775c",
+      "right_view_sha256": "69c1fe3bb7250e6701b82784de4fd4d3916dc3d9434d9d525a8ff716b4f74581",
+      "action": "extend_embargo_over_full_groups",
+      "reason": "Shared legal registration/amendment boilerplate in different acts. Keep documents, conservatively withhold the connected full groups."
+    },
+    {
+      "left_doc_id": "e7a3e258fb0a6ccffc81d142",
+      "right_doc_id": "9a502dda5b32d393a5f2ab1a",
+      "left_view_sha256": "68b19050480171d9aba912e34a87786aa518206200bc7f59b29c43ad743c9fa3",
+      "right_view_sha256": "7d5f8879728e0ede118f83feff3aa9553de745fbe4f0da130c1c0010f91fb820",
+      "action": "extend_embargo_over_full_groups",
+      "reason": "Related fisheries-law amendment wording in different dated acts. Shared passage is not a duplicate-document judgement."
+    },
+    {
+      "left_doc_id": "f0109d095dbb740a9f3cf065",
+      "right_doc_id": "3b4fb8c5f7caf44cb2f412c5",
+      "left_view_sha256": "99ad4bd0a666fab883f9637bc91e1085c3f079afd3ced436098af6fc1a79d0ee",
+      "right_view_sha256": "fc8ae85d9ae6f5eaf4936149340e52fc4b94b90af84a5617d559ccd7fb3abe59",
+      "action": "extend_embargo_over_full_groups",
+      "reason": "Shared Navier-Stokes/OpenFOAM methodological wording in different scientific records. Preserve both originals; co-isolate groups from training."
+    }
+  ]
+}
