@@ -11,26 +11,52 @@ from pathlib import Path
 
 from kazstyle.data.corpus import digest, file_hash, make_excerpt, normalized_hash, write_json, write_jsonl
 from kazstyle.data.quality import assert_text_only, inspect_text
+from kazstyle.data.reservation import protected_rows, registered_ledgers
 from kazstyle.models.tokenization import load_dataset_tokenizer, tokenizer_specs, fit_shared_text
 
-VERSION = 'shared_candidate_views_v2'
+VERSION = 'shared_candidate_views_v3'
 
 
-def prepare(inputs, reference_dataset, out, view_policy='full_or_central'):
+def prepare(inputs, reference_dataset, out, view_policy='full_or_central', *, corpus=None, development_only=False):
     if out.exists():
         raise FileExistsError(out)
     if view_policy not in {'full_or_central','legacy_mixed'}:
         raise ValueError('Unknown view policy')
+    inputs=[Path(path) for path in inputs]
+    if bool(inputs)==(corpus is not None):
+        raise ValueError('Choose JSONL inputs or one canonical corpus')
     config = json.loads((reference_dataset/'config.json').read_text(encoding='utf-8'))
     specs = tokenizer_specs(config)
     loaded = [load_dataset_tokenizer(reference_dataset, config, spec['model_name']) for spec in specs]
     constraints = [(tokenizer, spec['max_tokens']) for tokenizer, spec in loaded]
     records = defaultdict(list)
-    for path in inputs:
-        for line in path.read_text(encoding='utf-8').splitlines():
-            row = json.loads(line)
-            records[row['doc_id']].append({**row, 'view_input_file': str(path)})
-    protocol = {'version': VERSION, 'inputs': {str(p): file_hash(p) for p in inputs},
+    if corpus is not None:
+        from kazstyle.data.export_corpus import load_documents
+        corpus=Path(corpus)
+        rows=load_documents(corpus)
+        summary=json.loads((corpus/'summary.json').read_text(encoding='utf-8'))
+        if not summary['grouping']['performed']:
+            raise ValueError('Canonical corpus needs full-document grouping before view preparation')
+        for row in rows:
+            group=row.get('split_group_id')
+            if not isinstance(group,str) or not group:
+                raise ValueError('Missing canonical full-document group')
+            records[row['doc_id']].append({**row,'view_input_file':str(corpus/'corpus.csv'),
+                'corpus_split_group_id':group,'corpus_text_sha256':digest(row['text'])})
+        input_hashes={str(corpus/'COMPLETE.json'):file_hash(corpus/'COMPLETE.json')}
+    else:
+        for path in inputs:
+            for line in path.read_text(encoding='utf-8').splitlines():
+                row = json.loads(line)
+                records[row['doc_id']].append({**row, 'view_input_file': str(path)})
+        input_hashes={str(p):file_hash(p) for p in inputs}
+    all_rows=[row for versions in records.values() for row in versions]
+    ledgers=registered_ledgers()
+    reservations=protected_rows(all_rows,ledgers)
+    protected={all_rows[index]['doc_id']:reasons for index,reasons in reservations.items()}
+    protocol = {'version': VERSION, 'inputs': input_hashes,
+                'canonical_corpus':str(corpus) if corpus is not None else None,
+                'canonical_group_policy':'Preserve corpus_split_group_id even when excerpts or sampling omit a connecting document',
                 'reference_dataset': str(reference_dataset),
                 'reference_config_sha256': file_hash(reference_dataset/'config.json'),
                 'tokenizers': specs, 'view_policy': view_policy,
@@ -38,10 +64,17 @@ def prepare(inputs, reference_dataset, out, view_policy='full_or_central'):
                 'word_budget_selection': 'fixed 160; preserve shorter complete texts' if view_policy == 'full_or_central' else 'sha256(doc_id) first 8 hex modulo 3',
                 'excerpt': 'central contiguous excerpt, then trailing whole words removed to fit every tokenizer',
                 'purpose': 'development_candidate_review_NOT_final_test', 'model_predictions_used': False,
-                'expert_verified': False, 'split_assignment': None}
+                'expert_verified': False, 'split_assignment': None,
+                'development_only': development_only,
+                'reservation_ledgers':{str(path):file_hash(path) for path,_ in ledgers},
+                'reservation_policy': 'Registered source/identity/group embargo; reserved views never become training candidates'}
     accepted, rejected, duplicate_records = [], [], []
     seen_text = {}
     for doc_id, versions in records.items():
+        if development_only and doc_id in protected:
+            rejected.append({'doc_id':doc_id,'reason':'evaluation_reservation',
+                             'details':protected[doc_id]})
+            continue
         if len({(r['style'], digest(r['text'])) for r in versions}) != 1:
             rejected.append({'doc_id': doc_id, 'reason': 'conflicting_versions_of_document',
                              'inputs': [r['view_input_file'] for r in versions]})
@@ -68,7 +101,8 @@ def prepare(inputs, reference_dataset, out, view_policy='full_or_central'):
             rejected.append({'doc_id': doc_id, 'reason': 'identical_view', 'duplicate_of': first['doc_id']}); continue
         seen_text[text_hash] = row
         counts = {spec['model_name']: len(tok(text, add_special_tokens=True, truncation=False)['input_ids']) for tok, spec in loaded}
-        accepted.append({**row, 'text': text, 'content_hash': digest(text.casefold()),
+        accepted.append({**row, 'text': text, 'text_sha256':text_hash,
+            'content_hash': digest(text.casefold()),
             'parent_id': row.get('parent_id') or doc_id, 'view_parent_text_sha256': digest(row['text']),
             'parent_content_hash': normalized_hash(row['text']),
             'duplicate_probe': ' '.join(row['text'].split()[:120] + row['text'].split()[-120:]),
@@ -77,10 +111,19 @@ def prepare(inputs, reference_dataset, out, view_policy='full_or_central'):
                 'token_counts': counts, 'char_start': details['char_start'],
                 'char_end': details['char_start'] + len(text), 'is_excerpt': text != row['text']},
             'view_review_status': 'exact_view_requires_semantic_review',
-            'usage_status': row['usage_status'] if str(row.get('usage_status','')).startswith('reserved') else 'review_pool_only'})
+            'usage_status': ('reserved_pending_exact_view_review' if doc_id in protected
+                             else 'review_pool_only')})
     for path, expected in protocol['inputs'].items():
         if file_hash(path) != expected:
             raise ValueError('Candidate input changed while preparing views')
+    if file_hash(reference_dataset/'config.json')!=protocol['reference_config_sha256']:
+        raise ValueError('Reference tokenizer configuration changed while preparing views')
+    for path,sha in protocol['reservation_ledgers'].items():
+        if file_hash(path)!=sha:
+            raise ValueError('Reservation ledger changed while preparing views')
+    if corpus is not None:
+        from kazstyle.data.export_corpus import verify_integrity
+        verify_integrity(corpus)
     out.mkdir(parents=True)
     shutil.copy2(__file__, out/'code_snapshot.py')
     write_json(out/'protocol.json', protocol)
@@ -101,9 +144,13 @@ def prepare(inputs, reference_dataset, out, view_policy='full_or_central'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--input', type=Path, action='append', required=True)
+    source=parser.add_mutually_exclusive_group(required=True)
+    source.add_argument('--input', type=Path, action='append')
+    source.add_argument('--corpus', type=Path)
     parser.add_argument('--reference-dataset', type=Path, required=True)
     parser.add_argument('--out-dir', type=Path, required=True)
     parser.add_argument('--view-policy', choices=['full_or_central','legacy_mixed'],default='full_or_central')
+    parser.add_argument('--development-only',action='store_true',help='Exclude registered evaluation documents, groups and source units')
     args = parser.parse_args()
-    prepare(args.input, args.reference_dataset, args.out_dir,args.view_policy)
+    prepare(args.input or [], args.reference_dataset, args.out_dir,args.view_policy,corpus=args.corpus,
+            development_only=args.development_only)

@@ -14,6 +14,7 @@ from kazstyle.settings import project_path
 from kazstyle.data.grouping import assign_split_groups, assign_passage_groups, validate_group_separation, GROUP_KEYS
 from kazstyle.models.tokenization import load_dataset_tokenizer, tokenizer_specs, fit_shared_text
 from kazstyle.data.sampling import diverse_sample
+from kazstyle.data.reservation import assert_training_allowed
 
 
 def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=None, shared_reference=None):
@@ -22,6 +23,8 @@ def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=N
     if not 2<=len(styles)<=5 or len(set(styles))!=len(styles) or any(s not in STYLES for s in styles):
         raise ValueError('Choose 2 to 5 distinct styles')
     if per_class<40:raise ValueError('At least 40 requested documents per class')
+    rows=[json.loads(line) for line in candidates.read_text(encoding='utf-8').splitlines()]
+    reservation_evidence=assert_training_allowed(rows)
     shared_loaded = []
     tokenizer_name = DEFAULT_MODEL
     if shared_reference:
@@ -35,9 +38,6 @@ def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=N
         tokenizer = shared_loaded[0][0]; tokenizer_name = reference_config['tokenizer_name']
     else:
         tokenizer=AutoTokenizer.from_pretrained(tokenizer_path or DEFAULT_MODEL,local_files_only=True)
-    rows=[json.loads(line) for line in candidates.read_text(encoding='utf-8').splitlines()]
-    if any(str(r.get('usage_status','')).startswith('reserved') for r in rows):
-        raise ValueError('Reserved source/evaluation candidates cannot be included in training datasets')
     mapping={s:i for i,s in enumerate(styles)}
     rows=[r for r in rows if r['style'] in styles]
     available=Counter(r['style'] for r in rows)
@@ -132,7 +132,7 @@ def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=N
     metadata_columns=['sample_id','doc_id','parent_group','duplicate_group_id','source_url','source_domain',
                       'style','style_name','label','split','genre','label_origin','review_status','content_hash','excerpt_hash',
                       'excerpt_words','token_count','view_max_words']
-    metadata_columns += [key for key in ['split_group_id','author_group','author_kind','work_group','template_family_id','passage_group_id'] if key in selected]
+    metadata_columns += [key for key in ['split_group_id','author_group','author_kind','work_group','template_family_id','passage_group_id','corpus_split_group_id'] if key in selected]
     metadata=selected[metadata_columns].astype(object).where(pd.notna(selected[metadata_columns]),None)
     write_jsonl(out/'metadata.jsonl',metadata.to_dict('records'))
     # Compatibility report manifest is validated against the separate text-only inputs.
@@ -153,7 +153,8 @@ def build(candidates, out, per_class=240, seed=42, styles=None, tokenizer_path=N
         'tokenizer_revision':shared_loaded[0][1].get('revision') if shared_loaded else None,
         'manifest_sha256':file_hash(out/'manifest.jsonl'),'input_file_hashes':input_hashes,
         'metadata_sha256':file_hash(out/'metadata.jsonl'),'candidate_sha256':file_hash(candidates),
-        'split_grouping_version':'known_author_work_template_passage_v2', 'split_group_keys':list(GROUP_KEYS),
+        'evaluation_reservations':reservation_evidence,
+        'split_grouping_version':'known_author_work_template_passage_corpus_v3', 'split_group_keys':list(GROUP_KEYS),
         'passage_grouping':{'audit_version':'word_passage_overlap_v2','width':5,'min_shared':10,
             'containment_threshold':.8,'passage_min_shared':40,'passage_threshold':.2,'short_passage_threshold':.5,
             'edges_sha256':file_hash(out/'passage_edges.jsonl'),

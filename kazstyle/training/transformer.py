@@ -22,6 +22,7 @@ from kazstyle.data.corpus import DEFAULT_MODEL,load_manifest,write_json,file_has
 from kazstyle.models.tokenization import load_dataset_tokenizer
 from kazstyle.evaluation.reports import metrics,save_provenance,render_report,save_predictions
 from kazstyle.models.style_transformer import StyleTransformer
+from kazstyle.data.reservation import assert_training_allowed
 
 
 def encode(part,tokenizer,max_tokens):
@@ -73,6 +74,7 @@ def main():
     if device.type!='cuda' and (a.precision=='float16' or a.fused_adamw):
         raise ValueError('float16 and fused AdamW require CUDA')
     frame,config = load_manifest(a.dataset)
+    reservations=assert_training_allowed(frame.to_dict('records'),allow_reserved_test=True)
     tokenizer,tokenizer_spec = load_dataset_tokenizer(a.dataset,config,a.model_name)
     if a.revision and tokenizer_spec.get('revision') and a.revision!=tokenizer_spec['revision']:
         raise ValueError('Encoder revision differs from registered tokenizer')
@@ -95,7 +97,7 @@ def main():
     params.update(device=str(device),requested_device=a.device,encoder_commit=getattr(model.encoder.config,'_commit_hash',None),
                   max_tokens=max_tokens,effective_batch_size=a.batch_size*a.gradient_accumulation,
                   parameter_count=sum(p.numel() for p in model.parameters()))
-    save_provenance(a.out_dir,a.dataset,params)
+    save_provenance(a.out_dir,a.dataset,{**params,'evaluation_reservations':reservations})
     write_json(a.out_dir/'dataset_config.json',config)
     optimizer = torch.optim.AdamW(model.parameters(),lr=a.lr,weight_decay=.01,
                                  **({'fused':True,'foreach':False} if a.fused_adamw else {}))

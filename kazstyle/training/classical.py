@@ -15,6 +15,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
 
 from kazstyle.data.corpus import load_manifest, write_json
+from kazstyle.data.reservation import assert_training_allowed
 from kazstyle.evaluation.reports import metrics, save_provenance, render_report, save_predictions
 
 
@@ -35,6 +36,7 @@ def model_specs(seed=42):
 def train(dataset, out, seed=42):
     require_new_run(out)
     frame,config = load_manifest(dataset)
+    reservations=assert_training_allowed(frame.to_dict('records'),allow_reserved_test=True)
     train_set = frame[frame.split=='train']
     validation = frame[frame.split=='validation']
     test = frame[frame.split=='test']
@@ -43,8 +45,8 @@ def train(dataset, out, seed=42):
     params = {name:{key:str(value) for key,value in pipe.get_params(deep=True).items()}
               for name,pipe in specs.items()}
     write_json(out/'protocol.json',{'models':params,'selection':'all configurations fixed before test',
-                                   'seed':seed,'dataset_config':config})
-    save_provenance(out,dataset,{'seed':seed})
+                                   'seed':seed,'dataset_config':config,'evaluation_reservations':reservations})
+    save_provenance(out,dataset,{'seed':seed,'evaluation_reservations':reservations})
     results = {}
     for name,pipe in specs.items():
         start = time.perf_counter()
