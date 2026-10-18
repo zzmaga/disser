@@ -9,6 +9,23 @@ from kazstyle.training.suite import build_jobs,run
 
 
 class FrozenSuiteTests(unittest.TestCase):
+    def test_new_encoder_downloads_are_explicit_and_legacy_jobs_unchanged(self):
+        model={'id':'encoder','model_name':'jhu-clsp/mmBERT-small','head':'last','batch_size':1,'gradient_accumulation':8}
+        plan={'dataset':'data','seeds':[42],'models':[model],
+              'epochs':2,'learning_rate':2e-5,'threads':2}
+        self.assertNotIn('--allow-download',build_jobs(plan)[1]['command'])
+        for changed in [{**plan,'allow_download':True},
+                        {**plan,'models':[{**model,'allow_download':True}]}]:
+            self.assertIn('--allow-download',build_jobs(changed)[1]['command'])
+        legacy={**model,'model_name':'google-bert/bert-base-multilingual-cased'}
+        old={**plan,'models':[legacy]}
+        self.assertIn('--allow-download',build_jobs(old)[1]['command'])
+        self.assertNotIn('--allow-download',build_jobs({**old,'allow_download':False})[1]['command'])
+        self.assertNotIn('--allow-download',build_jobs({**plan,'allow_download':True,
+            'models':[{**model,'allow_download':False}]})[1]['command'])
+        with self.assertRaisesRegex(ValueError,'JSON boolean'):
+            build_jobs({**plan,'allow_download':'false'})
+
     def test_gpu_options_are_explicit_in_saved_commands(self):
         plan={'dataset':'data','seeds':[42],'models':[{'id':'encoder','model_name':'local/model','head':'last','batch_size':1,'gradient_accumulation':8}],
               'epochs':2,'learning_rate':2e-5,'threads':4,'device':'cuda','precision':'float16','gradient_checkpointing':True,'fused_adamw':True}

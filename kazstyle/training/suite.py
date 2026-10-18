@@ -31,7 +31,14 @@ def build_jobs(plan):
                      '--batch-size',str(spec['batch_size']),'--gradient-accumulation',str(spec['gradient_accumulation']),
                      '--lr',str(plan['learning_rate']),'--seed',str(seed),'--threads',str(plan['threads'])]
             if spec.get('revision'):command+=['--revision',spec['revision']]
-            if spec['model_name'].startswith('google-bert/'):command+=['--allow-download']
+            # Old frozen plans allowed mBERT downloads implicitly. Keep their
+            # saved commands reproducible, but let new encoder plans declare
+            # network access explicitly instead of depending on an HF namespace.
+            allow_download=spec.get('allow_download',plan.get(
+                'allow_download',spec['model_name'].startswith('google-bert/')))
+            if not isinstance(allow_download,bool):
+                raise ValueError('allow_download must be a JSON boolean')
+            if allow_download:command+=['--allow-download']
             device=spec.get('device',plan.get('device','cpu'))
             precision=spec.get('precision',plan.get('precision','float32'))
             if device not in {'cpu','cuda','auto'} or precision not in {'float32','float16'}:
