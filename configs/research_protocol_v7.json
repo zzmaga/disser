@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "status": "reserved_and_encoder_probe_passed_pending_exact_view_audit_and_labels",
+  "not_a_suite_plan": true,
+  "dated": "2026-10-18",
+  "thesis_language": "English",
+  "topic": "Corpus Construction and Development of a Text Style Identification System for the Kazakh Language Using Machine Learning Methods",
+  "research_questions": [
+    "How do genre, source and length affect five-way functional-style classification?",
+    "Do Kazakh-specific and modern multilingual encoders outperform transparent linear baselines on the same frozen inputs?",
+    "How does performance change on reserved documents and previously unseen sources?"
+  ],
+  "corpus_recipe": "configs/corpus_unified_20261018b.json",
+  "immutable_previous_corpus": "data/cleaned/unified_corpus_20261012b",
+  "collection_target_per_style": 11425,
+  "collection_target_is_not_a_degree_requirement": true,
+  "labels": {
+    "training": "source_provisional_with_explicit_ai_assisted_curation",
+    "reference": "reserved_before_training_with_declared_reference_label_origin",
+    "human_expert_annotations_available": false,
+    "assistant_reviews_are_not_human_expert_annotations": true,
+    "ambiguous_choices": [
+      "mixed",
+      "insufficient",
+      "non_kazakh",
+      "noise"
+    ]
+  },
+  "data_freeze_requirements": [
+    "Complete checksummed corpus with CSV/metadata alignment and per-source/genre/length counts",
+    "Resolve known extraction damage and style conflicts; retain reasoned quarantine",
+    "Reserve reference documents, author/work/template/duplicate groups and source-shift sets before training",
+    "Report actual retained volume and imbalance; do not fabricate a quota",
+    "Freeze exact shared text views and every encoder tokenizer/revision",
+    "Publish rights/provenance metadata without claiming blanket redistribution permission"
+  ],
+  "primary_models": [
+    {
+      "id": "word_tfidf_logreg",
+      "kind": "classical"
+    },
+    {
+      "id": "word_tfidf_linear_svc",
+      "kind": "classical"
+    },
+    {
+      "id": "char_tfidf_linear_svc",
+      "kind": "classical"
+    },
+    {
+      "id": "mbert_last",
+      "kind": "transformer",
+      "model_name": "google-bert/bert-base-multilingual-cased",
+      "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8"
+    },
+    {
+      "id": "kaz_roberta_last",
+      "kind": "transformer",
+      "model_name": "kz-transformers/kaz-roberta-conversational",
+      "revision": "43077c2fd0a163487ed468b5ec3b8750686a5888"
+    },
+    {
+      "id": "mmbert_small",
+      "kind": "transformer",
+      "model_name": "jhu-clsp/mmBERT-small",
+      "revision": "abc32620dd4f6ab06f5fbe905dc25f310618e09f",
+      "trained_in_this_project": false,
+      "compatibility_probe": "reports/technical/dissertation_completion_20261018/encoder_compatibility/mmbert_gpu.json",
+      "discarded_hardware_steps_only": true
+    }
+  ],
+  "optional_after_primary_results": [
+    "Kaz-RoBERTa concat4 as a registered ablation; existing v4/v6 results are retained",
+    "XLM-R-base if it answers a distinct hypothesis and fits the resource budget",
+    "One frozen-prompt local Kazakh LLM comparison; no paid API, test-driven prompt search or model-generated gold labels"
+  ],
+  "controls": [
+    "majority_class",
+    "length_only",
+    "source_only_diagnostic_never_a_deployed_classifier"
+  ],
+  "experiment_rules": {
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "tfidf_fit_on_train_only": true,
+    "transformers_start_from_pinned_pretrained_weights": true,
+    "selection": "Validation Macro-F1 only; all planned seeds retained; representative seed 42 fixed in advance",
+    "primary_metric": "Macro-F1",
+    "other_outputs": [
+      "per_class_precision_recall_f1",
+      "confusion_matrix",
+      "group_bootstrap_intervals",
+      "genre_source_length_errors",
+      "training_and_inference_costs"
+    ],
+    "v4_v6_tests": "Previously inspected development diagnostics, not fresh final tests",
+    "shared_input": "One fixed text view per document for the primary comparison; no silent truncation",
+    "long_document_windows": "Separate preregistered secondary analysis; no post-test choice of aggregation",
+    "stop_rule": "One compatibility/memory probe, then one frozen primary series; no retraining merely to obtain a preferred score"
+  },
+  "publication": {
+    "planned_main_title": "Source-Aware Corpus Construction and Functional Style Identification for Kazakh",
+    "degree_publication_requirement": "Requires confirmation for the current AITU cohort; Scopus-only admission requirement not established by this audit",
+    "existing_conference_paper_status": "Reported accepted by the author; DOI, proceedings record or acceptance evidence not supplied",
+    "submission_rule": "One manuscript under review at one venue at a time; use a sequential backup venue after withdrawal/rejection",
+    "extension_rule": "Cite prior paper, identify new data/methods/results, follow the selected publisher's prior-publication and AI-use policy"
+  },
+  "corpus_complete_sha256": "178660e1ab1cf34621bf4f5a76c548cf8c38c8228b29d3b82a759d4063cfcac8",
+  "reservation": {
+    "ledger": "configs/reservations/v7_20261018c.json",
+    "sha256": "70a502debcf1df0b280b9ea9f1ac93f72ea64eb211fe372ad02e40f851d297b5",
+    "candidate_texts": "data/annotation/reserved_v7_20261018c/candidates.jsonl",
+    "candidates_per_style_per_role": 100,
+    "roles": [
+      "document_groups",
+      "source_shift"
+    ],
+    "source_shift_scope": "Source units excluded from future v7; some sites known to historical models. Not a universally unseen publisher test.",
+    "final_reference_ready": false,
+    "exact_views": "data/annotation/reserved_v7_views_20261018",
+    "view_candidates": 997,
+    "quarantined_views": 3,
+    "ai_pilot_review": "configs/reviews/reserved_v7_pilot_20261019.json",
+    "legacy_view_overlap": "reports/technical/dissertation_completion_20261018/curation_followup/reserved_legacy_overlap",
+    "view_overlap_ledger": "configs/reservations/v7_20261019_view_overlap.json",
+    "view_overlap_ledger_sha256": "04f5870b8552a16fe8d9adace70f16331a51e1e990e6236afe6f977bf2fcf59b",
+    "combined_embargo_documents": 4137,
+    "final_view_overlap_audit": "reports/technical/dissertation_completion_20261018/curation_followup/reserved_development_overlap_closed"
+  },
+  "shared_tokenizer_limit": 256,
+  "tokenizer_reference": {
+    "path": "data/processed/tokenizer_reference_v7_20261018",
+    "complete_sha256": "98307b21ea99d6c4bf3363c79a947a7ea09afac1faf9b69d62c40e08f5377e2d",
+    "protocol_at_tokenizer_freeze_sha256": "44a458ce451c7f16981360423b5df62671945a08dd4a2c97b4ac1c96ef03ed01",
+    "note": "Tokenizer snapshot predates the later hardware-compatibility status update; encoder names, revisions and limits are unchanged."
+  },
+  "development_views": {
+    "path": "data/cleaned/development_v7_views_20261019",
+    "candidates_sha256": "407879792fa934d40cf377ba87fa2d778284a7d3e526effe1c1910faa5cfe027",
+    "reference_pending_label_review": true
+  }
+}

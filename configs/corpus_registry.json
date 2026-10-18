@@ -1,22 +1,413 @@
 {
-  "active_document_corpus": "data/cleaned/unified_corpus_20261010",
+  "active_document_corpus": "data/cleaned/unified_corpus_20261018b",
   "collection_targets": {
-    "official": 2000,
-    "scientific": 2000,
-    "publicistic": 2000,
-    "literary": 2000,
-    "colloquial": 2000
+    "official": 11425,
+    "scientific": 11425,
+    "publicistic": 11425,
+    "literary": 11425,
+    "colloquial": 11425
   },
-  "note": "Targets refer to screened documents, not fragments or expert-verified labels. Candidate batches below have not been merged into the active corpus. Deployment is controlled separately by configs/deployment.json.",
+  "note": "Targets count screened standalone documents, not fragments or expert labels. Batch states distinguish collection, screening and export. Deployment is controlled separately by configs/deployment.json.",
   "candidate_batches": [
-    {"path": "data/cleaned/legal_screened_20261010", "state": "screened_not_merged"},
-    {"path": "data/external/journals_scale_20261010/bulletin-history", "state": "collected_not_merged"},
-    {"path": "data/external/journals_scale_20261010/bulletin-geography", "state": "interrupted_checkpoint"},
-    {"path": "data/external/journals_scale_20261010/bulletin-journalism", "state": "interrupted_checkpoint"},
-    {"path": "data/external/journals_scale_20261010/philart", "state": "interrupted_checkpoint"},
-    {"path": "data/external/poetry_scale_20261010", "state": "interrupted_checkpoint"},
-    {"path": "data/external/forum_scale_20261010", "state": "interrupted_checkpoint"},
-    {"path": "data/external/stories_scale_20261010", "state": "partial_assistant_review"},
-    {"path": "data/external/business_scale_20261010", "state": "collected_not_merged"}
-  ]
+    {
+      "path": "data/cleaned/legal_screened_20261010",
+      "state": "superseded_by_larger_screened_batch",
+      "superseded_by": "data/cleaned/legal_screened_20261012"
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-history",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "candidates_sha256": "be8620c801f6ac6352415187b0561bc74958cf046452ebe9e74cefdde0227e15",
+      "candidate_documents": 500,
+      "accepted_provisional": 500,
+      "collection_finished": false
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-geography",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "candidates_sha256": "c3a99fb6da33a4da05aa63d84242f9e942f99bee67090262b40703d7c6d74ede",
+      "candidate_documents": 438,
+      "accepted_provisional": 437,
+      "review": 1
+    },
+    {
+      "path": "data/external/journals_scale_20261010/bulletin-journalism",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "candidates_sha256": "ebe3b2b755e6e89b41a0e16efae51e3608e09946ea200debe4f40a404513dbc2",
+      "candidate_documents": 466,
+      "accepted_provisional": 459,
+      "review": 4,
+      "excluded": 3
+    },
+    {
+      "path": "data/external/journals_scale_20261010/philart",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "candidates_sha256": "cce2c5f19a8141912674971d3128318b9ab62b84a137921c30b1ef2ae116e365",
+      "candidate_documents": 423,
+      "review": 2,
+      "accepted_provisional": 421
+    },
+    {
+      "path": "data/external/poetry_scale_20261010",
+      "state": "preserved_checkpoint_superseded",
+      "superseded_by": "data/external/poetry_scale_20261012"
+    },
+    {
+      "path": "data/external/forum_scale_20261010",
+      "state": "interrupted_checkpoint"
+    },
+    {
+      "path": "data/external/stories_scale_20261010",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "candidates_sha256": "db67b245b858fa18d7b02fab957b5175657686fc324fd1e1b108f6b9ceb342fb",
+      "candidate_documents": 183,
+      "accepted_provisional": 107,
+      "assistant_reviewed": 119,
+      "assistant_keep": 107,
+      "excluded": 12,
+      "review": 64,
+      "collection_finished": false
+    },
+    {
+      "path": "data/external/business_scale_20261010",
+      "state": "collected_not_merged"
+    },
+    {
+      "path": "data/cleaned/legal_screened_20261012",
+      "state": "superseded_by_rescreened_batch",
+      "candidate_documents": 6118,
+      "candidates_sha256": "d8d6e433fd23972871410714be6d744d1c9c89b6b9b29f37828a5f450cc04b59",
+      "collection_finished": true,
+      "included_in": "data/cleaned/unified_corpus_20261012",
+      "note": "Included as input, not every candidate accepted. Per-record decisions are in the corpus audit.jsonl; pending texts in review.csv.",
+      "superseded_by": "data/cleaned/legal_screened_followup_20261012"
+    },
+    {
+      "path": "data/external/poetry_scale_20261012",
+      "state": "included_in_export_with_screening",
+      "candidate_documents": 1767,
+      "candidates_sha256": "c614ef4bd2eae3bd62268ecf7c00997f7fd6c79bf1a2f1521fb3dd653b2a6cec",
+      "collection_finished": false,
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "accepted_provisional": 1767
+    },
+    {
+      "path": "data/external/forum_scale_20261012",
+      "state": "included_in_export_with_screening",
+      "candidate_documents": 588,
+      "candidates_sha256": "55905d304ae17f2f9e3fb475495ffa90518aff192e117ee6a2e4752307d8bb28",
+      "collection_finished": false,
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "accepted_provisional": 107,
+      "assistant_reviewed": 140,
+      "assistant_keep": 108,
+      "review": 449,
+      "excluded": 32
+    },
+    {
+      "path": "data/external/journals_scale_20261012",
+      "state": "included_in_export_with_screening",
+      "candidate_documents": 782,
+      "candidates_sha256": "285c9511e136bda005a0a9192ffa2272191ec7ef320d2cf29c8eefd0732c8134",
+      "collection_finished": false,
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "accepted_provisional": 754,
+      "review": 27,
+      "excluded": 1
+    },
+    {
+      "path": "data/external/forum_replies_20261012",
+      "state": "included_in_export_with_screening",
+      "candidate_documents": 1878,
+      "candidates_sha256": "8b244c942d8d50ed8fc03e9c7a29a4e5a8392abac66464d58169d60bb02a5613",
+      "collection_finished": true,
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "previous_included_in": [
+        "data/cleaned/unified_corpus_20261012"
+      ],
+      "review": 1668,
+      "accepted_provisional": 162,
+      "assistant_reviewed": 210,
+      "assistant_keep": 162,
+      "excluded": 48
+    },
+    {
+      "path": "data/external/forum_followup_20261012",
+      "state": "included_in_export_with_screening",
+      "protocol": "forum_checkpoint_v1; five everyday categories, 300/category, 90 pages/category",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "candidates_sha256": "fa6b54c9a61bcff2964b4c46d66fd47d7468176a02a6fe32da3d155c815cf1e3",
+      "candidate_documents": 1282,
+      "review": 1042,
+      "accepted_provisional": 213,
+      "assistant_reviewed": 240,
+      "assistant_keep": 213,
+      "excluded": 27,
+      "collection_finished": false,
+      "frozen_for_corpus": true,
+      "resume_in_place": false,
+      "stop_reason": "stop_file_for_corpus_freeze"
+    },
+    {
+      "path": "data/external/customer_reviews_20261012",
+      "state": "included_in_export_with_screening",
+      "assistant_reviewed": 200,
+      "assistant_keep": 177,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "d1e5beb0080a0065b9cf8af0c7acda266fa0a5af0fda7ff0ec0af356453e1399",
+      "candidate_documents": 2000,
+      "accepted_provisional": 177,
+      "review": 1800,
+      "excluded": 23,
+      "collection_finished": true
+    },
+    {
+      "path": "data/cleaned/business_forms_followup_20261012",
+      "state": "included_in_export_with_screening",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "f8d96d49520f5780807bc7a96a69840c7dde2af43423af912b492e95e0c0ff39",
+      "candidate_documents": 2,
+      "accepted_provisional": 2,
+      "assistant_reviewed": 2,
+      "assistant_keep": 2
+    },
+    {
+      "path": "data/external/journals_followup_20261012",
+      "state": "included_in_export_with_screening",
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "24735d82a4f47bbb9cf8a878d6a4b09b1eff446c47b81771353d7e4dec8fe4fe",
+      "candidate_documents": 159,
+      "accepted_provisional": 156,
+      "review": 3,
+      "collection_finished": true
+    },
+    {
+      "path": "data/external/news_reextracted_20261010",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "323660e91fd09861e28ca74cc16fed229ded97bf2db7776c02344f7d6ae30a71",
+      "candidate_documents": 13408,
+      "accepted_provisional": 12729,
+      "review": 661,
+      "excluded": 18,
+      "assistant_reviewed": 34,
+      "assistant_keep": 25,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": true
+    },
+    {
+      "path": "data/external/journals_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "f64ccfa462c549b0a0710c3d27481f860748eea5fc3fcee0c6d1c950861a9336",
+      "candidate_documents": 120,
+      "accepted_provisional": 119,
+      "review": 1,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": false
+    },
+    {
+      "path": "data/cleaned/prose_extended_attributed_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "99496c2c76b2bcf7a2fe7cec74b00b755b52f1b36ca9b25fc1b792d12ef0a566",
+      "candidate_documents": 200,
+      "accepted_provisional": 193,
+      "assistant_reviewed": 20,
+      "assistant_keep": 16,
+      "excluded": 7,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation."
+    },
+    {
+      "path": "data/cleaned/forum_reviewed_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "86279934bfe5239ebcbe1188516dbac98396e40a70ec54114787da1d78727a01",
+      "candidate_documents": 70,
+      "accepted_provisional": 70,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation."
+    },
+    {
+      "path": "data/cleaned/forum_everyday_reviewed_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "0d57bda8ad1774ddfb3973c9a909621e96eff7b22ab230ec20abb2c001252f53",
+      "candidate_documents": 98,
+      "accepted_provisional": 98,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation."
+    },
+    {
+      "path": "data/cleaned/forum_everyday_extra_reviewed_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "b7ce484ec115f96e6ba4f17f1080063b9e9c4a33fac25938da47adb85bd18d86",
+      "candidate_documents": 75,
+      "accepted_provisional": 75,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation."
+    },
+    {
+      "path": "data/cleaned/business_reviewed_20261006",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "4a1ba97f602874cb90d41ea06b0484a70276ed3f2f6b28b26f156f0d13a5d047",
+      "candidate_documents": 30,
+      "accepted_provisional": 30,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation."
+    },
+    {
+      "path": "data/external/journals_expansion_20261010",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "a95979db509d48e5d1f23ae60afdf0a3cfd160f18a1b606afa2a2d53c3e363ff",
+      "candidate_documents": 551,
+      "accepted_provisional": 548,
+      "review": 3,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": false
+    },
+    {
+      "path": "data/external/prose_expansion_20261010",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "1ecfbba8127d1f3a939046108f5683d99b437afae182f9459ee28950c6ae29c3",
+      "candidate_documents": 200,
+      "accepted_provisional": 141,
+      "assistant_reviewed": 200,
+      "assistant_keep": 141,
+      "excluded": 59,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": false
+    },
+    {
+      "path": "data/external/forum_expansion_20261010",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "15a2d01b118bb9801fa53adc0e0ca207fabd67c43488dfa4e56246c1b9f0d632",
+      "candidate_documents": 200,
+      "accepted_provisional": 174,
+      "assistant_reviewed": 200,
+      "assistant_keep": 174,
+      "excluded": 26,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": false
+    },
+    {
+      "path": "data/cleaned/legal_screened_followup_20261012",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "11646ef336b3959e063fd90f8439a867896455625b78002f742af210247fb0a6",
+      "candidate_documents": 8855,
+      "accepted_provisional": 8842,
+      "review": 13,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": true
+    },
+    {
+      "path": "data/external/journals_followup_more_20261012",
+      "state": "included_in_export_with_screening",
+      "included_in": "data/cleaned/unified_corpus_20261012b",
+      "candidates_sha256": "6060b55895ebc0abca21685c9f04542de23c0296b23e92c61e68246b3ad0722b",
+      "candidate_documents": 567,
+      "excluded": 1,
+      "assistant_reviewed": 6,
+      "assistant_keep": 5,
+      "accepted_provisional": 546,
+      "review": 20,
+      "note": "Input counts are not automatically accepted counts. Per-record evidence: current corpus audit.jsonl. Provisional labels, not expert annotation.",
+      "collection_finished": true
+    }
+  ],
+  "target_basis": {
+    "requested_on": "2026-10-12",
+    "reference_style": "publicistic",
+    "reference_documents": 11425,
+    "reference_corpus": "data/cleaned/unified_corpus_20261010",
+    "instruction": "Increase the other four styles toward the current publicistic count; no publicistic collection. Count standalone screened documents, never duplicate fragments."
+  },
+  "intermediate_milestone_per_style": 2000,
+  "last_completed_export": {
+    "path": "data/cleaned/unified_corpus_20261018b",
+    "documents": 29585,
+    "by_style": {
+      "official": 9819,
+      "scientific": 3958,
+      "publicistic": 11387,
+      "literary": 2368,
+      "colloquial": 2053
+    },
+    "review": 4897,
+    "excluded": 336,
+    "ready_for_training": false,
+    "complete_sha256": "178660e1ab1cf34621bf4f5a76c548cf8c38c8228b29d3b82a759d4063cfcac8"
+  },
+  "previous_document_corpora": [
+    "data/cleaned/unified_corpus_20261012",
+    "data/cleaned/unified_corpus_20261012b",
+    "data/cleaned/unified_corpus_20261018"
+  ],
+  "length_audit": "reports/technical/dissertation_completion_20261018/curation_followup/lengths",
+  "current_corpus_report": "data/cleaned/unified_corpus_20261018b/corpus.html",
+  "latest_revision": {
+    "date": "2026-10-18",
+    "full_assistant_reviews": 888,
+    "semantically_accepted": 810,
+    "excluded_or_ambiguous": 78,
+    "previous_documents_returned_to_review": 27,
+    "old_retained_texts_unchanged": true,
+    "human_reviews_received": 0,
+    "intermediate_2000_per_style_reached": true,
+    "trained_on_this_version": false,
+    "evidence": "reports/technical/dissertation_completion_20261018/curation_followup",
+    "note": "Historical batch included_in values refer to their original exports. Current inclusion is recorded by the active corpus audit. Labels remain provisional; no final reference set declared."
+  },
+  "curation_report": "reports/technical/dissertation_completion_20261018/curation_followup/report.html",
+  "reservation_feasibility": "reports/technical/dissertation_completion_20261018/curation_followup/reservation_feasibility.json",
+  "evaluation_reservation": "data/annotation/reserved_v7_20261018c",
+  "evaluation_views": "data/annotation/reserved_v7_views_20261018",
+  "tokenizer_reference": "data/processed/tokenizer_reference_v7_20261018",
+  "encoder_compatibility": "reports/technical/dissertation_completion_20261018/encoder_compatibility/mmbert_gpu.json",
+  "development_views": "data/cleaned/development_v7_views_20261019",
+  "reservation_checks": "reports/technical/dissertation_completion_20261018/curation_followup/reservation_checks.json"
 }
