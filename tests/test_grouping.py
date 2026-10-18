@@ -5,6 +5,19 @@ from kazstyle.data.corpus import balanced_splits
 
 
 class ProvenanceGroupingTests(unittest.TestCase):
+    def test_full_corpus_component_survives_missing_bridge_documents(self):
+        # A and C need not share a visible author or excerpt: an unselected B
+        # already connected their full documents in the source corpus.
+        frame=pd.DataFrame([
+            {'doc_id':'a','parent_group':'parent_a','corpus_split_group_id':'whole_a_b_c'},
+            {'doc_id':'c','parent_group':'parent_c','corpus_split_group_id':'whole_a_b_c'},
+            {'doc_id':'d','parent_group':'parent_d','corpus_split_group_id':'whole_d'}])
+        groups=assign_split_groups(frame)
+        self.assertEqual(groups[0],groups[1]);self.assertNotEqual(groups[0],groups[2])
+        frame['split']=['train','test','test']
+        with self.assertRaisesRegex(ValueError,'corpus_split_group_id'):
+            validate_group_separation(frame)
+
     def test_collapsed_duplicates_retain_all_author_and_parent_links(self):
         frame = pd.DataFrame([
             {'doc_id':'canonical', 'author_group':'author_a',

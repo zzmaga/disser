@@ -1,15 +1,52 @@
 import copy
+import csv
 import json
 import tempfile
 import unittest
 from pathlib import Path
 
 from kazstyle.data.annotation import build_packet, compare_reviews, read_packet, validate_review, LABELS
-from kazstyle.data.corpus import STYLES, write_json, write_jsonl
+from kazstyle.data.corpus import STYLES, digest, file_hash, write_json, write_jsonl
 from kazstyle.data.journals import article_key, parse_abstract
 
 
 class AnnotationTests(unittest.TestCase):
+    def test_canonical_csv_audit_is_blind_and_rejects_changed_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);corpus=root/'corpus';corpus.mkdir()
+            rows=[{'text':f'Қазақ тіліндегі мәтін {i} толық көрсетілмейтін ұзын жалғасы бар',
+                   'label':label} for i,label in enumerate(STYLES.values())]
+            with (corpus/'corpus.csv').open('w',encoding='utf-8',newline='') as stream:
+                writer=csv.DictWriter(stream,fieldnames=['text','label']);writer.writeheader();writer.writerows(rows)
+            metadata=[{'doc_id':str(i),'corpus_row':i+1,'style':style,'text_sha256':digest(row['text']),
+                       'source_domain':'private.example'} for i,(style,row) in enumerate(zip(STYLES,rows))]
+            write_jsonl(corpus/'metadata.jsonl',metadata);write_json(corpus/'summary.json',{})
+            (corpus/'by_style').mkdir()
+            for style,row in zip(STYLES,rows):
+                with (corpus/'by_style'/f'{style}.csv').open('w',encoding='utf-8',newline='') as stream:
+                    writer=csv.DictWriter(stream,fieldnames=['text','label']);writer.writeheader();writer.writerow(row)
+            files=list(corpus.rglob('*.csv'))+[corpus/'metadata.jsonl',corpus/'summary.json']
+            write_json(corpus/'COMPLETE.json',{p.relative_to(corpus).as_posix():file_hash(p) for p in files})
+            packet=build_packet([],root/'packet',per_style=1,corpus=corpus,max_words=5)
+            self.assertTrue(all(len(item['text'].split())==5 for item in packet['items']))
+            self.assertNotIn('private.example',(root/'packet/reviewer_A.html').read_text(encoding='utf-8'))
+            manifest=json.loads((root/'packet/manifest.json').read_text(encoding='utf-8'))
+            self.assertFalse(manifest['external_test']);self.assertEqual(manifest['human_reviews_received'],0)
+            self.assertIn(str(corpus/'COMPLETE.json'),manifest['inputs'])
+            self.assertEqual(manifest['excerpt_count'],5)
+            (corpus/'corpus.csv').write_text('tampered',encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'integrity check failed'):
+                build_packet([],root/'bad',per_style=1,corpus=corpus)
+            self.assertFalse((root/'bad').exists())
+
+    def test_audit_source_is_explicit_and_excerpt_limit_positive(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            for inputs,corpus,max_words in [([],None,350),([root/'a'],root/'b',350),([root/'a'],None,0)]:
+                with self.subTest(inputs=inputs,corpus=corpus,max_words=max_words),self.assertRaises(ValueError):
+                    build_packet(inputs,root/'out',corpus=corpus,max_words=max_words)
+            self.assertFalse((root/'out').exists())
+
     def fixture(self, root):
         source=root/'candidates.jsonl'
         write_jsonl(source,[{'doc_id':str(i), 'style':style, 'text':f'Қазақ тіліндегі мысал {i} </script><script>danger()</script>',

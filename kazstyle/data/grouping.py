@@ -8,7 +8,8 @@ import pandas as pd
 from kazstyle.data.corpus import UnionFind, digest
 from kazstyle.data.overlap import words, shingles, overlap_metrics
 
-GROUP_KEYS = ('duplicate_group_id', 'parent_group', 'author_group', 'work_group', 'template_family_id', 'passage_group_id')
+GROUP_KEYS = ('duplicate_group_id', 'parent_group', 'author_group', 'work_group',
+              'template_family_id', 'passage_group_id', 'corpus_split_group_id')
 
 
 def assign_passage_groups(frame):

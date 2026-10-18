@@ -73,18 +73,34 @@ def select_balanced(rows, per_style, seed):
     return selected
 
 
-def build_packet(inputs, out, per_style=50, seed=20261006):
+def build_packet(inputs, out, per_style=50, seed=20261006, *, corpus=None, max_words=350):
+    """Prepare an audit from JSONL candidates or one verified canonical corpus.
+
+    Corpus mode reads the existing CSV/metadata contract without exporting another
+    full-text JSONL. Neither mode produces expert labels or an external test set.
+    """
     if out.exists(): raise FileExistsError(out)
     if per_style < 1: raise ValueError('per-style must be positive')
+    if max_words < 1: raise ValueError('max-words must be positive')
+    inputs = [Path(source) for source in inputs]
+    if bool(inputs) == (corpus is not None):
+        raise ValueError('Choose candidate inputs or one canonical corpus, not both')
+    if corpus is not None:
+        from kazstyle.data.export_corpus import load_documents
+        corpus = Path(corpus)
+        candidates = [(str(corpus/'corpus.csv'), row) for row in load_documents(corpus)]
+        source_hashes = {str(corpus/'COMPLETE.json'): file_hash(corpus/'COMPLETE.json')}
+    else:
+        candidates = [(str(source), json.loads(line)) for source in inputs
+                      for line in source.read_text(encoding='utf-8').splitlines()]
+        source_hashes = {str(source): file_hash(source) for source in inputs}
     rows, by_content = [], defaultdict(list)
-    for source in inputs:
-        for line in source.read_text(encoding='utf-8').splitlines():
-            row=json.loads(line)
-            if row.get('style') not in STYLES: continue
-            if not isinstance(row.get('text'),str) or not row['text'].strip(): continue
-            row={**row,'input_file':str(source)}
-            key=digest(' '.join(re.findall(r'\w+',row['text'].casefold())))
-            by_content[key].append(row)
+    for source, row in candidates:
+        if row.get('style') not in STYLES: continue
+        if not isinstance(row.get('text'),str) or not row['text'].strip(): continue
+        row={**row,'input_file':source}
+        key=digest(' '.join(re.findall(r'\w+',row['text'].casefold())))
+        by_content[key].append(row)
     conflicts=[]
     for key, group in by_content.items():
         if len({r['style'] for r in group}) > 1:
@@ -93,7 +109,7 @@ def build_packet(inputs, out, per_style=50, seed=20261006):
     selected=select_balanced(rows,per_style,seed)
     items, private = [], []
     for index,row in enumerate(selected):
-        text,truncated=review_excerpt(row['text'])
+        text,truncated=review_excerpt(row['text'], max_words)
         key=digest(f'{seed}:{index}:{row["doc_id"]}')[:20]
         items.append({'id':key,'text':text,'text_sha256':digest(text)})
         private.append({'id':key, 'candidate_doc_id':row['doc_id'],'provisional_style':row['style'],
@@ -109,7 +125,9 @@ def build_packet(inputs, out, per_style=50, seed=20261006):
     write_json(out/'packet.json',packet)
     write_jsonl(out/'private_provenance.jsonl',private)
     summary={'packet_sha256':packet['packet_sha256'],'seed':seed,'items':len(items),
-             'inputs':{str(p):file_hash(p) for p in inputs},'sampling':'round_robin_source_genre_length',
+             'inputs':source_hashes,'source_kind':'canonical_corpus' if corpus is not None else 'candidate_jsonl',
+             'corpus':str(corpus) if corpus is not None else None,'max_words_shown':max_words,
+             'sampling':'round_robin_source_genre_length',
              'provisional_counts':dict(Counter(r['provisional_style'] for r in private)),
              'source_counts':dict(Counter(r['source_domain'] for r in private)),
              'excerpt_count':sum(r['is_excerpt'] for r in private), 'conflicting_exact_duplicates':conflicts,
@@ -187,9 +205,13 @@ def compare_reviews(packet_path, review_a, review_b, out):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     commands=parser.add_subparsers(dest='action',required=True)
-    build=commands.add_parser('build'); build.add_argument('--inputs',type=Path,nargs='+',required=True)
+    build=commands.add_parser('build')
+    source=build.add_mutually_exclusive_group(required=True)
+    source.add_argument('--inputs',type=Path,nargs='+')
+    source.add_argument('--corpus',type=Path,help='Verified canonical CSV corpus directory')
     build.add_argument('--out-dir',type=Path,required=True);build.add_argument('--per-style',type=int,default=50)
     build.add_argument('--seed',type=int,default=20261006)
+    build.add_argument('--max-words',type=int,default=350,help='Shown excerpt only; does not shorten the source corpus')
     compare=commands.add_parser('compare');compare.add_argument('--packet',type=Path,required=True)
     compare.add_argument('--review-a',type=Path,required=True);compare.add_argument('--review-b',type=Path,required=True)
     compare.add_argument('--out-dir',type=Path,required=True)
@@ -197,7 +219,8 @@ if __name__=='__main__':
     finalize.add_argument('--review-a',type=Path,required=True);finalize.add_argument('--review-b',type=Path,required=True)
     finalize.add_argument('--adjudication',type=Path);finalize.add_argument('--out-dir',type=Path,required=True)
     args=parser.parse_args()
-    if args.action=='build':build_packet(args.inputs,args.out_dir,args.per_style,args.seed)
+    if args.action=='build':build_packet(args.inputs or [],args.out_dir,args.per_style,args.seed,
+                                       corpus=args.corpus,max_words=args.max_words)
     elif args.action=='compare':compare_reviews(args.packet,args.review_a,args.review_b,args.out_dir)
     else:
         from kazstyle.data.adjudication import finalize_annotations
