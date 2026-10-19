@@ -1,3 +1,5 @@
+-r configs/requirements-web.txt
+Jinja2==3.1.6
 pandas>=2.0
 scikit-learn>=1.4
 beautifulsoup4>=4.12
