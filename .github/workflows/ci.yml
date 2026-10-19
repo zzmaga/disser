@@ -38,10 +38,11 @@ jobs:
           cache-dependency-path: |
             configs/requirements-ci.txt
             configs/requirements-data-ci.txt
+            configs/requirements-web.txt
       - name: Install offline data and API test dependencies
         run: python -m pip install -r configs/requirements-data-ci.txt
       - name: Run offline data and API tests
-        run: python scripts/ci.py --data
+        run: python -m pytest --junitxml=build/ci-tests.xml
       - name: Run text cleaning demo
         run: python -m kazstyle.demo --out-dir build/demo
       - name: Upload demo and test reports
@@ -50,8 +51,7 @@ jobs:
         with:
           name: kazstyle-demo-${{ matrix.os }}
           path: |
-            build/ci-tests.txt
-            build/ci-tests.json
+            build/ci-tests.xml
             build/demo/
           if-no-files-found: error
           retention-days: 14
