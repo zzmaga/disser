@@ -9,16 +9,12 @@ import html
 import json
 import os
 from pathlib import Path
-import re
+from markupsafe import Markup
 
 from kazstyle.data.corpus import file_hash,write_json
 from kazstyle.settings import PROJECT_ROOT,evidence_path
-
-
-def table(headers,rows):
-    cell=lambda value:html.escape(str(value))
-    return '<table><thead><tr>'+''.join('<th>'+cell(x)+'</th>' for x in headers)+'</tr></thead><tbody>'+''.join(
-        '<tr>'+''.join('<td>'+cell(x)+'</td>' for x in row)+'</tr>' for row in rows)+'</tbody></table>'
+from kazstyle.experiment_history import history_index
+from kazstyle.evaluation.rendering import render_template, table
 
 
 def build(out):
@@ -62,6 +58,9 @@ def build(out):
         [names.get(key,'Majority/prior baseline'),f"{r['validation_macro_f1']:.4f}",f"{r['test']['macro_f1']:.4f}"]
         for key,r in held.items()])
     def link(path,label):
+        parts=Path(path).parts
+        if len(parts)>1 and parts[0]=='reports' and parts[1] in history_index(root).get('reports',[]):
+            path='docs/EXPERIMENTS.md'
         path=evidence_path(path)
         if not path.exists():raise FileNotFoundError(path)
         href=Path(os.path.relpath(path,out)).as_posix()
@@ -96,15 +95,13 @@ def build(out):
         [(labels[s],f'{reservation["embargo_by_style"][s]:,}',f'{reservation["eligible_by_style"][s]:,}')
          for s in labels])
     replacements={
-        'CORPUS_ID':html.escape(corpus_id),'CORPUS_N':f"{sum(summary['by_style'].values()):,}",
+        'CORPUS_ID':corpus_id,'CORPUS_N':f"{sum(summary['by_style'].values()):,}",
         'CORPUS_TABLE':corpus_table,'RESULTS_TABLE':results_table,'HOLDOUT_TABLE':held_table,
         'RESERVATION_TABLE':reservation_table,
         'EMBARGO_N':f'{reservation["embargo_documents"]:,}',
-        'EVIDENCE_LINKS':evidence_links,
+        'EVIDENCE_LINKS':Markup(evidence_links),
     }
-    template=Path(__file__).with_name('thesis_english.html').read_text(encoding='utf-8')
-    for key,value in replacements.items():template=template.replace('{{'+key+'}}',value)
-    if re.search(r'\{\{[A-Z_]+\}\}',template):raise ValueError('Unresolved English manuscript placeholder')
+    template=render_template('thesis_english.html', **replacements)
     (out/'manuscript.html').write_text(template,encoding='utf-8')
     write_json(out/'evidence.json',{'created_at':datetime.now(timezone.utc).isoformat(),
         'status':'working_english_draft_not_ready_for_submission','corpus':registry['active_document_corpus'],
