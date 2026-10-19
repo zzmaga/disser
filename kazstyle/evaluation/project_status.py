@@ -7,6 +7,7 @@ from pathlib import Path
 from kazstyle.data.corpus import load_manifest,file_hash,write_json
 from kazstyle.inference.deployment import FAMILIES
 from kazstyle.settings import PROJECT_ROOT,evidence_path
+from kazstyle.experiment_history import history_index
 
 
 def dissertation_plan_html():
@@ -44,6 +45,9 @@ def build():
     results=json.loads((summary/'results.json').read_text(encoding='utf-8'))
     rows=''.join('<tr><td>'+html.escape(name)+'</td><td>'+f"{results[family]['validation_macro_f1_mean']:.4f} ± {results[family]['validation_macro_f1_sample_std']:.4f}"+'</td><td>'+f"{results[family]['test_macro_f1_mean']:.4f} ± {results[family]['test_macro_f1_sample_std']:.4f}"+'</td></tr>' for family,(_,name,_) in FAMILIES.items())
     def link(relative,title):
+        parts=Path(relative).parts
+        if len(parts)>1 and parts[0]=='reports' and parts[1] in history_index(root).get('reports',[]):
+            relative='docs/EXPERIMENTS.md'
         target=evidence_path(relative)
         if not target.exists():raise FileNotFoundError(target)
         return '<a href="'+html.escape(Path(os.path.relpath(target,reports)).as_posix(),quote=True)+'">'+html.escape(title)+'</a>'
@@ -241,7 +245,7 @@ def build():
 <h1>KazStyle: результаты и дальнейшая работа</h1><p class="muted">Эксперименты 6 октября 2026 · сверка проекта, статьи и ИПМ 18 октября 2026 · одна точка входа в проект.</p>
 <p><strong>Работает локальный классификатор пяти стилей.</strong> Вставить текст: <a href="http://127.0.0.1:8765">стабильный сайт v4</a>. Если сервер выключен, запустить <code>start_site.cmd</code>. Основная модель — {html.escape(default)}, корпус {len(active_frame)} текстов. Внешний ИИ API не используется.</p>
 <p>Новое исследование v6: <strong>{len(frame):,} текстов</strong>, по {len(frame)//5} на стиль. Train {counts['train']}, validation {counts['validation']}, test {counts['test']}. URL и сведения об источнике хранятся отдельно от признаков.</p>
-<p class="note">V6 пока не заменяет стабильный сайт: выбранная по validation модель ошибается на знакомом школьном заявлении, которое v4 распознаёт правильно. <a href="http://127.0.0.1:8766">Отдельный экспериментальный сайт v6</a> позволяет проверить новые веса. Высокая общая метрика не отменяет эту регрессию.</p>
+<p class="note">V6 не заменяла стабильный сайт: выбранная по validation модель ошибалась на знакомом школьном заявлении, которое v4 распознаёт правильно. Старые веса v6 сняты с хранения по запросу владельца; её экспериментальный сервер больше не запускается. <a href="../docs/EXPERIMENTS.md">Результаты и выводы сохранены</a>. Рабочий сайт использует шесть моделей v4.</p>
 <div class="note">Это рабочие результаты на предварительных метках. Содержательную проверку пользователь поручил ассистенту; она обозначается AI-assisted curation. Для завершения нужны замороженная итоговая выборка, оценка на новых источниках с явно указанным происхождением меток и английский текст. Независимого человеческого gold сейчас нет.</div>
 <h2>Открыть нужное</h2><div class="cards">{cards}</div>
 {corpus_note}
@@ -252,7 +256,7 @@ def build():
 {plan_note}
 <h2>Проверка текстов и происхождение меток</h2><p>В новом аудите ассистент просмотрел 25 текстов, по пять на стиль, включая семь ограниченных выдержек. <a href="../configs/reviews/corpus_pilot_20261018.json">Решения и причины</a> сохранены отдельно; это не оценка точности всего корпуса и не финальный test. Проверка обнаружила удаление слов при сборе сказок и юбилейную заметку под научной меткой. Исправления сверены с сохранёнными первоисточниками.</p><p>Старые формы для людей остаются диагностическими; заполненных человеческих ответов нет. Дальнейшая проверка по выбору пользователя — AI-assisted curation. Для итогового эксперимента нужно заранее зарезервировать новые источники и группы, явно описать происхождение и ограничения меток. Коэффициент согласия людей без их ответов не рассчитывается.</p>
 <p>В продолжении работы полностью прочитаны ещё 888 разговорных кандидатов: 810 приняты по стилю, 78 исключены или неоднозначны. Сборка <code>unified_corpus_20261018b</code> содержит 2 053 разговорных документа; каждый класс превысил промежуточный ориентир 2 000. Просмотр касается коротких текстов 8–55 слов и не доказывает качество всех жанров. Метрики новых моделей на этом банке ещё не получены.</p>
-<p>Память и принятые решения: <a href="../docs/PROJECT.md">PROJECT.md</a>. Команды и архитектура: <a href="../docs/WORKFLOW.md">WORKFLOW.md</a>. Предыдущие эксперименты сохраняются в архиве; старый отчёт не является текущим результатом.</p>
+<p>Память и принятые решения: <a href="../docs/PROJECT.md">PROJECT.md</a>. Команды и архитектура: <a href="../docs/WORKFLOW.md">WORKFLOW.md</a>. <a href="../docs/EXPERIMENTS.md">История экспериментов</a> и компактный ZIP сохраняют результаты без старых весов; старый отчёт не является текущим результатом.</p>
 <details><summary>Ограничения и доказательства</summary><p>Связь источника и класса остаётся сильной; длины классов различаются. Автоматическая проверка не доказывает правильность стилевой метки. В одном train-тексте v6 зафиксирован остаток подписи к фото: исправлен очиститель для следующей версии, замороженные данные не переписаны.</p><p>Сайт: <code>{html.escape(profile['dataset'])}</code><br>Исследование: <code>expanded_v6_shared</code><br>Manifest SHA-256 исследования: <code>{config['manifest_sha256']}</code></p></details>
 </main></body></html>'''
     (reports/'PROJECT_STATUS.html').write_text(content,encoding='utf-8')
