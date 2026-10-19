@@ -1,8 +1,0 @@
-{
-  "date": "2026-10-18",
-  "operation": "preserve_before_memory_consolidation",
-  "source": "docs/PROJECT.md",
-  "snapshot": "archive/docs/project_memory_20261018/PROJECT_before_revision.md",
-  "sha256": "7168e0984079846e8d193d6acb7a024bdd733b79a2935e873dd903e0de005d90",
-  "note": "Includes pre-existing uncommitted changes. Active memory remains docs/PROJECT.md; this snapshot is historical."
-}
