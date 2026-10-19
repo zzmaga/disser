@@ -3,10 +3,12 @@ import json
 import unittest
 from pathlib import Path
 from kazstyle.settings import artifact_path
+from kazstyle.experiment_history import is_retired
 
 
-@unittest.skipUnless((artifact_path('text_only_v3_roberta_concat4')/'results.json').exists(),
-                     'Requires completed v3 models')
+@unittest.skipUnless(not is_retired('text_only_v3_roberta_concat4', Path.cwd()) and
+                     (artifact_path('text_only_v3_roberta_concat4')/'best_model.pt').exists(),
+                     'Historical v3 weights retired by user; only recorded evidence remains')
 class V3InferenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

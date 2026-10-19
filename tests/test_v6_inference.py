@@ -3,11 +3,13 @@ import json
 import unittest
 from pathlib import Path
 from kazstyle.settings import artifact_path
+from kazstyle.experiment_history import is_retired
 
 PROFILE=Path('configs/deployments/expanded_v6_shared.json')
 
 
-@unittest.skipUnless(PROFILE.exists(),'Requires the completed v6 deployment profile')
+@unittest.skipUnless(PROFILE.exists() and not is_retired('expanded_v6_kaz_roberta_last_s42', Path.cwd()),
+                     'Historical v6 weights retired by user; active v4 models remain tested')
 class V6InferenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

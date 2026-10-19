@@ -3,9 +3,12 @@ import json
 import unittest
 from pathlib import Path
 from kazstyle.settings import artifact_path
+from kazstyle.experiment_history import is_retired
 
 
-@unittest.skipUnless((artifact_path('pilot_v2_roberta_concat4')/'results.json').exists(), 'Requires trained pilot artifacts')
+@unittest.skipUnless(not is_retired('pilot_v2_roberta_concat4', Path.cwd()) and
+                     (artifact_path('pilot_v2_roberta_concat4')/'best_model.pt').exists(),
+                     'Historical pilot weights retired by user; only recorded evidence remains')
 class InferenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
