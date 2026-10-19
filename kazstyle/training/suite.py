@@ -90,7 +90,7 @@ def run(plan_path,out,resume=False,max_jobs=None):
         state={'status':'running','completed':[],'failed':[],'current':None,'total':len(jobs)}
     pending=jobs[len(state['completed']):]
     if any(artifact_path(j['id']).exists() for j in pending):
-        raise FileExistsError('A pending run ID already exists in active storage or archive')
+        raise FileExistsError('A pending run ID already exists in active storage or historical evidence')
     if not resume:
         out.mkdir(parents=True)
         write_json(out/'protocol.json',{'plan':plan,'plan_sha256':plan_hash,
