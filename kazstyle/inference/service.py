@@ -14,6 +14,7 @@ from kazstyle.data.corpus import file_hash, make_excerpt, normalize_text
 from kazstyle.models.style_transformer import StyleTransformer
 from kazstyle.models.tokenization import tokenizer_specs,load_dataset_tokenizer,fit_shared_text
 from kazstyle.settings import PROJECT_ROOT, artifact_path
+from kazstyle.experiment_history import is_retired
 
 ROOT = PROJECT_ROOT
 MODELS = {
@@ -39,6 +40,9 @@ class InferenceService:
             deployment=json.loads(Path(deployment).read_text(encoding='utf-8'))
         deployment=deployment or {'dataset':'data/processed/pilot_v2','models':MODELS,'default_model':'roberta'}
         self.models=deployment['models']
+        if any(is_retired(spec.get('run', 'pilot_v2_classical'), self.root) for spec in self.models.values()):
+            raise FileNotFoundError('Weights for this historical profile were retired to save disk space. '
+                                    'Use configs/deployment.json; results remain in docs/EXPERIMENTS.md.')
         self.default_model=deployment['default_model']
         if self.default_model not in self.models:raise ValueError('Default model missing from deployment')
         self.dataset = self.root / deployment['dataset']
