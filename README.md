@@ -31,7 +31,7 @@ cd disser
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r configs/requirements-ci.txt
 .venv/Scripts/python.exe -m kazstyle.demo --out-dir build/demo
-.venv/Scripts/python.exe scripts/ci.py
+.venv/Scripts/python.exe -m pytest tests/test_demo.py tests/test_api_contract.py
 ```
 
 Linux:
@@ -42,7 +42,7 @@ cd disser
 python3 -m venv .venv
 .venv/bin/python -m pip install -r configs/requirements-ci.txt
 .venv/bin/python -m kazstyle.demo --out-dir build/demo
-.venv/bin/python scripts/ci.py
+.venv/bin/python -m pytest tests/test_demo.py tests/test_api_contract.py
 ```
 
 Откройте `build/demo/report.html` в браузере. Ожидаемый результат: **5 входных строк,
@@ -63,11 +63,12 @@ Workflow запускается при push и pull request в `main`, а так
 Проверки проходят независимо на Ubuntu и Windows с Python 3.12:
 
 1. Устанавливаются небольшие зависимости с фиксированными версиями.
-2. Выполняются 139 проверок очистки, экспорта, группировки, сборщиков, HTTP API и работы с файлами.
+2. Pytest выполняет 150 проверок очистки, экспорта, группировки, сборщиков, HTTP API и отчётов.
 3. Запускается пример очистки и создаётся HTML-отчёт.
 4. Журналы тестов и результат примера сохраняются в downloadable artifacts на 14 дней.
 
-Ошибки тестов, пропуски или неполное обнаружение тестов завершают проверку неуспешно.
+Ошибки тестов и сбои обнаружения завершают проверку неуспешно.
+Число выполненных и пропущенных тестов видно в журнале и JUnit XML.
 Эта проверка подтверждает работу кода; она не оценивает точность классификации
 и не переобучает модели. Полные проверки с локальными весами запускаются отдельно.
 
@@ -77,23 +78,25 @@ Workflow запускается при push и pull request в `main`, а так
 Реализован CI с сохранением готового результата. Автоматическая публикация сайта
 на сервере и развёртывание новых весов (CD) пока не настроены.
 
-Ревизия 19 октября расширяет CI до 139 проверок; локально они прошли без ошибок
+Ревизия 19 октября переводит CI на pytest: 150 проверок локально прошли без ошибок
 и пропусков. Набор не требует корпуса, весов и PyTorch/Transformers. Результат
 GitHub Actions нужно смотреть для конкретного коммита во вкладке Actions.
 Для полного набора проверок данных на чистой копии:
 
 ```powershell
 .venv/Scripts/python.exe -m pip install -r configs/requirements-data-ci.txt
-.venv/Scripts/python.exe scripts/ci.py --data
+.venv/Scripts/python.exe -m pytest --junitxml=build/ci-tests.xml
 ```
 
-Быстрый запуск `scripts/ci.py` с минимальными зависимостями выполняет 39 тестов.
+Состав переносимых проверок задаётся в `pytest.ini`; отдельного самописного runner нет.
 
 ## Полный сайт с обученными моделями
 
 На подготовленном компьютере запустите `start_site.cmd` и откройте
 **http://127.0.0.1:8765**. Вставьте казахский текст и нажмите «Сравнить все».
 Сайт показывает ответы шести вариантов и прочитанный фрагмент длинного текста.
+Сервер использует **FastAPI + Pydantic + Uvicorn**. Схема API доступна локально
+по `/openapi.json`; страница и предсказания не требуют внешних сервисов.
 
 Ручной запуск из корня проекта:
 
@@ -165,31 +168,36 @@ AI-assisted просмотра 888 новых кандидатов (810 прин
 | --- | --- |
 | `kazstyle/data/` | Сбор, очистка, версии корпуса и проверка разбиения |
 | `kazstyle/training/`, `kazstyle/models/` | Обучение и нейросетевые модели |
-| `kazstyle/inference/`, `kazstyle/api/` | Загрузка весов, предсказания и HTTP-сервер |
+| `kazstyle/inference/`, `kazstyle/api/` | Загрузка весов, предсказания и FastAPI-сервер |
 | `frontend/` | Интерфейс локального сайта |
-| `kazstyle/evaluation/` | Метрики, диагностика и исследовательские отчёты |
+| `kazstyle/evaluation/` | Метрики, диагностика и отчёты с шаблонами Jinja2 |
 | `kazstyle/demo.py`, `examples/` | Переносимая демонстрация очистки |
-| `tests/`, `scripts/ci.py` | Тесты и запуск переносимых проверок |
+| `tests/`, `pytest.ini` | Тесты и состав переносимых проверок pytest |
 | `.github/workflows/ci.yml` | Автоматические проверки GitHub Actions |
 | `configs/` | Зависимости, источники, планы экспериментов и профили сайта |
 | `docs/` | Состояние, команды, архитектура и инструкции GPU |
 | `data/`, `artifacts/`, `models/` | Локальные данные и веса, исключённые из Git |
-| `reports/`, `archive/` | Локальные результаты и история экспериментов |
+| `reports/` | Локальные результаты и компактные числовые доказательства прежних экспериментов |
 
 Локальная сводка для владельца: `reports/PROJECT_STATUS.html`.
 Английская рабочая рукопись: `reports/dissertation_english/manuscript.html`.
 Карта для агентов и этапы завершения: [PROJECT.md](docs/PROJECT.md).
-Правила хранения и архивирования: [WORKFLOW.md](docs/WORKFLOW.md).
+История моделей, результаты и следующие шаги: [EXPERIMENTS.md](docs/EXPERIMENTS.md).
+Прежние модели выведены из активного использования по запросу владельца; рабочий сайт v4 сохранён.
+Папка `archive/` удалена; результаты и выводы сохранены в EXPERIMENTS.md и компактном ZIP.
+Правила хранения: [WORKFLOW.md](docs/WORKFLOW.md).
 Точка входа для следующего агента: [AGENTS.md](AGENTS.md).
 
 ## Полные локальные тесты
 
 ```powershell
-.venv/Scripts/python.exe -m unittest discover -s tests -v
+.venv/Scripts/python.exe -m pip install -r configs/requirements-data-ci.txt
+.venv/Scripts/python.exe -m pytest tests
 ```
 
 Полный набор включает проверки моделей и HTTP и требует локальных ресурсов проекта.
-Для чистой копии репозитория используйте `scripts/ci.py`, как в быстром запуске выше.
+Для чистой копии репозитория используйте `python -m pytest` после установки
+`configs/requirements-data-ci.txt`; по умолчанию выбирается переносимый набор.
 Исследовательские эксперименты и показатели качества хранятся отдельно от журналов CI.
 
 ## Лицензия и задачи
