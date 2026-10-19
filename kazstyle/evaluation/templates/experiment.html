@@ -1,0 +1,26 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>{{ title }}</title>
+<style>
+body{max-width:1080px;margin:40px auto;padding:0 24px;font:17px/1.5 system-ui;color:#172b42}
+table{border-collapse:collapse;margin:20px 0;width:100%}th,td{border:1px solid #cbd5e1;padding:10px;text-align:right}
+th:first-child,td:first-child{text-align:left}th{background:#eaf0f7}.note{background:#fff2cf;padding:18px;border-radius:8px}
+</style>
+<h1>{{ title }}</h1><p>Стилей: {{ names|length }}. Одинаковые тексты и разбиения у всех моделей.
+Единица оценки: один фиксированный фрагмент исходного документа.</p>
+<div class="note">Предварительный эксперимент на фиксированном внутреннем разбиении.
+Выбор эпохи выполняется по validation; ограничения test указаны ниже.
+<ul>{% for item in limitations %}<li>{{ item }}</li>{% endfor %}</ul></div>
+<h2>Состав выборок</h2>{{ counts }}<h2>Результаты</h2>
+<table><tr><th>Модель</th><th>Validation Macro-F1</th><th>Test Macro-F1</th><th>Test accuracy</th><th>Обучение, с</th></tr>
+{% for name, result in results.items() %}
+<tr><td>{{ name }}</td><td>{{ '%.4f'|format(result.validation.macro_f1) }}</td>
+<td>{{ '%.4f'|format(result.test.macro_f1) }}</td><td>{{ '%.4f'|format(result.test.accuracy) }}</td>
+<td>{{ '%.2f'|format(result.fit_seconds) }}</td></tr>
+{% endfor %}</table>
+<h2>Матрицы ошибок test</h2>
+{% for name, result in results.items() %}
+<h3>{{ name }}</h3><table><tr><th>True / predicted</th>{% for label in names %}<th>{{ label }}</th>{% endfor %}</tr>
+{% for row in result.test.confusion_matrix %}
+<tr><th>{{ names[loop.index0] }}</th>{% for value in row %}<td>{{ value }}</td>{% endfor %}</tr>
+{% endfor %}</table>
+{% endfor %}
+<p>Manifest SHA-256: {{ manifest_sha256 }}</p></html>

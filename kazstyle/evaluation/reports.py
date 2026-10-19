@@ -1,7 +1,6 @@
 """Shared evaluation and experiment provenance for all pilot models."""
 from __future__ import annotations
 
-import html
 import importlib.metadata
 import json
 import platform
@@ -13,6 +12,9 @@ from pathlib import Path
 
 import numpy as np
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, f1_score
+from markupsafe import Markup
+
+from kazstyle.evaluation.rendering import render_template
 
 from kazstyle.data.corpus import file_hash, write_json, write_jsonl
 from kazstyle.settings import PROJECT_ROOT
@@ -31,7 +33,7 @@ def metrics(y, predictions, config):
 
 def provenance(dataset, params):
     packages = {}
-    for name in ['numpy','pandas','scikit-learn','torch','transformers','tokenizers','joblib']:
+    for name in ['numpy','pandas','scikit-learn','torch','transformers','tokenizers','joblib','Jinja2']:
         try:
             packages[name] = importlib.metadata.version(name)
         except importlib.metadata.PackageNotFoundError:
@@ -42,7 +44,9 @@ def provenance(dataset, params):
     except (OSError,subprocess.CalledProcessError):
         status,commit = 'unavailable','unavailable'
     paths = [PROJECT_ROOT/'manage.py', PROJECT_ROOT/'requirements.txt',
-             *sorted((PROJECT_ROOT/'kazstyle').rglob('*.py'))]
+             PROJECT_ROOT/'configs/requirements-web.txt',
+             *sorted((PROJECT_ROOT/'kazstyle').rglob('*.py')),
+             *sorted((PROJECT_ROOT/'kazstyle').rglob('*.html'))]
     return {'created_at_utc':datetime.now(timezone.utc).isoformat(), 'python':sys.version,
             'platform':platform.platform(), 'packages':packages, 'git_commit':commit,
             'git_status':status, 'command':sys.argv, 'parameters':params,
@@ -82,30 +86,9 @@ def render_report(out, frame, config, results, title='Pilot comparison'):
         'Source labels have not been expert-reviewed; source and class are confounded.',
         'This internal test does not establish generalization to new publishers.'
     ])
-    limitations_html = ''.join('<li>'+html.escape(item)+'</li>' for item in limitations)
-    rows, matrices = [], []
-    for name, result in results.items():
-        te = result['test']
-        rows.append(f"<tr><td>{html.escape(name)}</td><td>{result['validation']['macro_f1']:.4f}</td>"
-                    f"<td>{te['macro_f1']:.4f}</td><td>{te['accuracy']:.4f}</td>"
-                    f"<td>{result['fit_seconds']:.2f}</td></tr>")
-        matrix = te['confusion_matrix']
-        cells = ''.join('<tr><th>'+html.escape(label)+'</th>'+''.join(f'<td>{v}</td>' for v in vals)+'</tr>'
-                        for label,vals in zip(names,matrix))
-        matrices.append(f"<h3>{html.escape(name)}</h3><table><tr><th>True / predicted</th>"+
-                        ''.join('<th>'+html.escape(n)+'</th>' for n in names)+'</tr>'+cells+'</table>')
-    content = f'''<!doctype html><html lang="ru"><meta charset="utf-8"><title>{html.escape(title)}</title>
-<style>body{{max-width:1080px;margin:40px auto;padding:0 24px;font:17px/1.5 system-ui;color:#172b42}}
-table{{border-collapse:collapse;margin:20px 0;width:100%}}th,td{{border:1px solid #cbd5e1;padding:10px;text-align:right}}
-th:first-child,td:first-child{{text-align:left}}th{{background:#eaf0f7}}.note{{background:#fff2cf;padding:18px;border-radius:8px}}</style>
-<h1>{html.escape(title)}</h1><p>Стилей: {len(names)}. Одинаковые тексты и разбиения у всех моделей.
-Единица оценки: один фиксированный фрагмент исходного документа.</p>
-<div class="note">Предварительный эксперимент на фиксированном внутреннем разбиении.
-Выбор эпохи выполняется по validation; ограничения test указаны ниже.
-<ul>{limitations_html}</ul></div>
-<h2>Состав выборок</h2>{counts.to_html()}<h2>Результаты</h2>
-<table><tr><th>Модель</th><th>Validation Macro-F1</th><th>Test Macro-F1</th><th>Test accuracy</th><th>Обучение, с</th></tr>{''.join(rows)}</table>
-<h2>Матрицы ошибок test</h2>{''.join(matrices)}<p>Manifest SHA-256: {config['manifest_sha256']}</p></html>'''
+    content = render_template('templates/experiment.html', title=title, names=names,
+                              limitations=limitations, counts=Markup(counts.to_html()),
+                              results=results, manifest_sha256=config['manifest_sha256'])
     (out/'report.html').write_text(content,encoding='utf-8')
     lines = ['# Предварительное сравнение моделей','',
              'Один фрагмент на документ. Ограничения: ' + ' '.join(limitations), '',
