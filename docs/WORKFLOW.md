@@ -34,12 +34,18 @@
 ```powershell
 .venv/Scripts/python.exe manage.py serve
 .venv/Scripts/python.exe manage.py predict --text-file example.txt --compare
-.venv/Scripts/python.exe -m unittest discover -s tests -v
+.venv/Scripts/python.exe -m pytest tests
 ```
 
 `example.txt` — свой UTF-8 файл. Активный реестр: `configs/deployment.json`.
 В нём шесть моделей и четыре каталога весов. Один каталог classical содержит три
 классификатора. Менять модель сайта следует через проверенный профиль.
+HTTP обслуживает Uvicorn, маршруты — FastAPI, типы входного JSON — Pydantic.
+Фабрика приложения — `kazstyle.api.server.create_app`; загрузка моделей выполняется
+при старте. Схема — `http://127.0.0.1:8765/openapi.json`. Swagger/ReDoc с CDN отключены,
+чтобы сайт работал офлайн. Зависимости сервера — `configs/requirements-web.txt`.
+Для обновления существующего окружения достаточно установить этот файл; для тестов —
+`configs/requirements-data-ci.txt`. Запуск сайта остаётся прежним.
 
 ## Переносимая демонстрация и CI
 
@@ -48,7 +54,7 @@
 ```powershell
 .venv/Scripts/python.exe -m pip install -r configs/requirements-ci.txt
 .venv/Scripts/python.exe -m kazstyle.demo --out-dir build/demo
-.venv/Scripts/python.exe scripts/ci.py
+.venv/Scripts/python.exe -m pytest tests/test_demo.py tests/test_api_contract.py
 ```
 
 Вход по умолчанию — пять искусственных записей `examples/cleaning_input.jsonl`.
@@ -56,11 +62,16 @@
 схема каждой строки — только строковые `id,text`, ID непустой и уникальный.
 Каталог результата должен быть новым. HTML, JSONL и сводка сохраняются вместе.
 
-`scripts/ci.py` запускает 39 переносимых тестов очистки, хранения, демонстрации и HTTP API.
-Расширенный вариант `scripts/ci.py --data` — 139 тестов, включая сборщики, экспорт,
-дедупликацию и группировку. Для него установить `configs/requirements-data-ci.txt`.
-Оба варианта не требуют корпуса, весов, PyTorch/Transformers или сети во время тестов.
-Пропуски, ошибки и отсутствие обязательного тестового файла дают ненулевой код.
+Для полного переносимого набора установить `configs/requirements-data-ci.txt` и выполнить:
+
+```powershell
+.venv/Scripts/python.exe -m pytest --junitxml=build/ci-tests.xml
+```
+
+Pytest выбирает 150 проверок из `pytest.ini`, включая сборщики, экспорт,
+дедупликацию, группировку, FastAPI и Jinja2. Самописный `scripts/ci.py` удалён.
+Переносимые проверки не требуют корпуса, весов, PyTorch/Transformers или сети.
+Ошибки дают ненулевой код; пропуски видны в журнале и JUnit XML (локально их нет).
 Полный набор с локальными весами запускается отдельно командой из предыдущего раздела.
 `.github/workflows/ci.yml` выполняет проверки на Ubuntu и Windows, Python 3.12,
 при push/PR в main или ручном запуске. Журналы и пример хранятся в Actions artifacts
@@ -82,9 +93,10 @@
 | `training/classical.py`, `transformer.py`, `suite.py` | Обучение и серия по зафиксированному плану |
 | `models/tokenization.py`, `style_transformer.py` | Ограничения входа и модель |
 | `inference/service.py`, `deployment.py` | Загрузка весов, общая обработка и проверка профиля |
-| `api/server.py`, `frontend/` | HTTP и сайт для ручной проверки |
-| `evaluation/` | Метрики, диагностика, восстановление, рисунки и рукопись |
-| `settings.py` | Пути; чтение активных и архивных запусков |
+| `api/server.py`, `frontend/` | FastAPI/Pydantic/Uvicorn и сайт для ручной проверки |
+| `evaluation/` | Метрики, диагностика, восстановление, рисунки и английская рукопись |
+| `evaluation/rendering.py`, `evaluation/templates/` | Общие шаблоны Jinja2 с экранированием и проверкой обязательных полей |
+| `settings.py`, `experiment_history.py` | Активные веса и чтение компактных исторических доказательств |
 
 ## Данные: порядок следующей итерации
 
@@ -125,7 +137,7 @@
 при экспорте у такого входа обязательно `require_review: true`.
 
 Удалять только воспроизводимые кэши, предварительно проверив абсолютный путь.
-`data/`, `artifacts/`, `models/` и `archive/` не являются временными файлами.
+`data/`, `artifacts/` и `models/` не являются временными файлами.
 Для `build/corpus_preview_20261010/` ранее зафиксирован запрет автоматического удаления;
 обходить его другим инструментом нельзя. Это не актуальная версия корпуса.
 
@@ -450,15 +462,10 @@ GPU-настройки и проверка восстановления прив
 при новом межчастевом совпадении отменяет сокращение соответствующего train-текста.
 Выполненный `train_length_ablation_v1` не устранил нейросетевую ошибку заявления.
 
-Для сравнения новых весов с основным сайтом без смены активного профиля:
-
-```powershell
-.venv/Scripts/python.exe manage.py serve --port 8766 --deployment configs/deployments/expanded_v6_shared.json
-```
-
-Основной порт 8765 и `configs/deployment.json` сохраняют v4. Веса экспериментального
-профиля читаются через `artifact_path()` из архива. `evidence_path()` разрешает также
-старые отчёты из `archive/reports/`; при двух копиях одного пути выдаёт ошибку.
+Основной порт 8765 и `configs/deployment.json` используют v4. Старый экспериментальный
+сервер v6 на порту 8766 больше не запускать: пользователь поручил удалить его веса.
+Профиль сохранён как описание прежнего эксперимента; сервис выдаёт понятную ошибку
+для снятых с хранения моделей. Для следующей версии потребуется новое обучение по плану v7.
 
 ## Лемматизация
 
@@ -479,22 +486,23 @@ stanza_lemma. Обработка выполняется локально, без
 .venv-gpu/Scripts/python.exe -c "import stanza; stanza.download('kk', model_dir='models/stanza_kk_1_15', package=None, processors={'tokenize':'ktb_nocharlm','mwt':'ktb','pos':'ktb_nocharlm','lemma':'ktb_nocharlm'}, resources_version='1.15.0')"
 ```
 
-## Отчёты и архив
+## Отчёты и история экспериментов
 
 - `reports/PROJECT_STATUS.html` — одна точка входа. Обновить: `manage.py project-status`.
 - У нового эксперимента один каталог с ID; не делать копии с суффиксами final/final2.
 - Логи и вспомогательные проверки — `reports/technical/`.
-- `artifacts/` содержит активные модели; `archive/artifacts/` — остальные запуски.
-- `artifact_path(run_id)` и `evidence_path(relative)` разрешают старые ссылки при чтении.
+- `artifacts/` содержит активные модели. `archive/` удалён по прямому запросу пользователя.
+- `docs/EXPERIMENTS.md` содержит результаты, ограничения, выполненные проверки и дальнейшие шаги.
+- `reports/experiment_history/evidence.zip` хранит числовые доказательства, предсказания
+  и снимки кода без весов/токенизаторов; реестр — `configs/retired_experiments.json`.
+- `artifact_path(run_id)` и `evidence_path(relative)` проверяют SHA и извлекают нужный
+  каталог из ZIP в `build/experiment_evidence/`. Этот кэш можно удалять; ZIP сохранять.
   Для нового обучения задаётся явный новый каталог в `artifacts/`.
 - `results.json`, предсказания, параметры, manifest и снимок кода — доказательства.
   Завершённый запуск хранится целиком; внутренний snapshot не обновляется вместе с кодом.
-- Из старой версии оставлять один отчёт/черновик в архиве, а не несколько «актуальных».
-- Исторические инструкции в `archive/docs/` не являются текущим планом проекта.
-
-Для освобождения места первыми можно рассматривать веса инженерных GPU-проверок и
-прерванного v3-запуска. Сейчас они только архивированы. Повторы основной серии нужны
-для воспроизводимости. Архив на том же диске не заменяет внешнюю резервную копию.
+- Не создавать `archive/` заново и не восстанавливать прежние веса без запроса.
+- Старые метрики можно пересчитать по сохранённым предсказаниям. Восстановить удалённую
+  модель или проверить её ответы на новых текстах нельзя. Не заявлять полную воспроизводимость весов.
 
 ## Память проекта
 
