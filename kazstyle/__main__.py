@@ -24,7 +24,6 @@ COMMANDS = {
     'audit-experiment-code': ('kazstyle.evaluation.code_audit', 'Verify computational source snapshots across a completed suite'),
     'gpu-check': ('kazstyle.training.gpu_check', 'Check CUDA training memory using discarded train-only steps'),
     'export-figures': ('kazstyle.evaluation.figures', 'Export figures from verified repeated experiment results'),
-    'build-manuscript': ('kazstyle.evaluation.manuscript', 'Build the working manuscript from recorded evidence'),
     'project-status': ('kazstyle.evaluation.project_status', 'Build the local project report navigation page'),
     'collect-prose': ('kazstyle.data.prose', 'Collect bounded prose/story candidates from verified category listings'),
     'prepare-deployment': ('kazstyle.inference.deployment', 'Prepare a profile from complete verified runs and validation selection'),
