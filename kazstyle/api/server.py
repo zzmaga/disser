@@ -1,139 +1,137 @@
-"""Local testing website: python manage.py serve, then http://127.0.0.1:8765."""
+﻿"""FastAPI application for the local website; run with ``manage.py serve``."""
 from __future__ import annotations
 
 import argparse
-import json
+import asyncio
+from contextlib import asynccontextmanager
 import logging
-import socket
 import threading
-import time
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+
+from fastapi import FastAPI, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel, ConfigDict, Field
+from starlette.exceptions import HTTPException
+from starlette.requests import ClientDisconnect
+import uvicorn
+
 from kazstyle.settings import FRONTEND_DIR
 
-WEB = FRONTEND_DIR
-STATIC = {'/': ('index.html', 'text/html; charset=utf-8'),
-          '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
-          '/style.css': ('style.css', 'text/css; charset=utf-8')}
 MAX_BODY_BYTES = 500_000
 REQUEST_TIMEOUT_SECONDS = 10
+HEADERS = {
+    'Cache-Control': 'no-store',
+    'X-Content-Type-Options': 'nosniff',
+    'Content-Security-Policy': "default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'",
+}
 
 
-def handler_for(service):
-    # Admit one inference request per service. The UI can retry instead of
-    # accumulating threads waiting for the same model lock and CPU memory.
+class ClassifyRequest(BaseModel):
+    model_config = ConfigDict(strict=True, extra='forbid')
+    text: str = Field(min_length=1, max_length=100_000)
+    model: str | None = None
+    compare: bool = False
+
+
+def error(status, message):
+    return JSONResponse({'error': message}, status_code=status, headers=HEADERS)
+
+
+def create_app(service=None, *, deployment=None, request_timeout=REQUEST_TIMEOUT_SECONDS):
+    """Inject a service in tests; load the active local models only at startup."""
+    @asynccontextmanager
+    async def lifespan(app):
+        if service is None:
+            from kazstyle.inference.service import InferenceService
+            app.state.service = InferenceService(deployment=deployment)
+        else:
+            app.state.service = service
+        yield
+        app.state.service = None
+
+    # Built-in Swagger/ReDoc pages fetch CDN assets. Keep this application offline.
+    app = FastAPI(title='KazStyle', lifespan=lifespan, docs_url=None, redoc_url=None)
     inference_slot = threading.BoundedSemaphore(1)
 
-    class Handler(BaseHTTPRequestHandler):
-        timeout = REQUEST_TIMEOUT_SECONDS
-
-        def log_message(self, format, *args):
-            pass  # Do not save pasted text, request paths or browser traffic.
-
-        def reply(self, status, data, content_type='application/json; charset=utf-8'):
-            body = json.dumps(data, ensure_ascii=False).encode('utf-8') if isinstance(data, dict) else data
-            self.send_response(status)
-            self.send_header('Content-Type', content_type)
-            self.send_header('Content-Length', str(len(body)))
-            self.send_header('Cache-Control', 'no-store')
-            self.send_header('X-Content-Type-Options', 'nosniff')
-            self.send_header('Content-Security-Policy', "default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; frame-ancestors 'none'")
-            self.end_headers()
-            try:
-                self.wfile.write(body)
-                self.wfile.flush()
-                # HTTP/1.0 closes after this response. Send FIN before close so
-                # Windows clients receive early rejections even with unread input.
-                self.connection.shutdown(socket.SHUT_WR)
-                if self.command == 'POST' and not getattr(self, '_body_consumed', False):
-                    # Bounded lingering close: a late request-body packet must not
-                    # reset the connection and discard our 4xx response on Windows.
-                    deadline = time.monotonic() + .2
-                    remaining = MAX_BODY_BYTES
-                    while remaining and time.monotonic() < deadline:
-                        self.connection.settimeout(max(.001, deadline-time.monotonic()))
-                        chunk = self.connection.recv(min(65536, remaining))
-                        if not chunk:
-                            break
-                        remaining -= len(chunk)
-            except OSError:
-                pass
-
-        def do_GET(self):
-            path = self.path.split('?', 1)[0]
-            if path == '/api/health':
-                return self.reply(200, {'status': 'ready'})
-            if path == '/api/models':
-                return self.reply(200, {'models': service.available_models(), 'default': service.default_model,
-                                       'styles':service.available_styles(),'dataset':service.dataset.name})
-            if path in STATIC:
-                filename, kind = STATIC[path]
-                return self.reply(200, (WEB / filename).read_bytes(), kind)
-            self.reply(404, {'error': 'Страница не найдена.'})
-
-        def do_POST(self):
-            if self.path != '/api/classify':
-                return self.reply(404, {'error': 'Маршрут не найден.'})
-            # The browser must call this loopback API from this site's own origin.
-            origin = self.headers.get('Origin')
-            port = self.server.server_port
+    @app.middleware('http')
+    async def local_request_policy(request: Request, call_next):
+        if request.method == 'POST' and request.url.path == '/api/classify':
+            port = request.url.port or 80
+            origin = request.headers.get('origin')
             if origin and origin not in {f'http://127.0.0.1:{port}', f'http://localhost:{port}'}:
-                return self.reply(403, {'error': 'Запрос разрешён только с локального сайта.'})
+                return error(403, 'Запрос разрешён только с локального сайта.')
+            if request.headers.get('content-type', '').split(';')[0].lower() != 'application/json':
+                return error(415, 'Ожидается JSON.')
+            lengths = request.headers.getlist('content-length')
+            if (request.headers.get('transfer-encoding') or len(lengths) != 1
+                    or len(lengths[0]) > 8 or not lengths[0].isascii() or not lengths[0].isdigit()):
+                return error(400, 'Некорректная длина запроса.')
+            length = int(lengths[0])
+            if not 0 < length <= MAX_BODY_BYTES:
+                return error(413, 'Пустой или слишком большой запрос.')
             try:
-                if self.headers.get('Transfer-Encoding'):
-                    raise ValueError('Потоковая передача запроса не поддерживается.')
-                lengths = self.headers.get_all('Content-Length', [])
-                if len(lengths) != 1 or not lengths[0].isascii() or not lengths[0].isdigit():
-                    raise ValueError('Некорректная длина запроса.')
-                length = int(lengths[0])
-                if length <= 0 or length > MAX_BODY_BYTES:
-                    return self.reply(413, {'error': 'Пустой или слишком большой запрос.'})
-                if self.headers.get_content_type() != 'application/json':
-                    return self.reply(415, {'error': 'Ожидается JSON.'})
-                body = self.rfile.read(length)
-                if len(body) != length:
-                    raise ValueError('Запрос передан не полностью.')
-                self._body_consumed = True
-                payload = json.loads(body.decode('utf-8'))
-                if not isinstance(payload, dict):
-                    raise ValueError('Некорректный запрос.')
-                if not isinstance(payload.get('compare', False), bool):
-                    raise ValueError('Некорректный режим сравнения.')
-                if not inference_slot.acquire(blocking=False):
-                    return self.reply(503, {'error': 'Модель занята другим запросом. Повторите проверку позже.'})
-                try:
-                    result = service.classify(payload.get('text'), payload.get('model'), payload.get('compare', False))
-                finally:
-                    inference_slot.release()
-                return self.reply(200, result)
+                body = await asyncio.wait_for(request.body(), timeout=request_timeout)
             except TimeoutError:
-                return self.reply(408, {'error': 'Истекло время передачи запроса.'})
-            except (BrokenPipeError, ConnectionResetError):
-                # Closing a browser tab is not an inference failure.
-                return
-            except (ValueError, UnicodeDecodeError) as error:
-                return self.reply(400, {'error': str(error)})
-            except Exception:
-                logging.exception('Local inference failed')
-                return self.reply(500, {'error': 'Не удалось выполнить проверку. Подробности в журнале сервера.'})
-    return Handler
+                return error(408, 'Истекло время передачи запроса.')
+            except ClientDisconnect:
+                return error(400, 'Запрос передан не полностью.')
+            if len(body) != length:
+                return error(400, 'Запрос передан не полностью.')
+        response = await call_next(request)
+        response.headers.update(HEADERS)
+        return response
+
+    @app.exception_handler(RequestValidationError)
+    async def invalid_payload(request, exc):
+        # Pydantic's detailed errors can contain the pasted text; do not echo it.
+        return error(400, 'Некорректный запрос. Проверьте текст, модель и режим сравнения.')
+
+    @app.exception_handler(HTTPException)
+    async def http_error(request, exc):
+        return error(exc.status_code, 'Страница не найдена.' if exc.status_code == 404 else str(exc.detail))
+
+    @app.get('/api/health')
+    def health():
+        return {'status': 'ready'}
+
+    @app.get('/api/models')
+    def models(request: Request):
+        current = request.app.state.service
+        return {'models': current.available_models(), 'default': current.default_model,
+                'styles': current.available_styles(), 'dataset': current.dataset.name}
+
+    @app.post('/api/classify')
+    def classify(payload: ClassifyRequest, request: Request):
+        # FastAPI runs this synchronous endpoint in its thread pool.
+        if not inference_slot.acquire(blocking=False):
+            return error(503, 'Модель занята другим запросом. Повторите проверку позже.')
+        try:
+            return request.app.state.service.classify(payload.text, payload.model, payload.compare)
+        except ValueError as exc:
+            return error(400, str(exc))
+        except Exception:
+            logging.exception('Local inference failed')
+            return error(500, 'Не удалось выполнить проверку. Подробности в журнале сервера.')
+        finally:
+            inference_slot.release()
+
+    @app.api_route('/api/{path:path}', methods=['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+                   include_in_schema=False)
+    def unknown_api(path: str):
+        return error(404, 'Маршрут не найден.')
+
+    app.mount('/', StaticFiles(directory=FRONTEND_DIR, html=True), name='frontend')
+    return app
 
 
 def main():
-    from kazstyle.inference.service import InferenceService
-
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8765)
     parser.add_argument('--deployment', help='Optional model registry JSON')
     args = parser.parse_args()
-    service = InferenceService(deployment=args.deployment)
-    server = ThreadingHTTPServer(('127.0.0.1', args.port), handler_for(service))
-    print(f'Website ready: http://127.0.0.1:{args.port}', flush=True)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        server.server_close()
+    uvicorn.run(create_app(deployment=args.deployment), host='127.0.0.1', port=args.port,
+                access_log=False, http='h11')
 
 
 if __name__ == '__main__':
