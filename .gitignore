@@ -7,11 +7,7 @@ __pycache__/
 *.pyc
 tmp_*
 /models/
-/archive/*
-!/archive/legacy_collectors_20260925/
-!/archive/README.md
-!/archive/docs/
-!/archive/reorganization_20261006/
+/archive/
 /reports/
 .pytest_cache/
 *.ftz

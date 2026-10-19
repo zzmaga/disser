@@ -2,5 +2,3 @@
 # Preserve their bytes on Windows and Linux; do not rewrite completed evidence.
 configs/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 configs/**/*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-# The historical memory manifest verifies the original snapshot byte for byte.
-/archive/docs/project_memory_20261018/* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
