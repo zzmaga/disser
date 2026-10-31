@@ -1,0 +1,4 @@
+# Portable preparation service: no PyTorch, corpus or model downloads.
+-r requirements-web.txt
+beautifulsoup4==4.15.0
+soupsieve==2.9.2

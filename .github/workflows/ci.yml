@@ -2,7 +2,7 @@ name: KazStyle CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'codex/**']
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -55,3 +55,70 @@ jobs:
             build/demo/
           if-no-files-found: error
           retention-days: 14
+
+  container-and-kubernetes:
+    name: Docker build and Kubernetes CD
+    needs: test-and-demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - name: Check out code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Build and test container
+        run: |
+          mkdir -p build/devops
+          docker build --target test --progress plain . 2>&1 | tee build/devops/docker-tests.log
+          docker build --target runtime -t kazstyle-preparation:ci --progress plain . 2>&1 | tee build/devops/docker-build.log
+          docker image inspect kazstyle-preparation:ci > build/devops/image.json
+      - name: Check running Docker container
+        run: |
+          docker run -d --name kazstyle-ci --read-only --cap-drop ALL --security-opt no-new-privileges --memory 256m --cpus 1 -p 127.0.0.1:8085:8000 kazstyle-preparation:ci
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8085/health; then break; fi
+            sleep 2
+          done
+          python deploy/smoke.py http://127.0.0.1:8085 | tee build/devops/docker-smoke.json
+          docker logs kazstyle-ci > build/devops/docker-runtime.log 2>&1
+      - name: Install verified kind binary
+        run: |
+          curl -fsSLo /tmp/kind-linux-amd64 https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-linux-amd64
+          curl -fsSLo /tmp/kind-linux-amd64.sha256sum https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-linux-amd64.sha256sum
+          (cd /tmp && sha256sum -c kind-linux-amd64.sha256sum)
+          chmod +x /tmp/kind-linux-amd64
+      - name: Deploy tested image to ephemeral Kubernetes
+        run: |
+          /tmp/kind-linux-amd64 create cluster --name kazstyle-ci --wait 120s
+          /tmp/kind-linux-amd64 load docker-image kazstyle-preparation:ci --name kazstyle-ci
+          kubectl --context kind-kazstyle-ci apply -f deploy/kubernetes/preparation.yaml
+          kubectl --context kind-kazstyle-ci -n kazstyle-demo rollout status deployment/preparation --timeout=120s
+          kubectl --context kind-kazstyle-ci -n kazstyle-demo get deployments,pods,services -o wide | tee build/devops/kubernetes.txt
+          kubectl --context kind-kazstyle-ci -n kazstyle-demo port-forward service/preparation 8086:80 > build/devops/port-forward.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8086/health; then break; fi
+            sleep 2
+          done
+          python deploy/smoke.py http://127.0.0.1:8086 | tee build/devops/kubernetes-smoke.json
+      - name: Collect Kubernetes diagnostics
+        if: always()
+        run: |
+          kubectl --context kind-kazstyle-ci -n kazstyle-demo describe pods > build/devops/pods.txt 2>&1 || true
+          kubectl --context kind-kazstyle-ci -n kazstyle-demo logs deployment/preparation > build/devops/kubernetes-runtime.log 2>&1 || true
+      - name: Upload CI/CD evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: kazstyle-devops-evidence
+          path: build/devops/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Stop disposable test resources
+        if: always()
+        run: |
+          docker rm -f kazstyle-ci || true
+          if [ -x /tmp/kind-linux-amd64 ]; then /tmp/kind-linux-amd64 delete cluster --name kazstyle-ci; fi

@@ -59,11 +59,11 @@ python3 -m venv .venv
 [Конфигурация CI](.github/workflows/ci.yml) ·
 [Запуски и их результаты](https://github.com/zzmaga/disser/actions/workflows/ci.yml)
 
-Workflow запускается при push и pull request в `main`, а также вручную.
+Workflow запускается при push в `main`/`codex/**`, pull request в `main`, а также вручную.
 Проверки проходят независимо на Ubuntu и Windows с Python 3.12:
 
 1. Устанавливаются небольшие зависимости с фиксированными версиями.
-2. Pytest выполняет 150 проверок очистки, экспорта, группировки, сборщиков, HTTP API и отчётов.
+2. Pytest проверяет очистку, экспорт, группировку, сборщики, HTTP API и отчёты.
 3. Запускается пример очистки и создаётся HTML-отчёт.
 4. Журналы тестов и результат примера сохраняются в downloadable artifacts на 14 дней.
 
@@ -75,8 +75,44 @@ Workflow запускается при push и pull request в `main`, а так
 Для нового запуска владелец репозитория может нажать
 **Run workflow → main → Run workflow** на странице workflow.
 
-Реализован CI с сохранением готового результата. Автоматическая публикация сайта
-на сервере и развёртывание новых весов (CD) пока не настроены.
+После успешных тестов выполняется Docker/Kubernetes job: тесты внутри образа,
+сборка runtime, HTTP-проверка контейнера, загрузка того же образа в отдельный kind
+кластер, Deployment/Service и повторная HTTP-проверка. Это автоматическое
+развёртывание в одноразовую тестовую среду; публичный сайт и новые веса не публикуются.
+Доказательства сохраняются как `kazstyle-devops-evidence` на 30 дней.
+
+### Docker и Kubernetes: подготовка корпуса
+
+Контейнер использует настоящие `clean_text` и `demo.prepare` из KazStyle.
+Он очищает HTML/ссылки и исключает точные повторы; классификация и обучение сюда
+не входят. В образ не попадают исходный корпус, веса, `.env` и история Git.
+
+```powershell
+docker build --target test .
+docker compose up --build -d
+.venv/Scripts/python.exe -X utf8 deploy/smoke.py http://127.0.0.1:8085
+```
+
+Откройте http://localhost:8085/docs и `POST /api/prepare`: до 20 записей
+`{"id":"sample","text":"Қазақ тілі. https://example.org"}` в поле `records`.
+Остановка: `docker compose down`. Основной сайт на 8765 работает отдельно.
+
+Для Kubernetes нужен собственный тестовый kind-кластер; не используйте случайный
+текущий context. [Манифест](deploy/kubernetes/preparation.yaml) ограничивает RAM/CPU,
+использует non-root, read-only filesystem, readiness/liveness probes.
+
+```sh
+docker build --target runtime -t kazstyle-preparation:ci .
+kind create cluster --name kazstyle-ci
+kind load docker-image kazstyle-preparation:ci --name kazstyle-ci
+kubectl --context kind-kazstyle-ci apply -f deploy/kubernetes/preparation.yaml
+kubectl --context kind-kazstyle-ci -n kazstyle-demo rollout status deployment/preparation --timeout=120s
+kubectl --context kind-kazstyle-ci -n kazstyle-demo port-forward service/preparation 8086:80
+```
+
+В другом терминале: `python deploy/smoke.py http://127.0.0.1:8086`.
+После демонстрации удалить только созданный тестовый кластер:
+`kind delete cluster --name kazstyle-ci`. Docker Hub и платное облако не нужны.
 
 Ревизия 19 октября переводит CI на pytest: 150 проверок локально прошли без ошибок
 и пропусков. Набор не требует корпуса, весов и PyTorch/Transformers. Результат
