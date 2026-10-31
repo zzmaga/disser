@@ -89,7 +89,7 @@ Workflow запускается при push в `main`/`codex/**`, pull request �
 
 ```powershell
 docker build --target test .
-docker compose up --build -d
+docker compose up --build -d --wait
 .venv/Scripts/python.exe -X utf8 deploy/smoke.py http://127.0.0.1:8085
 ```
 

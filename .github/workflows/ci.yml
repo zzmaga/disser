@@ -104,6 +104,10 @@ jobs:
             sleep 2
           done
           python deploy/smoke.py http://127.0.0.1:8086 | tee build/devops/kubernetes-smoke.json
+      - name: Capture real pipeline and API screenshots
+        run: |
+          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1100 --virtual-time-budget=8000 --screenshot=build/devops/pipeline.png "https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1440,1100 --virtual-time-budget=5000 --screenshot=build/devops/api.png http://127.0.0.1:8086/docs
       - name: Collect Kubernetes diagnostics
         if: always()
         run: |
